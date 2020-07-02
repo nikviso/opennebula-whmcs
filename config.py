@@ -12,7 +12,7 @@ one = pyone.OneServer("http://localhost:2633/RPC2", session)
 """
 Getting AES key
 """
-key_file = open("/root/key","r")
+key_file = open("/var/lib/one/.one/key_aes","r")
 key = base64.b64decode(key_file.read())
 key_file.close() 
 
