@@ -17,7 +17,7 @@ def worker_routine(worker_url, key, context=None):
     Worker routine
     """
 
-    obj = AESCipher(key)
+    AESobj = AESCipher(key)
     
     context = context or zmq.Context.instance()
     # Socket to talk to dispatcher
@@ -28,7 +28,7 @@ def worker_routine(worker_url, key, context=None):
     while True:
 
 #        json_recive  = socket.recv()
-        json_recive  = obj.decrypt(socket.recv())
+        json_recive  = AESobj.decrypt(socket.recv())
             
         print("Received request: [ %s ]" % (json_recive))
 
@@ -38,11 +38,11 @@ def worker_routine(worker_url, key, context=None):
         
         #send reply back to client
 #        socket.send(json_reply)
-        socket.send(obj.encrypt(json_reply))
+        socket.send(AESobj.encrypt(json_reply))
         
             
 
-def main(workers_quantity, server_ip, server_port,key):
+def main(workers_quantity, server_ip, server_port, key):
     """
     Server routine
     """

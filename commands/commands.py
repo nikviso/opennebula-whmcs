@@ -179,7 +179,10 @@ def get_all_vm_state(json_message):
         },)
     return_message = '{"vms_state": ' + json.dumps(return_message) + '}'
 
-    return json.loads(return_message)    
+    return json.loads(return_message)
+    
+def user_group_allocate(user_name):
+    return "NOT DEFINED"    
 
 def get_user_info(json_message):
     return "NOT DEFINED"
@@ -188,7 +191,7 @@ def user_allocate(json_message):
     """
     Allocate user.
     """
-    user_group_id_array = [1]
+    user_group_id_array = [100]
     json_dict = json.loads(json_message)
     if not (json_dict.get('user_name') is None):
         user_name = json_dict['user_name']
