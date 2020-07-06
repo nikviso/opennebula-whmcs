@@ -182,7 +182,11 @@ def get_all_vm_state(json_message):
     return json.loads(return_message)
     
 def user_group_allocate(user_name):
-    return "NOT DEFINED"    
+    """
+    Allocate users group with name like user name.
+    """
+    group_id = one.group.allocate(user_name)
+    return group_id    
 
 def get_user_info(json_message):
     return "NOT DEFINED"
@@ -191,7 +195,6 @@ def user_allocate(json_message):
     """
     Allocate user.
     """
-    user_group_id_array = [100]
     json_dict = json.loads(json_message)
     if not (json_dict.get('user_name') is None):
         user_name = json_dict['user_name']
@@ -201,5 +204,11 @@ def user_allocate(json_message):
         user_password = json_dict['user_password']
     else:
         return {"error": "not set user password"} 
+
+    user_group_id_array = [100]
+    """    
+    user_group_id_array = []
+    user_group_id_array.append(user_group_allocate(user_name))
+    """
     
     return one.user.allocate(user_name, user_password, '', user_group_id_array)
