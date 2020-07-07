@@ -14,6 +14,7 @@ def command_switcher(json_message):
             'get_all_vm_state': get_all_vm_state,
             'get_user_info': get_user_info,
             'user_allocate': user_allocate,
+            'template_instantiate': template_instantiate,
         }
         # Get the function from switcher dictionary
         cmd_execute = switcher.get(cmd, lambda null_argument: {"error": "invalid command"})
@@ -212,3 +213,34 @@ def user_allocate(json_message):
     """
     
     return one.user.allocate(user_name, user_password, '', user_group_id_array)
+    
+def template_instantiate(json_message):
+    """
+    Instantiates a new virtual machine from a template.
+    """
+    json_dict = json.loads(json_message)
+    if not (json_dict.get('user_id') is None):
+        user_id = json_dict['user_id']
+    else:
+        return {"error": "not set user id"}
+    if not (json_dict.get('user_password') is None):
+        user_password = json_dict['user_password']
+    else:
+        return {"error": "not set user password"}
+    if not (json_dict.get('vm_name') is None):
+        vm_name = json_dict['vm_name']
+    else:
+        return {"error": "not set vm name"}     
+    if not (json_dict.get('template_id') is None):
+        template_id = json_dict['template_id']
+    else:
+        return {"error": "not set template id"}
+    
+    return one.template.instantiate(template_id, vm_name, False, 
+    {
+    'NIC': {
+      'IP': '192.168.55.253'
+    }
+    }, 
+    True)
+
