@@ -238,9 +238,11 @@ def template_instantiate(json_message):
     
     return one.template.instantiate(template_id, vm_name, False, 
     {
+    'TEMPLATE':{
+    'PASSWORD': user_password,
     'NIC': {
       'IP': '192.168.55.253'
     }
-    }, 
-    True)
+    }}, 
+    False)
 
