@@ -211,8 +211,17 @@ def user_allocate(json_message):
     user_group_id_array = []
     user_group_id_array.append(user_group_allocate(user_name))
     """
+    try:
+        return_message = {
+                "user_name": user_name,
+                "user_id": one.user.allocate(user_name, user_password, '', user_group_id_array),
+                "user_group_id_array": user_group_id_array
+            }
+    except:
+        return {"error": "user allocate error"}
+        
     
-    return one.user.allocate(user_name, user_password, '', user_group_id_array)
+    return return_message
     
 def template_instantiate(json_message):
     """
@@ -223,6 +232,10 @@ def template_instantiate(json_message):
         user_id = json_dict['user_id']
     else:
         return {"error": "not set user id"}
+    if not (json_dict.get('user_group_id') is None):
+        user_group_id = json_dict['user_group_id']
+    else:
+        return {"error": "not set user group id"}       
     if not (json_dict.get('user_password') is None):
         user_password = json_dict['user_password']
     else:
@@ -235,14 +248,54 @@ def template_instantiate(json_message):
         template_id = json_dict['template_id']
     else:
         return {"error": "not set template id"}
+    if not (json_dict.get('ip_address') is None):
+        ip_address = json_dict['ip_address']
+    else:
+        return {"error": "not set ip address"}
+    if not (json_dict.get('dns_ip_address') is None):
+        dns_ip_address = json_dict['dns_ip_address']
+    else:
+        return {"error": "not set dns ip address"} 
+    if not (json_dict.get('gw_ip_address') is None):
+        gw_ip_address = json_dict['gw_ip_address']
+    else:
+        return {"error": "not set gateway ip address"}
+    if not (json_dict.get('network_name') is None):
+        network_name = json_dict['network_name']
+    else:
+        return {"error": "not set network name"}
+    if not (json_dict.get('network_address') is None):
+        network_address = json_dict['network_address']
+    else:
+        return {"error": "not set network address"}   
+        
+    try:    
+        vm_id = one.template.instantiate(template_id, vm_name, False, 
+        {
+        'TEMPLATE':{
+        'CONTEXT':{
+          'PASSWORD': user_password,
+        },
+        'NIC': {
+          'IP': ip_address,
+          'DNS': dns_ip_address,
+          'GATEWAY': gw_ip_address,
+          'NETWORK': network_name,
+          'NETWORK_ADDRESS': network_address
+        }
+        }}, 
+        True)
+    except:
+        return {"error": "template instantiate error"}
+       
+    try:
+        one.vm.chown(vm_id, user_id, user_group_id)
+    except:
+        return {"error": "change vm owner error"}
     
-    return one.template.instantiate(template_id, vm_name, False, 
-    {
-    'TEMPLATE':{
-    'PASSWORD': user_password,
-    'NIC': {
-      'IP': '192.168.55.253'
-    }
-    }}, 
-    False)
-
+    
+    return_message = {
+            "vm_id": vm_id,
+        }
+        
+    return return_message
