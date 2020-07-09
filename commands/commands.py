@@ -268,13 +268,15 @@ def template_instantiate(json_message):
         network_address = json_dict['network_address']
     else:
         return {"error": "not set network address"}   
-        
+    """
     try:    
         vm_id = one.template.instantiate(template_id, vm_name, False, 
         {
         'TEMPLATE':{
         'CONTEXT':{
-          'PASSWORD': user_password,
+          'SSH_PUBLIC_KEY': '',
+          'START_SCRIPT_BASE64': base64.b64encode('echo -e "' + user_password + '\n' + user_password + '" | passwd root; echo -e "'
+                                 + user_password + '\n' + user_password + '" | passwd debian;'),
         },
         'NIC': {
           'IP': ip_address,
@@ -287,15 +289,55 @@ def template_instantiate(json_message):
         True)
     except:
         return {"error": "template instantiate error"}
-       
+        
+
+    try:
+        print one.vm.update(vm_id,
+        {
+        'TEMPLATE':{
+        'CONTEXT':{
+          'SSH_PUBLIC_KEY': '',
+          'START_SCRIPT_BASE64': '',
+        },
+        }}, 0)        
+    except:
+        return {"error": "update vm error"}
+    """   
+   
+    vm_id = one.vm.updateconf(80, 
+        {
+        'TEMPLATE':{
+            'CONTEXT':{
+#             'DISK_ID': '1',
+             'START_SCRIPT_BASE64': '',
+#             'TARGET': 'hda'
+             },  
+            'GRAPHICS':{ 
+              'LISTEN': '0.0.0.0',
+              'PORT': '5980',
+              'TYPE': 'VNC'
+            },
+            'CPU_MODEL':{'host-passthrough'},
+            'OS':{'ARCH': 'x86_64','MACHINE': 'pc'}
+        },
+        }
+        )
+    """   
+    try:
+        vm_id = one.vm.updateconf(78, XML_TEMPLATE)   
+        print vm_id
+    except:
+        return {"error": "update vm error"}    
+    
+ 
     try:
         one.vm.chown(vm_id, user_id, user_group_id)
     except:
         return {"error": "change vm owner error"}
-    
+    """
     
     return_message = {
             "vm_id": vm_id,
         }
-        
+    
     return return_message
