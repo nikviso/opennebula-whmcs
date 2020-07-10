@@ -31,3 +31,14 @@ server_port = "5555"
 PID file path
 """
 pidfile = "/var/run/mtszmq.pid"
+
+"""
+VM user name
+"""
+vm_user = "debian"
+
+"""
+Size and complexity password for VM users
+"""
+password_size = 6
+password_complexity = 0

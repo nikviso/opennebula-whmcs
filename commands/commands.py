@@ -1,4 +1,5 @@
 import json
+import random
 from config import *
 
 def command_switcher(json_message):
@@ -22,7 +23,26 @@ def command_switcher(json_message):
         return cmd_execute(json_message)
     except ValueError:
         return {"error": "string could not be converted to json"}
-        
+
+def password_generator(size = 16, complexity = 1):
+    
+    if not complexity:
+        s = "abcdefghijklmnopqrstuvwxyz01234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    else:
+        s = "abcdefghijklmnopqrstuvwxyz01234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()?{}[]\/<>.,~"
+    
+    return "".join(random.sample(s,size ))
+    
+def get_template_id(template_name):
+    """
+    Get TEMPLATE ID by TEMPLATE NAME.
+    """
+    templatepoolInfo = one.templatepool.info(-2, -1, -1)
+    templatelist = templatepoolInfo.get_VMTEMPLATE()
+    for template in templatelist:
+        if template.NAME == template_name:
+            return template.ID
+    
 def get_user_id(user_name):
     """
     Get USER ID by USER NAME. (Asymptotic O(n), FIXME!!!!)
@@ -236,10 +256,6 @@ def template_instantiate(json_message):
         user_group_id = json_dict['user_group_id']
     else:
         return {"error": "not set user group id"}       
-    if not (json_dict.get('user_password') is None):
-        user_password = json_dict['user_password']
-    else:
-        return {"error": "not set user password"}
     if not (json_dict.get('vm_name') is None):
         vm_name = json_dict['vm_name']
     else:
@@ -268,15 +284,20 @@ def template_instantiate(json_message):
         network_address = json_dict['network_address']
     else:
         return {"error": "not set network address"}   
-    """
+     
+    vm_root_password = password_generator(password_size, password_complexity) # Generating password for root user.
+    vm_user_password = password_generator(password_size, password_complexity) # Generating password for a simple user.
+    
+
+    # Instantiate a new VM from a tempate
     try:    
         vm_id = one.template.instantiate(template_id, vm_name, False, 
         {
         'TEMPLATE':{
         'CONTEXT':{
           'SSH_PUBLIC_KEY': '',
-          'START_SCRIPT_BASE64': base64.b64encode('echo -e "' + user_password + '\n' + user_password + '" | passwd root; echo -e "'
-                                 + user_password + '\n' + user_password + '" | passwd debian;'),
+          'START_SCRIPT_BASE64': base64.b64encode('echo -e "' + vm_root_password + '\n' + vm_root_password + '" | passwd root; echo -e "'
+                                 + vm_user_password + '\n' + vm_user_password + '" | passwd ' + vm_user),
         },
         'NIC': {
           'IP': ip_address,
@@ -289,55 +310,50 @@ def template_instantiate(json_message):
         True)
     except:
         return {"error": "template instantiate error"}
-        
-
-    try:
-        print one.vm.update(vm_id,
-        {
-        'TEMPLATE':{
-        'CONTEXT':{
-          'SSH_PUBLIC_KEY': '',
-          'START_SCRIPT_BASE64': '',
-        },
-        }}, 0)        
-    except:
-        return {"error": "update vm error"}
-    """   
    
-    vm_id = one.vm.updateconf(80, 
-        {
-        'TEMPLATE':{
-            'CONTEXT':{
-#             'DISK_ID': '1',
-             'START_SCRIPT_BASE64': '',
-#             'TARGET': 'hda'
-             },  
-            'GRAPHICS':{ 
-              'LISTEN': '0.0.0.0',
-              'PORT': '5980',
-              'TYPE': 'VNC'
-            },
-            'CPU_MODEL':{'host-passthrough'},
-            'OS':{'ARCH': 'x86_64','MACHINE': 'pc'}
-        },
-        }
-        )
-    """   
+    
+    """ 
+    #Removing from VM template "START SCRIPT" for setting a passwords. 
     try:
-        vm_id = one.vm.updateconf(78, XML_TEMPLATE)   
-        print vm_id
+        vm_id = one.vm.updateconf(80, 
+            {
+            'TEMPLATE':{
+                'CONTEXT':{
+    #             'DISK_ID': '1',
+                 'START_SCRIPT_BASE64': '',
+    #             'TARGET': 'hda'
+                 },  
+                'GRAPHICS':{ 
+                  'LISTEN': '0.0.0.0',
+                  'PORT': '5980',
+                  'TYPE': 'VNC'
+                },
+                'CPU_MODEL':{'host-passthrough'},
+                'OS':{'ARCH': 'x86_64','MACHINE': 'pc'}
+            },
+            }
+            )
     except:
         return {"error": "update vm error"}    
+    """   
     
- 
+    #Changing VM owner.
     try:
         one.vm.chown(vm_id, user_id, user_group_id)
     except:
         return {"error": "change vm owner error"}
-    """
     
+    #Removing VM template.
+    try:
+        one.template.delete(get_template_id(vm_name), False)
+    except:
+        return {"error": "removing vm template error"}
+        
     return_message = {
             "vm_id": vm_id,
+            "vm_root_password": vm_root_password,
+            "vm_user": vm_user,
+            "vm_user_password": vm_user_password,
         }
     
     return return_message
