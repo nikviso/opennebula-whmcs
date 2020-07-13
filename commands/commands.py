@@ -16,6 +16,7 @@ def command_switcher(json_message):
             'get_user_info': get_user_info,
             'user_allocate': user_allocate,
             'template_instantiate': template_instantiate,
+            'vm_terminate': vm_terminate,
         }
         # Get the function from switcher dictionary
         cmd_execute = switcher.get(cmd, lambda null_argument: {"error": "invalid command"})
@@ -357,3 +358,23 @@ def template_instantiate(json_message):
         }
     
     return return_message
+    
+def vm_terminate(json_message):
+    """
+    Terminate VM
+    """
+    json_dict = json.loads(json_message)
+    if not (json_dict.get('vm_id') is None):
+        vm_id = json_dict['vm_id']
+    else:
+        return {"error": "not set vm id"}
+
+    template_info = one.vm.info(vm_id).TEMPLATE["DISK"]
+    one.vm.action("terminate-hard", vm_id)
+    i = 0
+    while i < len(template_info):
+        print template_info[i]["IMAGE_ID"]
+        print one.image.delete(int(template_info[i]["IMAGE_ID"]))
+        i += 1
+        
+    return template_info
