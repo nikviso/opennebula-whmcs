@@ -1,5 +1,6 @@
 import json
 import random
+import time
 from config import *
 
 def command_switcher(json_message):
@@ -26,7 +27,9 @@ def command_switcher(json_message):
         return {"error": "string could not be converted to json"}
 
 def password_generator(size = 16, complexity = 1):
-    
+    """
+    Password generator.
+    """    
     if not complexity:
         s = "abcdefghijklmnopqrstuvwxyz01234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ"
     else:
@@ -192,7 +195,7 @@ def get_all_vm_state(json_message):
     else:
         return {"error": "error user name or user id"}        
 
-    return_message=[]
+    return_message = []
     for vm in vmlist:
         return_message.append({
             "vm_id": vm.ID,
@@ -285,10 +288,11 @@ def template_instantiate(json_message):
         network_address = json_dict['network_address']
     else:
         return {"error": "not set network address"}   
-     
+    
+    #one_user = pyone.OneServer("http://one:2633/RPC2", session="oneuser:onepass" )
+    
     vm_root_password = password_generator(password_size, password_complexity) # Generating password for root user.
     vm_user_password = password_generator(password_size, password_complexity) # Generating password for a simple user.
-    
 
     # Instantiate a new VM from a tempate
     try:    
@@ -311,7 +315,6 @@ def template_instantiate(json_message):
         True)
     except:
         return {"error": "template instantiate error"}
-   
     
     """ 
     #Removing from VM template "START SCRIPT" for setting a passwords. 
@@ -368,13 +371,26 @@ def vm_terminate(json_message):
         vm_id = json_dict['vm_id']
     else:
         return {"error": "not set vm id"}
+    
+    template_disk_info = one.vm.info(vm_id).TEMPLATE["DISK"]
+    
+    one.vm.action("terminate-hard", vm_id)      
+    if type(template_disk_info) is list:
+        i = 0
+        while one.image.info(int(template_disk_info[i]["IMAGE_ID"])).STATE <> 1:
+            time.sleep(1)
+        while i < len(template_disk_info):
+            image_id = template_disk_info[i]["IMAGE_ID"]
+            print image_id
+            print one.image.info(int(image_id)).STATE
+            print one.image.delete(int(template_disk_info[i]["IMAGE_ID"]))
+            i += 1
+    else:
+        while one.image.info(int(template_disk_info["IMAGE_ID"])).STATE <> 1:
+            time.sleep(1)        
+        image_id = template_disk_info["IMAGE_ID"]
+        print image_id
+        print one.image.info(int(image_id)).STATE
+        print one.image.delete(int(template_disk_info["IMAGE_ID"]))
 
-    template_info = one.vm.info(vm_id).TEMPLATE["DISK"]
-    one.vm.action("terminate-hard", vm_id)
-    i = 0
-    while i < len(template_info):
-        print template_info[i]["IMAGE_ID"]
-        print one.image.delete(int(template_info[i]["IMAGE_ID"]))
-        i += 1
-        
-    return template_info
+    return "NOT DEFINED"
