@@ -1,27 +1,47 @@
 <?php
 
-$password = generate_password(16,0);
+$password = generate_password(6,0);
 echo "password: ".$password."\n";
 
+/**/
+$arr = array(
+    "cmd" => "vm_terminate",
+    "vm_id" => 95,
+);
+
 /*
+$vm_name = "v1p253.clouds365.host";
+$arr = array(
+    "cmd" => "template_instantiate",
+    "user_id" => 6,
+    "user_group_id" => 100,
+    "vm_name" => $vm_name,
+    "template_id" => 6,
+    "ip_address" => "192.168.55.253",
+    "dns_ip_address" => "8.8.8.8",
+    "gw_ip_address" => "192.168.55.1",
+    "network_name" => "network_v61",
+    "network_address" => "192.168.55.0",
+);
+
 $arr = array(
     "cmd" => "user_allocate",
     "user_name" => "test_user1",
     "user_password" => $password,
 );
-*/
+
 $arr = array(
     "cmd" => "get_vm_state",
-    "user_id" => 4,
-    "vm_id" => 26,
+    "user_id" => 3,
+    "vm_id" => 89,
 );
-
+*/
 
 $cipher="AES-256-CBC";
-$key_file = 'security/key';
+$key_file = '../key_aes';
 $key = base64_decode(file_get_contents($key_file));
 
-define("REQUEST_TIMEOUT", 2500); //  msecs, (> 1000!)
+define("REQUEST_TIMEOUT", 10000); //  msecs, (> 1000!)
 define("REQUEST_RETRIES", 3); //  Before we abandon
 
 $plaintext =  json_encode($arr);
@@ -52,48 +72,48 @@ function decrypt($ciphertext, $key, $cipher){
 /*
 * Password generator
 */
-function generate_password($number,$strong)  
-{  
+function generate_password($number,$strong)
+{
     $arr_strong = array(
-                 'a','b','c','d','e','f',  
-                 'g','h','i','j','k','l',  
-                 'm','n','o','p','r','s',  
-                 't','u','v','x','y','z',  
-                 'A','B','C','D','E','F',  
-                 'G','H','I','J','K','L',  
-                 'M','N','O','P','R','S',  
-                 'T','U','V','X','Y','Z',  
-                 '1','2','3','4','5','6',  
-                 '7','8','9','0','.',',',  
-                 '(',')','[',']','!','?',  
-                 '&','^','%','@','*','$',  
-                 '<','>','/','|','+','-',  
+                 'a','b','c','d','e','f',
+                 'g','h','i','j','k','l',
+                 'm','n','o','p','r','s',
+                 't','u','v','x','y','z',
+                 'A','B','C','D','E','F',
+                 'G','H','I','J','K','L',
+                 'M','N','O','P','R','S',
+                 'T','U','V','X','Y','Z',
+                 '1','2','3','4','5','6',
+                 '7','8','9','0','.',',',
+                 '(',')','[',']','!','?',
+                 '&','^','%','@','*','$',
+                 '<','>','/','|','+','-',
                  '{','}','`','~');
     $arr_middle = array(
-                 'a','b','c','d','e','f',  
-                 'g','h','i','j','k','l',  
-                 'm','n','o','p','r','s',  
-                 't','u','v','x','y','z',  
-                 'A','B','C','D','E','F',  
-                 'G','H','I','J','K','L',  
-                 'M','N','O','P','R','S',  
-                 'T','U','V','X','Y','Z',  
-                 '1','2','3','4','5','6',  
+                 'a','b','c','d','e','f',
+                 'g','h','i','j','k','l',
+                 'm','n','o','p','r','s',
+                 't','u','v','x','y','z',
+                 'A','B','C','D','E','F',
+                 'G','H','I','J','K','L',
+                 'M','N','O','P','R','S',
+                 'T','U','V','X','Y','Z',
+                 '1','2','3','4','5','6',
                  '7','8','9','0');
     if ($strong) {
        $arr = $arr_strong;
     } else {
        $arr = $arr_middle;
-    }   
-                 
-    $pass = "";  
-    for($i = 0; $i < $number; $i++)  
-    {  
-      $index = rand(0, count($arr) - 1);  
-      $pass .= $arr[$index];  
-    }  
-    return $pass;  
-}  
+    }
+
+    $pass = "";
+    for($i = 0; $i < $number; $i++)
+    {
+      $index = rand(0, count($arr) - 1);
+      $pass .= $arr[$index];
+    }
+    return $pass;
+}
 
 /*
 * Helper function that returns a new configured socket
@@ -102,7 +122,7 @@ function client_socket(ZMQContext $context)
 {
     echo "I: connecting to server…", PHP_EOL;
     $client = new ZMQSocket($context,ZMQ::SOCKET_REQ);
-    $client->connect("tcp://79.135.149.37:5555");
+    $client->connect("tcp://10.3.3.3:5555");
 
     //  Configure socket to not wait at close time
     $client->setSockOpt(ZMQ::SOCKOPT_LINGER, 0);
@@ -121,7 +141,7 @@ $read = $write = array();
 while ($retries_left) {
     //  We send a request, then we work to get a reply
     $client->send(encrypt($plaintext, $key, $cipher));
-    
+
     $expect_reply = true;
     while ($expect_reply) {
         //  Poll socket for a reply, with timeout

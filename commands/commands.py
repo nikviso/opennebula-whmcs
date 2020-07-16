@@ -17,6 +17,7 @@ def command_switcher(json_message):
             'get_user_info': get_user_info,
             'user_allocate': user_allocate,
             'template_instantiate': template_instantiate,
+            'template_instantiate_user': template_instantiate_user,
             'vm_terminate': vm_terminate,
         }
         # Get the function from switcher dictionary
@@ -289,7 +290,6 @@ def template_instantiate(json_message):
     else:
         return {"error": "not set network address"}   
     
-    #one_user = pyone.OneServer("http://one:2633/RPC2", session="oneuser:onepass" )
     
     vm_root_password = password_generator(password_size, password_complexity) # Generating password for root user.
     vm_user_password = password_generator(password_size, password_complexity) # Generating password for a simple user.
@@ -361,7 +361,122 @@ def template_instantiate(json_message):
         }
     
     return return_message
+
+def template_instantiate_user(json_message):
+    """
+    Instantiates a new virtual machine from a template.
+    """
+    json_dict = json.loads(json_message)
+    if not (json_dict.get('user_id') is None):
+        user_id = json_dict['user_id']
+    else:
+        return {"error": "not set user id"}
+    if not (json_dict.get('user_name') is None):
+        user_name = json_dict['user_name']
+    else:
+        return {"error": "not set user name"}  
+    if not (json_dict.get('user_password') is None):
+        user_password = json_dict['user_password']
+    else:
+        return {"error": "not set user password"}       
+    if not (json_dict.get('vm_name') is None):
+        vm_name = json_dict['vm_name']
+    else:
+        return {"error": "not set vm name"}     
+    if not (json_dict.get('template_id') is None):
+        template_id = json_dict['template_id']
+    else:
+        return {"error": "not set template id"}
+    if not (json_dict.get('ip_address') is None):
+        ip_address = json_dict['ip_address']
+    else:
+        return {"error": "not set ip address"}
+    if not (json_dict.get('dns_ip_address') is None):
+        dns_ip_address = json_dict['dns_ip_address']
+    else:
+        return {"error": "not set dns ip address"} 
+    if not (json_dict.get('gw_ip_address') is None):
+        gw_ip_address = json_dict['gw_ip_address']
+    else:
+        return {"error": "not set gateway ip address"}
+    if not (json_dict.get('network_name') is None):
+        network_name = json_dict['network_name']
+    else:
+        return {"error": "not set network name"}
+    if not (json_dict.get('network_address') is None):
+        network_address = json_dict['network_address']
+    else:
+        return {"error": "not set network address"}   
     
+    
+    session=user_name+":"+user_password
+    one_user = pyone.OneServer("http://localhost:2633/RPC2", session)
+    
+    vm_root_password = password_generator(password_size, password_complexity) # Generating password for root user.
+    vm_user_password = password_generator(password_size, password_complexity) # Generating password for a simple user.
+
+    # Instantiate a new VM from a tempate
+    #try:    
+    vm_id = one_user.template.instantiate(template_id, vm_name, False, 
+    {
+    'TEMPLATE':{
+    'CONTEXT':{
+      'SSH_PUBLIC_KEY': '',
+      'START_SCRIPT_BASE64': base64.b64encode('echo -e "' + vm_root_password + '\n' + vm_root_password + '" | passwd root; echo -e "'
+                             + vm_user_password + '\n' + vm_user_password + '" | passwd ' + vm_user),
+    },
+    'NIC': {
+      'IP': ip_address,
+      'DNS': dns_ip_address,
+      'GATEWAY': gw_ip_address,
+      'NETWORK': network_name,
+      'NETWORK_ADDRESS': network_address
+    }
+    }}, 
+    True)
+    #except:
+    #    return {"error": "template instantiate error"}
+    
+    """ 
+    #Removing from VM template "START SCRIPT" for setting a passwords. 
+    try:
+        vm_id = one_user.vm.updateconf(80, 
+            {
+            'TEMPLATE':{
+                'CONTEXT':{
+    #             'DISK_ID': '1',
+                 'START_SCRIPT_BASE64': '',
+    #             'TARGET': 'hda'
+                 },  
+                'GRAPHICS':{ 
+                  'LISTEN': '0.0.0.0',
+                  'PORT': '5980',
+                  'TYPE': 'VNC'
+                },
+                'CPU_MODEL':{'host-passthrough'},
+                'OS':{'ARCH': 'x86_64','MACHINE': 'pc'}
+            },
+            }
+            )
+    except:
+        return {"error": "update vm error"}    
+    """   
+
+    #Removing VM template.
+    try:
+        one_user.template.delete(get_template_id(vm_name), False)
+    except:
+        return {"error": "removing vm template error"}
+        
+    return_message = {
+            "vm_id": vm_id,
+            "vm_root_password": vm_root_password,
+            "vm_user": vm_user,
+            "vm_user_password": vm_user_password,
+        }
+    
+    return return_message
+
 def vm_terminate(json_message):
     """
     Terminate VM
@@ -371,26 +486,36 @@ def vm_terminate(json_message):
         vm_id = json_dict['vm_id']
     else:
         return {"error": "not set vm id"}
+    if not (json_dict.get('user_id') is None):
+        user_id = json_dict['user_id']
+    else:
+        return {"error": "not set user id"}    
     
+    #Checking VM availability  
+    try:
+        vm_state = one.vm.info(one.vmpool.info(user_id,vm_id,vm_id,-1).VM[0].get_ID()).STATE
+    except IndexError:
+        return {"error": "list vm index out of range"}
+
+    #Getting information about VM disks
     template_disk_info = one.vm.info(vm_id).TEMPLATE["DISK"]
     
-    one.vm.action("terminate-hard", vm_id)      
+    #Terminating VM
+    one.vm.action("terminate-hard", vm_id)
+    
+    #Deleting disks images of VM
     if type(template_disk_info) is list:
+        #If the disk is not one
         i = 0
         while one.image.info(int(template_disk_info[i]["IMAGE_ID"])).STATE <> 1:
             time.sleep(1)
         while i < len(template_disk_info):
-            image_id = template_disk_info[i]["IMAGE_ID"]
-            print image_id
-            print one.image.info(int(image_id)).STATE
-            print one.image.delete(int(template_disk_info[i]["IMAGE_ID"]))
+            one.image.delete(int(template_disk_info[i]["IMAGE_ID"]))
             i += 1
     else:
+        #If the disk is one        
         while one.image.info(int(template_disk_info["IMAGE_ID"])).STATE <> 1:
             time.sleep(1)        
-        image_id = template_disk_info["IMAGE_ID"]
-        print image_id
-        print one.image.info(int(image_id)).STATE
-        print one.image.delete(int(template_disk_info["IMAGE_ID"]))
+        one.image.delete(int(template_disk_info["IMAGE_ID"]))
 
-    return "NOT DEFINED"
+    return {"action": "vm terminated"}
