@@ -340,7 +340,13 @@ def template_instantiate(json_message):
         print str(e)
         return {"error": str(e)}
     """ 
-   
+    #Removing VM template.
+    try:
+        one.template.delete(get_template_id(vm_name), False)
+    except Exception as e:
+        print str(e)
+        return {"error": str(e)}   
+        
     #Changing VM owner.
     try:
         one.vm.chown(vm_id, user_id, one.user.info(user_id).GID)
@@ -348,9 +354,20 @@ def template_instantiate(json_message):
         print str(e)
         return {"error": str(e)}
     
-    #Removing VM template.
+    #Getting information about VM disks
+    template_disk_info = one.vm.info(vm_id).TEMPLATE["DISK"]
+    
+    #Changing images owner.
     try:
-        one.template.delete(get_template_id(vm_name), False)
+        if type(template_disk_info) is list:
+            #If the disk is not one
+            i = 0
+            while i < len(template_disk_info):
+                one.image.chown(int(template_disk_info[i]["IMAGE_ID"]),user_id, one.user.info(user_id).GID)
+                i += 1
+        else:
+            #If the disk is one        
+            one.image.chown(int(template_disk_info["IMAGE_ID"]),user_id, one.user.info(user_id).GID)
     except Exception as e:
         print str(e)
         return {"error": str(e)}
@@ -512,18 +529,22 @@ def vm_terminate(json_message):
     one.vm.action("terminate-hard", vm_id)
     
     #Deleting disks images of VM
-    if type(template_disk_info) is list:
-        #If the disk is not one
-        i = 0
-        while one.image.info(int(template_disk_info[i]["IMAGE_ID"])).STATE <> 1:
-            time.sleep(1)
-        while i < len(template_disk_info):
-            one.image.delete(int(template_disk_info[i]["IMAGE_ID"]))
-            i += 1
-    else:
-        #If the disk is one        
-        while one.image.info(int(template_disk_info["IMAGE_ID"])).STATE <> 1:
-            time.sleep(1)        
-        one.image.delete(int(template_disk_info["IMAGE_ID"]))
-
+    try:
+        if type(template_disk_info) is list:
+            #If the disk is not one
+            i = 0
+            while one.image.info(int(template_disk_info[i]["IMAGE_ID"])).STATE <> 1:
+                time.sleep(1)
+            while i < len(template_disk_info):
+                one.image.delete(int(template_disk_info[i]["IMAGE_ID"]))
+                i += 1
+        else:
+            #If the disk is one        
+            while one.image.info(int(template_disk_info["IMAGE_ID"])).STATE <> 1:
+                time.sleep(1)        
+            one.image.delete(int(template_disk_info["IMAGE_ID"]))
+    except Exception as e:
+        print str(e)
+        return {"error": str(e)}
+        
     return {"action": "vm terminated"}

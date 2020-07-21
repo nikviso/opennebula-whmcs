@@ -1,0 +1,14 @@
+#Copy me to /lib/systemd/system/
+#And systemctl daemon-reload "systemctl daemon-reload"
+[Unit]
+Description=mtszmq service
+After=multi-user.target
+Conflicts=getty@tty1.service
+
+[Service]
+Type=simple
+ExecStart=/root/zmq-one-rpc-xml/mtszmq.py
+StandardInput=tty-force
+
+[Install]
+WantedBy=multi-user.target
