@@ -3,37 +3,54 @@
 $password = generate_password(6,0);
 echo "password: ".$password."\n";
 
-/**/
+/*
 $arr = array(
     "cmd" => "vm_terminate",
-    "vm_id" => 95,
+    "vm_id" => 116,
+    "user_id" => 6,    
 );
-
-/*
+*/
 $vm_name = "v1p253.clouds365.host";
+/*
 $arr = array(
-    "cmd" => "template_instantiate",
+    "cmd" => "template_instantiate_user",
     "user_id" => 6,
-    "user_group_id" => 100,
+    "user_name" => "test_user2",
+    "user_password" => "uxnCAy",
     "vm_name" => $vm_name,
     "template_id" => 6,
     "ip_address" => "192.168.55.253",
     "dns_ip_address" => "8.8.8.8",
     "gw_ip_address" => "192.168.55.1",
-    "network_name" => "network_v61",
+    "network_id" => 0,
+    "network_address" => "192.168.55.0",
+);
+*/
+/**/
+$arr = array(
+    "cmd" => "template_instantiate",
+    "user_id" => 6,
+    "vm_name" => $vm_name,
+    "template_id" => 6,
+    "ip_address" => "192.168.55.253",
+    "dns_ip_address" => "8.8.8.8",
+    "gw_ip_address" => "192.168.55.1",
+    "network_id" => "0",
     "network_address" => "192.168.55.0",
 );
 
+/*
 $arr = array(
     "cmd" => "user_allocate",
-    "user_name" => "test_user1",
+    "user_name" => "test_user2",
     "user_password" => $password,
 );
-
+*/
+/*
 $arr = array(
     "cmd" => "get_vm_state",
-    "user_id" => 3,
-    "vm_id" => 89,
+    "user_id" => 6,
+    "vm_id" => 96,
 );
 */
 

@@ -242,9 +242,9 @@ def user_allocate(json_message):
                 "user_id": one.user.allocate(user_name, user_password, '', user_group_id_array),
                 "user_group_id_array": user_group_id_array
             }
-    except:
-        return {"error": "user allocate error"}
-        
+    except Exception as e:
+        print str(e)
+        return {"error": str(e)}        
     
     return return_message
     
@@ -257,10 +257,6 @@ def template_instantiate(json_message):
         user_id = json_dict['user_id']
     else:
         return {"error": "not set user id"}
-    if not (json_dict.get('user_group_id') is None):
-        user_group_id = json_dict['user_group_id']
-    else:
-        return {"error": "not set user group id"}       
     if not (json_dict.get('vm_name') is None):
         vm_name = json_dict['vm_name']
     else:
@@ -281,10 +277,10 @@ def template_instantiate(json_message):
         gw_ip_address = json_dict['gw_ip_address']
     else:
         return {"error": "not set gateway ip address"}
-    if not (json_dict.get('network_name') is None):
-        network_name = json_dict['network_name']
+    if not (json_dict.get('network_id') is None):
+        network_id = json_dict['network_id']
     else:
-        return {"error": "not set network name"}
+        return {"error": "not set network id"}
     if not (json_dict.get('network_address') is None):
         network_address = json_dict['network_address']
     else:
@@ -301,6 +297,7 @@ def template_instantiate(json_message):
         'TEMPLATE':{
         'CONTEXT':{
           'SSH_PUBLIC_KEY': '',
+          'NETWORK': "YES",
           'START_SCRIPT_BASE64': base64.b64encode('echo -e "' + vm_root_password + '\n' + vm_root_password + '" | passwd root; echo -e "'
                                  + vm_user_password + '\n' + vm_user_password + '" | passwd ' + vm_user),
         },
@@ -308,13 +305,14 @@ def template_instantiate(json_message):
           'IP': ip_address,
           'DNS': dns_ip_address,
           'GATEWAY': gw_ip_address,
-          'NETWORK': network_name,
+          'NETWORK_ID': network_id,
           'NETWORK_ADDRESS': network_address
         }
         }}, 
-        True)
-    except:
-        return {"error": "template instantiate error"}
+        True)   
+    except Exception as e:
+        print str(e)
+        return {"error": str(e)}
     
     """ 
     #Removing from VM template "START SCRIPT" for setting a passwords. 
@@ -324,7 +322,8 @@ def template_instantiate(json_message):
             'TEMPLATE':{
                 'CONTEXT':{
     #             'DISK_ID': '1',
-                 'START_SCRIPT_BASE64': '',
+                  'NETWORK': "YES",
+                  'START_SCRIPT_BASE64': '',
     #             'TARGET': 'hda'
                  },  
                 'GRAPHICS':{ 
@@ -337,21 +336,24 @@ def template_instantiate(json_message):
             },
             }
             )
-    except:
-        return {"error": "update vm error"}    
-    """   
-    
+    except Exception as e:
+        print str(e)
+        return {"error": str(e)}
+    """ 
+   
     #Changing VM owner.
     try:
-        one.vm.chown(vm_id, user_id, user_group_id)
-    except:
-        return {"error": "change vm owner error"}
+        one.vm.chown(vm_id, user_id, one.user.info(user_id).GID)
+    except Exception as e:
+        print str(e)
+        return {"error": str(e)}
     
     #Removing VM template.
     try:
         one.template.delete(get_template_id(vm_name), False)
-    except:
-        return {"error": "removing vm template error"}
+    except Exception as e:
+        print str(e)
+        return {"error": str(e)}
         
     return_message = {
             "vm_id": vm_id,
@@ -399,10 +401,10 @@ def template_instantiate_user(json_message):
         gw_ip_address = json_dict['gw_ip_address']
     else:
         return {"error": "not set gateway ip address"}
-    if not (json_dict.get('network_name') is None):
-        network_name = json_dict['network_name']
+    if not (json_dict.get('network_id') is None):
+        network_id = json_dict['network_id']
     else:
-        return {"error": "not set network name"}
+        return {"error": "not set network id"}
     if not (json_dict.get('network_address') is None):
         network_address = json_dict['network_address']
     else:
@@ -416,26 +418,29 @@ def template_instantiate_user(json_message):
     vm_user_password = password_generator(password_size, password_complexity) # Generating password for a simple user.
 
     # Instantiate a new VM from a tempate
-    #try:    
-    vm_id = one_user.template.instantiate(template_id, vm_name, False, 
-    {
-    'TEMPLATE':{
-    'CONTEXT':{
-      'SSH_PUBLIC_KEY': '',
-      'START_SCRIPT_BASE64': base64.b64encode('echo -e "' + vm_root_password + '\n' + vm_root_password + '" | passwd root; echo -e "'
-                             + vm_user_password + '\n' + vm_user_password + '" | passwd ' + vm_user),
-    },
-    'NIC': {
-      'IP': ip_address,
-      'DNS': dns_ip_address,
-      'GATEWAY': gw_ip_address,
-      'NETWORK': network_name,
-      'NETWORK_ADDRESS': network_address
-    }
-    }}, 
-    True)
-    #except:
-    #    return {"error": "template instantiate error"}
+    try:    
+        vm_id = one_user.template.instantiate(template_id, vm_name, False, 
+        {
+            'TEMPLATE':{
+                'CONTEXT':{
+                  'SSH_PUBLIC_KEY': '',
+                  'NETWORK': "YES",
+                  'START_SCRIPT_BASE64': base64.b64encode('echo -e "' + vm_root_password + '\n' + vm_root_password + '" | passwd root; echo -e "'
+                                         + vm_user_password + '\n' + vm_user_password + '" | passwd ' + vm_user),
+                },
+                'NIC': {
+                  'IP': ip_address,
+                  'DNS': dns_ip_address,
+                  'GATEWAY': gw_ip_address,
+                  'NETWORK_ID': "0",
+                  'NETWORK_ADDRESS': network_address
+                }
+            }
+        }, 
+        True)
+    except Exception as e:
+        print str(e)
+        return {"error": str(e)}
     
     """ 
     #Removing from VM template "START SCRIPT" for setting a passwords. 
@@ -445,7 +450,8 @@ def template_instantiate_user(json_message):
             'TEMPLATE':{
                 'CONTEXT':{
     #             'DISK_ID': '1',
-                 'START_SCRIPT_BASE64': '',
+                  'NETWORK': "YES",
+                  'START_SCRIPT_BASE64': '',
     #             'TARGET': 'hda'
                  },  
                 'GRAPHICS':{ 
@@ -458,15 +464,17 @@ def template_instantiate_user(json_message):
             },
             }
             )
-    except:
-        return {"error": "update vm error"}    
+    except Exception as e:
+        print str(e)
+        return {"error": str(e)}
     """   
 
     #Removing VM template.
     try:
         one_user.template.delete(get_template_id(vm_name), False)
-    except:
-        return {"error": "removing vm template error"}
+    except Exception as e:
+        print str(e)
+        return {"error": str(e)}
         
     return_message = {
             "vm_id": vm_id,
