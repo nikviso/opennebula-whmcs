@@ -12,6 +12,7 @@ from config import *
 from security.aes_cbc import *
 from commands.commands import *
 
+  
 def worker_routine(worker_url, key, context=None):
     """
     Worker routine
@@ -29,11 +30,9 @@ def worker_routine(worker_url, key, context=None):
 
 #        json_recive  = socket.recv()
         json_recive  = AESobj.decrypt(socket.recv())
-            
-        print("Received request: [ %s ]" % (json_recive))
-
-        #time.sleep(1)
         
+        #time.sleep(1)
+       
         json_reply = json.dumps(command_switcher(json_recive))
         
         #send reply back to client

@@ -1,13 +1,21 @@
 import json
 import random
 import time
+import logging
 from config import *
+
+"""
+Setting basic configuration for logging
+"""
+logging.basicConfig(level=logging.DEBUG, filename=logfile_name, filemode='a', format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', 
+                   datefmt='%d-%b-%y %H:%M:%S')
 
 def command_switcher(json_message):
     """
     Get command from JSON message. Selecting by command and execute function.  
     """
-    
+    message_id = message_id_generator()
+    logging_local("Received request" , json_message, message_id)    
     try:
         json_dict = json.loads(json_message)
         cmd =  json_dict['cmd']
@@ -23,24 +31,40 @@ def command_switcher(json_message):
         # Get the function from switcher dictionary
         cmd_execute = switcher.get(cmd, lambda null_argument: {"error": "invalid command"})
         # Execute the function
-        return cmd_execute(json_message)
+        json_reply = cmd_execute(json_message)
+        logging_local("Sended reply" , json_reply, message_id)
+        return json_reply
     except ValueError:
+        logging_local("Sended reply" , {"error": "string could not be converted to json"}, message_id)
         return {"error": "string could not be converted to json"}
+
+def logging_local(sendrecive, message, message_id):
+    #json_dict = json.loads(message)
+    if 'error' in message:
+        logging.error("Message ID: %s, %s: %s" % (message_id, sendrecive, message))
+    else:    
+    #    if 'user_password' in message:
+    #        message['user_password'] = ' '
+        logging.info("Message ID: %s, %s: %s" % (message_id, sendrecive, message))
+    
+def message_id_generator(size = 8):
+    s = "0123456789ABCDEF"
+    return "".join(random.sample(s,size ))    
 
 def password_generator(size = 16, complexity = 1):
     """
     Password generator.
     """    
     if not complexity:
-        s = "abcdefghijklmnopqrstuvwxyz01234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        s = "abcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
     else:
-        s = "abcdefghijklmnopqrstuvwxyz01234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()?{}[]\/<>.,~"
+        s = "abcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()?{}[]\/<>.,~"
     
     return "".join(random.sample(s,size ))
     
 def get_template_id(template_name):
     """
-    Get TEMPLATE ID by TEMPLATE NAME.
+    Getting TEMPLATE ID by TEMPLATE NAME.
     """
     templatepoolInfo = one.templatepool.info(-2, -1, -1)
     templatelist = templatepoolInfo.get_VMTEMPLATE()
@@ -50,7 +74,7 @@ def get_template_id(template_name):
     
 def get_user_id(user_name):
     """
-    Get USER ID by USER NAME. (Asymptotic O(n), FIXME!!!!)
+    Getting USER ID by USER NAME. (Asymptotic O(n), FIXME!!!!)
     """
     userpoolInfo = one.userpool.info()
     userlist = userpoolInfo.get_USER()
@@ -98,7 +122,7 @@ def switch_vm_state(state):
     
 def get_vm_state(json_message):
     """
-    Get state of one VM of user by VM NAME or VM ID.
+    Getting state of one VM of user by VM NAME or VM ID.
     """
     
     json_dict = json.loads(json_message)
@@ -168,7 +192,7 @@ def get_vm_state(json_message):
 
 def get_all_vm_state(json_message):
     """
-    Get state all VMs of user by USERNAME or USER ID.
+    Getting state all VMs of user by USERNAME or USER ID.
     """
     
     json_dict = json.loads(json_message)
@@ -236,6 +260,7 @@ def user_allocate(json_message):
     user_group_id_array = []
     user_group_id_array.append(user_group_allocate(user_name))
     """
+    
     try:
         return_message = {
                 "user_name": user_name,

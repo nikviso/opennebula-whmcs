@@ -42,3 +42,8 @@ Size and complexity password for VM users
 """
 password_size = 6
 password_complexity = 0
+
+"""
+Setting log file path 
+"""
+logfile_name = 'app.log'
