@@ -1,0 +1,88 @@
+23-Jul-20 17:17:31 - root - ERROR - Message ID: 7398E650, Sended reply: {'error': 'list vm index out of range'}
+23-Jul-20 17:19:02 - root - ERROR - Message ID: 6F93B4E2, Sended reply: {'error': 'list vm index out of range'}
+23-Jul-20 17:19:25 - root - ERROR - Message ID: B6ACED2F, Sended reply: {'error': 'list vm index out of range'}
+23-Jul-20 17:20:41 - root - ERROR - Message ID: 1280F547, Sended reply: {'error': 'list vm index out of range'}
+23-Jul-20 17:21:45 - root - INFO - Message ID: 6EC258D3, Received request: {u'vm_id': 155, u'cmd': u'vm_terminate', u'user_id': 6}
+23-Jul-20 17:21:45 - root - ERROR - Message ID: 6EC258D3, Sended reply: {'error': 'list vm index out of range'}
+23-Jul-20 17:21:45 - root - INFO - Message ID: 6EC258D3, Sended reply: {'error': 'list vm index out of range'}
+23-Jul-20 17:23:28 - root - INFO - Message ID: 96F2780C, Received request: {u'vm_id': 155, u'cmd': u'vm_terminate', u'user_id': 6}
+23-Jul-20 17:23:28 - root - ERROR - Message ID: 96F2780C, Sended reply: {'error': 'list vm index out of range'}
+23-Jul-20 17:24:04 - root - ERROR - Message ID: 5876EAF3, Sended reply: {'error': 'list vm index out of range'}
+23-Jul-20 17:34:19 - root - ERROR - Message ID: 504721FC, Sended reply: {'error': 'list vm index out of range'}
+23-Jul-20 17:34:42 - root - INFO - Message ID: 175D426B, Received request: {u'vm_id': 155, u'cmd': u'vm_terminate', u'user_id': 6}
+23-Jul-20 17:34:42 - root - ERROR - Message ID: 175D426B, Sended reply: {'error': 'list vm index out of range'}
+23-Jul-20 17:39:24 - root - INFO - Message ID: C1B2A89F, Received request: {u'user_password': u'*******', u'cmd': u'user_allocate', u'user_name': u'test_user2', u'user_group_id_array': 100}
+23-Jul-20 17:39:24 - root - INFO - Message ID: C1B2A89F, Sended reply: {'user_name': u'test_user2', 'user_id': 9, 'user_group_id_array': [100]}
+23-Jul-20 17:40:35 - root - INFO - Message ID: 59A30416, Received request: {u'0': 104, u'user_password': u'*******', u'cmd': u'user_allocate', u'user_name': u'test_user2', u'user_group_id_array': 100}
+23-Jul-20 17:40:35 - root - INFO - Message ID: 59A30416, Sended reply: {'user_name': u'test_user2', 'user_id': 10, 'user_group_id_array': [100]}
+23-Jul-20 17:41:42 - root - INFO - Message ID: 09C35E2A, Received request: {u'0': 104, u'user_password': u'*******', u'cmd': u'user_allocate', u'user_name': u'test_user2', u'user_group_id_array': 100}
+23-Jul-20 17:41:42 - root - ERROR - Message ID: 09C35E2A, Sended reply: {'error': "<Fault -501: 'Parameter that is supposed to be an array is not'>"}
+23-Jul-20 17:45:42 - root - INFO - Message ID: D6408AEB, Received request: {u'user_password': u'*******', u'cmd': u'user_allocate', u'user_name': u'test_user2', u'user_group_id_array': [100, 104]}
+23-Jul-20 17:45:42 - root - INFO - Message ID: D6408AEB, Sended reply: {'user_name': u'test_user2', 'user_id': 11, 'user_group_id_array': [100, 104]}
+23-Jul-20 17:46:50 - root - INFO - Message ID: 48B7209E, Received request: {u'user_password': u'*******', u'cmd': u'user_allocate', u'user_name': u'test_user2', u'user_group_id_array': [100]}
+23-Jul-20 17:46:50 - root - INFO - Message ID: 48B7209E, Sended reply: {'user_name': u'test_user2', 'user_id': 12, 'user_group_id_array': [100]}
+23-Jul-20 17:49:14 - root - INFO - Message ID: F145C20D, Received request: {u'vm_name': u'v1p253.clouds365.host', u'user_id': 6, u'network_id': u'0', u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.253', u'template_id': 6}
+23-Jul-20 17:49:14 - dicttoxml - INFO - Inside dicttoxml(): type(obj) is: "dict", obj="{'TEMPLATE': {'NIC': {'NETWORK_ID': u'0', 'IP': u'192.168.55.253', 'NETWORK_ADDRESS': u'192.168.55.0', 'GATEWAY': u'192.168.55.1', 'DNS': u'8.8.8.8'}, 'CONTEXT': {'SSH_PUBLIC_KEY': '', 'NETWORK': 'YES', 'START_SCRIPT_BASE64': 'ZWNobyAtZSAidnlCQ3BFCnZ5QkNwRSIgfCBwYXNzd2Qgcm9vdDsgZWNobyAtZSAib1k1ekVQCm9ZNXpFUCIgfCBwYXNzd2QgZGViaWFu'}}}"
+23-Jul-20 17:49:14 - dicttoxml - INFO - Inside convert(). obj type is: "dict", obj="{'TEMPLATE': {'NIC': {'NETWORK_ID': u'0', 'IP': u'192.168.55.253', 'NETWORK_ADDRESS': u'192.168.55.0', 'GATEWAY': u'192.168.55.1', 'DNS': u'8.8.8.8'}, 'CONTEXT': {'SSH_PUBLIC_KEY': '', 'NETWORK': 'YES', 'START_SCRIPT_BASE64': 'ZWNobyAtZSAidnlCQ3BFCnZ5QkNwRSIgfCBwYXNzd2Qgcm9vdDsgZWNobyAtZSAib1k1ekVQCm9ZNXpFUCIgfCBwYXNzd2QgZGViaWFu'}}}"
+23-Jul-20 17:49:14 - dicttoxml - INFO - Inside convert_dict(): obj type is: "dict", obj="{'TEMPLATE': {'NIC': {'NETWORK_ID': u'0', 'IP': u'192.168.55.253', 'NETWORK_ADDRESS': u'192.168.55.0', 'GATEWAY': u'192.168.55.1', 'DNS': u'8.8.8.8'}, 'CONTEXT': {'SSH_PUBLIC_KEY': '', 'NETWORK': 'YES', 'START_SCRIPT_BASE64': 'ZWNobyAtZSAidnlCQ3BFCnZ5QkNwRSIgfCBwYXNzd2Qgcm9vdDsgZWNobyAtZSAib1k1ekVQCm9ZNXpFUCIgfCBwYXNzd2QgZGViaWFu'}}}"
+23-Jul-20 17:49:14 - dicttoxml - INFO - Looping inside convert_dict(): key="TEMPLATE", val="{'NIC': {'NETWORK_ID': u'0', 'IP': u'192.168.55.253', 'NETWORK_ADDRESS': u'192.168.55.0', 'GATEWAY': u'192.168.55.1', 'DNS': u'8.8.8.8'}, 'CONTEXT': {'SSH_PUBLIC_KEY': '', 'NETWORK': 'YES', 'START_SCRIPT_BASE64': 'ZWNobyAtZSAidnlCQ3BFCnZ5QkNwRSIgfCBwYXNzd2Qgcm9vdDsgZWNobyAtZSAib1k1ekVQCm9ZNXpFUCIgfCBwYXNzd2QgZGViaWFu'}}", type(val)="dict"
+23-Jul-20 17:49:14 - dicttoxml - INFO - Inside make_valid_xml_name(). Testing key "TEMPLATE" with attr "{}"
+23-Jul-20 17:49:14 - dicttoxml - INFO - Inside key_is_valid_xml(). Testing "TEMPLATE"
+23-Jul-20 17:49:14 - dicttoxml - INFO - Inside convert_dict(): obj type is: "dict", obj="{'NIC': {'NETWORK_ID': u'0', 'IP': u'192.168.55.253', 'NETWORK_ADDRESS': u'192.168.55.0', 'GATEWAY': u'192.168.55.1', 'DNS': u'8.8.8.8'}, 'CONTEXT': {'SSH_PUBLIC_KEY': '', 'NETWORK': 'YES', 'START_SCRIPT_BASE64': 'ZWNobyAtZSAidnlCQ3BFCnZ5QkNwRSIgfCBwYXNzd2Qgcm9vdDsgZWNobyAtZSAib1k1ekVQCm9ZNXpFUCIgfCBwYXNzd2QgZGViaWFu'}}"
+23-Jul-20 17:49:14 - dicttoxml - INFO - Looping inside convert_dict(): key="NIC", val="{'NETWORK_ID': u'0', 'IP': u'192.168.55.253', 'NETWORK_ADDRESS': u'192.168.55.0', 'GATEWAY': u'192.168.55.1', 'DNS': u'8.8.8.8'}", type(val)="dict"
+23-Jul-20 17:49:14 - dicttoxml - INFO - Inside make_valid_xml_name(). Testing key "NIC" with attr "{}"
+23-Jul-20 17:49:14 - dicttoxml - INFO - Inside key_is_valid_xml(). Testing "NIC"
+23-Jul-20 17:49:14 - dicttoxml - INFO - Inside convert_dict(): obj type is: "dict", obj="{'NETWORK_ID': u'0', 'IP': u'192.168.55.253', 'NETWORK_ADDRESS': u'192.168.55.0', 'GATEWAY': u'192.168.55.1', 'DNS': u'8.8.8.8'}"
+23-Jul-20 17:49:14 - dicttoxml - INFO - Looping inside convert_dict(): key="NETWORK_ID", val="0", type(val)="unicode"
+23-Jul-20 17:49:14 - dicttoxml - INFO - Inside make_valid_xml_name(). Testing key "NETWORK_ID" with attr "{}"
+23-Jul-20 17:49:14 - dicttoxml - INFO - Inside key_is_valid_xml(). Testing "NETWORK_ID"
+23-Jul-20 17:49:14 - dicttoxml - INFO - Inside convert_kv(): key="NETWORK_ID", val="0", type(val) is: "unicode"
+23-Jul-20 17:49:14 - dicttoxml - INFO - Inside make_valid_xml_name(). Testing key "NETWORK_ID" with attr "{}"
+23-Jul-20 17:49:14 - dicttoxml - INFO - Inside key_is_valid_xml(). Testing "NETWORK_ID"
+23-Jul-20 17:49:14 - dicttoxml - INFO - Looping inside convert_dict(): key="IP", val="192.168.55.253", type(val)="unicode"
+23-Jul-20 17:49:14 - dicttoxml - INFO - Inside make_valid_xml_name(). Testing key "IP" with attr "{}"
+23-Jul-20 17:49:14 - dicttoxml - INFO - Inside key_is_valid_xml(). Testing "IP"
+23-Jul-20 17:49:14 - dicttoxml - INFO - Inside convert_kv(): key="IP", val="192.168.55.253", type(val) is: "unicode"
+23-Jul-20 17:49:14 - dicttoxml - INFO - Inside make_valid_xml_name(). Testing key "IP" with attr "{}"
+23-Jul-20 17:49:14 - dicttoxml - INFO - Inside key_is_valid_xml(). Testing "IP"
+23-Jul-20 17:49:14 - dicttoxml - INFO - Looping inside convert_dict(): key="NETWORK_ADDRESS", val="192.168.55.0", type(val)="unicode"
+23-Jul-20 17:49:14 - dicttoxml - INFO - Inside make_valid_xml_name(). Testing key "NETWORK_ADDRESS" with attr "{}"
+23-Jul-20 17:49:14 - dicttoxml - INFO - Inside key_is_valid_xml(). Testing "NETWORK_ADDRESS"
+23-Jul-20 17:49:14 - dicttoxml - INFO - Inside convert_kv(): key="NETWORK_ADDRESS", val="192.168.55.0", type(val) is: "unicode"
+23-Jul-20 17:49:14 - dicttoxml - INFO - Inside make_valid_xml_name(). Testing key "NETWORK_ADDRESS" with attr "{}"
+23-Jul-20 17:49:14 - dicttoxml - INFO - Inside key_is_valid_xml(). Testing "NETWORK_ADDRESS"
+23-Jul-20 17:49:14 - dicttoxml - INFO - Looping inside convert_dict(): key="GATEWAY", val="192.168.55.1", type(val)="unicode"
+23-Jul-20 17:49:14 - dicttoxml - INFO - Inside make_valid_xml_name(). Testing key "GATEWAY" with attr "{}"
+23-Jul-20 17:49:14 - dicttoxml - INFO - Inside key_is_valid_xml(). Testing "GATEWAY"
+23-Jul-20 17:49:14 - dicttoxml - INFO - Inside convert_kv(): key="GATEWAY", val="192.168.55.1", type(val) is: "unicode"
+23-Jul-20 17:49:14 - dicttoxml - INFO - Inside make_valid_xml_name(). Testing key "GATEWAY" with attr "{}"
+23-Jul-20 17:49:14 - dicttoxml - INFO - Inside key_is_valid_xml(). Testing "GATEWAY"
+23-Jul-20 17:49:14 - dicttoxml - INFO - Looping inside convert_dict(): key="DNS", val="8.8.8.8", type(val)="unicode"
+23-Jul-20 17:49:14 - dicttoxml - INFO - Inside make_valid_xml_name(). Testing key "DNS" with attr "{}"
+23-Jul-20 17:49:14 - dicttoxml - INFO - Inside key_is_valid_xml(). Testing "DNS"
+23-Jul-20 17:49:14 - dicttoxml - INFO - Inside convert_kv(): key="DNS", val="8.8.8.8", type(val) is: "unicode"
+23-Jul-20 17:49:14 - dicttoxml - INFO - Inside make_valid_xml_name(). Testing key "DNS" with attr "{}"
+23-Jul-20 17:49:14 - dicttoxml - INFO - Inside key_is_valid_xml(). Testing "DNS"
+23-Jul-20 17:49:14 - dicttoxml - INFO - Looping inside convert_dict(): key="CONTEXT", val="{'SSH_PUBLIC_KEY': '', 'NETWORK': 'YES', 'START_SCRIPT_BASE64': 'ZWNobyAtZSAidnlCQ3BFCnZ5QkNwRSIgfCBwYXNzd2Qgcm9vdDsgZWNobyAtZSAib1k1ekVQCm9ZNXpFUCIgfCBwYXNzd2QgZGViaWFu'}", type(val)="dict"
+23-Jul-20 17:49:14 - dicttoxml - INFO - Inside make_valid_xml_name(). Testing key "CONTEXT" with attr "{}"
+23-Jul-20 17:49:14 - dicttoxml - INFO - Inside key_is_valid_xml(). Testing "CONTEXT"
+23-Jul-20 17:49:14 - dicttoxml - INFO - Inside convert_dict(): obj type is: "dict", obj="{'SSH_PUBLIC_KEY': '', 'NETWORK': 'YES', 'START_SCRIPT_BASE64': 'ZWNobyAtZSAidnlCQ3BFCnZ5QkNwRSIgfCBwYXNzd2Qgcm9vdDsgZWNobyAtZSAib1k1ekVQCm9ZNXpFUCIgfCBwYXNzd2QgZGViaWFu'}"
+23-Jul-20 17:49:14 - dicttoxml - INFO - Looping inside convert_dict(): key="SSH_PUBLIC_KEY", val="", type(val)="str"
+23-Jul-20 17:49:14 - dicttoxml - INFO - Inside make_valid_xml_name(). Testing key "SSH_PUBLIC_KEY" with attr "{}"
+23-Jul-20 17:49:14 - dicttoxml - INFO - Inside key_is_valid_xml(). Testing "SSH_PUBLIC_KEY"
+23-Jul-20 17:49:14 - dicttoxml - INFO - Inside convert_kv(): key="SSH_PUBLIC_KEY", val="", type(val) is: "str"
+23-Jul-20 17:49:14 - dicttoxml - INFO - Inside make_valid_xml_name(). Testing key "SSH_PUBLIC_KEY" with attr "{}"
+23-Jul-20 17:49:14 - dicttoxml - INFO - Inside key_is_valid_xml(). Testing "SSH_PUBLIC_KEY"
+23-Jul-20 17:49:14 - dicttoxml - INFO - Looping inside convert_dict(): key="NETWORK", val="YES", type(val)="str"
+23-Jul-20 17:49:14 - dicttoxml - INFO - Inside make_valid_xml_name(). Testing key "NETWORK" with attr "{}"
+23-Jul-20 17:49:14 - dicttoxml - INFO - Inside key_is_valid_xml(). Testing "NETWORK"
+23-Jul-20 17:49:14 - dicttoxml - INFO - Inside convert_kv(): key="NETWORK", val="YES", type(val) is: "str"
+23-Jul-20 17:49:14 - dicttoxml - INFO - Inside make_valid_xml_name(). Testing key "NETWORK" with attr "{}"
+23-Jul-20 17:49:14 - dicttoxml - INFO - Inside key_is_valid_xml(). Testing "NETWORK"
+23-Jul-20 17:49:14 - dicttoxml - INFO - Looping inside convert_dict(): key="START_SCRIPT_BASE64", val="ZWNobyAtZSAidnlCQ3BFCnZ5QkNwRSIgfCBwYXNzd2Qgcm9vdDsgZWNobyAtZSAib1k1ekVQCm9ZNXpFUCIgfCBwYXNzd2QgZGViaWFu", type(val)="str"
+23-Jul-20 17:49:14 - dicttoxml - INFO - Inside make_valid_xml_name(). Testing key "START_SCRIPT_BASE64" with attr "{}"
+23-Jul-20 17:49:14 - dicttoxml - INFO - Inside key_is_valid_xml(). Testing "START_SCRIPT_BASE64"
+23-Jul-20 17:49:14 - dicttoxml - INFO - Inside convert_kv(): key="START_SCRIPT_BASE64", val="ZWNobyAtZSAidnlCQ3BFCnZ5QkNwRSIgfCBwYXNzd2Qgcm9vdDsgZWNobyAtZSAib1k1ekVQCm9ZNXpFUCIgfCBwYXNzd2QgZGViaWFu", type(val) is: "str"
+23-Jul-20 17:49:14 - dicttoxml - INFO - Inside make_valid_xml_name(). Testing key "START_SCRIPT_BASE64" with attr "{}"
+23-Jul-20 17:49:14 - dicttoxml - INFO - Inside key_is_valid_xml(). Testing "START_SCRIPT_BASE64"
+23-Jul-20 17:49:15 - root - INFO - Message ID: F145C20D, Sended reply: {'vm_id': 158, 'vm_root_password': u'*******', 'vm_user': 'debian', 'vm_user_password': u'*******'}
