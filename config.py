@@ -46,4 +46,4 @@ password_complexity = 0
 """
 Setting log file path 
 """
-logfile_name = 'app.log'
+logfile_name = '/root/zmq-one-rpc-xml/mtszmq.log'

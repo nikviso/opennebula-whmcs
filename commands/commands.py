@@ -2,6 +2,7 @@ import json
 import random
 import time
 import logging
+import copy
 from config import *
 
 """
@@ -12,12 +13,12 @@ logging.basicConfig(level=logging.DEBUG, filename=logfile_name, filemode='a', fo
 
 def command_switcher(json_message):
     """
-    Get command from JSON message. Selecting by command and execute function.  
+    Getting command from JSON message. Selecting by command and execute function.  
     """
     message_id = message_id_generator()
-    logging_local("Received request" , json_message, message_id)    
     try:
         json_dict = json.loads(json_message)
+        logging_local("Received request" , json_dict, message_id)
         cmd =  json_dict['cmd']
         switcher = {
             'get_vm_state': get_vm_state,
@@ -38,14 +39,17 @@ def command_switcher(json_message):
         logging_local("Sended reply" , {"error": "string could not be converted to json"}, message_id)
         return {"error": "string could not be converted to json"}
 
-def logging_local(sendrecive, message, message_id):
-    #json_dict = json.loads(message)
-    if 'error' in message:
-        logging.error("Message ID: %s, %s: %s" % (message_id, sendrecive, message))
+def logging_local(sendrecive, in_message, message_id):
+    out_message = copy.copy(in_message)
+    if 'error' in out_message:
+        logging.error("Message ID: %s, %s: %s" % (message_id, sendrecive, out_message))
     else:    
-    #    if 'user_password' in message:
-    #        message['user_password'] = ' '
-        logging.info("Message ID: %s, %s: %s" % (message_id, sendrecive, message))
+        if 'user_password' in out_message:
+            out_message['user_password'] = u'*******'
+        if 'vm_user_password' in out_message or 'vm_root_password' in out_message:
+            out_message['vm_user_password'] = u'*******'
+            out_message['vm_root_password'] = u'*******'            
+        logging.info("Message ID: %s, %s: %s" % (message_id, sendrecive, out_message))
     
 def message_id_generator(size = 8):
     s = "0123456789ABCDEF"
@@ -183,7 +187,7 @@ def get_vm_state(json_message):
     elif vm_id and not vm_name:
         return_message =  {
             "vm_id": vm_id,
-            "vm_state": switch_vm_state(vm_state)
+            "vm_state": switch_vm_state(vm_state),
         }
     else:
         return_message = {"error": "error vm state return"}
@@ -225,7 +229,7 @@ def get_all_vm_state(json_message):
         return_message.append({
             "vm_id": vm.ID,
             "vm_name": vm.NAME,
-            "vm_state": switch_vm_state(vm.STATE)
+            "vm_state": switch_vm_state(vm.STATE),
         },)
     return_message = '{"vms_state": ' + json.dumps(return_message) + '}'
 
@@ -253,14 +257,13 @@ def user_allocate(json_message):
     if not (json_dict.get('user_password') is None):
         user_password = json_dict['user_password']
     else:
-        return {"error": "not set user password"} 
-
-    user_group_id_array = [100]
-    """    
-    user_group_id_array = []
-    user_group_id_array.append(user_group_allocate(user_name))
-    """
-    
+        return {"error": "not set user password"}
+    if (json_dict.get('user_group_id_array')):
+        user_group_id_array = json_dict.get('user_group_id_array')
+    else:    
+        user_group_id_array = []
+        user_group_id_array.append(user_group_allocate(user_name))
+   
     try:
         return_message = {
                 "user_name": user_name,
