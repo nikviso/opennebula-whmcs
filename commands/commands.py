@@ -273,7 +273,6 @@ def user_allocate(json_message):
                 "user_group_id_array": user_group_id_array
             }
     except Exception as e:
-        print str(e)
         return {"error": str(e)}        
     
     return return_message
@@ -283,10 +282,6 @@ def template_instantiate(json_message):
     Instantiates a new virtual machine from a template.
     """
     json_dict = json.loads(json_message)
-    if not (json_dict.get('user_id') is None):
-        user_id = json_dict['user_id']
-    else:
-        return {"error": "not set user id"}
     if not (json_dict.get('vm_name') is None):
         vm_name = json_dict['vm_name']
         try:
@@ -296,6 +291,10 @@ def template_instantiate(json_message):
             pass
     else:
         return {"error": "not set vm name"}     
+    if not (json_dict.get('user_id') is None):
+        user_id = json_dict['user_id']
+    else:
+        return {"error": "not set user id"}
     if not (json_dict.get('template_id') is None):
         template_id = json_dict['template_id']
     else:
@@ -347,7 +346,6 @@ def template_instantiate(json_message):
         True)   
     except Exception as e:
         template_terminate(vm_name)       
-        print str(e)
         return {"error": str(e)}
     
     """ 
@@ -373,7 +371,6 @@ def template_instantiate(json_message):
             }
             )
     except Exception as e:
-        print str(e)
         return {"error": str(e)}
     """ 
     #Removing VM template.
@@ -383,7 +380,6 @@ def template_instantiate(json_message):
     try:
         one.vm.chown(vm_id, user_id, one.user.info(user_id).GID)
     except Exception as e:
-        print str(e)
         return {"error": str(e)}
     
     #Getting information about VM disks
@@ -401,7 +397,6 @@ def template_instantiate(json_message):
             #If the disk is one        
             one.image.chown(int(template_disk_info["IMAGE_ID"]),user_id, one.user.info(user_id).GID)
     except Exception as e:
-        print str(e)
         return {"error": str(e)}
         
     return_message = {
@@ -418,6 +413,15 @@ def template_instantiate_user(json_message):
     Instantiates a new virtual machine from a template.
     """
     json_dict = json.loads(json_message)
+    if not (json_dict.get('vm_name') is None):
+        vm_name = json_dict['vm_name']
+        try:
+            one.vmpool.info(-2,-1,-1,-1,vm_name).VM[0]
+            return {"error": "vm with this name already allocated"}
+        except IndexError:
+            pass        
+    else:
+        return {"error": "not set vm name"}     
     if not (json_dict.get('user_id') is None):
         user_id = json_dict['user_id']
     else:
@@ -430,15 +434,6 @@ def template_instantiate_user(json_message):
         user_password = json_dict['user_password']
     else:
         return {"error": "not set user password"}       
-    if not (json_dict.get('vm_name') is None):
-        vm_name = json_dict['vm_name']
-        try:
-            one.vmpool.info(-2,-1,-1,-1,vm_name).VM[0]
-            return {"error": "vm with this name already allocated"}
-        except IndexError:
-            pass        
-    else:
-        return {"error": "not set vm name"}     
     if not (json_dict.get('template_id') is None):
         template_id = json_dict['template_id']
     else:
@@ -494,7 +489,6 @@ def template_instantiate_user(json_message):
         True)
     except Exception as e:
         template_terminate(vm_name)
-        print str(e)
         return {"error": str(e)}
     
     """ 
@@ -520,7 +514,6 @@ def template_instantiate_user(json_message):
             }
             )
     except Exception as e:
-        print str(e)
         return {"error": str(e)}
     """   
 
@@ -563,7 +556,6 @@ def vm_terminate(json_message):
     try:
         one.vm.action("terminate-hard", vm_id)
     except Exception as e:
-        print str(e)
         return {"error": str(e)}
         
     #Deleting disks images of VM
@@ -582,7 +574,6 @@ def vm_terminate(json_message):
                 time.sleep(1)        
             one.image.delete(int(template_disk_info["IMAGE_ID"]))
     except Exception as e:
-        print str(e)
         return {"error": str(e)}
         
     return {"action": "vm terminated"}
@@ -624,7 +615,6 @@ def vm_action(json_message):
     try:
         one.vm.action(action, vm_id)
     except Exception as e:
-        print str(e)
         return {"error": str(e)}
         
     
