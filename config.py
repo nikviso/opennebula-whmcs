@@ -44,6 +44,6 @@ password_size = 6
 password_complexity = 0
 
 """
-Setting log file path 
+Logger initialization file path 
 """
-logfile_name = '/root/zmq-one-rpc-xml/mtszmq.log'
+loggerini_file = '/root/zmq-one-rpc-xml/logger.ini'

@@ -2,14 +2,20 @@ import json
 import random
 import time
 import logging
+import logging.config
 import copy
 from config import *
 
 """
 Setting basic configuration for logging
 """
-logging.basicConfig(level=logging.DEBUG, filename=logfile_name, filemode='a', format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', 
-                   datefmt='%d-%b-%y %H:%M:%S')
+"""
+class LogFilter(logging.Filter):
+    def filter(self, record):
+            return "START_SCRIPT_BASE64" not in record.getMessage()
+""" 
+logging.config.fileConfig(fname=loggerini_file, disable_existing_loggers=False)
+logger = logging.getLogger(__name__)
 
 def command_switcher(json_message):
     """
@@ -42,14 +48,14 @@ def command_switcher(json_message):
 def logging_local(sendrecive, in_message, message_id):
     out_message = copy.copy(in_message)
     if 'error' in out_message:
-        logging.error("Message ID: %s, %s: %s" % (message_id, sendrecive, out_message))
+        logger.error("Message ID: %s, %s: %s" % (message_id, sendrecive, out_message))
     else:    
         if 'user_password' in out_message:
             out_message['user_password'] = u'*******'
         if 'vm_user_password' in out_message or 'vm_root_password' in out_message:
             out_message['vm_user_password'] = u'*******'
             out_message['vm_root_password'] = u'*******'            
-        logging.info("Message ID: %s, %s: %s" % (message_id, sendrecive, out_message))
+        logger.info("Message ID: %s, %s: %s" % (message_id, sendrecive, out_message))
     
 def message_id_generator(size = 8):
     s = "0123456789ABCDEF"
