@@ -3,10 +3,10 @@
 $password = generate_password(6,0);
 echo "password: ".$password."\n";
 #
-$vm_name = "v1p251.clouds365.host";
+$vm_name = "v1p249.clouds365.host";
 $user_id = 13;
 $template_id = 6;
-$ip_address = "192.168.55.251";
+$ip_address = "192.168.55.249";
 $dns_ip_address = "8.8.8.8";
 $gw_ip_address = "192.168.55.1";
 $network_id = 0;
@@ -15,8 +15,23 @@ $network_address = "192.168.55.0";
 /*
 $arr = array(
     "cmd" => "vm_terminate",
-    "vm_id" => 164,
-    "user_id" => 6,    
+    "vm_id" => 172,
+    "user_id" => 13,    
+);
+*/
+/*
+    VM action:
+    poweroff-hard
+    poweroff
+    reboot-hard
+    reboot
+    resume
+    
+$arr = array(
+    "cmd" => "vm_action",
+    "action" => "resume",
+    "vm_id" => 171,
+    "user_id" => 13,    
 );
 */
 /*
@@ -53,27 +68,27 @@ $arr = array(
     "cmd" => "user_allocate",
     "user_name" => "test_user2",
     "user_password" => $password,
-//    "user_group_id_array" => $user_group_id_array
+    "user_group_id_array" => $user_group_id_array
 );
 */
 /*
 $arr = array(
     "cmd" => "get_vm_state",
-    "user_id" => 6,
-    "vm_id" => 163,
+    "user_id" => 13,
+    "vm_id" => 171,
 );
 */
 /*
 $arr = array(
     "cmd" => "get_all_vm_state",
-    "user_id" => 6,
+    "user_id" => 13,
 );
 */
 $cipher="AES-256-CBC";
 $key_file = '../key_aes';
 $key = base64_decode(file_get_contents($key_file));
 
-define("REQUEST_TIMEOUT", 10000); //  msecs, (> 1000!)
+define("REQUEST_TIMEOUT", 20000); //  msecs, (> 1000!)
 define("REQUEST_RETRIES", 3); //  Before we abandon
 
 $plaintext =  json_encode($arr);
