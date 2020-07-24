@@ -1823,3 +1823,130 @@
 24-Jul-20 18:12:30 - commands.commands - INFO - Message ID: 931024AC, Sended reply: {'vm_id': 172, 'vm_root_password': u'*******', 'vm_user': 'debian', 'vm_user_password': u'*******'}
 24-Jul-20 19:22:58 - commands.commands - INFO - Message ID: 81DE052F, Received request: {u'vm_name': u'v1p249.clouds365.host', u'user_id': 13, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.249', u'template_id': 6}
 24-Jul-20 19:22:58 - commands.commands - ERROR - Message ID: 81DE052F, Sended reply: {'error': 'vm with this name already allocated'}
+24-Jul-20 19:31:13 - commands.commands - INFO - Message ID: 5B4A86D9, Received request: {u'vm_id': 170, u'cmd': u'vm_terminate', u'user_id': 13}
+24-Jul-20 19:31:13 - commands.commands - ERROR - Message ID: 5B4A86D9, Sended reply: {'error': 'list vm index out of range'}
+24-Jul-20 19:31:30 - commands.commands - INFO - Message ID: 196C3F4B, Received request: {u'vm_id': 170, u'cmd': u'vm_terminate', u'user_id': 13}
+24-Jul-20 19:31:30 - commands.commands - ERROR - Message ID: 196C3F4B, Sended reply: {'error': 'list vm index out of range'}
+24-Jul-20 19:31:38 - commands.commands - INFO - Message ID: B1C28E36, Received request: {u'vm_id': 172, u'cmd': u'vm_terminate', u'user_id': 13}
+24-Jul-20 19:31:43 - commands.commands - INFO - Message ID: B1C28E36, Sended reply: {'action': 'vm terminated'}
+24-Jul-20 19:52:33 - commands.commands - INFO - Message ID: C534AEB1, Received request: {u'action': u'poweroff-hard', u'vm_id': 172, u'cmd': u'vm_action', u'user_id': 13}
+24-Jul-20 19:52:33 - commands.commands - ERROR - Message ID: C534AEB1, Sended reply: {'error': 'list vm index out of range'}
+24-Jul-20 19:53:11 - commands.commands - INFO - Message ID: 74D1C9EA, Received request: {u'action': u'poweroff-hard', u'vm_id': 171, u'cmd': u'vm_action', u'user_id': 13}
+24-Jul-20 19:53:11 - commands.commands - INFO - Message ID: 74D1C9EA, Sended reply: {'action': <function vm_action at 0x7fa014077050>, 'vm_action': 171}
+24-Jul-20 19:53:21 - commands.commands - INFO - Message ID: 372F0CBA, Received request: {u'action': u'poweroff-hard', u'vm_id': 171, u'cmd': u'vm_action', u'user_id': 13}
+24-Jul-20 19:53:21 - commands.commands - ERROR - Message ID: 372F0CBA, Sended reply: {'error': '[one.vm.action] Error performing action "poweroff-hard": This action is not available for state POWEROFF'}
+24-Jul-20 19:54:43 - commands.commands - INFO - Message ID: 8A74215C, Received request: {u'action': u'poweroff-hard', u'vm_id': 171, u'cmd': u'vm_action', u'user_id': 13}
+24-Jul-20 19:54:43 - commands.commands - ERROR - Message ID: 8A74215C, Sended reply: {'error': '[one.vm.action] Error performing action "poweroff-hard": This action is not available for state POWEROFF'}
+24-Jul-20 19:56:03 - commands.commands - INFO - Message ID: 5A7C0483, Received request: {u'action': u'release', u'vm_id': 171, u'cmd': u'vm_action', u'user_id': 13}
+24-Jul-20 19:56:03 - commands.commands - ERROR - Message ID: 5A7C0483, Sended reply: {'error': '[one.vm.action] Error performing action "release": This action is not available for state POWEROFF'}
+24-Jul-20 19:56:33 - commands.commands - INFO - Message ID: 57B48DF6, Received request: {u'action': u'start', u'vm_id': 171, u'cmd': u'vm_action', u'user_id': 13}
+24-Jul-20 19:56:33 - commands.commands - ERROR - Message ID: 57B48DF6, Sended reply: {'error': '[one.vm.action] Action "start" is not supported'}
+24-Jul-20 19:57:25 - commands.commands - INFO - Message ID: 2EC8AF07, Received request: {u'action': u'resume', u'vm_id': 171, u'cmd': u'vm_action', u'user_id': 13}
+24-Jul-20 19:57:25 - commands.commands - INFO - Message ID: 2EC8AF07, Sended reply: {'action': <function vm_action at 0x7fcf0ec54050>, 'vm_action': 171}
+24-Jul-20 19:57:35 - commands.commands - INFO - Message ID: 318DF95C, Received request: {u'action': u'resume', u'vm_id': 171, u'cmd': u'vm_action', u'user_id': 13}
+24-Jul-20 19:57:35 - commands.commands - ERROR - Message ID: 318DF95C, Sended reply: {'error': '[one.vm.action] Error performing action "resume": This action is not available for state RUNNING'}
+24-Jul-20 19:59:23 - commands.commands - INFO - Message ID: 610FCB5E, Received request: {u'action': u'poweroff-hard', u'vm_id': 171, u'cmd': u'vm_action', u'user_id': 13}
+24-Jul-20 19:59:23 - commands.commands - INFO - Message ID: 610FCB5E, Sended reply: {'action': u'poweroff-hard', 'vm_action': 171}
+24-Jul-20 20:00:04 - commands.commands - INFO - Message ID: 9F5D60AE, Received request: {u'action': u'resume', u'vm_id': 171, u'cmd': u'vm_action', u'user_id': 13}
+24-Jul-20 20:00:04 - commands.commands - INFO - Message ID: 9F5D60AE, Sended reply: {'action': u'resume', 'vm_action': 171}
+24-Jul-20 20:00:39 - commands.commands - INFO - Message ID: BD206F3C, Received request: {u'action': u'reboot', u'vm_id': 171, u'cmd': u'vm_action', u'user_id': 13}
+24-Jul-20 20:00:39 - commands.commands - INFO - Message ID: BD206F3C, Sended reply: {'action': u'reboot', 'vm_action': 171}
+24-Jul-20 20:00:54 - commands.commands - INFO - Message ID: 384C719F, Received request: {u'action': u'reboot', u'vm_id': 171, u'cmd': u'vm_action', u'user_id': 13}
+24-Jul-20 20:00:55 - commands.commands - INFO - Message ID: 384C719F, Sended reply: {'action': u'reboot', 'vm_action': 171}
+24-Jul-20 20:01:22 - commands.commands - INFO - Message ID: ED1ACB63, Received request: {u'action': u'reboot', u'vm_id': 171, u'cmd': u'vm_action', u'user_id': 13}
+24-Jul-20 20:01:22 - commands.commands - INFO - Message ID: ED1ACB63, Sended reply: {'action': u'reboot', 'vm_action': 171}
+24-Jul-20 20:01:37 - commands.commands - INFO - Message ID: D85C74A2, Received request: {u'action': u'stop', u'vm_id': 171, u'cmd': u'vm_action', u'user_id': 13}
+24-Jul-20 20:01:37 - commands.commands - INFO - Message ID: D85C74A2, Sended reply: {'action': u'stop', 'vm_action': 171}
+24-Jul-20 20:02:16 - commands.commands - INFO - Message ID: 65FDC239, Received request: {u'action': u'release', u'vm_id': 171, u'cmd': u'vm_action', u'user_id': 13}
+24-Jul-20 20:02:16 - commands.commands - ERROR - Message ID: 65FDC239, Sended reply: {'error': '[one.vm.action] Error performing action "release": This action is not available for state STOPPED'}
+24-Jul-20 20:02:40 - commands.commands - INFO - Message ID: 7950BF32, Received request: {u'action': u'resume', u'vm_id': 171, u'cmd': u'vm_action', u'user_id': 13}
+24-Jul-20 20:02:40 - commands.commands - INFO - Message ID: 7950BF32, Sended reply: {'action': u'resume', 'vm_action': 171}
+24-Jul-20 20:03:40 - commands.commands - INFO - Message ID: 06BAF341, Received request: {u'action': u'reboot-hard', u'vm_id': 171, u'cmd': u'vm_action', u'user_id': 13}
+24-Jul-20 20:03:40 - commands.commands - INFO - Message ID: 06BAF341, Sended reply: {'action': u'reboot-hard', 'vm_action': 171}
+24-Jul-20 20:04:04 - commands.commands - INFO - Message ID: 37B249CE, Received request: {u'action': u'poweroff', u'vm_id': 171, u'cmd': u'vm_action', u'user_id': 13}
+24-Jul-20 20:04:04 - commands.commands - INFO - Message ID: 37B249CE, Sended reply: {'action': u'poweroff', 'vm_action': 171}
+24-Jul-20 20:04:20 - commands.commands - INFO - Message ID: 958B1A7C, Received request: {u'action': u'resume', u'vm_id': 171, u'cmd': u'vm_action', u'user_id': 13}
+24-Jul-20 20:04:20 - commands.commands - INFO - Message ID: 958B1A7C, Sended reply: {'action': u'resume', 'vm_action': 171}
+24-Jul-20 20:11:19 - commands.commands - INFO - Message ID: 7F8C3590, Received request: {u'action': u'resumee', u'vm_id': 171, u'cmd': u'vm_action', u'user_id': 13}
+24-Jul-20 20:11:20 - commands.commands - ERROR - Message ID: 7F8C3590, Sended reply: {'error': '[one.vm.action] Action "resumee" is not supported'}
+24-Jul-20 20:12:01 - commands.commands - INFO - Message ID: 16A795EB, Received request: {u'action': u'resumee', u'vm_id': 171, u'cmd': u'vm_action', u'user_id': 13}
+24-Jul-20 20:12:01 - commands.commands - ERROR - Message ID: 16A795EB, Sended reply: {'error': 'vm action not available'}
+24-Jul-20 20:12:31 - commands.commands - INFO - Message ID: 841E3FC7, Received request: {u'action': u'resume', u'vm_id': 171, u'cmd': u'vm_action', u'user_id': 13}
+24-Jul-20 20:12:31 - commands.commands - ERROR - Message ID: 841E3FC7, Sended reply: {'error': '[one.vm.action] Error performing action "resume": This action is not available for state RUNNING'}
+24-Jul-20 20:13:15 - commands.commands - INFO - Message ID: 8A310C9E, Received request: {u'action': u'poweroff', u'vm_id': 171, u'cmd': u'vm_action', u'user_id': 13}
+24-Jul-20 20:13:15 - commands.commands - INFO - Message ID: 8A310C9E, Sended reply: {'action': u'poweroff', 'vm_action': 171}
+24-Jul-20 20:15:15 - commands.commands - INFO - Message ID: 35C76F0B, Received request: {u'user_id': 13, u'cmd': u'get_vm_state', u'vm_id': 171}
+24-Jul-20 20:15:15 - commands.commands - INFO - Message ID: 35C76F0B, Sended reply: {'vm_state': 'POWEROFF', 'vm_id': 171}
+24-Jul-20 20:15:50 - commands.commands - INFO - Message ID: 40F5C2B8, Received request: {u'user_id': 13, u'cmd': u'get_vm_state', u'vm_id': 171}
+24-Jul-20 20:15:50 - commands.commands - INFO - Message ID: 40F5C2B8, Sended reply: {'vm_state': 'POWEROFF', 'vm_id': 171}
+24-Jul-20 20:16:34 - commands.commands - INFO - Message ID: 8D69FBAC, Received request: {u'action': u'resume', u'vm_id': 171, u'cmd': u'vm_action', u'user_id': 13}
+24-Jul-20 20:16:35 - commands.commands - INFO - Message ID: 8D69FBAC, Sended reply: {'action': u'resume', 'vm_action': 171}
+24-Jul-20 20:33:46 - commands.commands - INFO - Message ID: B35A4978, Received request: {u'action': u'resume', u'vm_id': 171, u'cmd': u'vm_action', u'user_id': 13}
+24-Jul-20 20:33:46 - commands.commands - ERROR - Message ID: B35A4978, Sended reply: {'error': '[one.vm.action] Error performing action "resume": This action is not available for state RUNNING'}
+24-Jul-20 20:34:39 - commands.commands - INFO - Message ID: E10834C9, Received request: {u'cmd': u'get_all_vm_state', u'user_id': 13}
+24-Jul-20 20:34:39 - commands.commands - INFO - Message ID: E10834C9, Sended reply: {u'vms_state': [{u'vm_name': u'v1p250.clouds365.host', u'vm_state': u'ACTIVE', u'vm_id': 171}, {u'vm_name': u'v1p251.clouds365.host', u'vm_state': u'ACTIVE', u'vm_id': 167}]}
+24-Jul-20 20:35:51 - commands.commands - INFO - Message ID: EABF6D40, Received request: {u'vm_name': u'v1p249.clouds365.host', u'user_id': 13, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.249', u'template_id': 6}
+24-Jul-20 20:35:51 - dicttoxml - INFO - Inside dicttoxml(): type(obj) is: "dict", obj="{'TEMPLATE': {'NIC': {'NETWORK_ID': 0, 'IP': u'192.168.55.249', 'NETWORK_ADDRESS': u'192.168.55.0', 'GATEWAY': u'192.168.55.1', 'DNS': u'8.8.8.8'}, 'CONTEXT': {'SSH_PUBLIC_KEY': '', 'NETWORK': 'YES', 'START_SCRIPT_BASE64': 'ZWNobyAtZSAiNjdnQ21UCjY3Z0NtVCIgfCBwYXNzd2Qgcm9vdDsgZWNobyAtZSAiWUtkemFxCllLZHphcSIgfCBwYXNzd2QgZGViaWFu'}}}"
+24-Jul-20 20:35:51 - dicttoxml - INFO - Inside convert(). obj type is: "dict", obj="{'TEMPLATE': {'NIC': {'NETWORK_ID': 0, 'IP': u'192.168.55.249', 'NETWORK_ADDRESS': u'192.168.55.0', 'GATEWAY': u'192.168.55.1', 'DNS': u'8.8.8.8'}, 'CONTEXT': {'SSH_PUBLIC_KEY': '', 'NETWORK': 'YES', 'START_SCRIPT_BASE64': 'ZWNobyAtZSAiNjdnQ21UCjY3Z0NtVCIgfCBwYXNzd2Qgcm9vdDsgZWNobyAtZSAiWUtkemFxCllLZHphcSIgfCBwYXNzd2QgZGViaWFu'}}}"
+24-Jul-20 20:35:51 - dicttoxml - INFO - Inside convert_dict(): obj type is: "dict", obj="{'TEMPLATE': {'NIC': {'NETWORK_ID': 0, 'IP': u'192.168.55.249', 'NETWORK_ADDRESS': u'192.168.55.0', 'GATEWAY': u'192.168.55.1', 'DNS': u'8.8.8.8'}, 'CONTEXT': {'SSH_PUBLIC_KEY': '', 'NETWORK': 'YES', 'START_SCRIPT_BASE64': 'ZWNobyAtZSAiNjdnQ21UCjY3Z0NtVCIgfCBwYXNzd2Qgcm9vdDsgZWNobyAtZSAiWUtkemFxCllLZHphcSIgfCBwYXNzd2QgZGViaWFu'}}}"
+24-Jul-20 20:35:51 - dicttoxml - INFO - Looping inside convert_dict(): key="TEMPLATE", val="{'NIC': {'NETWORK_ID': 0, 'IP': u'192.168.55.249', 'NETWORK_ADDRESS': u'192.168.55.0', 'GATEWAY': u'192.168.55.1', 'DNS': u'8.8.8.8'}, 'CONTEXT': {'SSH_PUBLIC_KEY': '', 'NETWORK': 'YES', 'START_SCRIPT_BASE64': 'ZWNobyAtZSAiNjdnQ21UCjY3Z0NtVCIgfCBwYXNzd2Qgcm9vdDsgZWNobyAtZSAiWUtkemFxCllLZHphcSIgfCBwYXNzd2QgZGViaWFu'}}", type(val)="dict"
+24-Jul-20 20:35:51 - dicttoxml - INFO - Inside make_valid_xml_name(). Testing key "TEMPLATE" with attr "{}"
+24-Jul-20 20:35:51 - dicttoxml - INFO - Inside key_is_valid_xml(). Testing "TEMPLATE"
+24-Jul-20 20:35:51 - dicttoxml - INFO - Inside convert_dict(): obj type is: "dict", obj="{'NIC': {'NETWORK_ID': 0, 'IP': u'192.168.55.249', 'NETWORK_ADDRESS': u'192.168.55.0', 'GATEWAY': u'192.168.55.1', 'DNS': u'8.8.8.8'}, 'CONTEXT': {'SSH_PUBLIC_KEY': '', 'NETWORK': 'YES', 'START_SCRIPT_BASE64': 'ZWNobyAtZSAiNjdnQ21UCjY3Z0NtVCIgfCBwYXNzd2Qgcm9vdDsgZWNobyAtZSAiWUtkemFxCllLZHphcSIgfCBwYXNzd2QgZGViaWFu'}}"
+24-Jul-20 20:35:51 - dicttoxml - INFO - Looping inside convert_dict(): key="NIC", val="{'NETWORK_ID': 0, 'IP': u'192.168.55.249', 'NETWORK_ADDRESS': u'192.168.55.0', 'GATEWAY': u'192.168.55.1', 'DNS': u'8.8.8.8'}", type(val)="dict"
+24-Jul-20 20:35:51 - dicttoxml - INFO - Inside make_valid_xml_name(). Testing key "NIC" with attr "{}"
+24-Jul-20 20:35:51 - dicttoxml - INFO - Inside key_is_valid_xml(). Testing "NIC"
+24-Jul-20 20:35:51 - dicttoxml - INFO - Inside convert_dict(): obj type is: "dict", obj="{'NETWORK_ID': 0, 'IP': u'192.168.55.249', 'NETWORK_ADDRESS': u'192.168.55.0', 'GATEWAY': u'192.168.55.1', 'DNS': u'8.8.8.8'}"
+24-Jul-20 20:35:51 - dicttoxml - INFO - Looping inside convert_dict(): key="NETWORK_ID", val="0", type(val)="int"
+24-Jul-20 20:35:51 - dicttoxml - INFO - Inside make_valid_xml_name(). Testing key "NETWORK_ID" with attr "{}"
+24-Jul-20 20:35:51 - dicttoxml - INFO - Inside key_is_valid_xml(). Testing "NETWORK_ID"
+24-Jul-20 20:35:51 - dicttoxml - INFO - Inside convert_kv(): key="NETWORK_ID", val="0", type(val) is: "int"
+24-Jul-20 20:35:51 - dicttoxml - INFO - Inside make_valid_xml_name(). Testing key "NETWORK_ID" with attr "{}"
+24-Jul-20 20:35:51 - dicttoxml - INFO - Inside key_is_valid_xml(). Testing "NETWORK_ID"
+24-Jul-20 20:35:51 - dicttoxml - INFO - Looping inside convert_dict(): key="IP", val="192.168.55.249", type(val)="unicode"
+24-Jul-20 20:35:51 - dicttoxml - INFO - Inside make_valid_xml_name(). Testing key "IP" with attr "{}"
+24-Jul-20 20:35:51 - dicttoxml - INFO - Inside key_is_valid_xml(). Testing "IP"
+24-Jul-20 20:35:51 - dicttoxml - INFO - Inside convert_kv(): key="IP", val="192.168.55.249", type(val) is: "unicode"
+24-Jul-20 20:35:51 - dicttoxml - INFO - Inside make_valid_xml_name(). Testing key "IP" with attr "{}"
+24-Jul-20 20:35:51 - dicttoxml - INFO - Inside key_is_valid_xml(). Testing "IP"
+24-Jul-20 20:35:51 - dicttoxml - INFO - Looping inside convert_dict(): key="NETWORK_ADDRESS", val="192.168.55.0", type(val)="unicode"
+24-Jul-20 20:35:51 - dicttoxml - INFO - Inside make_valid_xml_name(). Testing key "NETWORK_ADDRESS" with attr "{}"
+24-Jul-20 20:35:51 - dicttoxml - INFO - Inside key_is_valid_xml(). Testing "NETWORK_ADDRESS"
+24-Jul-20 20:35:51 - dicttoxml - INFO - Inside convert_kv(): key="NETWORK_ADDRESS", val="192.168.55.0", type(val) is: "unicode"
+24-Jul-20 20:35:51 - dicttoxml - INFO - Inside make_valid_xml_name(). Testing key "NETWORK_ADDRESS" with attr "{}"
+24-Jul-20 20:35:51 - dicttoxml - INFO - Inside key_is_valid_xml(). Testing "NETWORK_ADDRESS"
+24-Jul-20 20:35:51 - dicttoxml - INFO - Looping inside convert_dict(): key="GATEWAY", val="192.168.55.1", type(val)="unicode"
+24-Jul-20 20:35:51 - dicttoxml - INFO - Inside make_valid_xml_name(). Testing key "GATEWAY" with attr "{}"
+24-Jul-20 20:35:51 - dicttoxml - INFO - Inside key_is_valid_xml(). Testing "GATEWAY"
+24-Jul-20 20:35:51 - dicttoxml - INFO - Inside convert_kv(): key="GATEWAY", val="192.168.55.1", type(val) is: "unicode"
+24-Jul-20 20:35:51 - dicttoxml - INFO - Inside make_valid_xml_name(). Testing key "GATEWAY" with attr "{}"
+24-Jul-20 20:35:51 - dicttoxml - INFO - Inside key_is_valid_xml(). Testing "GATEWAY"
+24-Jul-20 20:35:51 - dicttoxml - INFO - Looping inside convert_dict(): key="DNS", val="8.8.8.8", type(val)="unicode"
+24-Jul-20 20:35:51 - dicttoxml - INFO - Inside make_valid_xml_name(). Testing key "DNS" with attr "{}"
+24-Jul-20 20:35:51 - dicttoxml - INFO - Inside key_is_valid_xml(). Testing "DNS"
+24-Jul-20 20:35:51 - dicttoxml - INFO - Inside convert_kv(): key="DNS", val="8.8.8.8", type(val) is: "unicode"
+24-Jul-20 20:35:51 - dicttoxml - INFO - Inside make_valid_xml_name(). Testing key "DNS" with attr "{}"
+24-Jul-20 20:35:51 - dicttoxml - INFO - Inside key_is_valid_xml(). Testing "DNS"
+24-Jul-20 20:35:51 - dicttoxml - INFO - Looping inside convert_dict(): key="CONTEXT", val="{'SSH_PUBLIC_KEY': '', 'NETWORK': 'YES', 'START_SCRIPT_BASE64': 'ZWNobyAtZSAiNjdnQ21UCjY3Z0NtVCIgfCBwYXNzd2Qgcm9vdDsgZWNobyAtZSAiWUtkemFxCllLZHphcSIgfCBwYXNzd2QgZGViaWFu'}", type(val)="dict"
+24-Jul-20 20:35:51 - dicttoxml - INFO - Inside make_valid_xml_name(). Testing key "CONTEXT" with attr "{}"
+24-Jul-20 20:35:51 - dicttoxml - INFO - Inside key_is_valid_xml(). Testing "CONTEXT"
+24-Jul-20 20:35:51 - dicttoxml - INFO - Inside convert_dict(): obj type is: "dict", obj="{'SSH_PUBLIC_KEY': '', 'NETWORK': 'YES', 'START_SCRIPT_BASE64': 'ZWNobyAtZSAiNjdnQ21UCjY3Z0NtVCIgfCBwYXNzd2Qgcm9vdDsgZWNobyAtZSAiWUtkemFxCllLZHphcSIgfCBwYXNzd2QgZGViaWFu'}"
+24-Jul-20 20:35:51 - dicttoxml - INFO - Looping inside convert_dict(): key="SSH_PUBLIC_KEY", val="", type(val)="str"
+24-Jul-20 20:35:51 - dicttoxml - INFO - Inside make_valid_xml_name(). Testing key "SSH_PUBLIC_KEY" with attr "{}"
+24-Jul-20 20:35:51 - dicttoxml - INFO - Inside key_is_valid_xml(). Testing "SSH_PUBLIC_KEY"
+24-Jul-20 20:35:51 - dicttoxml - INFO - Inside convert_kv(): key="SSH_PUBLIC_KEY", val="", type(val) is: "str"
+24-Jul-20 20:35:51 - dicttoxml - INFO - Inside make_valid_xml_name(). Testing key "SSH_PUBLIC_KEY" with attr "{}"
+24-Jul-20 20:35:51 - dicttoxml - INFO - Inside key_is_valid_xml(). Testing "SSH_PUBLIC_KEY"
+24-Jul-20 20:35:51 - dicttoxml - INFO - Looping inside convert_dict(): key="NETWORK", val="YES", type(val)="str"
+24-Jul-20 20:35:51 - dicttoxml - INFO - Inside make_valid_xml_name(). Testing key "NETWORK" with attr "{}"
+24-Jul-20 20:35:51 - dicttoxml - INFO - Inside key_is_valid_xml(). Testing "NETWORK"
+24-Jul-20 20:35:51 - dicttoxml - INFO - Inside convert_kv(): key="NETWORK", val="YES", type(val) is: "str"
+24-Jul-20 20:35:51 - dicttoxml - INFO - Inside make_valid_xml_name(). Testing key "NETWORK" with attr "{}"
+24-Jul-20 20:35:51 - dicttoxml - INFO - Inside key_is_valid_xml(). Testing "NETWORK"
+24-Jul-20 20:35:51 - dicttoxml - INFO - Looping inside convert_dict(): key="START_SCRIPT_BASE64", val="ZWNobyAtZSAiNjdnQ21UCjY3Z0NtVCIgfCBwYXNzd2Qgcm9vdDsgZWNobyAtZSAiWUtkemFxCllLZHphcSIgfCBwYXNzd2QgZGViaWFu", type(val)="str"
+24-Jul-20 20:35:51 - dicttoxml - INFO - Inside make_valid_xml_name(). Testing key "START_SCRIPT_BASE64" with attr "{}"
+24-Jul-20 20:35:51 - dicttoxml - INFO - Inside key_is_valid_xml(). Testing "START_SCRIPT_BASE64"
+24-Jul-20 20:35:51 - dicttoxml - INFO - Inside convert_kv(): key="START_SCRIPT_BASE64", val="ZWNobyAtZSAiNjdnQ21UCjY3Z0NtVCIgfCBwYXNzd2Qgcm9vdDsgZWNobyAtZSAiWUtkemFxCllLZHphcSIgfCBwYXNzd2QgZGViaWFu", type(val) is: "str"
+24-Jul-20 20:35:51 - dicttoxml - INFO - Inside make_valid_xml_name(). Testing key "START_SCRIPT_BASE64" with attr "{}"
+24-Jul-20 20:35:51 - dicttoxml - INFO - Inside key_is_valid_xml(). Testing "START_SCRIPT_BASE64"
+24-Jul-20 20:35:51 - commands.commands - INFO - Message ID: EABF6D40, Sended reply: {'vm_id': 173, 'vm_root_password': u'*******', 'vm_user': 'debian', 'vm_user_password': u'*******'}

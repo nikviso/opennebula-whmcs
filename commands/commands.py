@@ -29,6 +29,7 @@ def command_switcher(json_message):
             'template_instantiate': template_instantiate,
             'template_instantiate_user': template_instantiate_user,
             'vm_terminate': vm_terminate,
+            'vm_action': vm_action,
         }
         # Get the function from switcher dictionary
         cmd_execute = switcher.get(cmd, lambda null_argument: {"error": "invalid command"})
@@ -544,7 +545,7 @@ def vm_terminate(json_message):
     
     #Checking VM availability  
     try:
-        vm_state = one.vm.info(one.vmpool.info(user_id,vm_id,vm_id,-1).VM[0].get_ID()).STATE
+        one.vmpool.info(user_id,vm_id,vm_id,-1).VM[0]
     except IndexError:
         return {"error": "list vm index out of range"}
 
@@ -552,8 +553,12 @@ def vm_terminate(json_message):
     template_disk_info = one.vm.info(vm_id).TEMPLATE["DISK"]
     
     #Terminating VM
-    one.vm.action("terminate-hard", vm_id)
-    
+    try:
+        one.vm.action("terminate-hard", vm_id)
+    except Exception as e:
+        print str(e)
+        return {"error": str(e)}
+        
     #Deleting disks images of VM
     try:
         if type(template_disk_info) is list:
@@ -574,6 +579,50 @@ def vm_terminate(json_message):
         return {"error": str(e)}
         
     return {"action": "vm terminated"}
+
+def vm_action(json_message):
+    """
+    VM action:
+    poweroff-hard
+    poweroff
+    reboot-hard
+    reboot
+    resume
+    """
+    json_dict = json.loads(json_message)
+    if not (json_dict.get('vm_id') is None):
+        vm_id = json_dict['vm_id']
+    else:
+        return {"error": "not set vm id"}
+    if not (json_dict.get('user_id') is None):
+        user_id = json_dict['user_id']
+    else:
+        return {"error": "not set user id"}
+    if not (json_dict.get('action') is None):
+        action = json_dict['action']
+        if action in ("poweroff-hard", "poweroff", "reboot-hard", "reboot", "resume"):
+           pass
+        else:
+           return {"error": "vm action not available"}  
+    else:
+        return {"error": "not set vm action"}           
+    
+    #Checking VM availability  
+    try:
+        one.vmpool.info(user_id,vm_id,vm_id,-1).VM[0]
+    except IndexError:
+        return {"error": "list vm index out of range"}
+    
+    
+    try:
+        one.vm.action(action, vm_id)
+    except Exception as e:
+        print str(e)
+        return {"error": str(e)}
+        
+    
+    return {"action": action, "vm_action": vm_id, }
+        
 
 def template_terminate(template_name):
     """
