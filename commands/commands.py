@@ -526,6 +526,13 @@ def template_instantiate_user(json_message):
 
     #Removing VM template.
     template_terminate(vm_name)
+    
+    return_message = {
+            "vm_id": vm_id,
+            "vm_root_password": vm_root_password,
+            "vm_user": vm_user,
+            "vm_user_password": vm_user_password,
+        }
 
     return return_message
 

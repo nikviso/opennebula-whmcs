@@ -1950,3 +1950,5 @@
 24-Jul-20 20:35:51 - dicttoxml - INFO - Inside make_valid_xml_name(). Testing key "START_SCRIPT_BASE64" with attr "{}"
 24-Jul-20 20:35:51 - dicttoxml - INFO - Inside key_is_valid_xml(). Testing "START_SCRIPT_BASE64"
 24-Jul-20 20:35:51 - commands.commands - INFO - Message ID: EABF6D40, Sended reply: {'vm_id': 173, 'vm_root_password': u'*******', 'vm_user': 'debian', 'vm_user_password': u'*******'}
+24-Jul-20 22:25:58 - commands.commands - INFO - Message ID: 5D140C98, Received request: {u'vm_name': u'v1p249.clouds365.host', u'user_id': 13, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.249', u'template_id': 6}
+24-Jul-20 22:25:58 - commands.commands - ERROR - Message ID: 5D140C98, Sended reply: {'error': 'vm with this name already allocated'}
