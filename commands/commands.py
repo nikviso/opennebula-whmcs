@@ -9,11 +9,6 @@ from config import *
 """
 Setting basic configuration for logging
 """
-"""
-class LogFilter(logging.Filter):
-    def filter(self, record):
-            return "START_SCRIPT_BASE64" not in record.getMessage()
-""" 
 logging.config.fileConfig(fname=loggerini_file, disable_existing_loggers=False)
 logger = logging.getLogger(__name__)
 
