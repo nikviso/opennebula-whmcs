@@ -66,7 +66,7 @@ def password_generator(size = 16, complexity = 1):
         s = "abcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()?{}[]\/<>.,~"
     
     return "".join(random.sample(s,size ))
-    
+
 def get_template_id(template_name):
     """
     Getting TEMPLATE ID by TEMPLATE NAME.
@@ -288,6 +288,11 @@ def template_instantiate(json_message):
         return {"error": "not set user id"}
     if not (json_dict.get('vm_name') is None):
         vm_name = json_dict['vm_name']
+        try:
+            one.vmpool.info(-2,-1,-1,-1,vm_name).VM[0]
+            return {"error": "vm with this name already allocated"}
+        except IndexError:
+            pass
     else:
         return {"error": "not set vm name"}     
     if not (json_dict.get('template_id') is None):
@@ -340,6 +345,7 @@ def template_instantiate(json_message):
         }}, 
         True)   
     except Exception as e:
+        template_terminate(vm_name)       
         print str(e)
         return {"error": str(e)}
     
@@ -370,11 +376,7 @@ def template_instantiate(json_message):
         return {"error": str(e)}
     """ 
     #Removing VM template.
-    try:
-        one.template.delete(get_template_id(vm_name), False)
-    except Exception as e:
-        print str(e)
-        return {"error": str(e)}   
+    template_terminate(vm_name)
         
     #Changing VM owner.
     try:
@@ -429,6 +431,11 @@ def template_instantiate_user(json_message):
         return {"error": "not set user password"}       
     if not (json_dict.get('vm_name') is None):
         vm_name = json_dict['vm_name']
+        try:
+            one.vmpool.info(-2,-1,-1,-1,vm_name).VM[0]
+            return {"error": "vm with this name already allocated"}
+        except IndexError:
+            pass        
     else:
         return {"error": "not set vm name"}     
     if not (json_dict.get('template_id') is None):
@@ -485,6 +492,7 @@ def template_instantiate_user(json_message):
         }, 
         True)
     except Exception as e:
+        template_terminate(vm_name)
         print str(e)
         return {"error": str(e)}
     
@@ -516,19 +524,8 @@ def template_instantiate_user(json_message):
     """   
 
     #Removing VM template.
-    try:
-        one_user.template.delete(get_template_id(vm_name), False)
-    except Exception as e:
-        print str(e)
-        return {"error": str(e)}
-        
-    return_message = {
-            "vm_id": vm_id,
-            "vm_root_password": vm_root_password,
-            "vm_user": vm_user,
-            "vm_user_password": vm_user_password,
-        }
-    
+    template_terminate(vm_name)
+
     return return_message
 
 def vm_terminate(json_message):
@@ -577,3 +574,15 @@ def vm_terminate(json_message):
         return {"error": str(e)}
         
     return {"action": "vm terminated"}
+
+def template_terminate(template_name):
+    """
+    Terminating VM template
+    """
+    if get_template_id(template_name):
+        try:
+            return one.template.delete(get_template_id(template_name), True)
+        except Exception as e:
+            return {"error": str(e)}  
+    else:
+        return {"error": "not found template name"}
