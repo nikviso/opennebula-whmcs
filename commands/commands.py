@@ -34,7 +34,7 @@ def command_switcher(json_message):
             'get_user_info': get_user_info,
             'user_allocate': user_allocate,
             'template_instantiate': template_instantiate,
-            'template_instantiate_user': template_instantiate_user,
+            #'template_instantiate_user': template_instantiate_user,
             'vm_terminate': vm_terminate,
             'vm_action': vm_action,
         }
@@ -244,11 +244,15 @@ def get_all_vm_state(json_message):
 
     return json.loads(return_message)
     
-def user_group_allocate(user_name):
+def user_group_allocate(group_name):
     """
     Allocate users group with name like user name.
     """
-    group_id = one.group.allocate(user_name)
+    try:
+        group_id = one.group.allocate(group_name)
+    except Exception as e:
+        return {"error": str(e)}
+        
     return group_id    
 
 def get_user_info(json_message):
@@ -271,7 +275,10 @@ def user_allocate(json_message):
         user_group_id_array = json_dict.get('user_group_id_array')
     else:    
         user_group_id_array = []
-        user_group_id_array.append(user_group_allocate(user_name))
+        try:
+            user_group_id_array.append(one.group.allocate(user_name))
+        except Exception as e:
+            return {"error": str(e)}        
    
     try:
         return_message = {

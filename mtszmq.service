@@ -7,8 +7,9 @@ Conflicts=getty@tty1.service
 
 [Service]
 Type=simple
-ExecStart=/root/zmq-one-rpc-xml/mtszmq.py
-StandardInput=tty-force
+ExecStart=/var/lib/one/mtszmq/mtszmq.py
+User=oneadmin
+Group=oneadmin
 
 [Install]
 WantedBy=multi-user.target
