@@ -9,8 +9,15 @@ from config import *
 """
 Setting basic configuration for logging
 """
-logging.config.fileConfig(fname=loggerini_file, disable_existing_loggers=False)
+class CustomFilter(logging.Filter):
+    def filter(self, record):
+        if 'commands.commands' in getattr(record, 'name', ''):
+            return True
+        return False
+logging.config.fileConfig(fname=loggerconf_file, disable_existing_loggers=False)
 logger = logging.getLogger(__name__)
+f = CustomFilter()
+logger.addFilter(f)
 
 def command_switcher(json_message):
     """

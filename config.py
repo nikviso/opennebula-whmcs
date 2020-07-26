@@ -44,6 +44,6 @@ password_size = 6
 password_complexity = 0
 
 """
-Logger initialization file path 
+Logger configuration file path 
 """
-loggerini_file = '/root/zmq-one-rpc-xml/logger.conf'
+loggerconf_file = '/root/zmq-one-rpc-xml/logger.conf'
