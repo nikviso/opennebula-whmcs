@@ -37,6 +37,7 @@ def command_switcher(json_message):
             'get_all_vm_state': get_all_vm_state,
             'get_user_info': get_user_info,
             'user_allocate': user_allocate,
+            'user_delete': user_delete,
             'template_instantiate': template_instantiate,
             #'template_instantiate_user': template_instantiate_user,
             'vm_terminate': vm_terminate,
@@ -141,7 +142,6 @@ def get_vm_state(json_message):
     """
     Getting state of one VM of user by VM NAME or VM ID.
     """
-    
     json_dict = json.loads(json_message)
     if not (json_dict.get('user_name') is None):
         user_name = json_dict['user_name']
@@ -211,7 +211,6 @@ def get_all_vm_state(json_message):
     """
     Getting state all VMs of user by USERNAME or USER ID.
     """
-    
     json_dict = json.loads(json_message)
     if not (json_dict.get('user_name') is None):
         user_name = json_dict['user_name']
@@ -258,9 +257,6 @@ def user_group_allocate(group_name):
         return {"error": str(e)}
         
     return group_id    
-
-def get_user_info(json_message):
-    return "NOT DEFINED"
     
 def user_allocate(json_message):
     """
@@ -294,6 +290,52 @@ def user_allocate(json_message):
         return {"error": str(e)}        
     
     return return_message
+    
+def user_delete(json_message):
+    """    
+    Deletes the given user from the pool.
+    """
+    json_dict = json.loads(json_message)    
+    if not (json_dict.get('user_id') is None):
+        user_id = json_dict['user_id']
+    else:
+        return {"error": "not set user id"}
+        
+    try:
+        vms_used = one.user.info(user_id).VM_QUOTA.VM.VMS_USED
+    except Exception as e:
+        if "[one.user.info]" in str(e):
+            return {"error": str(e)}
+        try:
+            user_group_id = one.user.info(user_id).GID
+            one.user.delete(user_id)           
+            if one.group.info(user_group_id).USERS.ID:
+                return {"action": "user deleted", "user_id": user_id}
+            else:
+                one.group.delete(user_group_id)
+                return {"action": "user and user group deleted", "user_id": user_id, "user_group_id": user_group_id}
+        except Exception as e:
+            return {"error": str(e)}              
+                
+    return {"error": "vm allocated", "user_id": user_id, "vms_used": vms_used}                 
+ 
+def get_user_info(json_message):
+    """
+    Getting information about user by ID
+    """
+    json_dict = json.loads(json_message)    
+    if not (json_dict.get('user_id') is None):
+        user_id = json_dict['user_id']
+    else:
+        return {"error": "not set user id"} 
+    
+    try:
+        vms_used = one.user.info(user_id).VM_QUOTA.VM.VMS_USED
+        running_vms_used = one.user.info(user_id).VM_QUOTA.VM.RUNNING_VMS_USED
+    except Exception as e:
+        return {"error": str(e)}
+
+    return {"user_id": user_id, "vms_used": vms_used,"running_vms_used": running_vms_used}
     
 def template_instantiate(json_message):
     """
