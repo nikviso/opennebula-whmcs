@@ -2,12 +2,12 @@ import json
 import random
 import time
 import logging
-import logging.config
+#import logging.config
 import copy
 from config import *
 
 """
-Setting basic configuration for logging
+Configuration for logging
 """
 """
 class CustomFilter(logging.Filter):
@@ -16,18 +16,16 @@ class CustomFilter(logging.Filter):
             return True
         return False
 """
-logging.config.fileConfig(fname=loggerconf_file, disable_existing_loggers=False)
 logger = logging.getLogger(__name__)
 """
 f = CustomFilter()
 logger.addFilter(f)
 """
 
-def command_switcher(json_message):
+def command_switcher(json_message, message_id):
     """
     Getting command from JSON message. Selecting by command and execute function.  
     """
-    message_id = message_id_generator()
     try:
         json_dict = json.loads(json_message)
         logging_local("Received request" , json_dict, message_id)
@@ -46,28 +44,24 @@ def command_switcher(json_message):
         # Get the function from switcher dictionary
         cmd_execute = switcher.get(cmd, lambda null_argument: {"error": "invalid command"})
         # Execute the function
-        json_reply = cmd_execute(json_message)
+        json_reply = cmd_execute(json_dict)
         logging_local("Sended reply" , json_reply, message_id)
         return json_reply
     except ValueError:
         logging_local("Sended reply" , {"error": "string could not be converted to json"}, message_id)
         return {"error": "string could not be converted to json"}
 
-def logging_local(sendrecive, in_message, message_id):
+def logging_local(sendreceive, in_message, message_id):
     out_message = copy.copy(in_message)
     if 'error' in out_message:
-        logger.error("Message ID: %s, %s: %s" % (message_id, sendrecive, out_message))
+        logger.error("Message ID: %s, %s: %s" % (message_id, sendreceive, out_message))
     else:    
         if 'user_password' in out_message:
             out_message['user_password'] = u'*******'
         if 'vm_user_password' in out_message or 'vm_root_password' in out_message:
             out_message['vm_user_password'] = u'*******'
             out_message['vm_root_password'] = u'*******'            
-        logger.info("Message ID: %s, %s: %s" % (message_id, sendrecive, out_message))
-    
-def message_id_generator(size = 8):
-    s = "0123456789ABCDEF"
-    return "".join(random.sample(s,size ))    
+        logger.info("Message ID: %s, %s: %s" % (message_id, sendreceive, out_message))
 
 def password_generator(size = 16, complexity = 1):
     """
@@ -138,11 +132,10 @@ def switch_vm_state(state):
     }
     return switcher.get(state, "Invalid STATE")
     
-def get_vm_state(json_message):
+def get_vm_state(json_dict):
     """
     Getting state of one VM of user by VM NAME or VM ID.
     """
-    json_dict = json.loads(json_message)
     if not (json_dict.get('user_name') is None):
         user_name = json_dict['user_name']
     else:
@@ -207,11 +200,10 @@ def get_vm_state(json_message):
         
     return return_message
 
-def get_all_vm_state(json_message):
+def get_all_vm_state(json_dict):
     """
     Getting state all VMs of user by USERNAME or USER ID.
     """
-    json_dict = json.loads(json_message)
     if not (json_dict.get('user_name') is None):
         user_name = json_dict['user_name']
     else:
@@ -258,11 +250,10 @@ def user_group_allocate(group_name):
         
     return group_id    
     
-def user_allocate(json_message):
+def user_allocate(json_dict):
     """
     Allocate user.
     """
-    json_dict = json.loads(json_message)
     if not (json_dict.get('user_name') is None):
         user_name = json_dict['user_name']
     else:
@@ -291,11 +282,10 @@ def user_allocate(json_message):
     
     return return_message
     
-def user_delete(json_message):
+def user_delete(json_dict):
     """    
     Deletes the given user from the pool.
     """
-    json_dict = json.loads(json_message)    
     if not (json_dict.get('user_id') is None):
         user_id = json_dict['user_id']
     else:
@@ -303,6 +293,17 @@ def user_delete(json_message):
         
     try:
         vms_used = one.user.info(user_id).VM_QUOTA.VM.VMS_USED
+        if vms_used == "0":
+            try:
+                user_group_id = one.user.info(user_id).GID
+                one.user.delete(user_id)           
+                if one.group.info(user_group_id).USERS.ID:
+                    return {"action": "user deleted", "user_id": user_id}
+                else:
+                    one.group.delete(user_group_id)
+                    return {"action": "user and user group deleted", "user_id": user_id, "user_group_id": user_group_id}
+            except Exception as e:
+                return {"error": str(e)}              
     except Exception as e:
         if "[one.user.info]" in str(e):
             return {"error": str(e)}
@@ -319,29 +320,28 @@ def user_delete(json_message):
                 
     return {"error": "vm allocated", "user_id": user_id, "vms_used": vms_used}                 
  
-def get_user_info(json_message):
+def get_user_info(json_dict):
     """
     Getting information about user by ID
     """
-    json_dict = json.loads(json_message)    
     if not (json_dict.get('user_id') is None):
         user_id = json_dict['user_id']
     else:
         return {"error": "not set user id"} 
     
     try:
+        vms = one.user.info(user_id).VM_QUOTA.VM.VMS
         vms_used = one.user.info(user_id).VM_QUOTA.VM.VMS_USED
         running_vms_used = one.user.info(user_id).VM_QUOTA.VM.RUNNING_VMS_USED
     except Exception as e:
         return {"error": str(e)}
 
-    return {"user_id": user_id, "vms_used": vms_used,"running_vms_used": running_vms_used}
+    return {"user_id": user_id, "vms": vms, "vms_used": vms_used,"running_vms_used": running_vms_used}
     
-def template_instantiate(json_message):
+def template_instantiate(json_dict):
     """
     Instantiates a new virtual machine from a template.
     """
-    json_dict = json.loads(json_message)
     if not (json_dict.get('vm_name') is None):
         vm_name = json_dict['vm_name']
         try:
@@ -468,11 +468,10 @@ def template_instantiate(json_message):
     
     return return_message
 
-def template_instantiate_user(json_message):
+def template_instantiate_user(json_dict):
     """
     Instantiates a new virtual machine from a template.
     """
-    json_dict = json.loads(json_message)
     if not (json_dict.get('vm_name') is None):
         vm_name = json_dict['vm_name']
         try:
@@ -589,11 +588,10 @@ def template_instantiate_user(json_message):
 
     return return_message
 
-def vm_terminate(json_message):
+def vm_terminate(json_dict):
     """
     Terminate VM
     """
-    json_dict = json.loads(json_message)
     if not (json_dict.get('vm_id') is None):
         vm_id = json_dict['vm_id']
     else:
@@ -638,7 +636,7 @@ def vm_terminate(json_message):
         
     return {"action": "vm terminated"}
 
-def vm_action(json_message):
+def vm_action(json_dict):
     """
     VM action:
     poweroff-hard
@@ -647,7 +645,6 @@ def vm_action(json_message):
     reboot
     resume
     """
-    json_dict = json.loads(json_message)
     if not (json_dict.get('vm_id') is None):
         vm_id = json_dict['vm_id']
     else:

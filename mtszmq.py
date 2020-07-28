@@ -8,16 +8,21 @@ import time
 import threading
 import zmq
 import json
+import logging
+import logging.config
 from config import *
 from security.aes_cbc import *
 from commands.commands import *
 
+def message_id_generator(size = 8):
+    s = "0123456789ABCDEF"
+    return "".join(random.sample(s,size ))  
   
-def worker_routine(worker_url, key, context=None):
+def worker_routine(worker_url, key, worker_number, context=None):
     """
     Worker routine
     """
-
+    logger = logging.getLogger(__name__)    
     AESobj = AESCipher(key)
     
     context = context or zmq.Context.instance()
@@ -28,23 +33,28 @@ def worker_routine(worker_url, key, context=None):
 
     while True:
 
-#        json_recive  = socket.recv()
-        json_recive  = AESobj.decrypt(socket.recv())
-        
+#        json_receive  = socket.recv()
+        json_receive  = AESobj.decrypt(socket.recv())
+        message_id = message_id_generator()
+        logger.info(("Worker %s received  message ID: %s") % (worker_number, message_id))         
         #time.sleep(1)
        
-        json_reply = json.dumps(command_switcher(json_recive))
+        json_reply = json.dumps(command_switcher(json_receive, message_id))
         
         #send reply back to client
 #        socket.send(json_reply)
         socket.send(AESobj.encrypt(json_reply))
-        
+       
             
 
 def main(workers_quantity, server_ip, server_port, key):
     """
-    Server routine
+    Routing server
     """
+    #Configuration for logging
+    logging.config.fileConfig(fname=loggerconf_file, disable_existing_loggers=False)
+    logger = logging.getLogger(__name__)
+    logger.info("Routing server started")
 
     url_worker = "inproc://workers"
     url_client = "tcp://" + server_ip + ":" + server_port
@@ -61,9 +71,10 @@ def main(workers_quantity, server_ip, server_port, key):
     workers.bind(url_worker)
 
     # Launch pool of worker threads
-    for i in range(workers_quantity):
-        thread = threading.Thread(target=worker_routine, args=(url_worker, key,))
+    for worker_number in range(workers_quantity):
+        thread = threading.Thread(target=worker_routine, args=(url_worker, key, worker_number))
         thread.start()
+        logger.info(("Worker %s started") % worker_number)
 
     zmq.proxy(clients, workers)
 
@@ -76,6 +87,5 @@ if __name__ == "__main__":
     pid = str(os.getpid())
     file(pidfile, 'w').write(pid)
 
-#    print json.dumps(command_switcher('{"cmd": "get_all_vm_state", "user_id": 4, "vm_id": 33}'))
     main(workers_quantity, server_ip, server_port, key)
   
