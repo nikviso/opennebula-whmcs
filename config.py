@@ -1,13 +1,11 @@
-import pyone
 import base64
 
 """
-Create Opennebula connection
+Getting Opennebula sessions credential
 """
 one_auth_file = open("/var/lib/one/.one/one_auth","r")
 session = one_auth_file.read().replace('\n', '')
 one_auth_file.close()
-one = pyone.OneServer("http://localhost:2633/RPC2", session)
 
 """
 Getting AES key

@@ -1,20 +1,22 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 #
-
 import sys
 import os
-import time
 import threading
 import zmq
 import json
 import logging
+import pyone
 import logging.config
 from config import *
 from security.aes_cbc import *
 from commands.commands import *
 
-def message_id_generator(size = 8):
+def session_id_generator(size = 8):
+    """
+    Generating session id for writing to log file
+    """
     s = "0123456789ABCDEF"
     return "".join(random.sample(s,size ))  
   
@@ -24,22 +26,23 @@ def worker_routine(worker_url, key, worker_number, context=None):
     """
     logger = logging.getLogger(__name__)    
     AESobj = AESCipher(key)
+    one = pyone.OneServer("http://localhost:2633/RPC2", session)
     
     context = context or zmq.Context.instance()
     # Socket to talk to dispatcher
     socket = context.socket(zmq.REP)
 
     socket.connect(worker_url)
+    logger.info(("Worker %s started") % worker_number) 
 
     while True:
 
 #        json_receive  = socket.recv()
         json_receive  = AESobj.decrypt(socket.recv())
-        message_id = message_id_generator()
-        logger.info(("Worker %s received  message ID: %s") % (worker_number, message_id))         
-        #time.sleep(1)
+        session_id = session_id_generator()
+        logger.info(("Worker %s received  session ID: %s") % (worker_number, session_id))         
        
-        json_reply = json.dumps(command_switcher(json_receive, message_id))
+        json_reply = json.dumps(command_switcher(json_receive, session_id, one))
         
         #send reply back to client
 #        socket.send(json_reply)
@@ -74,7 +77,6 @@ def main(workers_quantity, server_ip, server_port, key):
     for worker_number in range(workers_quantity):
         thread = threading.Thread(target=worker_routine, args=(url_worker, key, worker_number))
         thread.start()
-        logger.info(("Worker %s started") % worker_number)
 
     zmq.proxy(clients, workers)
 
