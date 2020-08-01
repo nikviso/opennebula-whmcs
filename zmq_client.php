@@ -4,7 +4,7 @@ $password = generate_password(6,0);
 echo "password: ".$password."\n";
 #
 $vm_name = "v1p249.clouds365.host";
-$user_id = 13;
+$user_id = 30;
 $template_id = 6;
 $ip_address = "192.168.55.249";
 $dns_ip_address = "8.8.8.8";
@@ -15,8 +15,36 @@ $network_address = "192.168.55.0";
 /*
 $arr = array(
     "cmd" => "vm_terminate",
-    "vm_id" => 172,
-    "user_id" => 13,    
+    "vm_id" => 246,
+    "user_id" => 27    
+);
+*/
+/*
+$arr = array(
+    "cmd" => "template_instantiate",
+    "user_id" => $user_id,
+    "vm_name" => $vm_name,
+    "template_id" => $template_id,
+    "ip_address" => $ip_address,
+    "dns_ip_address" => $dns_ip_address,
+    "gw_ip_address" => $gw_ip_address,
+    "network_id" => $network_id,
+    "network_address" => $network_address,
+);
+*/
+/*
+$arr = array(
+    "cmd" => "template_instantiate_user",
+    "user_id" => 7,
+    "user_name" => "test_user2",
+    "user_password" => "8OgsSE",
+    "vm_name" => $vm_name,
+    "template_id" => 6,
+    "ip_address" => "192.168.55.253",
+    "dns_ip_address" => "8.8.8.8",
+    "gw_ip_address" => "192.168.55.1",
+    "network_id" => 0,
+    "network_address" => "192.168.55.0",
 );
 */
 /*
@@ -30,60 +58,44 @@ $arr = array(
 $arr = array(
     "cmd" => "vm_action",
     "action" => "resume",
-    "vm_id" => 171,
-    "user_id" => 13,    
+    "vm_id" => 248,
+    "user_id" => 30,    
 );
 */
-/*
-$arr = array(
-    "cmd" => "template_instantiate_user",
-    "user_id" => 7,
-    "user_name" => "test_user2",
-    "user_password" => "uxnCAy",
-    "vm_name" => $vm_name,
-    "template_id" => 6,
-    "ip_address" => "192.168.55.253",
-    "dns_ip_address" => "8.8.8.8",
-    "gw_ip_address" => "192.168.55.1",
-    "network_id" => 0,
-    "network_address" => "192.168.55.0",
-);
-*/
-/**/
-$arr = array(
-    "cmd" => "template_instantiate",
-    "user_id" => $user_id,
-    "vm_name" => $vm_name,
-    "template_id" => $template_id,
-    "ip_address" => $ip_address,
-    "dns_ip_address" => $dns_ip_address,
-    "gw_ip_address" => $gw_ip_address,
-    "network_id" => $network_id,
-    "network_address" => $network_address,
-);
-
 /*
 $user_group_id_array = array(100);
 $arr = array(
     "cmd" => "user_allocate",
-    "user_name" => "test_user2",
+    "user_name" => "test_user1",
     "user_password" => $password,
-    "user_group_id_array" => $user_group_id_array
+//    "user_group_id_array" => $user_group_id_array
+);
+*/
+/*
+$arr = array(
+    "cmd" => "get_user_info",
+    "user_id" => 30,    
+);
+*/
+/*
+$arr = array(
+    "cmd" => "user_delete",
+    "user_id" => 27,    
 );
 */
 /*
 $arr = array(
     "cmd" => "get_vm_state",
-    "user_id" => 13,
-    "vm_id" => 171,
+    "user_id" => 30,
+    "vm_id" => 248,
 );
 */
-/*
+/**/
 $arr = array(
     "cmd" => "get_all_vm_state",
-    "user_id" => 13,
+    "user_id" => 30,
 );
-*/
+
 $cipher="AES-256-CBC";
 $key_file = '../key_aes';
 $key = base64_decode(file_get_contents($key_file));
