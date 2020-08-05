@@ -48,12 +48,12 @@ $arr = array(
 );
 */
 /*
-    VM action:
-    poweroff-hard
-    poweroff
-    reboot-hard
-    reboot
-    resume
+//    VM action:
+//    poweroff-hard
+//    poweroff
+//    reboot-hard
+//    reboot
+//    resume
     
 $arr = array(
     "cmd" => "vm_action",

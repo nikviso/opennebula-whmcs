@@ -53,7 +53,7 @@ def command_switcher(json_message, session_id, one):
 def logging_local(sendreceive, in_message, session_id):
     out_message = copy.copy(in_message)
     if 'error' in out_message:
-        logger.error("Message ID: %s, %s: %s" % (session_id, sendreceive, out_message))
+        logger.error("Session ID: %s, %s: %s" % (session_id, sendreceive, out_message))
     else:    
         if 'user_password' in out_message:
             out_message['user_password'] = u'*******'
@@ -666,7 +666,7 @@ def vm_action(json_dict, one):
         return {"error": str(e)}
         
     
-    return {"action": action, "vm_action": vm_id, }
+    return {"vm_action": action, "vm_id": vm_id,}
         
 def get_template_id(template_name, one):
     """

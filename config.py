@@ -22,7 +22,7 @@ workers_quantity = 5
 """
 IP address and port number for ZMQ routing server binding
 """
-server_ip = "10.3.3.3"
+server_ip = "*"
 server_port = "5555"
 
 """
