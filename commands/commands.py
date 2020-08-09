@@ -339,31 +339,43 @@ def template_instantiate(json_dict, one):
         except IndexError:
             pass
     else:
-        return {"error": "not set vm name"}     
+        return {"error": "not set vm name"} 
+        
     if not (json_dict.get('user_id') is None):
         user_id = json_dict['user_id']
     else:
         return {"error": "not set user id"}
+        
     if not (json_dict.get('template_id') is None):
         template_id = json_dict['template_id']
     else:
         return {"error": "not set template id"}
+        
     if not (json_dict.get('ip_address') is None):
         ip_address = json_dict['ip_address']
     else:
         return {"error": "not set ip address"}
+        
+    if not (json_dict.get('network_mask') is None):
+        network_mask = json_dict['network_mask']
+    else:
+        return {"error": "not set network mask"}  
+        
     if not (json_dict.get('dns_ip_address') is None):
         dns_ip_address = json_dict['dns_ip_address']
     else:
         return {"error": "not set dns ip address"} 
+        
     if not (json_dict.get('gw_ip_address') is None):
         gw_ip_address = json_dict['gw_ip_address']
     else:
         return {"error": "not set gateway ip address"}
+        
     if not (json_dict.get('network_id') is None):
         network_id = json_dict['network_id']
     else:
         return {"error": "not set network id"}
+        
     if not (json_dict.get('network_address') is None):
         network_address = json_dict['network_address']
     else:
@@ -388,7 +400,8 @@ def template_instantiate(json_dict, one):
           'DNS': dns_ip_address,
           'GATEWAY': gw_ip_address,
           'NETWORK_ID': network_id,
-          'NETWORK_ADDRESS': network_address
+          'NETWORK_ADDRESS': network_address,
+          'NETWORK_MASK': network_mask          
         }
         }}, 
         True)   
@@ -470,39 +483,53 @@ def template_instantiate_user(json_dict, one):
         except IndexError:
             pass        
     else:
-        return {"error": "not set vm name"}     
+        return {"error": "not set vm name"}
+        
     if not (json_dict.get('user_id') is None):
         user_id = json_dict['user_id']
     else:
         return {"error": "not set user id"}
+        
     if not (json_dict.get('user_name') is None):
         user_name = json_dict['user_name']
     else:
-        return {"error": "not set user name"}  
+        return {"error": "not set user name"}
+        
     if not (json_dict.get('user_password') is None):
         user_password = json_dict['user_password']
     else:
-        return {"error": "not set user password"}       
+        return {"error": "not set user password"} 
+        
     if not (json_dict.get('template_id') is None):
         template_id = json_dict['template_id']
     else:
         return {"error": "not set template id"}
+        
     if not (json_dict.get('ip_address') is None):
         ip_address = json_dict['ip_address']
     else:
         return {"error": "not set ip address"}
+        
     if not (json_dict.get('dns_ip_address') is None):
         dns_ip_address = json_dict['dns_ip_address']
     else:
-        return {"error": "not set dns ip address"} 
+        return {"error": "not set dns ip address"}
+    
+    if not (json_dict.get('network_mask') is None):
+        network_mask = json_dict['network_mask']
+    else:
+        return {"error": "not set network mask"}
+        
     if not (json_dict.get('gw_ip_address') is None):
         gw_ip_address = json_dict['gw_ip_address']
     else:
         return {"error": "not set gateway ip address"}
+        
     if not (json_dict.get('network_id') is None):
         network_id = json_dict['network_id']
     else:
         return {"error": "not set network id"}
+        
     if not (json_dict.get('network_address') is None):
         network_address = json_dict['network_address']
     else:
@@ -531,7 +558,8 @@ def template_instantiate_user(json_dict, one):
                   'DNS': dns_ip_address,
                   'GATEWAY': gw_ip_address,
                   'NETWORK_ID': "0",
-                  'NETWORK_ADDRESS': network_address
+                  'NETWORK_ADDRESS': network_address,
+                  'NETWORK_MASK': network_mask          
                 }
             }
         }, 
