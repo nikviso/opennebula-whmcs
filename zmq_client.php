@@ -3,23 +3,24 @@
 $password = generate_password(6,0);
 echo "password: ".$password."\n";
 #
-$vm_name = "v1p249.clouds365.host";
+$vm_name = "v1p246.clouds365.host";
 $user_id = 30;
 $template_id = 6;
-$ip_address = "192.168.55.249";
+$ip_address = "192.168.55.246";
 $dns_ip_address = "8.8.8.8";
 $gw_ip_address = "192.168.55.1";
-$network_id = 0;
+$network_id = "0";
 $network_address = "192.168.55.0";
+$network_mask = "255.255.255.0";
 
 /*
 $arr = array(
     "cmd" => "vm_terminate",
-    "vm_id" => 246,
-    "user_id" => 27    
+    "vm_id" => 247,
+    "user_id" => 29    
 );
 */
-/*
+/**/
 $arr = array(
     "cmd" => "template_instantiate",
     "user_id" => $user_id,
@@ -30,8 +31,9 @@ $arr = array(
     "gw_ip_address" => $gw_ip_address,
     "network_id" => $network_id,
     "network_address" => $network_address,
+    "network_mask" => $network_mask,
 );
-*/
+
 /*
 $arr = array(
     "cmd" => "template_instantiate_user",
@@ -45,15 +47,16 @@ $arr = array(
     "gw_ip_address" => "192.168.55.1",
     "network_id" => 0,
     "network_address" => "192.168.55.0",
+    "network_mask" => 255.255.255.0,    
 );
 */
 /*
-//    VM action:
-//    poweroff-hard
-//    poweroff
-//    reboot-hard
-//    reboot
-//    resume
+    VM action:
+    poweroff-hard
+    poweroff
+    reboot-hard
+    reboot
+    resume
     
 $arr = array(
     "cmd" => "vm_action",
@@ -90,12 +93,12 @@ $arr = array(
     "vm_id" => 248,
 );
 */
-/**/
+/*
 $arr = array(
     "cmd" => "get_all_vm_state",
     "user_id" => 30,
 );
-
+*/
 $cipher="AES-256-CBC";
 $key_file = '../key_aes';
 $key = base64_decode(file_get_contents($key_file));
@@ -131,7 +134,7 @@ function decrypt($ciphertext, $key, $cipher){
 /*
 * Password generator
 */
-function generate_password($number,$strong)
+function generate_password($length,$strong)
 {
     $arr_strong = array(
                  'a','b','c','d','e','f',
@@ -166,7 +169,7 @@ function generate_password($number,$strong)
     }
 
     $pass = "";
-    for($i = 0; $i < $number; $i++)
+    for($i = 0; $i < $length; $i++)
     {
       $index = rand(0, count($arr) - 1);
       $pass .= $arr[$index];

@@ -343,6 +343,8 @@ def template_instantiate(json_dict, one):
         
     if not (json_dict.get('user_id') is None):
         user_id = json_dict['user_id']
+        if type(user_id) is not int:
+            return {"error": "Parameter user_id that is supposed to be integer is not"}
     else:
         return {"error": "not set user id"}
         
