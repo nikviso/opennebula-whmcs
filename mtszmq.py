@@ -37,16 +37,19 @@ def worker_routine(worker_url, key, worker_number, context=None):
 
     while True:
 
-#        json_receive  = socket.recv()
         json_receive  = AESobj.decrypt(socket.recv())
         session_id = session_id_generator()
-        logger.info(("Worker %s received  session ID: %s") % (worker_number, session_id))         
-       
-        json_reply = json.dumps(command_switcher(json_receive, session_id, one))
-        
+        if json_receive:
+            logger.info(("Worker %s received  session ID: %s") % (worker_number, session_id))         
+            json_reply = json.dumps(command_switcher(json_receive, session_id, one))
+            socket.send(AESobj.encrypt(json_reply))
+        else:
+            logger.info(("Session ID: %s. Worker %s received a message with an unsupported encryption method. ") % (session_id, worker_number))
+            json_reply = json.dumps({"error": "unsupported encryption method"})
+            socket.send(json_reply)
         #send reply back to client
-#        socket.send(json_reply)
-        socket.send(AESobj.encrypt(json_reply))
+        #socket.send(json_reply)
+        #socket.send(AESobj.encrypt(json_reply))
        
             
 
