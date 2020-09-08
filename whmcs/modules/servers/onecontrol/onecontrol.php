@@ -180,7 +180,7 @@ function onecontrol_CreateAccount(array $params)
         // )
         // ```
         
- 
+
     } catch (Exception $e) {
         // Record the error in WHMCS's module log.
         logModuleCall(
@@ -282,6 +282,7 @@ function onecontrol_TerminateAccount(array $params)
     try {
         // Call the service's terminate function, using the values provided by
         // WHMCS in `$params`.
+        
     } catch (Exception $e) {
         // Record the error in WHMCS's module log.
         logModuleCall(
@@ -530,63 +531,128 @@ function onecontrol_actionOneFunction(array $params)
             // `$params`.
             require_once('lib/OneConnector.php');
             $oneconnector = new OneConnector;
-            $one_user_password = $oneconnector->generate_password();
             $whmcs_user_id = $params['clientsdetails']['id'];
-               /*         
-            $arr = array(
-                "cmd" => "user_allocate",
-                "user_name" => $params['clientsdetails']['id'],
-                "user_password" => $one_user_password,
-                );
-             */                 
-
-            $arr = array(
-                "cmd" => "user_delete",
-                "user_id" => 47,    
-            );
-       
-            $one_reply = $oneconnector->connector($arr);            
-            //echo $params["clientsdetails"]["email"];
-            //echo $params['clientsdetails']['uuid'];
-            //var_dump ($params);
-            echo $one_reply->{'error'};
             
-            if($one_reply->{'error'}){
-                return '. Oops! Something went wrong!';
-            }
+            /*
+            Capsule::table('mod_on_user')->where('id_service',$serviceid)
+                ->update(
+                array(
+                    'id_service'=>$serviceid,
+                    'loginon'=>$loginon,
+                    'passwordon'=>$password,
+                    'userid'=>$userid,
+                    'vmid'=>$vmid)
+            );
+            
+            return Capsule::table( 'mod_on_user' )->insert(
+            array(
+                'id_service'=>$serviceid,
+                'loginon'=>$loginon,
+                'passwordon'=>$password,
+                'userid'=>$userid,
+                'vmid'=>$vmid)
+            );
+            var_dump (Capsule::table('mod_onecontrol_onevm')
+                ->select('vm_name','vm_ip_address')
+                ->where('vm_id',0)
+                ->first());
+            */
 
-            $pdo = Capsule::connection()->getPdo();
-            $pdo->beginTransaction();
-            try {
-                $statement = $pdo->prepare(
-                    'insert into mod_onecontrol_oneuser (whmcs_user_id, one_user_id, one_user_group_id, one_user_name, one_user_password, one_user_token)
-                    values (:whmcs_user_id, :one_user_id, :one_user_group_id, :one_user_name, :one_user_password, :one_user_token)'
-                );
 
-                $statement->execute(
-                    [
-                        ':whmcs_user_id' => $whmcs_user_id,
-                        ':one_user_id' => '',
-                        ':one_user_group_id' => '',
-                        ':one_user_name' => '',
-                        ':one_user_password' => '',
-                        ':one_user_token' => '',
-                    ]
-                );
+            $result_oneuser = Capsule::table( 'mod_onecontrol_oneuser' )
+                        ->select('one_user_id')
+                        ->where('whmcs_user_id',$whmcs_user_id)
+                        ->first();
+            if($result_oneuser) {
+                $one_user_id = $result_oneuser->{'one_user_id'};
+                $result_onevm = Capsule::table('mod_onecontrol_onevm')
+                                ->select('id','vm_name','vm_ip_address','vm_network_mask','vm_network_address',
+                                         'vm_gw_ip_address','vm_dns_ip_address','one_network_id')
+                                ->where('vm_id',0)
+                                ->where('user_id',0)
+                                ->first();
+                                
+                               
+                if($result_onevm){
+                    Capsule::table('mod_onecontrol_onevm')->where('id',$result_onevm->{'id'})
+                        ->update(
+                            array(
+                                'user_id'=>$one_user_id,
+                                'service_id'=>$params['serviceid']
+                                )
+                        );    
 
-                $pdo->commit();
-            } catch (\Exception $e) {
-                $pdo->rollBack();                
-                // Record the error in WHMCS's module log.
-                logModuleCall(
-                    'onecontrol',
-                    __FUNCTION__,
-                    $params,
-                    $e->getMessage(),
-                    $e->getTraceAsString()
-                );
-            }
-        
+                    $arr = array(
+                        "cmd" => "template_instantiate",
+                        "user_id" => $one_user_id,
+                        "vm_name" => $result_onevm->{'vm_name'},
+                        "template_id" => 6,
+                        "ip_address" => $result_onevm->{'vm_ip_address'},
+                        "dns_ip_address" => $result_onevm->{'vm_dns_ip_address'},
+                        "gw_ip_address" => $result_onevm->{'vm_gw_ip_address'},
+                        "network_id" => $result_onevm->{'one_network_id'},
+                        "network_address" => $result_onevm->{'vm_network_address'},
+                        "network_mask" => $result_onevm->{'vm_network_mask'},
+                    );
+ 
+                    $one_reply = $oneconnector->connector($arr);
+                    if($one_reply->{'error'}){
+                        return '. Oops! Something went wrong!';
+                    } 
+                    
+                    Capsule::table('mod_onecontrol_onevm')->where('id',$result_onevm->{'id'})
+                        ->update(
+                            array(
+                                'vm_id'=>$one_reply->{'vm_id'}
+                                )
+                        );
+                } else {
+                    logModuleCall(
+                        'onecontrol',
+                        __FUNCTION__,
+                        $params,
+                        $arr
+                    );
+                    return '. Oops! Something went wrong!';
+                }
+                
+            } else {
+                $one_user_password = $oneconnector->generate_password();       
+                $arr = array(
+                            "cmd" => "user_allocate",
+                            "user_name" => $params["clientsdetails"]["email"],
+                            "user_password" => $one_user_password,
+                            );
+                
+                $one_reply = $oneconnector->connector($arr);
+                if($one_reply->{'error'}){
+                    return '. Oops! Something went wrong!';
+                }
+                
+                //echo $params["clientsdetails"]["email"];
+                //echo $params['clientsdetails']['id'];
+                //echo $params['clientsdetails']['uuid'];
+
+                $one_user_id = $one_reply->{'user_id'};
+                $one_user_name = $one_reply->{'user_name'};
+                $one_user_group_id_array = '';
+                foreach($one_reply->{'user_group_id_array'} as $key => $value)
+                    {
+                        $one_user_group_id_array = $one_user_group_id_array . $value . ',';
+                    }
+
+                $result_oneuser = Capsule::table( 'mod_onecontrol_oneuser' )->insert(
+                                    array(
+                                        'whmcs_user_id' => $whmcs_user_id,
+                                        'one_user_id' => $one_user_id,
+                                        'one_user_group_id' => $one_user_group_id_array,
+                                        'one_user_name' => $one_user_name,
+                                        'one_user_password' => $one_user_password,
+                                        'one_user_token' => '')               
+                                );
+                
+                onecontrol_actionOneFunction($params);
+            }    
         } catch (Exception $e) {
         // Record the error in WHMCS's module log.
         logModuleCall(
@@ -596,9 +662,89 @@ function onecontrol_actionOneFunction(array $params)
             $e->getMessage(),
             $e->getTraceAsString()
         );
+        //return $e->getMessage();        
+        return '. Oops! Something went wrong!';
 
-        return $e->getMessage();
     }
+    
+    return 'success';
+}
+
+
+function onecontrol_actionTwoFunction(array $params)
+{
+    
+    try {
+            // Call the service's function, using the values provided by WHMCS in
+            // `$params`.
+            require_once('lib/OneConnector.php');
+            $oneconnector = new OneConnector;
+            //$whmcs_user_id = $params['clientsdetails']['id'];
+            //$service_id = $params['serviceid'];
+           
+            $result_oneuser = Capsule::table('mod_onecontrol_oneuser')
+                ->select('one_user_id')
+                ->where('whmcs_user_id',$params['clientsdetails']['id'])
+                ->first();
+                
+            //$one_user_id = $result_oneuser->{'one_user_id'};
+
+            $result_onevm = Capsule::table('mod_onecontrol_onevm')
+                ->select('vm_id')
+                ->where('service_id',$params['serviceid'])
+                ->where('user_id',$result_oneuser->{'one_user_id'})
+                ->first();
+                
+            echo  $result_onevm->{'vm_id'};   
+
+            $arr = array(
+                "cmd" => "vm_terminate",
+                "vm_id" => $result_onevm->{'vm_id'},
+                "user_id" => $result_oneuser->{'one_user_id'}    
+            );
+
+            $one_reply = $oneconnector->connector($arr);              
+            if($one_reply->{'error'}){
+                return '. Oops! Something went wrong!';
+            }
+
+            Capsule::table('mod_onecontrol_onevm')
+                ->where('vm_id',$result_onevm->{'vm_id'})
+                ->update(
+                    array(
+                        'vm_id'=>0,
+                        'service_id'=>0,
+                        'user_id'=>0
+                        
+                        )
+                );
+
+/*    
+            $arr = array(
+                "cmd" => "user_delete",
+                "user_id" => $one_user_id,    
+            );
+            $one_reply = $oneconnector->connector($arr);              
+            if($one_reply->{'error'}){
+                return '. Oops! Something went wrong!';
+            }  
+            
+            (Capsule::table('mod_onecontrol_oneuser')
+                ->where('whmcs_user_id',$whmcs_user_id)
+                ->delete());
+*/            
+    } catch (Exception $e) {
+        // Record the error in WHMCS's module log.
+        logModuleCall(
+            'onecontrol',
+            __FUNCTION__,
+            $params,
+            $e->getMessage(),
+            $e->getTraceAsString()
+        );
+        //return $e->getMessage();        
+        return '. Oops! Something went wrong!';
+    }    
 
     return 'success';
 }
@@ -820,7 +966,7 @@ function onecontrol_ClientArea(array $params)
     $requestedAction = isset($_REQUEST['customAction']) ? $_REQUEST['customAction'] : '';
     
     
-    //var_dump($params);
+    
     
     if ($requestedAction == 'manage') {
         $serviceAction = 'get_usage';
@@ -828,6 +974,8 @@ function onecontrol_ClientArea(array $params)
     } else {
         $serviceAction = 'get_stats';
         $templateFile = 'templates/overview.tpl';
+        //echo "SID:".$params['serviceid']."; OID:".$params['attributes']['orderid'];
+        //var_dump($params);
     }
 
     try {

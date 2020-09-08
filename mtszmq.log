@@ -2274,3 +2274,384 @@
 02-Sep-20 17:06:23 - __main__ - INFO - Worker 2 received  session ID: ACD78265
 02-Sep-20 17:06:23 - commands.commands - INFO - Session ID: ACD78265, Received request: {u'cmd': u'user_delete', u'user_id': 47}
 02-Sep-20 17:06:23 - commands.commands - INFO - Session ID: ACD78265, Sended reply: {'action': 'user and user group deleted', 'user_group_id': 138, 'user_id': 47}
+02-Sep-20 17:21:56 - __main__ - INFO - Worker 3 received  session ID: FB6E2539
+02-Sep-20 17:21:56 - commands.commands - INFO - Session ID: FB6E2539, Received request: {u'cmd': u'user_delete', u'user_id': 47}
+02-Sep-20 17:21:56 - commands.commands - ERROR - Session ID: FB6E2539, Sended reply: {'error': '[one.user.info] Error getting user [47].'}
+02-Sep-20 20:47:27 - __main__ - INFO - Worker 1 received  session ID: B437C2E1
+02-Sep-20 20:47:27 - commands.commands - INFO - Session ID: B437C2E1, Received request: {u'cmd': u'user_delete', u'user_id': 47}
+02-Sep-20 20:47:27 - commands.commands - ERROR - Session ID: B437C2E1, Sended reply: {'error': '[one.user.info] Error getting user [47].'}
+02-Sep-20 21:04:24 - __main__ - INFO - Worker 4 received  session ID: 4CA85E7F
+02-Sep-20 21:04:24 - commands.commands - INFO - Session ID: 4CA85E7F, Received request: {u'user_password': u'*******', u'cmd': u'user_allocate', u'user_name': u'5'}
+02-Sep-20 21:04:25 - commands.commands - INFO - Session ID: 4CA85E7F, Sended reply: {'user_name': u'5', 'user_id': 48, 'user_group_id_array': [139]}
+02-Sep-20 21:12:56 - __main__ - INFO - Worker 0 received  session ID: DFC58760
+02-Sep-20 21:12:56 - commands.commands - INFO - Session ID: DFC58760, Received request: {u'user_password': u'*******', u'cmd': u'user_allocate', u'user_name': u'nikolaj@microlines.lv'}
+02-Sep-20 21:12:56 - commands.commands - INFO - Session ID: DFC58760, Sended reply: {'user_name': u'nikolaj@microlines.lv', 'user_id': 49, 'user_group_id_array': [140]}
+02-Sep-20 21:13:04 - __main__ - INFO - Worker 2 received  session ID: EA05CB41
+02-Sep-20 21:13:04 - commands.commands - INFO - Session ID: EA05CB41, Received request: {u'user_password': u'*******', u'cmd': u'user_allocate', u'user_name': u'nikolaj@microlines.lv'}
+02-Sep-20 21:13:04 - commands.commands - ERROR - Session ID: EA05CB41, Sended reply: {'error': '[one.group.allocate] NAME is already taken by GROUP 140.'}
+02-Sep-20 21:13:43 - __main__ - INFO - Worker 3 received  session ID: 3CF19267
+02-Sep-20 21:13:43 - commands.commands - INFO - Session ID: 3CF19267, Received request: {u'cmd': u'user_delete', u'user_id': 48}
+02-Sep-20 21:13:44 - commands.commands - INFO - Session ID: 3CF19267, Sended reply: {'action': 'user and user group deleted', 'user_group_id': 139, 'user_id': 48}
+02-Sep-20 21:13:53 - __main__ - INFO - Worker 1 received  session ID: 14E5089D
+02-Sep-20 21:13:53 - commands.commands - INFO - Session ID: 14E5089D, Received request: {u'cmd': u'user_delete', u'user_id': 49}
+02-Sep-20 21:13:53 - commands.commands - INFO - Session ID: 14E5089D, Sended reply: {'action': 'user and user group deleted', 'user_group_id': 140, 'user_id': 49}
+02-Sep-20 21:15:36 - __main__ - INFO - Worker 4 received  session ID: 6BCA47F2
+02-Sep-20 21:15:36 - commands.commands - INFO - Session ID: 6BCA47F2, Received request: {u'user_password': u'*******', u'cmd': u'user_allocate', u'user_name': u'nikolaj@microlines.lv'}
+02-Sep-20 21:15:37 - commands.commands - INFO - Session ID: 6BCA47F2, Sended reply: {'user_name': u'nikolaj@microlines.lv', 'user_id': 50, 'user_group_id_array': [141]}
+02-Sep-20 21:19:18 - __main__ - INFO - Worker 0 received  session ID: 5693CD2F
+02-Sep-20 21:19:18 - commands.commands - INFO - Session ID: 5693CD2F, Received request: {u'cmd': u'user_delete', u'user_id': 50}
+02-Sep-20 21:19:18 - commands.commands - INFO - Session ID: 5693CD2F, Sended reply: {'action': 'user and user group deleted', 'user_group_id': 141, 'user_id': 50}
+02-Sep-20 21:19:52 - __main__ - INFO - Worker 2 received  session ID: DC68137F
+02-Sep-20 21:19:52 - commands.commands - INFO - Session ID: DC68137F, Received request: {u'user_password': u'*******', u'cmd': u'user_allocate', u'user_name': u'nikolaj@microlines.lv'}
+02-Sep-20 21:19:53 - commands.commands - INFO - Session ID: DC68137F, Sended reply: {'user_name': u'nikolaj@microlines.lv', 'user_id': 51, 'user_group_id_array': [142]}
+02-Sep-20 21:21:44 - __main__ - INFO - Worker 3 received  session ID: 8025B694
+02-Sep-20 21:21:44 - commands.commands - INFO - Session ID: 8025B694, Received request: {u'user_password': u'*******', u'cmd': u'user_allocate', u'user_name': u'nikolaj@microlines.lv'}
+02-Sep-20 21:21:44 - commands.commands - ERROR - Session ID: 8025B694, Sended reply: {'error': '[one.group.allocate] NAME is already taken by GROUP 142.'}
+02-Sep-20 21:55:14 - __main__ - INFO - Worker 1 received  session ID: 956CB7DF
+02-Sep-20 21:55:14 - commands.commands - INFO - Session ID: 956CB7DF, Received request: {u'cmd': u'user_delete', u'user_id': 51}
+02-Sep-20 21:55:14 - commands.commands - INFO - Session ID: 956CB7DF, Sended reply: {'action': 'user and user group deleted', 'user_group_id': 142, 'user_id': 51}
+02-Sep-20 21:56:43 - __main__ - INFO - Worker 4 received  session ID: 2E0A57D3
+02-Sep-20 21:56:43 - commands.commands - INFO - Session ID: 2E0A57D3, Received request: {u'user_password': u'*******', u'cmd': u'user_allocate', u'user_name': u'nikolaj@microlines.lv'}
+02-Sep-20 21:56:44 - commands.commands - INFO - Session ID: 2E0A57D3, Sended reply: {'user_name': u'nikolaj@microlines.lv', 'user_id': 52, 'user_group_id_array': [143]}
+02-Sep-20 21:57:44 - __main__ - INFO - Worker 0 received  session ID: A605E3B8
+02-Sep-20 21:57:44 - commands.commands - INFO - Session ID: A605E3B8, Received request: {u'cmd': u'user_delete', u'user_id': 52}
+02-Sep-20 21:57:44 - commands.commands - INFO - Session ID: A605E3B8, Sended reply: {'action': 'user and user group deleted', 'user_group_id': 143, 'user_id': 52}
+02-Sep-20 21:59:51 - __main__ - INFO - Worker 2 received  session ID: D4975AB0
+02-Sep-20 21:59:51 - commands.commands - INFO - Session ID: D4975AB0, Received request: {u'user_password': u'*******', u'cmd': u'user_allocate', u'user_name': u'nikolaj@microlines.lv'}
+02-Sep-20 21:59:52 - commands.commands - INFO - Session ID: D4975AB0, Sended reply: {'user_name': u'nikolaj@microlines.lv', 'user_id': 53, 'user_group_id_array': [144]}
+02-Sep-20 22:00:52 - __main__ - INFO - Worker 3 received  session ID: 2795A684
+02-Sep-20 22:00:52 - commands.commands - INFO - Session ID: 2795A684, Received request: {u'user_password': u'*******', u'cmd': u'user_allocate', u'user_name': u'nikolaj@microlines.lv'}
+02-Sep-20 22:00:52 - commands.commands - ERROR - Session ID: 2795A684, Sended reply: {'error': '[one.group.allocate] NAME is already taken by GROUP 144.'}
+02-Sep-20 22:06:43 - __main__ - INFO - Worker 1 received  session ID: 7EB694A5
+02-Sep-20 22:06:43 - commands.commands - INFO - Session ID: 7EB694A5, Received request: {u'user_password': u'*******', u'cmd': u'user_allocate', u'user_name': u'nikolaj@microlines.lv'}
+02-Sep-20 22:06:43 - commands.commands - ERROR - Session ID: 7EB694A5, Sended reply: {'error': '[one.group.allocate] NAME is already taken by GROUP 144.'}
+02-Sep-20 22:07:10 - __main__ - INFO - Worker 4 received  session ID: 8CAE9726
+02-Sep-20 22:07:10 - commands.commands - INFO - Session ID: 8CAE9726, Received request: {u'cmd': u'user_delete', u'user_id': 53}
+02-Sep-20 22:07:10 - commands.commands - INFO - Session ID: 8CAE9726, Sended reply: {'action': 'user and user group deleted', 'user_group_id': 144, 'user_id': 53}
+03-Sep-20 00:07:17 - __main__ - INFO - Worker 0 received  session ID: 0ED321A8
+03-Sep-20 00:07:17 - commands.commands - INFO - Session ID: 0ED321A8, Received request: {u'user_password': u'*******', u'cmd': u'user_allocate', u'user_name': u'nikolaj@microlines.lv'}
+03-Sep-20 00:07:18 - commands.commands - INFO - Session ID: 0ED321A8, Sended reply: {'user_name': u'nikolaj@microlines.lv', 'user_id': 54, 'user_group_id_array': [145]}
+03-Sep-20 09:56:07 - __main__ - INFO - Worker 2 received  session ID: 46A7EF3B
+03-Sep-20 09:56:07 - commands.commands - INFO - Session ID: 46A7EF3B, Received request: {u'cmd': u'user_delete', u'user_id': 53}
+03-Sep-20 09:56:07 - commands.commands - ERROR - Session ID: 46A7EF3B, Sended reply: {'error': '[one.user.info] Error getting user [53].'}
+03-Sep-20 11:14:35 - __main__ - INFO - Worker 3 received  session ID: 71EF205D
+03-Sep-20 11:14:35 - commands.commands - INFO - Session ID: 71EF205D, Received request: {u'cmd': u'user_delete', u'user_id': 53}
+03-Sep-20 11:14:35 - commands.commands - ERROR - Session ID: 71EF205D, Sended reply: {'error': '[one.user.info] Error getting user [53].'}
+03-Sep-20 13:21:22 - __main__ - INFO - Worker 1 received  session ID: 2430F695
+03-Sep-20 13:21:22 - commands.commands - INFO - Session ID: 2430F695, Received request: {u'user_password': u'*******', u'cmd': u'user_allocate', u'user_name': u'nikolaj@microlines.lv'}
+03-Sep-20 13:21:22 - commands.commands - ERROR - Session ID: 2430F695, Sended reply: {'error': '[one.group.allocate] NAME is already taken by GROUP 145.'}
+03-Sep-20 13:24:57 - __main__ - INFO - Worker 4 received  session ID: D3586C09
+03-Sep-20 13:24:57 - commands.commands - INFO - Session ID: D3586C09, Received request: {u'cmd': u'user_delete', u'user_id': 54}
+03-Sep-20 13:24:58 - commands.commands - INFO - Session ID: D3586C09, Sended reply: {'action': 'user and user group deleted', 'user_group_id': 145, 'user_id': 54}
+03-Sep-20 14:10:04 - __main__ - INFO - Worker 0 received  session ID: BD78E049
+03-Sep-20 14:10:04 - commands.commands - INFO - Session ID: BD78E049, Received request: {u'cmd': u'user_delete', u'user_id': 54}
+03-Sep-20 14:10:04 - commands.commands - ERROR - Session ID: BD78E049, Sended reply: {'error': '[one.user.info] Error getting user [54].'}
+03-Sep-20 14:33:13 - __main__ - INFO - Worker 2 received  session ID: ADFC1205
+03-Sep-20 14:33:13 - commands.commands - INFO - Session ID: ADFC1205, Received request: {u'cmd': u'user_delete', u'user_id': 54}
+03-Sep-20 14:33:13 - commands.commands - ERROR - Session ID: ADFC1205, Sended reply: {'error': '[one.user.info] Error getting user [54].'}
+04-Sep-20 15:27:47 - __main__ - INFO - Worker 3 received  session ID: 21E70AC9
+04-Sep-20 15:27:47 - commands.commands - INFO - Session ID: 21E70AC9, Received request: {u'user_password': u'*******', u'cmd': u'user_allocate', u'user_name': u'nikolaj@microlines.lv'}
+04-Sep-20 15:27:48 - commands.commands - INFO - Session ID: 21E70AC9, Sended reply: {'user_name': u'nikolaj@microlines.lv', 'user_id': 55, 'user_group_id_array': [146]}
+04-Sep-20 15:33:24 - __main__ - INFO - Worker 1 received  session ID: 73DE860C
+04-Sep-20 15:33:24 - commands.commands - INFO - Session ID: 73DE860C, Received request: {u'cmd': u'user_delete', u'user_id': 55}
+04-Sep-20 15:33:25 - commands.commands - INFO - Session ID: 73DE860C, Sended reply: {'action': 'user and user group deleted', 'user_group_id': 146, 'user_id': 55}
+04-Sep-20 15:35:13 - __main__ - INFO - Worker 4 received  session ID: 95E0F8D3
+04-Sep-20 15:35:13 - commands.commands - INFO - Session ID: 95E0F8D3, Received request: {u'user_password': u'*******', u'cmd': u'user_allocate', u'user_name': u'nikolaj@microlines.lv'}
+04-Sep-20 15:35:14 - commands.commands - INFO - Session ID: 95E0F8D3, Sended reply: {'user_name': u'nikolaj@microlines.lv', 'user_id': 56, 'user_group_id_array': [147]}
+04-Sep-20 16:16:25 - __main__ - INFO - Worker 0 received  session ID: 6CD0E5B2
+04-Sep-20 16:16:25 - commands.commands - INFO - Session ID: 6CD0E5B2, Received request: {u'cmd': u'user_delete', u'user_id': 56}
+04-Sep-20 16:16:25 - commands.commands - INFO - Session ID: 6CD0E5B2, Sended reply: {'action': 'user and user group deleted', 'user_group_id': 147, 'user_id': 56}
+04-Sep-20 16:53:54 - __main__ - INFO - Worker 2 received  session ID: 61B9D3FE
+04-Sep-20 16:53:54 - commands.commands - INFO - Session ID: 61B9D3FE, Received request: {u'user_password': u'*******', u'cmd': u'user_allocate', u'user_name': u'nikolaj@microlines.lv'}
+04-Sep-20 16:53:54 - commands.commands - INFO - Session ID: 61B9D3FE, Sended reply: {'user_name': u'nikolaj@microlines.lv', 'user_id': 57, 'user_group_id_array': [148]}
+04-Sep-20 16:54:47 - __main__ - INFO - Worker 3 received  session ID: E8B27543
+04-Sep-20 16:54:47 - commands.commands - INFO - Session ID: E8B27543, Received request: {u'cmd': u'user_delete', u'user_id': 57}
+04-Sep-20 16:54:47 - commands.commands - INFO - Session ID: E8B27543, Sended reply: {'action': 'user and user group deleted', 'user_group_id': 148, 'user_id': 57}
+04-Sep-20 16:55:37 - __main__ - INFO - Worker 1 received  session ID: F3D50127
+04-Sep-20 16:55:37 - commands.commands - INFO - Session ID: F3D50127, Received request: {u'user_password': u'*******', u'cmd': u'user_allocate', u'user_name': u'nikolaj@microlines.lv'}
+04-Sep-20 16:55:37 - commands.commands - INFO - Session ID: F3D50127, Sended reply: {'user_name': u'nikolaj@microlines.lv', 'user_id': 58, 'user_group_id_array': [149]}
+04-Sep-20 16:55:58 - __main__ - INFO - Worker 4 received  session ID: C52693B7
+04-Sep-20 16:55:58 - commands.commands - INFO - Session ID: C52693B7, Received request: {u'cmd': u'user_delete', u'user_id': 58}
+04-Sep-20 16:55:59 - commands.commands - INFO - Session ID: C52693B7, Sended reply: {'action': 'user and user group deleted', 'user_group_id': 149, 'user_id': 58}
+04-Sep-20 16:56:48 - __main__ - INFO - Worker 0 received  session ID: 5E3D76C0
+04-Sep-20 16:56:48 - commands.commands - INFO - Session ID: 5E3D76C0, Received request: {u'user_password': u'*******', u'cmd': u'user_allocate', u'user_name': u'nikolaj@microlines.lv'}
+04-Sep-20 16:56:49 - commands.commands - INFO - Session ID: 5E3D76C0, Sended reply: {'user_name': u'nikolaj@microlines.lv', 'user_id': 59, 'user_group_id_array': [150]}
+04-Sep-20 16:56:56 - __main__ - INFO - Worker 2 received  session ID: F3B26058
+04-Sep-20 16:56:56 - commands.commands - INFO - Session ID: F3B26058, Received request: {u'user_password': u'*******', u'cmd': u'user_allocate', u'user_name': u'nikolaj@microlines.lv'}
+04-Sep-20 16:56:56 - commands.commands - ERROR - Session ID: F3B26058, Sended reply: {'error': '[one.group.allocate] NAME is already taken by GROUP 150.'}
+04-Sep-20 16:58:08 - __main__ - INFO - Worker 3 received  session ID: DCE603B5
+04-Sep-20 16:58:08 - commands.commands - INFO - Session ID: DCE603B5, Received request: {u'cmd': u'user_delete', u'user_id': 59}
+04-Sep-20 16:58:08 - commands.commands - INFO - Session ID: DCE603B5, Sended reply: {'action': 'user and user group deleted', 'user_group_id': 150, 'user_id': 59}
+04-Sep-20 16:58:35 - __main__ - INFO - Worker 1 received  session ID: C4AD617B
+04-Sep-20 16:58:35 - commands.commands - INFO - Session ID: C4AD617B, Received request: {u'user_password': u'*******', u'cmd': u'user_allocate', u'user_name': u'nikolaj@microlines.lv'}
+04-Sep-20 16:58:35 - commands.commands - INFO - Session ID: C4AD617B, Sended reply: {'user_name': u'nikolaj@microlines.lv', 'user_id': 60, 'user_group_id_array': [151]}
+04-Sep-20 16:59:10 - __main__ - INFO - Worker 4 received  session ID: 75FBA280
+04-Sep-20 16:59:10 - commands.commands - INFO - Session ID: 75FBA280, Received request: {u'cmd': u'user_delete', u'user_id': 60}
+04-Sep-20 16:59:10 - commands.commands - INFO - Session ID: 75FBA280, Sended reply: {'action': 'user and user group deleted', 'user_group_id': 151, 'user_id': 60}
+04-Sep-20 18:01:26 - __main__ - INFO - Worker 0 received  session ID: 3DA512E9
+04-Sep-20 18:01:26 - commands.commands - INFO - Session ID: 3DA512E9, Received request: {u'user_password': u'*******', u'cmd': u'user_allocate', u'user_name': u'nikolaj@microlines.lv'}
+04-Sep-20 18:01:27 - commands.commands - INFO - Session ID: 3DA512E9, Sended reply: {'user_name': u'nikolaj@microlines.lv', 'user_id': 61, 'user_group_id_array': [152]}
+04-Sep-20 18:02:00 - __main__ - INFO - Worker 2 received  session ID: 62908D74
+04-Sep-20 18:02:00 - commands.commands - INFO - Session ID: 62908D74, Received request: {u'user_password': u'*******', u'cmd': u'user_allocate', u'user_name': u'nikolaj@microlines.lv'}
+04-Sep-20 18:02:00 - commands.commands - ERROR - Session ID: 62908D74, Sended reply: {'error': '[one.group.allocate] NAME is already taken by GROUP 152.'}
+04-Sep-20 18:02:36 - __main__ - INFO - Worker 3 received  session ID: E581902B
+04-Sep-20 18:02:36 - commands.commands - INFO - Session ID: E581902B, Received request: {u'cmd': u'user_delete', u'user_id': 61}
+04-Sep-20 18:02:36 - commands.commands - INFO - Session ID: E581902B, Sended reply: {'action': 'user and user group deleted', 'user_group_id': 152, 'user_id': 61}
+04-Sep-20 21:04:45 - __main__ - INFO - Worker 1 received  session ID: D68192F3
+04-Sep-20 21:04:45 - commands.commands - INFO - Session ID: D68192F3, Received request: {u'user_password': u'*******', u'cmd': u'user_allocate', u'user_name': u'nikolaj@microlines.lv'}
+04-Sep-20 21:04:45 - commands.commands - INFO - Session ID: D68192F3, Sended reply: {'user_name': u'nikolaj@microlines.lv', 'user_id': 62, 'user_group_id_array': [153]}
+04-Sep-20 23:30:33 - __main__ - INFO - Worker 4 received  session ID: 30D1EA8B
+04-Sep-20 23:30:33 - commands.commands - INFO - Session ID: 30D1EA8B, Received request: {u'cmd': u'user_delete', u'user_id': 62}
+04-Sep-20 23:30:33 - commands.commands - INFO - Session ID: 30D1EA8B, Sended reply: {'action': 'user and user group deleted', 'user_group_id': 153, 'user_id': 62}
+04-Sep-20 23:31:38 - __main__ - INFO - Worker 0 received  session ID: 1728E0DA
+04-Sep-20 23:31:38 - commands.commands - INFO - Session ID: 1728E0DA, Received request: {u'cmd': u'user_delete', u'user_id': 62}
+04-Sep-20 23:31:38 - commands.commands - ERROR - Session ID: 1728E0DA, Sended reply: {'error': '[one.user.info] Error getting user [62].'}
+04-Sep-20 23:32:25 - __main__ - INFO - Worker 2 received  session ID: 1C59FD3B
+04-Sep-20 23:32:25 - commands.commands - INFO - Session ID: 1C59FD3B, Received request: {u'cmd': u'user_delete', u'user_id': 62}
+04-Sep-20 23:32:25 - commands.commands - ERROR - Session ID: 1C59FD3B, Sended reply: {'error': '[one.user.info] Error getting user [62].'}
+04-Sep-20 23:32:57 - __main__ - INFO - Worker 3 received  session ID: 7F9AB513
+04-Sep-20 23:32:57 - commands.commands - INFO - Session ID: 7F9AB513, Received request: {u'cmd': u'user_delete', u'user_id': 62}
+04-Sep-20 23:32:57 - commands.commands - ERROR - Session ID: 7F9AB513, Sended reply: {'error': '[one.user.info] Error getting user [62].'}
+04-Sep-20 23:51:13 - __main__ - INFO - Worker 1 received  session ID: C0E715FA
+04-Sep-20 23:51:13 - commands.commands - INFO - Session ID: C0E715FA, Received request: {u'cmd': u'user_delete', u'user_id': None}
+04-Sep-20 23:51:13 - commands.commands - ERROR - Session ID: C0E715FA, Sended reply: {'error': 'not set user id'}
+04-Sep-20 23:51:39 - __main__ - INFO - Worker 4 received  session ID: 047FCB93
+04-Sep-20 23:51:39 - commands.commands - INFO - Session ID: 047FCB93, Received request: {u'user_password': u'*******', u'cmd': u'user_allocate', u'user_name': u'nikolaj@microlines.lv'}
+04-Sep-20 23:51:39 - commands.commands - INFO - Session ID: 047FCB93, Sended reply: {'user_name': u'nikolaj@microlines.lv', 'user_id': 63, 'user_group_id_array': [154]}
+04-Sep-20 23:51:42 - __main__ - INFO - Worker 0 received  session ID: 83E5DBA9
+04-Sep-20 23:51:42 - commands.commands - INFO - Session ID: 83E5DBA9, Received request: {u'cmd': u'user_delete', u'user_id': 63}
+04-Sep-20 23:51:42 - commands.commands - INFO - Session ID: 83E5DBA9, Sended reply: {'action': 'user and user group deleted', 'user_group_id': 154, 'user_id': 63}
+04-Sep-20 23:51:57 - __main__ - INFO - Worker 2 received  session ID: F5641732
+04-Sep-20 23:51:57 - commands.commands - INFO - Session ID: F5641732, Received request: {u'user_password': u'*******', u'cmd': u'user_allocate', u'user_name': u'nikolaj@microlines.lv'}
+04-Sep-20 23:51:57 - commands.commands - INFO - Session ID: F5641732, Sended reply: {'user_name': u'nikolaj@microlines.lv', 'user_id': 64, 'user_group_id_array': [155]}
+04-Sep-20 23:52:05 - __main__ - INFO - Worker 3 received  session ID: 7608C1DB
+04-Sep-20 23:52:05 - commands.commands - INFO - Session ID: 7608C1DB, Received request: {u'cmd': u'user_delete', u'user_id': 64}
+04-Sep-20 23:52:05 - commands.commands - INFO - Session ID: 7608C1DB, Sended reply: {'action': 'user and user group deleted', 'user_group_id': 155, 'user_id': 64}
+04-Sep-20 23:53:23 - __main__ - INFO - Worker 1 received  session ID: 4EB31FCD
+04-Sep-20 23:53:23 - commands.commands - INFO - Session ID: 4EB31FCD, Received request: {u'cmd': u'user_delete', u'user_id': None}
+04-Sep-20 23:53:23 - commands.commands - ERROR - Session ID: 4EB31FCD, Sended reply: {'error': 'not set user id'}
+04-Sep-20 23:53:27 - __main__ - INFO - Worker 4 received  session ID: 259A1F36
+04-Sep-20 23:53:27 - commands.commands - INFO - Session ID: 259A1F36, Received request: {u'user_password': u'*******', u'cmd': u'user_allocate', u'user_name': u'nikolaj@microlines.lv'}
+04-Sep-20 23:53:27 - commands.commands - INFO - Session ID: 259A1F36, Sended reply: {'user_name': u'nikolaj@microlines.lv', 'user_id': 65, 'user_group_id_array': [156]}
+04-Sep-20 23:53:57 - __main__ - INFO - Worker 0 received  session ID: 9F41C057
+04-Sep-20 23:53:57 - commands.commands - INFO - Session ID: 9F41C057, Received request: {u'cmd': u'user_delete', u'user_id': 65}
+04-Sep-20 23:53:58 - commands.commands - INFO - Session ID: 9F41C057, Sended reply: {'action': 'user and user group deleted', 'user_group_id': 156, 'user_id': 65}
+04-Sep-20 23:54:05 - __main__ - INFO - Worker 2 received  session ID: 8426D1FE
+04-Sep-20 23:54:05 - commands.commands - INFO - Session ID: 8426D1FE, Received request: {u'user_password': u'*******', u'cmd': u'user_allocate', u'user_name': u'nikolaj@microlines.lv'}
+04-Sep-20 23:54:05 - commands.commands - INFO - Session ID: 8426D1FE, Sended reply: {'user_name': u'nikolaj@microlines.lv', 'user_id': 66, 'user_group_id_array': [157]}
+04-Sep-20 23:56:38 - __main__ - INFO - Worker 3 received  session ID: 0A95638F
+04-Sep-20 23:56:38 - commands.commands - INFO - Session ID: 0A95638F, Received request: {u'cmd': u'user_delete', u'user_id': 66}
+04-Sep-20 23:56:38 - commands.commands - INFO - Session ID: 0A95638F, Sended reply: {'action': 'user and user group deleted', 'user_group_id': 157, 'user_id': 66}
+05-Sep-20 00:07:06 - __main__ - INFO - Worker 1 received  session ID: 9B2814C6
+05-Sep-20 00:07:06 - commands.commands - INFO - Session ID: 9B2814C6, Received request: {u'user_password': u'*******', u'cmd': u'user_allocate', u'user_name': u'nikolaj@microlines.lv'}
+05-Sep-20 00:07:06 - commands.commands - INFO - Session ID: 9B2814C6, Sended reply: {'user_name': u'nikolaj@microlines.lv', 'user_id': 67, 'user_group_id_array': [158]}
+05-Sep-20 00:07:11 - __main__ - INFO - Worker 4 received  session ID: D3A5F192
+05-Sep-20 00:07:11 - commands.commands - INFO - Session ID: D3A5F192, Received request: {u'cmd': u'user_delete', u'user_id': 67}
+05-Sep-20 00:07:11 - commands.commands - INFO - Session ID: D3A5F192, Sended reply: {'action': 'user and user group deleted', 'user_group_id': 158, 'user_id': 67}
+05-Sep-20 00:48:03 - __main__ - INFO - Worker 0 received  session ID: CD28BA15
+05-Sep-20 00:48:03 - commands.commands - INFO - Session ID: CD28BA15, Received request: {u'user_password': u'*******', u'cmd': u'user_allocate', u'user_name': u'nikolaj@microlines.lv'}
+05-Sep-20 00:48:03 - commands.commands - INFO - Session ID: CD28BA15, Sended reply: {'user_name': u'nikolaj@microlines.lv', 'user_id': 68, 'user_group_id_array': [159]}
+05-Sep-20 00:48:08 - __main__ - INFO - Worker 2 received  session ID: 947A30C1
+05-Sep-20 00:48:08 - commands.commands - INFO - Session ID: 947A30C1, Received request: {u'cmd': u'user_delete', u'user_id': 68}
+05-Sep-20 00:48:08 - commands.commands - INFO - Session ID: 947A30C1, Sended reply: {'action': 'user and user group deleted', 'user_group_id': 159, 'user_id': 68}
+05-Sep-20 00:53:17 - __main__ - INFO - Worker 3 received  session ID: 4CA769EB
+05-Sep-20 00:53:17 - commands.commands - INFO - Session ID: 4CA769EB, Received request: {u'user_password': u'*******', u'cmd': u'user_allocate', u'user_name': u'nikolaj@microlines.lv'}
+05-Sep-20 00:53:17 - commands.commands - INFO - Session ID: 4CA769EB, Sended reply: {'user_name': u'nikolaj@microlines.lv', 'user_id': 69, 'user_group_id_array': [160]}
+05-Sep-20 00:53:26 - __main__ - INFO - Worker 1 received  session ID: DEB2A741
+05-Sep-20 00:53:26 - commands.commands - INFO - Session ID: DEB2A741, Received request: {u'cmd': u'user_delete', u'user_id': 69}
+05-Sep-20 00:53:26 - commands.commands - INFO - Session ID: DEB2A741, Sended reply: {'action': 'user and user group deleted', 'user_group_id': 160, 'user_id': 69}
+05-Sep-20 00:53:28 - __main__ - INFO - Worker 4 received  session ID: 6053498F
+05-Sep-20 00:53:28 - commands.commands - INFO - Session ID: 6053498F, Received request: {u'user_password': u'*******', u'cmd': u'user_allocate', u'user_name': u'nikolaj@microlines.lv'}
+05-Sep-20 00:53:29 - commands.commands - INFO - Session ID: 6053498F, Sended reply: {'user_name': u'nikolaj@microlines.lv', 'user_id': 70, 'user_group_id_array': [161]}
+06-Sep-20 22:09:55 - __main__ - INFO - Worker 0 received  session ID: 6F52A37E
+06-Sep-20 22:09:55 - commands.commands - INFO - Session ID: 6F52A37E, Received request: {u'vm_name': u'v1p253.clouds365.host', u'user_id': None, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.253', u'template_id': 6}
+06-Sep-20 22:09:55 - commands.commands - ERROR - Session ID: 6F52A37E, Sended reply: {'error': 'not set user id'}
+06-Sep-20 22:13:59 - __main__ - INFO - Worker 2 received  session ID: 9F3065D7
+06-Sep-20 22:13:59 - commands.commands - INFO - Session ID: 9F3065D7, Received request: {u'vm_name': u'v1p249.clouds365.host', u'user_id': 70, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.249', u'template_id': 6}
+06-Sep-20 22:14:01 - commands.commands - INFO - Session ID: 9F3065D7, Sended reply: {'user_id': 70, 'vm_root_password': u'*******', 'vm_id': 256, 'vm_user_password': u'*******', 'vm_user': 'debian'}
+06-Sep-20 22:14:22 - __main__ - INFO - Worker 3 received  session ID: 8A01BF39
+06-Sep-20 22:14:22 - commands.commands - INFO - Session ID: 8A01BF39, Received request: {u'vm_name': u'v1p253.clouds365.host', u'user_id': 70, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.253', u'template_id': 6}
+06-Sep-20 22:14:24 - commands.commands - INFO - Session ID: 8A01BF39, Sended reply: {'user_id': 70, 'vm_root_password': u'*******', 'vm_id': 257, 'vm_user_password': u'*******', 'vm_user': 'debian'}
+06-Sep-20 22:14:37 - __main__ - INFO - Worker 1 received  session ID: 3DE1942C
+06-Sep-20 22:14:37 - commands.commands - INFO - Session ID: 3DE1942C, Received request: {u'vm_name': u'v1p250.clouds365.host', u'user_id': 70, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.250', u'template_id': 6}
+06-Sep-20 22:14:39 - commands.commands - INFO - Session ID: 3DE1942C, Sended reply: {'user_id': 70, 'vm_root_password': u'*******', 'vm_id': 258, 'vm_user_password': u'*******', 'vm_user': 'debian'}
+06-Sep-20 22:14:44 - __main__ - INFO - Worker 4 received  session ID: 960CA2F8
+06-Sep-20 22:14:44 - commands.commands - INFO - Session ID: 960CA2F8, Received request: {u'vm_name': u'v1p255.clouds365.host', u'user_id': 70, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.255', u'template_id': 6}
+06-Sep-20 22:14:46 - commands.commands - ERROR - Session ID: 960CA2F8, Sended reply: {'error': '[one.template.instantiate] Error allocating a new virtual machine template. Cannot get IP/MAC lease from virtual network 0.'}
+06-Sep-20 22:15:21 - __main__ - INFO - Worker 0 received  session ID: C34089FB
+06-Sep-20 22:15:21 - commands.commands - INFO - Session ID: C34089FB, Received request: {u'vm_name': u'v1p258.clouds365.host', u'user_id': 70, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.248', u'template_id': 6}
+06-Sep-20 22:15:23 - commands.commands - INFO - Session ID: C34089FB, Sended reply: {'user_id': 70, 'vm_root_password': u'*******', 'vm_id': 259, 'vm_user_password': u'*******', 'vm_user': 'debian'}
+06-Sep-20 22:15:50 - __main__ - INFO - Worker 2 received  session ID: FB2DA38C
+06-Sep-20 22:15:50 - commands.commands - INFO - Session ID: FB2DA38C, Received request: {u'vm_name': None, u'user_id': 70, u'network_id': None, u'cmd': u'template_instantiate', u'network_address': None, u'dns_ip_address': None, u'network_mask': None, u'gw_ip_address': None, u'ip_address': None, u'template_id': 6}
+06-Sep-20 22:15:50 - commands.commands - ERROR - Session ID: FB2DA38C, Sended reply: {'error': 'not set vm name'}
+06-Sep-20 23:35:51 - __main__ - INFO - Worker 3 received  session ID: 7AB4F025
+06-Sep-20 23:35:51 - commands.commands - INFO - Session ID: 7AB4F025, Received request: {u'vm_name': u'v1p248.clouds365.host', u'user_id': 70, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.248', u'template_id': 6}
+06-Sep-20 23:35:53 - commands.commands - INFO - Session ID: 7AB4F025, Sended reply: {'user_id': 70, 'vm_root_password': u'*******', 'vm_id': 260, 'vm_user_password': u'*******', 'vm_user': 'debian'}
+06-Sep-20 23:42:21 - __main__ - INFO - Worker 1 received  session ID: 5BA761E8
+06-Sep-20 23:42:21 - commands.commands - INFO - Session ID: 5BA761E8, Received request: {u'vm_name': u'v1p248.clouds365.host', u'user_id': 70, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.248', u'template_id': 6}
+06-Sep-20 23:42:23 - commands.commands - INFO - Session ID: 5BA761E8, Sended reply: {'user_id': 70, 'vm_root_password': u'*******', 'vm_id': 261, 'vm_user_password': u'*******', 'vm_user': 'debian'}
+06-Sep-20 23:42:23 - __main__ - INFO - Worker 4 received  session ID: 80D1B367
+06-Sep-20 23:42:23 - commands.commands - INFO - Session ID: 80D1B367, Received request: {u'vm_name': u'v1p249.clouds365.host', u'user_id': 70, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.249', u'template_id': 6}
+06-Sep-20 23:42:25 - commands.commands - INFO - Session ID: 80D1B367, Sended reply: {'user_id': 70, 'vm_root_password': u'*******', 'vm_id': 262, 'vm_user_password': u'*******', 'vm_user': 'debian'}
+06-Sep-20 23:42:26 - __main__ - INFO - Worker 0 received  session ID: 3906E7A2
+06-Sep-20 23:42:26 - commands.commands - INFO - Session ID: 3906E7A2, Received request: {u'vm_name': u'v1p250.clouds365.host', u'user_id': 70, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.250', u'template_id': 6}
+06-Sep-20 23:42:28 - commands.commands - INFO - Session ID: 3906E7A2, Sended reply: {'user_id': 70, 'vm_root_password': u'*******', 'vm_id': 263, 'vm_user_password': u'*******', 'vm_user': 'debian'}
+06-Sep-20 23:42:42 - __main__ - INFO - Worker 2 received  session ID: 9024B5E7
+06-Sep-20 23:42:42 - commands.commands - INFO - Session ID: 9024B5E7, Received request: {u'vm_name': u'v1p251.clouds365.host', u'user_id': 70, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.251', u'template_id': 6}
+06-Sep-20 23:42:44 - commands.commands - INFO - Session ID: 9024B5E7, Sended reply: {'user_id': 70, 'vm_root_password': u'*******', 'vm_id': 264, 'vm_user_password': u'*******', 'vm_user': 'debian'}
+06-Sep-20 23:42:45 - __main__ - INFO - Worker 3 received  session ID: FCAB1436
+06-Sep-20 23:42:45 - commands.commands - INFO - Session ID: FCAB1436, Received request: {u'vm_name': u'v1p252.clouds365.host', u'user_id': 70, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.252', u'template_id': 6}
+06-Sep-20 23:42:47 - commands.commands - INFO - Session ID: FCAB1436, Sended reply: {'user_id': 70, 'vm_root_password': u'*******', 'vm_id': 265, 'vm_user_password': u'*******', 'vm_user': 'debian'}
+06-Sep-20 23:42:48 - __main__ - INFO - Worker 1 received  session ID: E1243D6B
+06-Sep-20 23:42:48 - commands.commands - INFO - Session ID: E1243D6B, Received request: {u'vm_name': u'v1p253.clouds365.host', u'user_id': 70, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.253', u'template_id': 6}
+06-Sep-20 23:42:50 - commands.commands - INFO - Session ID: E1243D6B, Sended reply: {'user_id': 70, 'vm_root_password': u'*******', 'vm_id': 266, 'vm_user_password': u'*******', 'vm_user': 'debian'}
+06-Sep-20 23:43:05 - __main__ - INFO - Worker 4 received  session ID: 5306CA72
+06-Sep-20 23:43:05 - commands.commands - INFO - Session ID: 5306CA72, Received request: {u'vm_name': u'v1p254.clouds365.host', u'user_id': 70, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.254', u'template_id': 6}
+06-Sep-20 23:43:07 - commands.commands - INFO - Session ID: 5306CA72, Sended reply: {'user_id': 70, 'vm_root_password': u'*******', 'vm_id': 267, 'vm_user_password': u'*******', 'vm_user': 'debian'}
+07-Sep-20 13:07:02 - __main__ - INFO - Worker 0 received  session ID: 19FE4DC8
+07-Sep-20 13:07:02 - commands.commands - INFO - Session ID: 19FE4DC8, Received request: {u'vm_name': u'v1p248.clouds365.host', u'user_id': 70, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.248', u'template_id': 6}
+07-Sep-20 13:07:04 - commands.commands - INFO - Session ID: 19FE4DC8, Sended reply: {'user_id': 70, 'vm_root_password': u'*******', 'vm_id': 268, 'vm_user_password': u'*******', 'vm_user': 'debian'}
+07-Sep-20 13:07:05 - __main__ - INFO - Worker 2 received  session ID: CF587E0B
+07-Sep-20 13:07:05 - commands.commands - INFO - Session ID: CF587E0B, Received request: {u'vm_name': u'v1p249.clouds365.host', u'user_id': 70, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.249', u'template_id': 6}
+07-Sep-20 13:07:07 - commands.commands - INFO - Session ID: CF587E0B, Sended reply: {'user_id': 70, 'vm_root_password': u'*******', 'vm_id': 269, 'vm_user_password': u'*******', 'vm_user': 'debian'}
+07-Sep-20 13:07:07 - __main__ - INFO - Worker 3 received  session ID: B372DACE
+07-Sep-20 13:07:07 - commands.commands - INFO - Session ID: B372DACE, Received request: {u'vm_name': u'v1p250.clouds365.host', u'user_id': 70, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.250', u'template_id': 6}
+07-Sep-20 13:07:09 - commands.commands - INFO - Session ID: B372DACE, Sended reply: {'user_id': 70, 'vm_root_password': u'*******', 'vm_id': 270, 'vm_user_password': u'*******', 'vm_user': 'debian'}
+07-Sep-20 13:07:10 - __main__ - INFO - Worker 1 received  session ID: 549B7F3A
+07-Sep-20 13:07:10 - commands.commands - INFO - Session ID: 549B7F3A, Received request: {u'vm_name': u'v1p251.clouds365.host', u'user_id': 70, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.251', u'template_id': 6}
+07-Sep-20 13:07:12 - commands.commands - INFO - Session ID: 549B7F3A, Sended reply: {'user_id': 70, 'vm_root_password': u'*******', 'vm_id': 271, 'vm_user_password': u'*******', 'vm_user': 'debian'}
+07-Sep-20 13:07:13 - __main__ - INFO - Worker 4 received  session ID: 40316C8E
+07-Sep-20 13:07:13 - commands.commands - INFO - Session ID: 40316C8E, Received request: {u'vm_name': u'v1p252.clouds365.host', u'user_id': 70, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.252', u'template_id': 6}
+07-Sep-20 13:07:15 - commands.commands - INFO - Session ID: 40316C8E, Sended reply: {'user_id': 70, 'vm_root_password': u'*******', 'vm_id': 272, 'vm_user_password': u'*******', 'vm_user': 'debian'}
+07-Sep-20 13:07:15 - __main__ - INFO - Worker 0 received  session ID: 4E72B916
+07-Sep-20 13:07:15 - commands.commands - INFO - Session ID: 4E72B916, Received request: {u'vm_name': u'v1p253.clouds365.host', u'user_id': 70, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.253', u'template_id': 6}
+07-Sep-20 13:07:17 - commands.commands - INFO - Session ID: 4E72B916, Sended reply: {'user_id': 70, 'vm_root_password': u'*******', 'vm_id': 273, 'vm_user_password': u'*******', 'vm_user': 'debian'}
+07-Sep-20 13:07:18 - __main__ - INFO - Worker 2 received  session ID: 079F8B54
+07-Sep-20 13:07:18 - commands.commands - INFO - Session ID: 079F8B54, Received request: {u'vm_name': u'v1p254.clouds365.host', u'user_id': 70, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.254', u'template_id': 6}
+07-Sep-20 13:07:20 - commands.commands - INFO - Session ID: 079F8B54, Sended reply: {'user_id': 70, 'vm_root_password': u'*******', 'vm_id': 274, 'vm_user_password': u'*******', 'vm_user': 'debian'}
+07-Sep-20 13:13:03 - __main__ - INFO - Worker 3 received  session ID: E12BFC70
+07-Sep-20 13:13:03 - commands.commands - INFO - Session ID: E12BFC70, Received request: {u'vm_name': None, u'user_id': 70, u'network_id': None, u'cmd': u'template_instantiate', u'network_address': None, u'dns_ip_address': None, u'network_mask': None, u'gw_ip_address': None, u'ip_address': None, u'template_id': 6}
+07-Sep-20 13:13:03 - commands.commands - ERROR - Session ID: E12BFC70, Sended reply: {'error': 'not set vm name'}
+07-Sep-20 13:22:34 - __main__ - INFO - Worker 1 received  session ID: AB8203D6
+07-Sep-20 13:22:34 - commands.commands - INFO - Session ID: AB8203D6, Received request: {u'vm_name': None, u'user_id': 70, u'network_id': None, u'cmd': u'template_instantiate', u'network_address': None, u'dns_ip_address': None, u'network_mask': None, u'gw_ip_address': None, u'ip_address': None, u'template_id': 6}
+07-Sep-20 13:22:34 - commands.commands - ERROR - Session ID: AB8203D6, Sended reply: {'error': 'not set vm name'}
+07-Sep-20 13:29:58 - __main__ - INFO - Worker 4 received  session ID: 9174DBA6
+07-Sep-20 13:29:58 - commands.commands - INFO - Session ID: 9174DBA6, Received request: {u'vm_name': None, u'user_id': 70, u'network_id': None, u'cmd': u'template_instantiate', u'network_address': None, u'dns_ip_address': None, u'network_mask': None, u'gw_ip_address': None, u'ip_address': None, u'template_id': 6}
+07-Sep-20 13:29:58 - commands.commands - ERROR - Session ID: 9174DBA6, Sended reply: {'error': 'not set vm name'}
+07-Sep-20 14:28:02 - __main__ - INFO - Worker 0 received  session ID: 4BC72F50
+07-Sep-20 14:28:02 - commands.commands - INFO - Session ID: 4BC72F50, Received request: {u'cmd': u'user_delete', u'user_id': 70}
+07-Sep-20 14:28:03 - commands.commands - INFO - Session ID: 4BC72F50, Sended reply: {'action': 'user and user group deleted', 'user_group_id': 161, 'user_id': 70}
+07-Sep-20 14:31:42 - __main__ - INFO - Worker 2 received  session ID: F174BC3D
+07-Sep-20 14:31:42 - commands.commands - INFO - Session ID: F174BC3D, Received request: {u'user_password': u'*******', u'cmd': u'user_allocate', u'user_name': u'nikolaj@microlines.lv'}
+07-Sep-20 14:31:42 - commands.commands - INFO - Session ID: F174BC3D, Sended reply: {'user_name': u'nikolaj@microlines.lv', 'user_id': 71, 'user_group_id_array': [162]}
+07-Sep-20 14:31:42 - __main__ - INFO - Worker 3 received  session ID: 45BCAD91
+07-Sep-20 14:31:42 - commands.commands - INFO - Session ID: 45BCAD91, Received request: {u'vm_name': u'v1p248.clouds365.host', u'user_id': 71, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.248', u'template_id': 6}
+07-Sep-20 14:31:44 - commands.commands - INFO - Session ID: 45BCAD91, Sended reply: {'user_id': 71, 'vm_root_password': u'*******', 'vm_id': 275, 'vm_user_password': u'*******', 'vm_user': 'debian'}
+07-Sep-20 14:38:00 - __main__ - INFO - Worker 1 received  session ID: E169C87B
+07-Sep-20 14:38:00 - commands.commands - INFO - Session ID: E169C87B, Received request: {u'vm_name': u'v1p249.clouds365.host', u'user_id': 71, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.249', u'template_id': 6}
+07-Sep-20 14:38:02 - commands.commands - INFO - Session ID: E169C87B, Sended reply: {'user_id': 71, 'vm_root_password': u'*******', 'vm_id': 276, 'vm_user_password': u'*******', 'vm_user': 'debian'}
+07-Sep-20 15:20:27 - __main__ - INFO - Worker 4 received  session ID: 5689CE7F
+07-Sep-20 15:20:27 - commands.commands - INFO - Session ID: 5689CE7F, Received request: {u'cmd': u'user_delete', u'user_id': 71}
+07-Sep-20 15:20:27 - commands.commands - INFO - Session ID: 5689CE7F, Sended reply: {'action': 'user and user group deleted', 'user_group_id': 162, 'user_id': 71}
+07-Sep-20 16:13:32 - __main__ - INFO - Worker 0 received  session ID: 63BA5C29
+07-Sep-20 16:13:32 - commands.commands - INFO - Session ID: 63BA5C29, Received request: {u'cmd': u'user_delete', u'user_id': None}
+07-Sep-20 16:13:33 - commands.commands - ERROR - Session ID: 63BA5C29, Sended reply: {'error': 'not set user id'}
+07-Sep-20 16:57:42 - __main__ - INFO - Worker 2 received  session ID: D97E05A4
+07-Sep-20 16:57:42 - commands.commands - INFO - Session ID: D97E05A4, Received request: {u'user_password': u'*******', u'cmd': u'user_allocate', u'user_name': u'nikolaj@microlines.lv'}
+07-Sep-20 16:57:42 - commands.commands - INFO - Session ID: D97E05A4, Sended reply: {'user_name': u'nikolaj@microlines.lv', 'user_id': 72, 'user_group_id_array': [163]}
+07-Sep-20 16:58:20 - __main__ - INFO - Worker 3 received  session ID: DF50B7A6
+07-Sep-20 16:58:20 - commands.commands - INFO - Session ID: DF50B7A6, Received request: {u'cmd': u'user_delete', u'user_id': 72}
+07-Sep-20 16:58:21 - commands.commands - INFO - Session ID: DF50B7A6, Sended reply: {'action': 'user and user group deleted', 'user_group_id': 163, 'user_id': 72}
+07-Sep-20 16:59:42 - __main__ - INFO - Worker 1 received  session ID: 8DA1F5E6
+07-Sep-20 16:59:42 - commands.commands - INFO - Session ID: 8DA1F5E6, Received request: {u'user_password': u'*******', u'cmd': u'user_allocate', u'user_name': u'nikolaj@microlines.lv'}
+07-Sep-20 16:59:43 - commands.commands - INFO - Session ID: 8DA1F5E6, Sended reply: {'user_name': u'nikolaj@microlines.lv', 'user_id': 73, 'user_group_id_array': [164]}
+07-Sep-20 16:59:43 - __main__ - INFO - Worker 4 received  session ID: 53D0E9AB
+07-Sep-20 16:59:43 - commands.commands - INFO - Session ID: 53D0E9AB, Received request: {u'vm_name': u'v1p248.clouds365.host', u'user_id': 73, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.248', u'template_id': 6}
+07-Sep-20 16:59:45 - commands.commands - INFO - Session ID: 53D0E9AB, Sended reply: {'user_id': 73, 'vm_root_password': u'*******', 'vm_id': 277, 'vm_user_password': u'*******', 'vm_user': 'debian'}
+07-Sep-20 17:00:45 - __main__ - INFO - Worker 0 received  session ID: 75A9F8B3
+07-Sep-20 17:00:45 - commands.commands - INFO - Session ID: 75A9F8B3, Received request: {u'vm_name': u'v1p249.clouds365.host', u'user_id': 73, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.249', u'template_id': 6}
+07-Sep-20 17:00:47 - commands.commands - INFO - Session ID: 75A9F8B3, Sended reply: {'user_id': 73, 'vm_root_password': u'*******', 'vm_id': 278, 'vm_user_password': u'*******', 'vm_user': 'debian'}
+07-Sep-20 23:06:35 - __main__ - INFO - Worker 2 received  session ID: EA2568FC
+07-Sep-20 23:06:35 - commands.commands - INFO - Session ID: EA2568FC, Received request: {u'vm_name': u'v1p249.clouds365.host', u'user_id': 73, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.249', u'template_id': 6}
+07-Sep-20 23:06:37 - commands.commands - INFO - Session ID: EA2568FC, Sended reply: {'user_id': 73, 'vm_root_password': u'*******', 'vm_id': 279, 'vm_user_password': u'*******', 'vm_user': 'debian'}
+07-Sep-20 23:07:26 - __main__ - INFO - Worker 3 received  session ID: 634BDE80
+07-Sep-20 23:07:26 - commands.commands - INFO - Session ID: 634BDE80, Received request: {u'vm_name': u'v1p250.clouds365.host', u'user_id': 73, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.250', u'template_id': 6}
+07-Sep-20 23:07:28 - commands.commands - ERROR - Session ID: 634BDE80, Sended reply: {'error': '[one.user.info] Error getting user [73].'}
+07-Sep-20 23:09:50 - __main__ - INFO - Worker 1 received  session ID: 7C198AED
+07-Sep-20 23:09:50 - commands.commands - INFO - Session ID: 7C198AED, Received request: {u'user_password': u'*******', u'cmd': u'user_allocate', u'user_name': u'nikolaj@microlines.lv'}
+07-Sep-20 23:09:50 - commands.commands - INFO - Session ID: 7C198AED, Sended reply: {'user_name': u'nikolaj@microlines.lv', 'user_id': 74, 'user_group_id_array': [165]}
+07-Sep-20 23:09:50 - __main__ - INFO - Worker 4 received  session ID: F17A642B
+07-Sep-20 23:09:50 - commands.commands - INFO - Session ID: F17A642B, Received request: {u'vm_name': u'v1p248.clouds365.host', u'user_id': 74, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.248', u'template_id': 6}
+07-Sep-20 23:09:52 - commands.commands - INFO - Session ID: F17A642B, Sended reply: {'user_id': 74, 'vm_root_password': u'*******', 'vm_id': 281, 'vm_user_password': u'*******', 'vm_user': 'debian'}
+07-Sep-20 23:36:16 - __main__ - INFO - Worker 0 received  session ID: ED2BF049
+07-Sep-20 23:36:16 - commands.commands - INFO - Session ID: ED2BF049, Received request: {u'vm_id': 281, u'cmd': u'vm_terminate', u'user_id': 74}
+07-Sep-20 23:36:19 - commands.commands - INFO - Session ID: ED2BF049, Sended reply: {'action': 'vm terminated'}
+07-Sep-20 23:38:40 - __main__ - INFO - Worker 2 received  session ID: 0D25B46E
+07-Sep-20 23:38:40 - commands.commands - INFO - Session ID: 0D25B46E, Received request: {u'vm_name': u'v1p248.clouds365.host', u'user_id': 74, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.248', u'template_id': 6}
+07-Sep-20 23:38:42 - commands.commands - INFO - Session ID: 0D25B46E, Sended reply: {'user_id': 74, 'vm_root_password': u'*******', 'vm_id': 282, 'vm_user_password': u'*******', 'vm_user': 'debian'}
+07-Sep-20 23:43:43 - __main__ - INFO - Worker 3 received  session ID: A07E1429
+07-Sep-20 23:43:43 - commands.commands - INFO - Session ID: A07E1429, Received request: {u'vm_id': 282, u'cmd': u'vm_terminate', u'user_id': 74}
+07-Sep-20 23:43:46 - commands.commands - INFO - Session ID: A07E1429, Sended reply: {'action': 'vm terminated'}
+07-Sep-20 23:45:30 - __main__ - INFO - Worker 1 received  session ID: 0AE15984
+07-Sep-20 23:45:30 - commands.commands - INFO - Session ID: 0AE15984, Received request: {u'vm_name': u'v1p248.clouds365.host', u'user_id': 74, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.248', u'template_id': 6}
+07-Sep-20 23:45:32 - commands.commands - INFO - Session ID: 0AE15984, Sended reply: {'user_id': 74, 'vm_root_password': u'*******', 'vm_id': 283, 'vm_user_password': u'*******', 'vm_user': 'debian'}
+07-Sep-20 23:45:56 - __main__ - INFO - Worker 4 received  session ID: 0C7529BD
+07-Sep-20 23:45:56 - commands.commands - INFO - Session ID: 0C7529BD, Received request: {u'vm_id': 283, u'cmd': u'vm_terminate', u'user_id': 74}
+07-Sep-20 23:45:59 - commands.commands - INFO - Session ID: 0C7529BD, Sended reply: {'action': 'vm terminated'}
+08-Sep-20 12:44:46 - __main__ - INFO - Worker 0 received  session ID: 72B5308A
+08-Sep-20 12:44:46 - commands.commands - INFO - Session ID: 72B5308A, Received request: {u'cmd': u'get_user_info', u'user_id': 74}
+08-Sep-20 12:44:46 - commands.commands - ERROR - Session ID: 72B5308A, Sended reply: {'error': "'NoneType' object has no attribute 'VMS'"}
+08-Sep-20 12:45:46 - __main__ - INFO - Worker 2 received  session ID: AF58E42C
+08-Sep-20 12:45:46 - commands.commands - INFO - Session ID: AF58E42C, Received request: {u'cmd': u'get_user_info', u'user_id': 74}
+08-Sep-20 12:45:46 - commands.commands - ERROR - Session ID: AF58E42C, Sended reply: {'error': "'NoneType' object has no attribute 'VMS'"}
+08-Sep-20 13:08:13 - __main__ - INFO - Routing server started
+08-Sep-20 13:08:13 - __main__ - INFO - Worker 1 started
+08-Sep-20 13:08:13 - __main__ - INFO - Worker 0 started
+08-Sep-20 13:08:13 - __main__ - INFO - Worker 3 started
+08-Sep-20 13:08:13 - __main__ - INFO - Worker 2 started
+08-Sep-20 13:08:13 - __main__ - INFO - Worker 4 started
+08-Sep-20 13:08:17 - __main__ - INFO - Worker 1 received  session ID: 17A0B46E
+08-Sep-20 13:08:17 - commands.commands - INFO - Session ID: 17A0B46E, Received request: {u'cmd': u'get_user_info', u'user_id': 74}
+08-Sep-20 13:08:17 - commands.commands - ERROR - Session ID: 17A0B46E, Sended reply: {'error': "'NoneType' object has no attribute 'VMS'"}
+08-Sep-20 13:13:05 - __main__ - INFO - Routing server started
+08-Sep-20 13:13:05 - __main__ - INFO - Worker 0 started
+08-Sep-20 13:13:05 - __main__ - INFO - Worker 1 started
+08-Sep-20 13:13:05 - __main__ - INFO - Worker 3 started
+08-Sep-20 13:13:05 - __main__ - INFO - Worker 2 started
+08-Sep-20 13:13:05 - __main__ - INFO - Worker 4 started
+08-Sep-20 13:13:09 - __main__ - INFO - Worker 0 received  session ID: 0D5F6AB3
+08-Sep-20 13:13:09 - commands.commands - INFO - Session ID: 0D5F6AB3, Received request: {u'cmd': u'get_user_info', u'user_id': 74}
+08-Sep-20 13:13:09 - commands.commands - INFO - Session ID: 0D5F6AB3, Sended reply: {'user_id': 74, 'vms': 'nikolaj@microlines.lv'}
+08-Sep-20 13:13:59 - __main__ - INFO - Worker 1 received  session ID: DA761CE8
+08-Sep-20 13:13:59 - commands.commands - INFO - Session ID: DA761CE8, Received request: {u'cmd': u'get_user_info', u'user_id': 74}
+08-Sep-20 13:13:59 - commands.commands - ERROR - Session ID: DA761CE8, Sended reply: {'error': '[one.user.info] Error getting user [74].'}
+08-Sep-20 13:14:39 - __main__ - INFO - Routing server started
+08-Sep-20 13:14:39 - __main__ - INFO - Worker 0 started
+08-Sep-20 13:14:39 - __main__ - INFO - Worker 1 started
+08-Sep-20 13:14:39 - __main__ - INFO - Worker 2 started
+08-Sep-20 13:14:39 - __main__ - INFO - Worker 3 started
+08-Sep-20 13:14:39 - __main__ - INFO - Worker 4 started
+08-Sep-20 13:14:52 - __main__ - INFO - Worker 0 received  session ID: B3F024A9
+08-Sep-20 13:14:52 - commands.commands - INFO - Session ID: B3F024A9, Received request: {u'cmd': u'get_user_info', u'user_id': 74}
+08-Sep-20 13:14:52 - commands.commands - ERROR - Session ID: B3F024A9, Sended reply: {'error': '[one.user.info] Error getting user [74].'}
+08-Sep-20 13:17:24 - __main__ - INFO - Routing server started
+08-Sep-20 13:17:24 - __main__ - INFO - Worker 3 started
+08-Sep-20 13:17:24 - __main__ - INFO - Worker 0 started
+08-Sep-20 13:17:24 - __main__ - INFO - Worker 4 started
+08-Sep-20 13:17:24 - __main__ - INFO - Worker 2 started
+08-Sep-20 13:17:24 - __main__ - INFO - Worker 1 started
+08-Sep-20 13:18:17 - __main__ - INFO - Worker 3 received  session ID: 8903D741
+08-Sep-20 13:18:17 - commands.commands - INFO - Session ID: 8903D741, Received request: {u'vm_name': u'v1p248.clouds365.host', u'user_id': 74, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.248', u'template_id': 6}
+08-Sep-20 13:18:18 - commands.commands - ERROR - Session ID: 8903D741, Sended reply: {'error': '[one.user.info] Error getting user [74].'}
+08-Sep-20 13:20:36 - __main__ - INFO - Routing server started
+08-Sep-20 13:20:36 - __main__ - INFO - Worker 0 started
+08-Sep-20 13:20:36 - __main__ - INFO - Worker 4 started
+08-Sep-20 13:20:36 - __main__ - INFO - Worker 1 started
+08-Sep-20 13:20:36 - __main__ - INFO - Worker 2 started
+08-Sep-20 13:20:36 - __main__ - INFO - Worker 3 started
+08-Sep-20 13:31:21 - __main__ - INFO - Worker 0 received  session ID: 5DAB8620
+08-Sep-20 13:31:21 - commands.commands - INFO - Session ID: 5DAB8620, Received request: {u'user_password': u'*******', u'cmd': u'user_allocate', u'user_name': u'nikolaj@microlines.lv'}
+08-Sep-20 13:31:22 - commands.commands - INFO - Session ID: 5DAB8620, Sended reply: {'user_name': u'nikolaj@microlines.lv', 'user_id': 75, 'user_group_id_array': [166]}
+08-Sep-20 13:31:22 - __main__ - INFO - Worker 4 received  session ID: 7563A9BE
+08-Sep-20 13:31:22 - commands.commands - INFO - Session ID: 7563A9BE, Received request: {u'vm_name': u'v1p249.clouds365.host', u'user_id': 75, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.249', u'template_id': 6}
+08-Sep-20 13:31:24 - commands.commands - INFO - Session ID: 7563A9BE, Sended reply: {'user_id': 75, 'vm_root_password': u'*******', 'vm_id': 284, 'vm_user_password': u'*******', 'vm_user': 'debian'}

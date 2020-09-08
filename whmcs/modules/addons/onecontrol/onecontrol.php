@@ -152,6 +152,7 @@ function onecontrol_activate()
                 function ($table) {
                     /** @var \Illuminate\Database\Schema\Blueprint $table */
                     $table->increments('id');
+                    $table->integer('service_id');
                     $table->integer('user_id');
                     $table->integer('vm_id');
                     $table->text('vm_name');
@@ -191,7 +192,16 @@ function onecontrol_activate()
                     $table->integer('one_user_password_length');
                     $table->boolean('one_user_password_strong');                    
                 }
-            );    
+            );
+    Capsule::schema()
+            ->create(
+                'mod_onecontrol_onetemplate',
+                function ($table) {
+                    /** @var \Illuminate\Database\Schema\Blueprint $table */
+                    $table->integer('one_template_id');
+                    $table->text('one_image_os');
+                }
+            );             
         return [
             // Supported values here include: success, error or info
             'status' => 'success',
@@ -228,7 +238,9 @@ function onecontrol_deactivate()
         Capsule::schema()
             ->dropIfExists('mod_onecontrol_oneuser');            
         Capsule::schema()
-            ->dropIfExists('mod_onecontrol_config');   
+            ->dropIfExists('mod_onecontrol_config'); 
+        Capsule::schema()
+            ->dropIfExists('mod_onecontrol_onetemplate');             
         return [
             // Supported values here include: success, error or info
             'status' => 'success',

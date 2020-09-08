@@ -317,7 +317,7 @@ def get_user_info(json_dict, one):
         user_id = json_dict['user_id']
     else:
         return {"error": "not set user id"} 
-    
+
     try:
         vms = one.user.info(user_id).VM_QUOTA.VM.VMS
         vms_used = one.user.info(user_id).VM_QUOTA.VM.VMS_USED
@@ -326,7 +326,7 @@ def get_user_info(json_dict, one):
         return {"error": str(e)}
 
     return {"user_id": user_id, "vms": vms, "vms_used": vms_used,"running_vms_used": running_vms_used}
-    
+
 def template_instantiate(json_dict, one):
     """
     Instantiates a new virtual machine from a template.
@@ -345,6 +345,10 @@ def template_instantiate(json_dict, one):
         user_id = json_dict['user_id']
         if type(user_id) is not int:
             return {"error": "Parameter user_id that is supposed to be integer is not"}
+        try:
+            vms = one.user.info(user_id).NAME
+        except Exception as e:
+            return {"error": str(e)}    
     else:
         return {"error": "not set user id"}
         
@@ -489,6 +493,12 @@ def template_instantiate_user(json_dict, one):
         
     if not (json_dict.get('user_id') is None):
         user_id = json_dict['user_id']
+        if type(user_id) is not int:
+            return {"error": "Parameter user_id that is supposed to be integer is not"}
+        try:
+            vms = one.user.info(user_id).NAME
+        except Exception as e:
+            return {"error": str(e)}  
     else:
         return {"error": "not set user id"}
         
