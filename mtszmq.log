@@ -2655,3 +2655,468 @@
 08-Sep-20 13:31:22 - __main__ - INFO - Worker 4 received  session ID: 7563A9BE
 08-Sep-20 13:31:22 - commands.commands - INFO - Session ID: 7563A9BE, Received request: {u'vm_name': u'v1p249.clouds365.host', u'user_id': 75, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.249', u'template_id': 6}
 08-Sep-20 13:31:24 - commands.commands - INFO - Session ID: 7563A9BE, Sended reply: {'user_id': 75, 'vm_root_password': u'*******', 'vm_id': 284, 'vm_user_password': u'*******', 'vm_user': 'debian'}
+08-Sep-20 13:46:33 - __main__ - INFO - Worker 1 received  session ID: 738A95F6
+08-Sep-20 13:46:33 - commands.commands - INFO - Session ID: 738A95F6, Received request: {u'vm_id': 284, u'cmd': u'vm_terminate', u'user_id': 75}
+08-Sep-20 13:46:37 - commands.commands - INFO - Session ID: 738A95F6, Sended reply: {'action': 'vm terminated'}
+08-Sep-20 14:40:37 - __main__ - INFO - Worker 2 received  session ID: 753CF6D1
+08-Sep-20 14:40:37 - commands.commands - INFO - Session ID: 753CF6D1, Received request: {u'vm_name': u'v1p249.clouds365.host', u'user_id': 75, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.249', u'template_id': 6}
+08-Sep-20 14:40:39 - commands.commands - INFO - Session ID: 753CF6D1, Sended reply: {'user_id': 75, 'vm_root_password': u'*******', 'vm_id': 285, 'vm_user_password': u'*******', 'vm_user': 'debian'}
+08-Sep-20 14:52:43 - __main__ - INFO - Worker 3 received  session ID: EA60392C
+08-Sep-20 14:52:43 - commands.commands - INFO - Session ID: EA60392C, Received request: {u'vm_id': 285, u'cmd': u'vm_terminate', u'user_id': 75}
+08-Sep-20 14:52:46 - commands.commands - INFO - Session ID: EA60392C, Sended reply: {'action': 'vm terminated'}
+08-Sep-20 19:04:14 - __main__ - INFO - Worker 0 received  session ID: EFC92A70
+08-Sep-20 19:04:14 - commands.commands - INFO - Session ID: EFC92A70, Received request: {u'vm_id': None, u'cmd': u'vm_terminate', u'user_id': 75}
+08-Sep-20 19:04:14 - commands.commands - ERROR - Session ID: EFC92A70, Sended reply: {'error': 'not set vm id'}
+08-Sep-20 19:54:00 - __main__ - INFO - Worker 4 received  session ID: 20CEF9B7
+08-Sep-20 19:54:00 - commands.commands - INFO - Session ID: 20CEF9B7, Received request: {u'vm_id': None, u'cmd': u'vm_terminate', u'user_id': 75}
+08-Sep-20 19:54:00 - commands.commands - ERROR - Session ID: 20CEF9B7, Sended reply: {'error': 'not set vm id'}
+08-Sep-20 19:58:54 - __main__ - INFO - Worker 1 received  session ID: 3E2F41D8
+08-Sep-20 19:58:54 - commands.commands - INFO - Session ID: 3E2F41D8, Received request: {u'vm_name': u'v1p249.clouds365.host', u'user_id': 75, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.249', u'template_id': 6}
+08-Sep-20 19:58:56 - commands.commands - INFO - Session ID: 3E2F41D8, Sended reply: {'user_id': 75, 'vm_root_password': u'*******', 'vm_id': 286, 'vm_user_password': u'*******', 'vm_user': 'debian'}
+08-Sep-20 19:59:45 - __main__ - INFO - Worker 2 received  session ID: 12D85FB6
+08-Sep-20 19:59:45 - commands.commands - INFO - Session ID: 12D85FB6, Received request: {u'vm_name': u'v1p250.clouds365.host', u'user_id': 75, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.250', u'template_id': 6}
+08-Sep-20 19:59:47 - commands.commands - INFO - Session ID: 12D85FB6, Sended reply: {'user_id': 75, 'vm_root_password': u'*******', 'vm_id': 287, 'vm_user_password': u'*******', 'vm_user': 'debian'}
+08-Sep-20 20:00:49 - __main__ - INFO - Worker 3 received  session ID: 01BA2F54
+08-Sep-20 20:00:49 - commands.commands - INFO - Session ID: 01BA2F54, Received request: {u'vm_id': 286, u'cmd': u'vm_terminate', u'user_id': 75}
+08-Sep-20 20:00:53 - commands.commands - INFO - Session ID: 01BA2F54, Sended reply: {'action': 'vm terminated'}
+08-Sep-20 20:00:55 - __main__ - INFO - Worker 0 received  session ID: 15AC79ED
+08-Sep-20 20:00:55 - commands.commands - INFO - Session ID: 15AC79ED, Received request: {u'vm_id': 287, u'cmd': u'vm_terminate', u'user_id': 75}
+08-Sep-20 20:00:58 - commands.commands - INFO - Session ID: 15AC79ED, Sended reply: {'action': 'vm terminated'}
+08-Sep-20 20:01:18 - __main__ - INFO - Worker 4 received  session ID: 80A24657
+08-Sep-20 20:01:18 - commands.commands - INFO - Session ID: 80A24657, Received request: {u'vm_name': u'v1p249.clouds365.host', u'user_id': 75, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.249', u'template_id': 6}
+08-Sep-20 20:01:20 - commands.commands - INFO - Session ID: 80A24657, Sended reply: {'user_id': 75, 'vm_root_password': u'*******', 'vm_id': 288, 'vm_user_password': u'*******', 'vm_user': 'debian'}
+08-Sep-20 20:02:19 - __main__ - INFO - Worker 1 received  session ID: 231EAB40
+08-Sep-20 20:02:19 - commands.commands - INFO - Session ID: 231EAB40, Received request: {u'vm_name': u'v1p250.clouds365.host', u'user_id': 75, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.250', u'template_id': 6}
+08-Sep-20 20:02:21 - commands.commands - INFO - Session ID: 231EAB40, Sended reply: {'user_id': 75, 'vm_root_password': u'*******', 'vm_id': 289, 'vm_user_password': u'*******', 'vm_user': 'debian'}
+08-Sep-20 20:03:32 - __main__ - INFO - Worker 2 received  session ID: 2F31BA94
+08-Sep-20 20:03:32 - commands.commands - INFO - Session ID: 2F31BA94, Received request: {u'vm_id': 288, u'cmd': u'vm_terminate', u'user_id': 75}
+08-Sep-20 20:03:35 - commands.commands - INFO - Session ID: 2F31BA94, Sended reply: {'action': 'vm terminated'}
+08-Sep-20 20:03:37 - __main__ - INFO - Worker 3 received  session ID: D321897E
+08-Sep-20 20:03:37 - commands.commands - INFO - Session ID: D321897E, Received request: {u'vm_id': 289, u'cmd': u'vm_terminate', u'user_id': 75}
+08-Sep-20 20:03:40 - commands.commands - INFO - Session ID: D321897E, Sended reply: {'action': 'vm terminated'}
+08-Sep-20 20:03:51 - __main__ - INFO - Worker 0 received  session ID: 8D096254
+08-Sep-20 20:03:51 - commands.commands - INFO - Session ID: 8D096254, Received request: {u'vm_id': None, u'cmd': u'vm_terminate', u'user_id': 75}
+08-Sep-20 20:03:51 - commands.commands - ERROR - Session ID: 8D096254, Sended reply: {'error': 'not set vm id'}
+08-Sep-20 20:17:43 - __main__ - INFO - Worker 4 received  session ID: 38DA1B7E
+08-Sep-20 20:17:43 - commands.commands - INFO - Session ID: 38DA1B7E, Received request: {u'vm_name': u'v1p249.clouds365.host', u'user_id': 75, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.249', u'template_id': 6}
+08-Sep-20 20:17:45 - commands.commands - INFO - Session ID: 38DA1B7E, Sended reply: {'user_id': 75, 'vm_root_password': u'*******', 'vm_id': 290, 'vm_user_password': u'*******', 'vm_user': 'debian'}
+08-Sep-20 20:19:58 - __main__ - INFO - Worker 1 received  session ID: 0F986E2A
+08-Sep-20 20:19:58 - commands.commands - INFO - Session ID: 0F986E2A, Received request: {u'vm_name': u'v1p250.clouds365.host', u'user_id': 75, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.250', u'template_id': 6}
+08-Sep-20 20:20:00 - commands.commands - INFO - Session ID: 0F986E2A, Sended reply: {'user_id': 75, 'vm_root_password': u'*******', 'vm_id': 291, 'vm_user_password': u'*******', 'vm_user': 'debian'}
+08-Sep-20 20:25:21 - __main__ - INFO - Worker 2 received  session ID: D48ECA27
+08-Sep-20 20:25:21 - commands.commands - INFO - Session ID: D48ECA27, Received request: {u'vm_name': u'v1p251.clouds365.host', u'user_id': 75, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.251', u'template_id': 6}
+08-Sep-20 20:25:23 - commands.commands - INFO - Session ID: D48ECA27, Sended reply: {'user_id': 75, 'vm_root_password': u'*******', 'vm_id': 292, 'vm_user_password': u'*******', 'vm_user': 'debian'}
+08-Sep-20 20:26:15 - __main__ - INFO - Worker 3 received  session ID: 8FBED745
+08-Sep-20 20:26:15 - commands.commands - INFO - Session ID: 8FBED745, Received request: {u'vm_id': 292, u'cmd': u'vm_terminate', u'user_id': 75}
+08-Sep-20 20:26:18 - commands.commands - INFO - Session ID: 8FBED745, Sended reply: {'action': 'vm terminated'}
+08-Sep-20 20:27:17 - __main__ - INFO - Worker 0 received  session ID: 93FE80AC
+08-Sep-20 20:27:17 - commands.commands - INFO - Session ID: 93FE80AC, Received request: {u'vm_name': u'v1p251.clouds365.host', u'user_id': 75, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.251', u'template_id': 6}
+08-Sep-20 20:27:19 - commands.commands - INFO - Session ID: 93FE80AC, Sended reply: {'user_id': 75, 'vm_root_password': u'*******', 'vm_id': 293, 'vm_user_password': u'*******', 'vm_user': 'debian'}
+08-Sep-20 20:28:25 - __main__ - INFO - Worker 4 received  session ID: 49DBC70A
+08-Sep-20 20:28:25 - commands.commands - INFO - Session ID: 49DBC70A, Received request: {u'vm_id': 293, u'cmd': u'vm_terminate', u'user_id': 75}
+08-Sep-20 20:28:28 - commands.commands - INFO - Session ID: 49DBC70A, Sended reply: {'action': 'vm terminated'}
+08-Sep-20 21:47:54 - __main__ - INFO - Worker 1 received  session ID: 0C129B34
+08-Sep-20 21:47:54 - commands.commands - INFO - Session ID: 0C129B34, Received request: {u'vm_name': u'v1p248.clouds365.host', u'user_id': 75, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.248', u'template_id': 6}
+08-Sep-20 21:47:56 - commands.commands - INFO - Session ID: 0C129B34, Sended reply: {'user_id': 75, 'vm_root_password': u'*******', 'vm_id': 294, 'vm_user_password': u'*******', 'vm_user': 'debian'}
+08-Sep-20 21:49:49 - __main__ - INFO - Worker 2 received  session ID: 0EAC7BF9
+08-Sep-20 21:49:49 - commands.commands - INFO - Session ID: 0EAC7BF9, Received request: {u'vm_id': 294, u'cmd': u'vm_terminate', u'user_id': 75}
+08-Sep-20 21:49:52 - commands.commands - INFO - Session ID: 0EAC7BF9, Sended reply: {'action': 'vm terminated'}
+08-Sep-20 21:55:54 - __main__ - INFO - Worker 3 received  session ID: ECDF5946
+08-Sep-20 21:55:54 - commands.commands - INFO - Session ID: ECDF5946, Received request: {u'vm_name': u'v1p248.clouds365.host', u'user_id': 75, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.248', u'template_id': 6}
+08-Sep-20 21:55:56 - commands.commands - INFO - Session ID: ECDF5946, Sended reply: {'user_id': 75, 'vm_root_password': u'*******', 'vm_id': 295, 'vm_user_password': u'*******', 'vm_user': 'debian'}
+08-Sep-20 21:56:54 - __main__ - INFO - Worker 0 received  session ID: 6CF4A019
+08-Sep-20 21:56:54 - commands.commands - INFO - Session ID: 6CF4A019, Received request: {u'vm_name': u'v1p249.clouds365.host', u'user_id': 75, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.249', u'template_id': 6}
+08-Sep-20 21:56:56 - commands.commands - INFO - Session ID: 6CF4A019, Sended reply: {'user_id': 75, 'vm_root_password': u'*******', 'vm_id': 296, 'vm_user_password': u'*******', 'vm_user': 'debian'}
+08-Sep-20 21:57:38 - __main__ - INFO - Worker 4 received  session ID: FC89435A
+08-Sep-20 21:57:38 - commands.commands - INFO - Session ID: FC89435A, Received request: {u'vm_name': u'v1p250.clouds365.host', u'user_id': 75, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.250', u'template_id': 6}
+08-Sep-20 21:57:40 - commands.commands - INFO - Session ID: FC89435A, Sended reply: {'user_id': 75, 'vm_root_password': u'*******', 'vm_id': 297, 'vm_user_password': u'*******', 'vm_user': 'debian'}
+08-Sep-20 22:02:16 - __main__ - INFO - Worker 1 received  session ID: 48D67F95
+08-Sep-20 22:02:16 - commands.commands - INFO - Session ID: 48D67F95, Received request: {u'vm_id': 295, u'cmd': u'vm_terminate', u'user_id': 75}
+08-Sep-20 22:02:19 - commands.commands - INFO - Session ID: 48D67F95, Sended reply: {'action': 'vm terminated'}
+08-Sep-20 22:03:12 - __main__ - INFO - Worker 2 received  session ID: A5847E02
+08-Sep-20 22:03:12 - commands.commands - INFO - Session ID: A5847E02, Received request: {u'vm_id': 296, u'cmd': u'vm_terminate', u'user_id': 75}
+08-Sep-20 22:03:15 - commands.commands - INFO - Session ID: A5847E02, Sended reply: {'action': 'vm terminated'}
+08-Sep-20 22:03:51 - __main__ - INFO - Worker 3 received  session ID: 2DE31046
+08-Sep-20 22:03:51 - commands.commands - INFO - Session ID: 2DE31046, Received request: {u'vm_id': 297, u'cmd': u'vm_terminate', u'user_id': 75}
+08-Sep-20 22:03:54 - commands.commands - INFO - Session ID: 2DE31046, Sended reply: {'action': 'vm terminated'}
+08-Sep-20 22:03:54 - __main__ - INFO - Worker 0 received  session ID: 4A869E37
+08-Sep-20 22:03:54 - commands.commands - INFO - Session ID: 4A869E37, Received request: {u'cmd': u'user_delete', u'user_id': 75}
+08-Sep-20 22:03:54 - commands.commands - INFO - Session ID: 4A869E37, Sended reply: {'action': 'user and user group deleted', 'user_group_id': 166, 'user_id': 75}
+08-Sep-20 22:06:57 - __main__ - INFO - Worker 4 received  session ID: 9543BAD2
+08-Sep-20 22:06:57 - commands.commands - INFO - Session ID: 9543BAD2, Received request: {u'user_password': u'*******', u'cmd': u'user_allocate', u'user_name': u'nikolaj@microlines.lv'}
+08-Sep-20 22:06:57 - commands.commands - INFO - Session ID: 9543BAD2, Sended reply: {'user_name': u'nikolaj@microlines.lv', 'user_id': 76, 'user_group_id_array': [167]}
+08-Sep-20 22:09:32 - __main__ - INFO - Worker 1 received  session ID: 64FDE501
+08-Sep-20 22:09:32 - commands.commands - INFO - Session ID: 64FDE501, Received request: {u'vm_name': u'v1p248.clouds365.host', u'user_id': 76, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.248', u'template_id': 6}
+08-Sep-20 22:09:32 - commands.commands - ERROR - Session ID: 64FDE501, Sended reply: {'error': '[one.user.info] Error getting user [76].'}
+08-Sep-20 22:10:42 - __main__ - INFO - Worker 2 received  session ID: 4C1D2A6F
+08-Sep-20 22:10:42 - commands.commands - INFO - Session ID: 4C1D2A6F, Received request: {u'vm_id': 0, u'cmd': u'vm_terminate', u'user_id': 76}
+08-Sep-20 22:10:43 - commands.commands - ERROR - Session ID: 4C1D2A6F, Sended reply: {'error': 'list vm index out of range'}
+08-Sep-20 22:12:25 - __main__ - INFO - Worker 3 received  session ID: A6540812
+08-Sep-20 22:12:25 - commands.commands - INFO - Session ID: A6540812, Received request: {u'user_password': u'*******', u'cmd': u'user_allocate', u'user_name': u'nikolaj@microlines.lv'}
+08-Sep-20 22:12:26 - commands.commands - INFO - Session ID: A6540812, Sended reply: {'user_name': u'nikolaj@microlines.lv', 'user_id': 77, 'user_group_id_array': [168]}
+08-Sep-20 22:12:26 - __main__ - INFO - Worker 0 received  session ID: 5A0F3194
+08-Sep-20 22:12:26 - commands.commands - INFO - Session ID: 5A0F3194, Received request: {u'vm_name': u'v1p248.clouds365.host', u'user_id': 77, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.248', u'template_id': 6}
+08-Sep-20 22:12:28 - commands.commands - INFO - Session ID: 5A0F3194, Sended reply: {'user_id': 77, 'vm_root_password': u'*******', 'vm_id': 298, 'vm_user_password': u'*******', 'vm_user': 'debian'}
+08-Sep-20 22:13:21 - __main__ - INFO - Worker 4 received  session ID: 67F84509
+08-Sep-20 22:13:21 - commands.commands - INFO - Session ID: 67F84509, Received request: {u'vm_id': 298, u'cmd': u'vm_terminate', u'user_id': 77}
+08-Sep-20 22:13:25 - commands.commands - INFO - Session ID: 67F84509, Sended reply: {'action': 'vm terminated'}
+08-Sep-20 22:13:25 - __main__ - INFO - Worker 1 received  session ID: 87DACF3B
+08-Sep-20 22:13:25 - commands.commands - INFO - Session ID: 87DACF3B, Received request: {u'cmd': u'user_delete', u'user_id': 77}
+08-Sep-20 22:13:25 - commands.commands - INFO - Session ID: 87DACF3B, Sended reply: {'action': 'user and user group deleted', 'user_group_id': 168, 'user_id': 77}
+08-Sep-20 22:19:12 - __main__ - INFO - Worker 2 received  session ID: FB9375EC
+08-Sep-20 22:19:12 - commands.commands - INFO - Session ID: FB9375EC, Received request: {u'user_password': u'*******', u'cmd': u'user_allocate', u'user_name': u'nikolaj@microlines.lv'}
+08-Sep-20 22:19:12 - commands.commands - INFO - Session ID: FB9375EC, Sended reply: {'user_name': u'nikolaj@microlines.lv', 'user_id': 78, 'user_group_id_array': [169]}
+08-Sep-20 22:19:12 - __main__ - INFO - Worker 3 received  session ID: 95A37620
+08-Sep-20 22:19:12 - commands.commands - INFO - Session ID: 95A37620, Received request: {u'vm_name': u'v1p248.clouds365.host', u'user_id': 78, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.248', u'template_id': 6}
+08-Sep-20 22:19:14 - commands.commands - INFO - Session ID: 95A37620, Sended reply: {'user_id': 78, 'vm_root_password': u'*******', 'vm_id': 299, 'vm_user_password': u'*******', 'vm_user': 'debian'}
+08-Sep-20 22:30:57 - __main__ - INFO - Worker 0 received  session ID: A5B4D931
+08-Sep-20 22:30:57 - commands.commands - INFO - Session ID: A5B4D931, Received request: {u'vm_name': u'v1p249.clouds365.host', u'user_id': 78, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.249', u'template_id': 6}
+08-Sep-20 22:30:59 - commands.commands - INFO - Session ID: A5B4D931, Sended reply: {'user_id': 78, 'vm_root_password': u'*******', 'vm_id': 300, 'vm_user_password': u'*******', 'vm_user': 'debian'}
+08-Sep-20 22:33:05 - __main__ - INFO - Worker 4 received  session ID: 3469BF12
+08-Sep-20 22:33:05 - commands.commands - INFO - Session ID: 3469BF12, Received request: {u'vm_id': 300, u'cmd': u'vm_terminate', u'user_id': 78}
+08-Sep-20 22:33:08 - commands.commands - INFO - Session ID: 3469BF12, Sended reply: {'action': 'vm terminated'}
+08-Sep-20 22:33:08 - __main__ - INFO - Worker 1 received  session ID: 5072A4D6
+08-Sep-20 22:33:08 - commands.commands - INFO - Session ID: 5072A4D6, Received request: {u'vm_id': 299, u'cmd': u'vm_terminate', u'user_id': 78}
+08-Sep-20 22:33:12 - commands.commands - INFO - Session ID: 5072A4D6, Sended reply: {'action': 'vm terminated'}
+08-Sep-20 22:33:12 - __main__ - INFO - Worker 2 received  session ID: 3786AFCE
+08-Sep-20 22:33:12 - commands.commands - INFO - Session ID: 3786AFCE, Received request: {u'cmd': u'user_delete', u'user_id': 78}
+08-Sep-20 22:33:12 - commands.commands - INFO - Session ID: 3786AFCE, Sended reply: {'action': 'user and user group deleted', 'user_group_id': 169, 'user_id': 78}
+08-Sep-20 23:36:45 - __main__ - INFO - Worker 3 received  session ID: 3821CFA0
+08-Sep-20 23:36:45 - commands.commands - INFO - Session ID: 3821CFA0, Received request: {u'user_password': u'*******', u'cmd': u'user_allocate', u'user_name': u'nikolaj@microlines.lv'}
+08-Sep-20 23:36:46 - commands.commands - INFO - Session ID: 3821CFA0, Sended reply: {'user_name': u'nikolaj@microlines.lv', 'user_id': 79, 'user_group_id_array': [170]}
+08-Sep-20 23:36:46 - __main__ - INFO - Worker 0 received  session ID: 403978E5
+08-Sep-20 23:36:46 - commands.commands - INFO - Session ID: 403978E5, Received request: {u'vm_name': u'v1p248.clouds365.host', u'user_id': 79, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.248', u'template_id': 6}
+08-Sep-20 23:36:48 - commands.commands - INFO - Session ID: 403978E5, Sended reply: {'user_id': 79, 'vm_root_password': u'*******', 'vm_id': 301, 'vm_user_password': u'*******', 'vm_user': 'debian'}
+08-Sep-20 23:39:30 - __main__ - INFO - Worker 4 received  session ID: 02EA745D
+08-Sep-20 23:39:30 - commands.commands - INFO - Session ID: 02EA745D, Received request: {u'vm_id': 301, u'cmd': u'vm_terminate', u'user_id': 79}
+08-Sep-20 23:39:34 - commands.commands - INFO - Session ID: 02EA745D, Sended reply: {'action': 'vm terminated'}
+08-Sep-20 23:39:34 - __main__ - INFO - Worker 1 received  session ID: 04D3795F
+08-Sep-20 23:39:34 - commands.commands - INFO - Session ID: 04D3795F, Received request: {u'cmd': u'user_delete', u'user_id': 79}
+08-Sep-20 23:39:34 - commands.commands - INFO - Session ID: 04D3795F, Sended reply: {'action': 'user and user group deleted', 'user_group_id': 170, 'user_id': 79}
+09-Sep-20 15:29:23 - __main__ - INFO - Worker 2 received  session ID: 1EFD9586
+09-Sep-20 15:29:23 - commands.commands - INFO - Session ID: 1EFD9586, Received request: {u'user_password': u'*******', u'cmd': u'user_allocate', u'user_name': u'nikolaj@microlines.lv'}
+09-Sep-20 15:29:23 - commands.commands - INFO - Session ID: 1EFD9586, Sended reply: {'user_name': u'nikolaj@microlines.lv', 'user_id': 80, 'user_group_id_array': [171]}
+09-Sep-20 15:29:23 - __main__ - INFO - Worker 3 received  session ID: 57ECFD29
+09-Sep-20 15:29:23 - commands.commands - INFO - Session ID: 57ECFD29, Received request: {u'vm_name': u'v1p248.clouds365.host', u'user_id': 80, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.248', u'template_id': 6}
+09-Sep-20 15:29:25 - commands.commands - INFO - Session ID: 57ECFD29, Sended reply: {'user_id': 80, 'vm_root_password': u'*******', 'vm_id': 302, 'vm_user_password': u'*******', 'vm_user': 'debian'}
+09-Sep-20 15:30:21 - __main__ - INFO - Worker 0 received  session ID: 20D4B8C6
+09-Sep-20 15:30:21 - commands.commands - INFO - Session ID: 20D4B8C6, Received request: {u'vm_name': u'v1p249.clouds365.host', u'user_id': 80, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.249', u'template_id': 6}
+09-Sep-20 15:30:23 - commands.commands - INFO - Session ID: 20D4B8C6, Sended reply: {'user_id': 80, 'vm_root_password': u'*******', 'vm_id': 303, 'vm_user_password': u'*******', 'vm_user': 'debian'}
+09-Sep-20 15:30:46 - __main__ - INFO - Worker 4 received  session ID: 1A0869B2
+09-Sep-20 15:30:46 - commands.commands - INFO - Session ID: 1A0869B2, Received request: {u'vm_name': u'v1p250.clouds365.host', u'user_id': 80, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.250', u'template_id': 6}
+09-Sep-20 15:30:48 - commands.commands - INFO - Session ID: 1A0869B2, Sended reply: {'user_id': 80, 'vm_root_password': u'*******', 'vm_id': 304, 'vm_user_password': u'*******', 'vm_user': 'debian'}
+09-Sep-20 16:47:44 - __main__ - INFO - Worker 1 received  session ID: 7BCD9315
+09-Sep-20 16:47:44 - commands.commands - INFO - Session ID: 7BCD9315, Received request: {u'vm_id': 302, u'cmd': u'vm_terminate', u'user_id': 80}
+09-Sep-20 16:47:47 - commands.commands - INFO - Session ID: 7BCD9315, Sended reply: {'action': 'vm terminated'}
+09-Sep-20 16:48:10 - __main__ - INFO - Worker 2 received  session ID: 758ED01A
+09-Sep-20 16:48:10 - commands.commands - INFO - Session ID: 758ED01A, Received request: {u'vm_name': u'v1p248.clouds365.host', u'user_id': 80, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.248', u'template_id': 6}
+09-Sep-20 16:48:12 - commands.commands - INFO - Session ID: 758ED01A, Sended reply: {'user_id': 80, 'vm_root_password': u'*******', 'vm_id': 305, 'vm_user_password': u'*******', 'vm_user': 'debian'}
+09-Sep-20 16:52:12 - __main__ - INFO - Worker 3 received  session ID: 62539701
+09-Sep-20 16:52:12 - commands.commands - INFO - Session ID: 62539701, Received request: {u'vm_id': 303, u'cmd': u'vm_terminate', u'user_id': 80}
+09-Sep-20 16:52:15 - commands.commands - INFO - Session ID: 62539701, Sended reply: {'action': 'vm terminated'}
+09-Sep-20 16:52:19 - __main__ - INFO - Worker 0 received  session ID: 3E708C4D
+09-Sep-20 16:52:19 - commands.commands - INFO - Session ID: 3E708C4D, Received request: {u'vm_name': u'v1p249.clouds365.host', u'user_id': 80, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.249', u'template_id': 8}
+09-Sep-20 16:52:20 - commands.commands - ERROR - Session ID: 3E708C4D, Sended reply: {'error': '[one.template.instantiate] Error getting virtual machine template [8].'}
+09-Sep-20 16:54:41 - __main__ - INFO - Worker 4 received  session ID: 74B1E620
+09-Sep-20 16:54:41 - commands.commands - INFO - Session ID: 74B1E620, Received request: {u'vm_id': 304, u'cmd': u'vm_terminate', u'user_id': 80}
+09-Sep-20 16:54:44 - commands.commands - INFO - Session ID: 74B1E620, Sended reply: {'action': 'vm terminated'}
+09-Sep-20 16:54:48 - __main__ - INFO - Worker 1 received  session ID: 70D1289E
+09-Sep-20 16:54:48 - commands.commands - INFO - Session ID: 70D1289E, Received request: {u'vm_name': u'v1p250.clouds365.host', u'user_id': 80, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.250', u'template_id': 7}
+09-Sep-20 16:54:49 - commands.commands - ERROR - Session ID: 70D1289E, Sended reply: {'error': '[one.template.instantiate] Error getting virtual machine template [7].'}
+09-Sep-20 17:05:18 - __main__ - INFO - Worker 2 received  session ID: E81F5C6D
+09-Sep-20 17:05:18 - commands.commands - INFO - Session ID: E81F5C6D, Received request: {u'vm_id': 0, u'cmd': u'vm_terminate', u'user_id': 80}
+09-Sep-20 17:05:18 - commands.commands - ERROR - Session ID: E81F5C6D, Sended reply: {'error': 'list vm index out of range'}
+09-Sep-20 17:05:18 - __main__ - INFO - Worker 3 received  session ID: 75C91A4E
+09-Sep-20 17:05:18 - commands.commands - INFO - Session ID: 75C91A4E, Received request: {u'vm_id': 0, u'cmd': u'vm_terminate', u'user_id': 80}
+09-Sep-20 17:05:18 - commands.commands - ERROR - Session ID: 75C91A4E, Sended reply: {'error': 'list vm index out of range'}
+09-Sep-20 17:05:18 - __main__ - INFO - Worker 0 received  session ID: 304A2BE6
+09-Sep-20 17:05:18 - commands.commands - INFO - Session ID: 304A2BE6, Received request: {u'vm_id': 305, u'cmd': u'vm_terminate', u'user_id': 80}
+09-Sep-20 17:05:21 - commands.commands - INFO - Session ID: 304A2BE6, Sended reply: {'action': 'vm terminated'}
+09-Sep-20 17:07:19 - __main__ - INFO - Worker 4 received  session ID: 7F219A5C
+09-Sep-20 17:07:19 - commands.commands - INFO - Session ID: 7F219A5C, Received request: {u'vm_name': u'v1p248.clouds365.host', u'user_id': 80, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.248', u'template_id': 6}
+09-Sep-20 17:07:21 - commands.commands - INFO - Session ID: 7F219A5C, Sended reply: {'user_id': 80, 'vm_root_password': u'*******', 'vm_id': 306, 'vm_user_password': u'*******', 'vm_user': 'debian'}
+09-Sep-20 17:11:06 - __main__ - INFO - Worker 1 received  session ID: D7C982BA
+09-Sep-20 17:11:06 - commands.commands - INFO - Session ID: D7C982BA, Received request: {u'vm_id': 306, u'cmd': u'vm_terminate', u'user_id': 80}
+09-Sep-20 17:11:09 - commands.commands - INFO - Session ID: D7C982BA, Sended reply: {'action': 'vm terminated'}
+09-Sep-20 17:11:09 - __main__ - INFO - Worker 2 received  session ID: 4B78ADE6
+09-Sep-20 17:11:10 - commands.commands - INFO - Session ID: 4B78ADE6, Received request: {u'cmd': u'user_delete', u'user_id': 80}
+09-Sep-20 17:11:10 - commands.commands - INFO - Session ID: 4B78ADE6, Sended reply: {'action': 'user and user group deleted', 'user_group_id': 171, 'user_id': 80}
+09-Sep-20 17:11:37 - __main__ - INFO - Worker 3 received  session ID: 3C4D92FB
+09-Sep-20 17:11:37 - commands.commands - INFO - Session ID: 3C4D92FB, Received request: {u'vm_id': None, u'cmd': u'vm_terminate', u'user_id': None}
+09-Sep-20 17:11:37 - commands.commands - ERROR - Session ID: 3C4D92FB, Sended reply: {'error': 'not set vm id'}
+09-Sep-20 17:14:16 - __main__ - INFO - Worker 0 received  session ID: 61439582
+09-Sep-20 17:14:16 - commands.commands - INFO - Session ID: 61439582, Received request: {u'user_password': u'*******', u'cmd': u'user_allocate', u'user_name': u'nikolaj@microlines.lv'}
+09-Sep-20 17:14:16 - commands.commands - INFO - Session ID: 61439582, Sended reply: {'user_name': u'nikolaj@microlines.lv', 'user_id': 81, 'user_group_id_array': [172]}
+09-Sep-20 17:14:16 - __main__ - INFO - Worker 4 received  session ID: 8CA59F61
+09-Sep-20 17:14:16 - commands.commands - INFO - Session ID: 8CA59F61, Received request: {u'vm_name': u'v1p248.clouds365.host', u'user_id': 81, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.248', u'template_id': 6}
+09-Sep-20 17:14:18 - commands.commands - INFO - Session ID: 8CA59F61, Sended reply: {'user_id': 81, 'vm_root_password': u'*******', 'vm_id': 307, 'vm_user_password': u'*******', 'vm_user': 'debian'}
+09-Sep-20 17:23:08 - __main__ - INFO - Worker 1 received  session ID: FC976420
+09-Sep-20 17:23:08 - commands.commands - INFO - Session ID: FC976420, Received request: {u'vm_id': 307, u'cmd': u'vm_terminate', u'user_id': 81}
+09-Sep-20 17:23:11 - commands.commands - INFO - Session ID: FC976420, Sended reply: {'action': 'vm terminated'}
+09-Sep-20 17:23:11 - __main__ - INFO - Worker 2 received  session ID: 682FEB04
+09-Sep-20 17:23:11 - commands.commands - INFO - Session ID: 682FEB04, Received request: {u'cmd': u'user_delete', u'user_id': 81}
+09-Sep-20 17:23:11 - commands.commands - INFO - Session ID: 682FEB04, Sended reply: {'action': 'user and user group deleted', 'user_group_id': 172, 'user_id': 81}
+09-Sep-20 17:29:37 - __main__ - INFO - Worker 3 received  session ID: A5BE7290
+09-Sep-20 17:29:37 - commands.commands - INFO - Session ID: A5BE7290, Received request: {u'user_password': u'*******', u'cmd': u'user_allocate', u'user_name': u'nikolaj@microlines.lv'}
+09-Sep-20 17:29:37 - commands.commands - INFO - Session ID: A5BE7290, Sended reply: {'user_name': u'nikolaj@microlines.lv', 'user_id': 82, 'user_group_id_array': [173]}
+09-Sep-20 17:29:37 - __main__ - INFO - Worker 0 received  session ID: 1954CE6A
+09-Sep-20 17:29:37 - commands.commands - INFO - Session ID: 1954CE6A, Received request: {u'vm_name': u'v1p248.clouds365.host', u'user_id': 82, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.248', u'template_id': 6}
+09-Sep-20 17:29:39 - commands.commands - INFO - Session ID: 1954CE6A, Sended reply: {'user_id': 82, 'vm_root_password': u'*******', 'vm_id': 308, 'vm_user_password': u'*******', 'vm_user': 'debian'}
+09-Sep-20 20:22:33 - __main__ - INFO - Worker 4 received  session ID: 2AC4E36B
+09-Sep-20 20:22:33 - commands.commands - INFO - Session ID: 2AC4E36B, Received request: {u'vm_name': u'v1p249.clouds365.host', u'user_id': 82, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.249', u'template_id': 8}
+09-Sep-20 20:22:35 - commands.commands - ERROR - Session ID: 2AC4E36B, Sended reply: {'error': '[one.template.instantiate] Error getting virtual machine template [8].'}
+09-Sep-20 20:23:13 - __main__ - INFO - Worker 1 received  session ID: 3495CE6B
+09-Sep-20 20:23:13 - commands.commands - INFO - Session ID: 3495CE6B, Received request: {u'vm_name': u'v1p250.clouds365.host', u'user_id': 82, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.250', u'template_id': 7}
+09-Sep-20 20:23:14 - commands.commands - ERROR - Session ID: 3495CE6B, Sended reply: {'error': '[one.template.instantiate] Error getting virtual machine template [7].'}
+09-Sep-20 20:24:25 - __main__ - INFO - Worker 2 received  session ID: DBCA325E
+09-Sep-20 20:24:25 - commands.commands - INFO - Session ID: DBCA325E, Received request: {u'vm_id': 0, u'cmd': u'vm_terminate', u'user_id': 82}
+09-Sep-20 20:24:25 - commands.commands - ERROR - Session ID: DBCA325E, Sended reply: {'error': 'list vm index out of range'}
+09-Sep-20 20:24:25 - __main__ - INFO - Worker 3 received  session ID: 8F176B93
+09-Sep-20 20:24:25 - commands.commands - INFO - Session ID: 8F176B93, Received request: {u'vm_id': 0, u'cmd': u'vm_terminate', u'user_id': 82}
+09-Sep-20 20:24:25 - commands.commands - ERROR - Session ID: 8F176B93, Sended reply: {'error': 'list vm index out of range'}
+09-Sep-20 20:24:26 - __main__ - INFO - Worker 0 received  session ID: EA204D37
+09-Sep-20 20:24:26 - commands.commands - INFO - Session ID: EA204D37, Received request: {u'vm_id': 308, u'cmd': u'vm_terminate', u'user_id': 82}
+09-Sep-20 20:24:29 - commands.commands - INFO - Session ID: EA204D37, Sended reply: {'action': 'vm terminated'}
+09-Sep-20 22:14:18 - __main__ - INFO - Worker 4 received  session ID: B0CA4812
+09-Sep-20 22:14:18 - commands.commands - INFO - Session ID: B0CA4812, Received request: {u'user_password': u'*******', u'cmd': u'user_allocate', u'user_name': u'nikolaj@microlines.lv'}
+09-Sep-20 22:14:19 - commands.commands - INFO - Session ID: B0CA4812, Sended reply: {'user_name': u'nikolaj@microlines.lv', 'user_id': 83, 'user_group_id_array': [174]}
+09-Sep-20 22:14:19 - __main__ - INFO - Worker 1 received  session ID: D16845CA
+09-Sep-20 22:14:19 - commands.commands - INFO - Session ID: D16845CA, Received request: {u'vm_name': u'v1p248.clouds365.host', u'user_id': 83, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.248', u'template_id': 6}
+09-Sep-20 22:14:21 - commands.commands - INFO - Session ID: D16845CA, Sended reply: {'user_id': 83, 'vm_root_password': u'*******', 'vm_id': 309, 'vm_user_password': u'*******', 'vm_user': 'debian'}
+09-Sep-20 22:14:37 - __main__ - INFO - Worker 2 received  session ID: C8FD0A35
+09-Sep-20 22:14:37 - commands.commands - INFO - Session ID: C8FD0A35, Received request: {u'vm_name': u'v1p249.clouds365.host', u'user_id': 83, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.249', u'template_id': 6}
+09-Sep-20 22:14:39 - commands.commands - INFO - Session ID: C8FD0A35, Sended reply: {'user_id': 83, 'vm_root_password': u'*******', 'vm_id': 310, 'vm_user_password': u'*******', 'vm_user': 'debian'}
+09-Sep-20 22:15:00 - __main__ - INFO - Worker 3 received  session ID: F6BA0D52
+09-Sep-20 22:15:00 - commands.commands - INFO - Session ID: F6BA0D52, Received request: {u'vm_name': u'v1p250.clouds365.host', u'user_id': 83, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.250', u'template_id': 6}
+09-Sep-20 22:15:02 - commands.commands - INFO - Session ID: F6BA0D52, Sended reply: {'user_id': 83, 'vm_root_password': u'*******', 'vm_id': 311, 'vm_user_password': u'*******', 'vm_user': 'debian'}
+09-Sep-20 22:18:33 - __main__ - INFO - Worker 0 received  session ID: B9346FE7
+09-Sep-20 22:18:33 - commands.commands - INFO - Session ID: B9346FE7, Received request: {u'vm_id': 311, u'cmd': u'vm_terminate', u'user_id': 83}
+09-Sep-20 22:18:37 - commands.commands - INFO - Session ID: B9346FE7, Sended reply: {'action': 'vm terminated'}
+09-Sep-20 22:18:37 - __main__ - INFO - Worker 4 received  session ID: CF719BD6
+09-Sep-20 22:18:37 - commands.commands - INFO - Session ID: CF719BD6, Received request: {u'vm_id': 310, u'cmd': u'vm_terminate', u'user_id': 83}
+09-Sep-20 22:18:40 - commands.commands - INFO - Session ID: CF719BD6, Sended reply: {'action': 'vm terminated'}
+09-Sep-20 22:18:40 - __main__ - INFO - Worker 1 received  session ID: EFC38B7D
+09-Sep-20 22:18:40 - commands.commands - INFO - Session ID: EFC38B7D, Received request: {u'vm_id': 309, u'cmd': u'vm_terminate', u'user_id': 83}
+09-Sep-20 22:18:43 - commands.commands - INFO - Session ID: EFC38B7D, Sended reply: {'action': 'vm terminated'}
+09-Sep-20 22:18:44 - __main__ - INFO - Worker 2 received  session ID: 685943DE
+09-Sep-20 22:18:44 - commands.commands - INFO - Session ID: 685943DE, Received request: {u'cmd': u'user_delete', u'user_id': 83}
+09-Sep-20 22:18:44 - commands.commands - INFO - Session ID: 685943DE, Sended reply: {'action': 'user and user group deleted', 'user_group_id': 174, 'user_id': 83}
+10-Sep-20 15:19:57 - __main__ - INFO - Worker 3 received  session ID: BE51840F
+10-Sep-20 15:19:57 - commands.commands - INFO - Session ID: BE51840F, Received request: {u'vm_name': u'v1p246.clouds365.host', u'user_id': 30, u'network_id': u'0', u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.246', u'template_id': 329}
+10-Sep-20 15:19:59 - commands.commands - INFO - Session ID: BE51840F, Sended reply: {'user_id': 30, 'vm_root_password': u'*******', 'vm_id': 312, 'vm_user_password': u'*******', 'vm_user': 'debian'}
+10-Sep-20 17:52:54 - __main__ - INFO - Worker 0 received  session ID: D3B02F16
+10-Sep-20 17:52:54 - commands.commands - INFO - Session ID: D3B02F16, Received request: {u'cmd': u'get_user_info', u'user_id': 74}
+10-Sep-20 17:52:54 - commands.commands - ERROR - Session ID: D3B02F16, Sended reply: {'error': '[one.user.info] Error getting user [74].'}
+10-Sep-20 17:57:37 - __main__ - INFO - Routing server started
+10-Sep-20 17:57:37 - __main__ - INFO - Worker 4 started
+10-Sep-20 17:57:37 - __main__ - INFO - Worker 0 started
+10-Sep-20 17:57:37 - __main__ - INFO - Worker 3 started
+10-Sep-20 17:57:37 - __main__ - INFO - Worker 1 started
+10-Sep-20 17:57:37 - __main__ - INFO - Worker 2 started
+10-Sep-20 17:57:54 - __main__ - INFO - Worker 4 received  session ID: B219C0D4
+10-Sep-20 17:57:54 - commands.commands - INFO - Session ID: B219C0D4, Received request: {u'cmd': u'get_user_info', u'user_id': 74}
+10-Sep-20 17:57:54 - commands.commands - ERROR - Session ID: B219C0D4, Sended reply: {'error': '[one.user.info] Error getting user [74].'}
+10-Sep-20 17:59:17 - __main__ - INFO - Worker 0 received  session ID: 08F53246
+10-Sep-20 17:59:17 - commands.commands - INFO - Session ID: 08F53246, Received request: {u'vm_name': u'v1p246.clouds365.host', u'user_id': 30, u'network_id': u'0', u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.246', u'template_id': 6}
+10-Sep-20 17:59:17 - commands.commands - ERROR - Session ID: 08F53246, Sended reply: {'error': 'vm with this name already allocated'}
+10-Sep-20 17:59:46 - __main__ - INFO - Worker 3 received  session ID: 3DB69AE7
+10-Sep-20 17:59:46 - commands.commands - INFO - Session ID: 3DB69AE7, Received request: {u'vm_name': u'v1p247.clouds365.host', u'user_id': 30, u'network_id': u'0', u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.247', u'template_id': 6}
+10-Sep-20 17:59:48 - commands.commands - INFO - Session ID: 3DB69AE7, Sended reply: {'user_id': 30, 'vm_root_password': u'*******', 'vm_id': 313, 'vm_user_password': u'*******', 'vm_user': 'debian'}
+10-Sep-20 20:31:29 - __main__ - INFO - Routing server started
+10-Sep-20 20:31:29 - __main__ - INFO - Worker 2 started
+10-Sep-20 20:31:29 - __main__ - INFO - Worker 0 started
+10-Sep-20 20:31:29 - __main__ - INFO - Worker 4 started
+10-Sep-20 20:31:29 - __main__ - INFO - Worker 1 started
+10-Sep-20 20:31:29 - __main__ - INFO - Worker 3 started
+10-Sep-20 20:31:38 - __main__ - INFO - Worker 2 received  session ID: B5F396A1
+10-Sep-20 20:31:38 - commands.commands - INFO - Session ID: B5F396A1, Received request: {u'vm_id': 313, u'cmd': u'vm_terminate', u'user_id': 30}
+10-Sep-20 20:31:41 - commands.commands - INFO - Session ID: B5F396A1, Sended reply: {'action': 'vm terminated'}
+10-Sep-20 20:35:21 - __main__ - INFO - Worker 0 received  session ID: 96D42B5C
+10-Sep-20 20:35:21 - commands.commands - INFO - Session ID: 96D42B5C, Received request: {u'vm_name': u'v1p247.clouds365.host', u'user_id': 30, u'network_id': u'0', u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.247', u'template_id': 6}
+10-Sep-20 20:35:23 - commands.commands - INFO - Session ID: 96D42B5C, Sended reply: {'user_id': 30, 'vm_root_password': u'*******', 'vm_id': 314, 'vm_user_password': u'*******', 'vm_user': 'debian'}
+10-Sep-20 21:12:32 - __main__ - INFO - Routing server started
+10-Sep-20 21:12:32 - __main__ - INFO - Worker 0 started
+10-Sep-20 21:12:32 - __main__ - INFO - Worker 1 started
+10-Sep-20 21:12:32 - __main__ - INFO - Worker 3 started
+10-Sep-20 21:12:32 - __main__ - INFO - Worker 4 started
+10-Sep-20 21:12:32 - __main__ - INFO - Worker 2 started
+10-Sep-20 21:14:13 - __main__ - INFO - Routing server started
+10-Sep-20 21:14:13 - __main__ - INFO - Worker 0 started
+10-Sep-20 21:14:13 - __main__ - INFO - Worker 3 started
+10-Sep-20 21:14:13 - __main__ - INFO - Worker 4 started
+10-Sep-20 21:14:13 - __main__ - INFO - Worker 1 started
+10-Sep-20 21:14:13 - __main__ - INFO - Worker 2 started
+10-Sep-20 21:14:24 - __main__ - INFO - Worker 0 received  session ID: 8F34B9D0
+10-Sep-20 21:14:24 - commands.commands - INFO - Session ID: 8F34B9D0, Received request: {u'vm_id': 314, u'cmd': u'vm_terminate', u'user_id': 30}
+10-Sep-20 21:14:27 - commands.commands - INFO - Session ID: 8F34B9D0, Sended reply: {'action': 'vm terminated'}
+10-Sep-20 21:14:47 - __main__ - INFO - Worker 3 received  session ID: 5F94A028
+10-Sep-20 21:14:47 - commands.commands - INFO - Session ID: 5F94A028, Received request: {u'vm_name': u'v1p247.clouds365.host', u'user_id': 30, u'network_id': u'0', u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.247', u'template_id': 6}
+10-Sep-20 21:14:49 - commands.commands - INFO - Session ID: 5F94A028, Sended reply: {'user_id': 30, 'vm_root_password': u'*******', 'vm_id': 315, 'vm_user_password': u'*******', 'vm_user': 'debian'}
+10-Sep-20 21:18:54 - __main__ - INFO - Worker 4 received  session ID: 1ECA95B8
+10-Sep-20 21:18:54 - commands.commands - INFO - Session ID: 1ECA95B8, Received request: {u'vm_id': 315, u'cmd': u'vm_terminate', u'user_id': 30}
+10-Sep-20 21:18:56 - commands.commands - INFO - Session ID: 1ECA95B8, Sended reply: {'action': 'vm terminated'}
+10-Sep-20 21:20:51 - __main__ - INFO - Routing server started
+10-Sep-20 21:20:51 - __main__ - INFO - Worker 2 started
+10-Sep-20 21:20:51 - __main__ - INFO - Worker 1 started
+10-Sep-20 21:20:51 - __main__ - INFO - Worker 0 started
+10-Sep-20 21:20:51 - __main__ - INFO - Worker 3 started
+10-Sep-20 21:20:51 - __main__ - INFO - Worker 4 started
+10-Sep-20 21:21:09 - __main__ - INFO - Worker 2 received  session ID: DAEF9B73
+10-Sep-20 21:21:09 - commands.commands - INFO - Session ID: DAEF9B73, Received request: {u'vm_name': u'v1p247.clouds365.host', u'user_id': 30, u'network_id': u'0', u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.247', u'template_id': 6}
+10-Sep-20 21:21:11 - commands.commands - INFO - Session ID: DAEF9B73, Sended reply: {'user_id': 30, 'vm_root_password': u'*******', 'vm_id': 316, 'vm_user_password': u'*******', 'vm_user': 'debian'}
+10-Sep-20 21:26:11 - __main__ - INFO - Routing server started
+10-Sep-20 21:26:11 - __main__ - INFO - Worker 0 started
+10-Sep-20 21:26:11 - __main__ - INFO - Worker 4 started
+10-Sep-20 21:26:11 - __main__ - INFO - Worker 1 started
+10-Sep-20 21:26:11 - __main__ - INFO - Worker 2 started
+10-Sep-20 21:26:11 - __main__ - INFO - Worker 3 started
+10-Sep-20 21:26:54 - __main__ - INFO - Worker 0 received  session ID: A695D24E
+10-Sep-20 21:26:54 - commands.commands - INFO - Session ID: A695D24E, Received request: {u'vm_id': 316, u'cmd': u'vm_terminate', u'user_id': 30}
+10-Sep-20 21:26:57 - commands.commands - INFO - Session ID: A695D24E, Sended reply: {'action': 'vm terminated'}
+10-Sep-20 21:27:26 - __main__ - INFO - Worker 4 received  session ID: 8BE4C039
+10-Sep-20 21:27:26 - commands.commands - INFO - Session ID: 8BE4C039, Received request: {u'vm_name': u'v1p247.clouds365.host', u'user_id': 30, u'network_id': u'0', u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.247', u'template_id': 6}
+10-Sep-20 21:27:26 - commands.commands - INFO - Session ID: 8BE4C039, Sended reply: {'user_id': 30, 'vm_root_password': u'*******', 'vm_id': 317, 'vm_user_password': u'*******', 'vm_user': 'debian'}
+10-Sep-20 21:31:09 - __main__ - INFO - Routing server started
+10-Sep-20 21:31:10 - __main__ - INFO - Worker 0 started
+10-Sep-20 21:31:10 - __main__ - INFO - Worker 4 started
+10-Sep-20 21:31:10 - __main__ - INFO - Worker 1 started
+10-Sep-20 21:31:10 - __main__ - INFO - Worker 3 started
+10-Sep-20 21:31:10 - __main__ - INFO - Worker 2 started
+10-Sep-20 21:31:40 - __main__ - INFO - Worker 0 received  session ID: B945FD20
+10-Sep-20 21:31:40 - commands.commands - INFO - Session ID: B945FD20, Received request: {u'vm_id': 317, u'cmd': u'vm_terminate', u'user_id': 30}
+10-Sep-20 21:31:42 - commands.commands - INFO - Session ID: B945FD20, Sended reply: {'action': 'vm terminated'}
+10-Sep-20 21:31:57 - __main__ - INFO - Worker 4 received  session ID: 958F67CD
+10-Sep-20 21:31:57 - commands.commands - INFO - Session ID: 958F67CD, Received request: {u'vm_name': u'v1p247.clouds365.host', u'user_id': 30, u'network_id': u'0', u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.247', u'template_id': 6}
+10-Sep-20 21:31:59 - commands.commands - INFO - Session ID: 958F67CD, Sended reply: {'user_id': 30, 'vm_root_password': u'*******', 'vm_id': 318, 'vm_user_password': u'*******', 'vm_user': 'debian'}
+10-Sep-20 21:34:07 - __main__ - INFO - Routing server started
+10-Sep-20 21:34:07 - __main__ - INFO - Worker 2 started
+10-Sep-20 21:34:07 - __main__ - INFO - Worker 1 started
+10-Sep-20 21:34:07 - __main__ - INFO - Worker 0 started
+10-Sep-20 21:34:07 - __main__ - INFO - Worker 3 started
+10-Sep-20 21:34:07 - __main__ - INFO - Worker 4 started
+10-Sep-20 21:34:16 - __main__ - INFO - Worker 2 received  session ID: 03A7486E
+10-Sep-20 21:34:16 - commands.commands - INFO - Session ID: 03A7486E, Received request: {u'vm_id': 318, u'cmd': u'vm_terminate', u'user_id': 30}
+10-Sep-20 21:34:18 - commands.commands - INFO - Session ID: 03A7486E, Sended reply: {'action': 'vm terminated'}
+10-Sep-20 21:34:37 - __main__ - INFO - Worker 1 received  session ID: FD720E84
+10-Sep-20 21:34:37 - commands.commands - INFO - Session ID: FD720E84, Received request: {u'vm_name': u'v1p247.clouds365.host', u'user_id': 30, u'network_id': u'0', u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.247', u'template_id': 6}
+10-Sep-20 21:34:39 - commands.commands - INFO - Session ID: FD720E84, Sended reply: {'user_id': 30, 'vm_root_password': u'*******', 'vm_id': 319, 'vm_user_password': u'*******', 'vm_user': 'debian'}
+10-Sep-20 21:37:40 - __main__ - INFO - Worker 0 received  session ID: 5801FE34
+10-Sep-20 21:37:40 - commands.commands - INFO - Session ID: 5801FE34, Received request: {u'vm_id': 319, u'cmd': u'vm_terminate', u'user_id': 30}
+10-Sep-20 21:37:43 - commands.commands - INFO - Session ID: 5801FE34, Sended reply: {'action': 'vm terminated'}
+10-Sep-20 21:40:23 - __main__ - INFO - Worker 3 received  session ID: ACEB5409
+10-Sep-20 21:40:23 - commands.commands - INFO - Session ID: ACEB5409, Received request: {u'vm_name': u'v1p247.clouds365.host', u'user_id': 30, u'network_id': u'0', u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.247', u'template_id': 6}
+10-Sep-20 21:40:26 - commands.commands - INFO - Session ID: ACEB5409, Sended reply: {'user_id': 30, 'vm_root_password': u'*******', 'vm_id': 320, 'vm_user_password': u'*******', 'vm_user': 'debian'}
+10-Sep-20 21:41:09 - __main__ - INFO - Worker 4 received  session ID: F9508EAB
+10-Sep-20 21:41:09 - commands.commands - INFO - Session ID: F9508EAB, Received request: {u'vm_id': 320, u'cmd': u'vm_terminate', u'user_id': 30}
+10-Sep-20 21:41:13 - commands.commands - INFO - Session ID: F9508EAB, Sended reply: {'action': 'vm terminated'}
+10-Sep-20 21:41:15 - __main__ - INFO - Routing server started
+10-Sep-20 21:41:15 - __main__ - INFO - Worker 0 started
+10-Sep-20 21:41:15 - __main__ - INFO - Worker 4 started
+10-Sep-20 21:41:15 - __main__ - INFO - Worker 2 started
+10-Sep-20 21:41:15 - __main__ - INFO - Worker 1 started
+10-Sep-20 21:41:15 - __main__ - INFO - Worker 3 started
+10-Sep-20 21:41:32 - __main__ - INFO - Worker 0 received  session ID: 6E41BDA7
+10-Sep-20 21:41:32 - commands.commands - INFO - Session ID: 6E41BDA7, Received request: {u'vm_name': u'v1p247.clouds365.host', u'user_id': 30, u'network_id': u'0', u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.247', u'template_id': 6}
+10-Sep-20 21:41:35 - commands.commands - INFO - Session ID: 6E41BDA7, Sended reply: {'user_id': 30, 'vm_root_password': u'*******', 'vm_id': 321, 'vm_user_password': u'*******', 'vm_user': 'debian'}
+10-Sep-20 21:42:46 - __main__ - INFO - Routing server started
+10-Sep-20 21:42:46 - __main__ - INFO - Worker 3 started
+10-Sep-20 21:42:46 - __main__ - INFO - Worker 0 started
+10-Sep-20 21:42:46 - __main__ - INFO - Worker 1 started
+10-Sep-20 21:42:46 - __main__ - INFO - Worker 4 started
+10-Sep-20 21:42:46 - __main__ - INFO - Worker 2 started
+10-Sep-20 22:26:00 - __main__ - INFO - Routing server started
+10-Sep-20 22:26:00 - __main__ - INFO - Worker 0 started
+10-Sep-20 22:26:00 - __main__ - INFO - Worker 2 started
+10-Sep-20 22:26:00 - __main__ - INFO - Worker 4 started
+10-Sep-20 22:26:00 - __main__ - INFO - Worker 1 started
+10-Sep-20 22:26:00 - __main__ - INFO - Worker 3 started
+10-Sep-20 22:26:30 - __main__ - INFO - Worker 0 received  session ID: 4DA2569B
+10-Sep-20 22:26:30 - commands.commands - INFO - Session ID: 4DA2569B, Received request: {u'vm_id': 321, u'cmd': u'vm_terminate', u'user_id': 30}
+10-Sep-20 22:26:34 - commands.commands - INFO - Session ID: 4DA2569B, Sended reply: {'action': 'vm terminated'}
+10-Sep-20 22:26:48 - __main__ - INFO - Worker 2 received  session ID: 8416CD25
+10-Sep-20 22:26:48 - commands.commands - INFO - Session ID: 8416CD25, Received request: {u'vm_name': u'v1p247.clouds365.host', u'user_id': 30, u'network_id': u'0', u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.247', u'template_id': 6}
+10-Sep-20 22:26:50 - commands.commands - INFO - Session ID: 8416CD25, Sended reply: {'user_id': 30, 'vm_root_password': u'*******', 'vm_id': 322, 'vm_user_password': u'*******', 'vm_user': 'debian'}
+10-Sep-20 22:32:45 - __main__ - INFO - Worker 4 received  session ID: 89175F6C
+10-Sep-20 22:32:45 - commands.commands - INFO - Session ID: 89175F6C, Received request: {u'vm_id': 322, u'cmd': u'vm_terminate', u'user_id': 30}
+10-Sep-20 22:32:47 - commands.commands - INFO - Session ID: 89175F6C, Sended reply: {'action': 'vm terminated'}
+10-Sep-20 22:32:53 - __main__ - INFO - Routing server started
+10-Sep-20 22:32:53 - __main__ - INFO - Worker 0 started
+10-Sep-20 22:32:53 - __main__ - INFO - Worker 1 started
+10-Sep-20 22:32:53 - __main__ - INFO - Worker 2 started
+10-Sep-20 22:32:53 - __main__ - INFO - Worker 3 started
+10-Sep-20 22:32:53 - __main__ - INFO - Worker 4 started
+10-Sep-20 22:33:06 - __main__ - INFO - Routing server started
+10-Sep-20 22:33:06 - __main__ - INFO - Worker 3 started
+10-Sep-20 22:33:06 - __main__ - INFO - Worker 1 started
+10-Sep-20 22:33:06 - __main__ - INFO - Worker 4 started
+10-Sep-20 22:33:06 - __main__ - INFO - Worker 0 started
+10-Sep-20 22:33:06 - __main__ - INFO - Worker 2 started
+10-Sep-20 22:33:25 - __main__ - INFO - Worker 3 received  session ID: 07ABE6F4
+10-Sep-20 22:33:25 - commands.commands - INFO - Session ID: 07ABE6F4, Received request: {u'vm_name': u'v1p247.clouds365.host', u'user_id': 30, u'network_id': u'0', u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.247', u'template_id': 6}
+10-Sep-20 22:33:28 - commands.commands - INFO - Session ID: 07ABE6F4, Sended reply: {'user_id': 30, 'vm_root_password': u'*******', 'vm_id': 323, 'vm_user_password': u'*******', 'vm_user': 'debian'}
+10-Sep-20 22:44:24 - __main__ - INFO - Routing server started
+10-Sep-20 22:44:24 - __main__ - INFO - Worker 1 started
+10-Sep-20 22:44:24 - __main__ - INFO - Worker 3 started
+10-Sep-20 22:44:24 - __main__ - INFO - Worker 2 started
+10-Sep-20 22:44:24 - __main__ - INFO - Worker 4 started
+10-Sep-20 22:44:24 - __main__ - INFO - Worker 0 started
+10-Sep-20 22:45:17 - __main__ - INFO - Worker 1 received  session ID: C726A9EB
+10-Sep-20 22:45:17 - commands.commands - INFO - Session ID: C726A9EB, Received request: {u'vm_id': 323, u'cmd': u'vm_terminate', u'user_id': 30}
+10-Sep-20 22:45:22 - commands.commands - INFO - Session ID: C726A9EB, Sended reply: {'action': 'vm terminated'}
+10-Sep-20 22:45:42 - __main__ - INFO - Worker 3 received  session ID: 723BE6C1
+10-Sep-20 22:45:42 - commands.commands - INFO - Session ID: 723BE6C1, Received request: {u'vm_name': u'v1p247.clouds365.host', u'user_id': 30, u'network_id': u'0', u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.247', u'template_id': 6}
+10-Sep-20 22:45:44 - commands.commands - INFO - Session ID: 723BE6C1, Sended reply: {'user_id': 30, 'vm_root_password': u'*******', 'vm_id': 324, 'vm_user_password': u'*******', 'vm_user': 'debian'}
+10-Sep-20 22:46:45 - __main__ - INFO - Worker 4 received  session ID: 910654B3
+10-Sep-20 22:46:45 - commands.commands - INFO - Session ID: 910654B3, Received request: {u'vm_id': 324, u'cmd': u'vm_terminate', u'user_id': 30}
+10-Sep-20 22:46:49 - commands.commands - INFO - Session ID: 910654B3, Sended reply: {'action': 'vm terminated'}
+10-Sep-20 22:46:57 - __main__ - INFO - Routing server started
+10-Sep-20 22:46:57 - __main__ - INFO - Worker 2 started
+10-Sep-20 22:46:57 - __main__ - INFO - Worker 0 started
+10-Sep-20 22:46:57 - __main__ - INFO - Worker 4 started
+10-Sep-20 22:46:57 - __main__ - INFO - Worker 1 started
+10-Sep-20 22:46:57 - __main__ - INFO - Worker 3 started
+10-Sep-20 22:47:13 - __main__ - INFO - Worker 2 received  session ID: 5E084792
+10-Sep-20 22:47:13 - commands.commands - INFO - Session ID: 5E084792, Received request: {u'vm_name': u'v1p247.clouds365.host', u'user_id': 30, u'network_id': u'0', u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.247', u'template_id': 6}
+10-Sep-20 22:47:15 - commands.commands - INFO - Session ID: 5E084792, Sended reply: {'user_id': 30, 'vm_root_password': u'*******', 'vm_id': 325, 'vm_user_password': u'*******', 'vm_user': 'debian'}
+10-Sep-20 22:58:09 - __main__ - INFO - Routing server started
+10-Sep-20 22:58:09 - __main__ - INFO - Worker 0 started
+10-Sep-20 22:58:09 - __main__ - INFO - Worker 2 started
+10-Sep-20 22:58:09 - __main__ - INFO - Worker 3 started
+10-Sep-20 22:58:09 - __main__ - INFO - Worker 4 started
+10-Sep-20 22:58:09 - __main__ - INFO - Worker 1 started
+10-Sep-20 23:01:09 - __main__ - INFO - Worker 0 received  session ID: 6F27091C
+10-Sep-20 23:01:09 - commands.commands - INFO - Session ID: 6F27091C, Received request: {u'vm_id': 325, u'cmd': u'vm_terminate', u'user_id': 30}
+10-Sep-20 23:01:12 - commands.commands - INFO - Session ID: 6F27091C, Sended reply: {'action': 'vm terminated'}
+10-Sep-20 23:02:28 - __main__ - INFO - Routing server started
+10-Sep-20 23:02:28 - __main__ - INFO - Worker 2 started
+10-Sep-20 23:02:28 - __main__ - INFO - Worker 0 started
+10-Sep-20 23:02:28 - __main__ - INFO - Worker 1 started
+10-Sep-20 23:02:28 - __main__ - INFO - Worker 3 started
+10-Sep-20 23:02:28 - __main__ - INFO - Worker 4 started
+10-Sep-20 23:02:52 - __main__ - INFO - Worker 2 received  session ID: 672A034F
+10-Sep-20 23:02:52 - commands.commands - INFO - Session ID: 672A034F, Received request: {u'vm_name': u'v1p247.clouds365.host', u'user_id': 30, u'network_id': u'0', u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.247', u'template_id': 6}
+10-Sep-20 23:02:55 - commands.commands - INFO - Session ID: 672A034F, Sended reply: {'user_id': 30, 'vm_root_password': u'*******', 'vm_id': 326, 'vm_user_password': u'*******', 'vm_user': 'debian'}
+10-Sep-20 23:05:14 - __main__ - INFO - Routing server started
+10-Sep-20 23:05:14 - __main__ - INFO - Worker 2 started
+10-Sep-20 23:05:14 - __main__ - INFO - Worker 1 started
+10-Sep-20 23:05:14 - __main__ - INFO - Worker 3 started
+10-Sep-20 23:05:14 - __main__ - INFO - Worker 4 started
+10-Sep-20 23:05:14 - __main__ - INFO - Worker 0 started
+10-Sep-20 23:06:08 - __main__ - INFO - Worker 2 received  session ID: 835D1C79
+10-Sep-20 23:06:08 - commands.commands - INFO - Session ID: 835D1C79, Received request: {u'vm_id': 326, u'cmd': u'vm_terminate', u'user_id': 30}
+10-Sep-20 23:06:11 - commands.commands - INFO - Session ID: 835D1C79, Sended reply: {'action': 'vm terminated'}
+10-Sep-20 23:06:37 - __main__ - INFO - Worker 1 received  session ID: B91C0DA6
+10-Sep-20 23:06:37 - commands.commands - INFO - Session ID: B91C0DA6, Received request: {u'vm_name': u'v1p247.clouds365.host', u'user_id': 30, u'network_id': u'0', u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.247', u'template_id': 6}
+10-Sep-20 23:06:40 - commands.commands - INFO - Session ID: B91C0DA6, Sended reply: {'user_id': 30, 'vm_root_password': u'*******', 'vm_id': 327, 'vm_user_password': u'*******', 'vm_user': 'debian'}
+10-Sep-20 23:10:58 - __main__ - INFO - Worker 3 received  session ID: A28163F7
+10-Sep-20 23:10:58 - commands.commands - INFO - Session ID: A28163F7, Received request: {u'vm_id': 312, u'cmd': u'vm_terminate', u'user_id': 30}
+10-Sep-20 23:11:03 - commands.commands - INFO - Session ID: A28163F7, Sended reply: {'action': 'vm terminated'}
+10-Sep-20 23:11:50 - __main__ - INFO - Worker 4 received  session ID: 64DA17C5
+10-Sep-20 23:11:50 - commands.commands - INFO - Session ID: 64DA17C5, Received request: {u'vm_name': u'v1p246.clouds365.host', u'user_id': 30, u'network_id': u'0', u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.246', u'template_id': 329}
+10-Sep-20 23:11:52 - commands.commands - INFO - Session ID: 64DA17C5, Sended reply: {'user_id': 30, 'vm_root_password': u'*******', 'vm_id': 328, 'vm_user_password': u'*******', 'vm_user': 'debian'}
+10-Sep-20 23:14:13 - __main__ - INFO - Worker 0 received  session ID: 4A6FD792
+10-Sep-20 23:14:13 - commands.commands - INFO - Session ID: 4A6FD792, Received request: {u'vm_id': 327, u'cmd': u'vm_terminate', u'user_id': 30}
+10-Sep-20 23:14:16 - commands.commands - INFO - Session ID: 4A6FD792, Sended reply: {'action': 'vm terminated'}
+10-Sep-20 23:14:24 - __main__ - INFO - Worker 2 received  session ID: 50AF12C4
+10-Sep-20 23:14:24 - commands.commands - INFO - Session ID: 50AF12C4, Received request: {u'vm_id': 328, u'cmd': u'vm_terminate', u'user_id': 30}
+10-Sep-20 23:14:27 - commands.commands - INFO - Session ID: 50AF12C4, Sended reply: {'action': 'vm terminated'}

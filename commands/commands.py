@@ -398,8 +398,9 @@ def template_instantiate(json_dict, one):
         'CONTEXT':{
           'SSH_PUBLIC_KEY': '',
           'NETWORK': "YES",
-          'START_SCRIPT_BASE64': base64.b64encode('echo -e "' + vm_root_password + '\n' + vm_root_password + '" | passwd root; echo -e "'
-                                 + vm_user_password + '\n' + vm_user_password + '" | passwd ' + vm_user),
+        #  'START_SCRIPT_BASE64': base64.b64encode('echo -e "' + vm_root_password + '\n' + vm_root_password + '" | passwd root; echo -e "'
+        #                         + vm_user_password + '\n' + vm_user_password + '" | passwd ' + vm_user),
+           'START_SCRIPT_BASE64': base64.b64encode(create_start_script(vm_root_password,vm_user_password,vm_user))
         },
         'NIC': {
           'IP': ip_address,
@@ -562,8 +563,9 @@ def template_instantiate_user(json_dict, one):
                 'CONTEXT':{
                   'SSH_PUBLIC_KEY': '',
                   'NETWORK': "YES",
-                  'START_SCRIPT_BASE64': base64.b64encode('echo -e "' + vm_root_password + '\n' + vm_root_password + '" | passwd root; echo -e "'
-                                         + vm_user_password + '\n' + vm_user_password + '" | passwd ' + vm_user),
+    #              'START_SCRIPT_BASE64': base64.b64encode('echo -e "' + vm_root_password + '\n' + vm_root_password + '" | passwd root; echo -e "'
+    #                                     + vm_user_password + '\n' + vm_user_password + '" | passwd ' + vm_user),
+                   'START_SCRIPT_BASE64': base64.b64encode(create_start_script(vm_root_password,vm_user_password,vm_user)) 
                 },
                 'NIC': {
                   'IP': ip_address,
@@ -730,3 +732,28 @@ def template_terminate(template_name, one, image_remove = False):
             return {"error": str(e)}  
     else:
         return {"error": "not found template name"}
+        
+def create_start_script(vm_root_password,vm_user_password,vm_user):
+    """"""
+    script = '#!/bin/sh\n' +\
+    'vm_root_password="' + vm_root_password + '"\n' + \
+    'vm_user_password="' + vm_user_password + '"\n' + \
+    'vm_user="' + vm_user + '"\n' + \
+    'OS="`uname`"\n\
+case $OS in\n\
+\'Linux\')\n\
+echo $vm_root_password\'\\n\'$vm_root_password | passwd root;\n\
+echo $vm_user_password\'\\n\'$vm_user_password | passwd $vm_user;\n\
+;;\n\
+\'FreeBSD\')\n\
+echo $vm_root_password | pw mod user root -h 0;\n\
+echo $vm_user_password | pw mod user $vm_user -h 0;\n\
+;;\n\
+*) ;;\n\
+esac'
+    
+    #Linux
+    #script = 'echo -e "' + vm_root_password + '\n' + vm_root_password + '" | passwd root; echo -e "' \
+    #          + vm_user_password + '\n' + vm_user_password + '" | passwd ' + vm_user
+   
+    return script
