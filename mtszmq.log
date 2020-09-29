@@ -3120,3 +3120,61 @@
 10-Sep-20 23:14:24 - __main__ - INFO - Worker 2 received  session ID: 50AF12C4
 10-Sep-20 23:14:24 - commands.commands - INFO - Session ID: 50AF12C4, Received request: {u'vm_id': 328, u'cmd': u'vm_terminate', u'user_id': 30}
 10-Sep-20 23:14:27 - commands.commands - INFO - Session ID: 50AF12C4, Sended reply: {'action': 'vm terminated'}
+29-Sep-20 16:49:37 - __main__ - INFO - Routing server started
+29-Sep-20 16:49:37 - __main__ - INFO - Worker 0 started
+29-Sep-20 16:49:37 - __main__ - INFO - Worker 2 started
+29-Sep-20 16:49:37 - __main__ - INFO - Worker 1 started
+29-Sep-20 16:49:37 - __main__ - INFO - Worker 3 started
+29-Sep-20 16:49:37 - __main__ - INFO - Worker 4 started
+29-Sep-20 16:53:02 - __main__ - INFO - Worker 0 received  session ID: 13FECB58
+29-Sep-20 16:53:02 - commands.commands - INFO - Session ID: 13FECB58, Received request: {u'user_password': u'*******', u'cmd': u'user_allocate', u'user_name': u'test_user1'}
+29-Sep-20 16:53:02 - commands.commands - ERROR - Session ID: 13FECB58, Sended reply: {'error': '[one.group.allocate] NAME is already taken by GROUP 121.'}
+29-Sep-20 16:54:34 - __main__ - INFO - Worker 2 received  session ID: 273E1AF0
+29-Sep-20 16:54:49 - __main__ - INFO - Worker 1 received  session ID: FB39C827
+29-Sep-20 16:54:49 - commands.commands - INFO - Session ID: FB39C827, Received request: {u'vm_name': u'v1p246.clouds365.host', u'user_id': 121, u'network_id': u'0', u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.246', u'template_id': 329}
+29-Sep-20 16:54:49 - commands.commands - ERROR - Session ID: FB39C827, Sended reply: {'error': '[one.user.info] Error getting user [121].'}
+29-Sep-20 16:55:07 - __main__ - INFO - Worker 3 received  session ID: 5F8AC074
+29-Sep-20 16:55:07 - commands.commands - INFO - Session ID: 5F8AC074, Received request: {u'vm_name': u'v1p246.clouds365.host', u'user_id': 121, u'network_id': u'0', u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.246', u'template_id': 329}
+29-Sep-20 16:55:07 - commands.commands - ERROR - Session ID: 5F8AC074, Sended reply: {'error': '[one.user.info] Error getting user [121].'}
+29-Sep-20 16:57:30 - __main__ - INFO - Routing server started
+29-Sep-20 16:57:30 - __main__ - INFO - Worker 1 started
+29-Sep-20 16:57:30 - __main__ - INFO - Worker 4 started
+29-Sep-20 16:57:30 - __main__ - INFO - Worker 0 started
+29-Sep-20 16:57:30 - __main__ - INFO - Worker 3 started
+29-Sep-20 16:57:30 - __main__ - INFO - Worker 2 started
+29-Sep-20 16:58:23 - __main__ - INFO - Worker 1 received  session ID: EA0653F2
+29-Sep-20 16:58:23 - commands.commands - INFO - Session ID: EA0653F2, Received request: {u'vm_name': u'v1p246.clouds365.host', u'user_id': 30, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.246', u'template_id': 329}
+29-Sep-20 16:58:25 - commands.commands - INFO - Session ID: EA0653F2, Sended reply: {'user_id': 30, 'vm_root_password': u'*******', 'vm_id': 342, 'vm_user_password': u'*******', 'vm_user': 'debian'}
+29-Sep-20 16:58:58 - __main__ - INFO - Worker 4 received  session ID: FA459E83
+29-Sep-20 16:58:58 - commands.commands - INFO - Session ID: FA459E83, Received request: {u'cmd': u'get_all_vm_state', u'user_id': 30}
+29-Sep-20 16:58:58 - commands.commands - INFO - Session ID: FA459E83, Sended reply: {u'vms_state': [{u'vm_name': u'v1p246.clouds365.host', u'vm_state': u'ACTIVE', u'vm_id': 342}]}
+29-Sep-20 16:59:20 - __main__ - INFO - Worker 0 received  session ID: 6239158A
+29-Sep-20 16:59:20 - commands.commands - INFO - Session ID: 6239158A, Received request: {u'user_id': 30, u'cmd': u'get_vm_state', u'vm_id': 342}
+29-Sep-20 16:59:20 - commands.commands - INFO - Session ID: 6239158A, Sended reply: {'vm_state': 'ACTIVE', 'vm_id': 342}
+29-Sep-20 16:59:33 - __main__ - INFO - Worker 3 received  session ID: EC2D786B
+29-Sep-20 16:59:33 - commands.commands - INFO - Session ID: EC2D786B, Received request: {u'user_id': 30, u'cmd': u'get_vm_state', u'vm_id': u'342'}
+29-Sep-20 16:59:33 - commands.commands - ERROR - Session ID: EC2D786B, Sended reply: {'error': 'Parameter vm_id that is supposed to be integer is not'}
+29-Sep-20 16:59:51 - __main__ - INFO - Worker 2 received  session ID: DB64CA13
+29-Sep-20 16:59:51 - commands.commands - INFO - Session ID: DB64CA13, Received request: {u'user_id': u'30', u'cmd': u'get_vm_state', u'vm_id': 342}
+29-Sep-20 16:59:51 - commands.commands - ERROR - Session ID: DB64CA13, Sended reply: {'error': 'Parameter user_id that is supposed to be integer is not'}
+29-Sep-20 17:00:45 - __main__ - INFO - Worker 1 received  session ID: F0C34B2E
+29-Sep-20 17:00:45 - commands.commands - INFO - Session ID: F0C34B2E, Received request: {u'cmd': u'get_user_info', u'user_id': u'30'}
+29-Sep-20 17:00:45 - commands.commands - ERROR - Session ID: F0C34B2E, Sended reply: {'error': 'Parameter user_id that is supposed to be integer is not'}
+29-Sep-20 17:01:00 - __main__ - INFO - Worker 4 received  session ID: D8E6B4CF
+29-Sep-20 17:01:00 - commands.commands - INFO - Session ID: D8E6B4CF, Received request: {u'cmd': u'get_user_info', u'user_id': 30}
+29-Sep-20 17:01:00 - commands.commands - INFO - Session ID: D8E6B4CF, Sended reply: {'vms_used': '1', 'user_id': 30, 'vms': '-1', 'running_vms_used': '1'}
+29-Sep-20 17:01:38 - __main__ - INFO - Worker 0 received  session ID: 8062153D
+29-Sep-20 17:01:38 - commands.commands - INFO - Session ID: 8062153D, Received request: {u'user_password': u'*******', u'cmd': u'user_allocate', u'user_name': u'test_user4'}
+29-Sep-20 17:01:38 - commands.commands - INFO - Session ID: 8062153D, Sended reply: {'user_name': u'test_user4', 'user_id': 84, 'user_group_id_array': [175]}
+29-Sep-20 17:02:19 - __main__ - INFO - Worker 3 received  session ID: 40A25E67
+29-Sep-20 17:02:19 - commands.commands - INFO - Session ID: 40A25E67, Received request: {u'cmd': u'user_delete', u'user_id': 84}
+29-Sep-20 17:02:19 - commands.commands - INFO - Session ID: 40A25E67, Sended reply: {'action': 'user and user group deleted', 'user_group_id': 175, 'user_id': 84}
+29-Sep-20 17:03:15 - __main__ - INFO - Worker 2 received  session ID: 3A10DFB2
+29-Sep-20 17:03:15 - commands.commands - INFO - Session ID: 3A10DFB2, Received request: {u'action': u'poweroff-hard', u'vm_id': 342, u'cmd': u'vm_action', u'user_id': 30}
+29-Sep-20 17:03:15 - commands.commands - INFO - Session ID: 3A10DFB2, Sended reply: {'vm_id': 342, 'vm_action': u'poweroff-hard'}
+29-Sep-20 17:04:06 - __main__ - INFO - Worker 1 received  session ID: E42CB506
+29-Sep-20 17:04:06 - commands.commands - INFO - Session ID: E42CB506, Received request: {u'vm_id': u'342', u'cmd': u'vm_terminate', u'user_id': 30}
+29-Sep-20 17:04:06 - commands.commands - ERROR - Session ID: E42CB506, Sended reply: {'error': 'Parameter vm_id that is supposed to be integer is not'}
+29-Sep-20 17:04:16 - __main__ - INFO - Worker 4 received  session ID: DCA89120
+29-Sep-20 17:04:16 - commands.commands - INFO - Session ID: DCA89120, Received request: {u'vm_id': 342, u'cmd': u'vm_terminate', u'user_id': 30}
+29-Sep-20 17:04:19 - commands.commands - INFO - Session ID: DCA89120, Sended reply: {'action': 'vm terminated'}

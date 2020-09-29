@@ -50,6 +50,7 @@ def command_switcher(json_message, session_id, one):
         logging_local("Sended reply" , {"error": "string could not be converted to json"}, session_id)
         return {"error": "string could not be converted to json"}
 
+
 def logging_local(sendreceive, in_message, session_id):
     out_message = copy.copy(in_message)
     if 'error' in out_message:
@@ -62,6 +63,7 @@ def logging_local(sendreceive, in_message, session_id):
             out_message['vm_root_password'] = u'*******'            
         logger.info("Session ID: %s, %s: %s" % (session_id, sendreceive, out_message))
 
+
 def password_generator(size = 16, complexity = 1):
     """
     Password generator.
@@ -72,6 +74,7 @@ def password_generator(size = 16, complexity = 1):
         s = "abcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()?{}[]\/<>.,~"
     
     return "".join(random.sample(s,size ))
+
 
 def get_user_id(user_name, one):
     """
@@ -85,6 +88,7 @@ def get_user_id(user_name, one):
 #            print(user.ID, user.NAME)
             break
     return user_id
+
 
 def switch_vm_state(state):
     """
@@ -120,7 +124,8 @@ def switch_vm_state(state):
         11: "CLONING_FAILURE"
     }
     return switcher.get(state, "Invalid STATE")
-    
+
+
 def get_vm_state(json_dict, one):
     """
     Getting state of one VM of user by VM NAME or VM ID.
@@ -131,6 +136,8 @@ def get_vm_state(json_dict, one):
         user_name = ''
     if not (json_dict.get('user_id') is None):
         user_id =  json_dict['user_id']
+        if type(user_id) is not int:
+            return {"error": "Parameter user_id that is supposed to be integer is not"}            
     else:
         user_id = ''
     if not (json_dict.get('vm_name') is None):
@@ -139,6 +146,8 @@ def get_vm_state(json_dict, one):
         vm_name = ''
     if not (json_dict.get('vm_id') is None):
         vm_id = json_dict['vm_id']
+        if type(vm_id) is not int:
+            return {"error": "Parameter vm_id that is supposed to be integer is not"}          
     else:
         vm_id = ''
         
@@ -189,6 +198,7 @@ def get_vm_state(json_dict, one):
         
     return return_message
 
+
 def get_all_vm_state(json_dict, one):
     """
     Getting state all VMs of user by USERNAME or USER ID.
@@ -199,6 +209,8 @@ def get_all_vm_state(json_dict, one):
         user_name = ''
     if not (json_dict.get('user_id') is None):
         user_id = json_dict['user_id']
+        if type(user_id) is not int:
+            return {"error": "Parameter user_id that is supposed to be integer is not"}          
     else:
         user_id = '' 
     
@@ -227,7 +239,8 @@ def get_all_vm_state(json_dict, one):
     return_message = '{"vms_state": ' + json.dumps(return_message) + '}'
 
     return json.loads(return_message)
-    
+
+
 def user_group_allocate(group_name, one):
     """
     Allocate users group with name like user name.
@@ -238,7 +251,8 @@ def user_group_allocate(group_name, one):
         return {"error": str(e)}
         
     return group_id    
-    
+ 
+ 
 def user_allocate(json_dict, one):
     """
     Allocate user.
@@ -270,13 +284,16 @@ def user_allocate(json_dict, one):
         return {"error": str(e)}        
     
     return return_message
-    
+
+
 def user_delete(json_dict, one):
     """    
     Deletes the given user from the pool.
     """
     if not (json_dict.get('user_id') is None):
         user_id = json_dict['user_id']
+        if type(user_id) is not int:
+            return {"error": "Parameter user_id that is supposed to be integer is not"}            
     else:
         return {"error": "not set user id"}
         
@@ -308,13 +325,16 @@ def user_delete(json_dict, one):
             return {"error": str(e)}              
                 
     return {"error": "vm allocated", "user_id": user_id, "vms_used": vms_used}                 
- 
+
+
 def get_user_info(json_dict, one):
     """
     Getting information about user by ID
     """
     if not (json_dict.get('user_id') is None):
         user_id = json_dict['user_id']
+        if type(user_id) is not int:
+            return {"error": "Parameter user_id that is supposed to be integer is not"}            
     else:
         return {"error": "not set user id"} 
 
@@ -326,6 +346,7 @@ def get_user_info(json_dict, one):
         return {"error": str(e)}
 
     return {"user_id": user_id, "vms": vms, "vms_used": vms_used,"running_vms_used": running_vms_used}
+
 
 def template_instantiate(json_dict, one):
     """
@@ -354,6 +375,8 @@ def template_instantiate(json_dict, one):
         
     if not (json_dict.get('template_id') is None):
         template_id = json_dict['template_id']
+        if type(template_id) is not int:
+            return {"error": "Parameter template_id that is supposed to be integer is not"}        
     else:
         return {"error": "not set template id"}
         
@@ -379,6 +402,8 @@ def template_instantiate(json_dict, one):
         
     if not (json_dict.get('network_id') is None):
         network_id = json_dict['network_id']
+        if type(network_id) is not int:
+            return {"error": "Parameter network_id that is supposed to be integer is not"}        
     else:
         return {"error": "not set network id"}
         
@@ -478,6 +503,7 @@ def template_instantiate(json_dict, one):
     
     return return_message
 
+
 def template_instantiate_user(json_dict, one):
     """
     Instantiates a new virtual machine from a template.
@@ -515,6 +541,8 @@ def template_instantiate_user(json_dict, one):
         
     if not (json_dict.get('template_id') is None):
         template_id = json_dict['template_id']
+        if type(template_id) is not int:
+            return {"error": "Parameter template_id that is supposed to be integer is not"}            
     else:
         return {"error": "not set template id"}
         
@@ -540,6 +568,8 @@ def template_instantiate_user(json_dict, one):
         
     if not (json_dict.get('network_id') is None):
         network_id = json_dict['network_id']
+        if type(network_id) is not int:
+            return {"error": "Parameter network_id that is supposed to be integer is not"}           
     else:
         return {"error": "not set network id"}
         
@@ -621,16 +651,21 @@ def template_instantiate_user(json_dict, one):
 
     return return_message
 
+
 def vm_terminate(json_dict, one):
     """
     Terminate VM
     """
     if not (json_dict.get('vm_id') is None):
         vm_id = json_dict['vm_id']
+        if type(vm_id) is not int:
+            return {"error": "Parameter vm_id that is supposed to be integer is not"}        
     else:
         return {"error": "not set vm id"}
     if not (json_dict.get('user_id') is None):
         user_id = json_dict['user_id']
+        if type(user_id) is not int:
+            return {"error": "Parameter user_id that is supposed to be integer is not"}          
     else:
         return {"error": "not set user id"}    
     
@@ -669,6 +704,7 @@ def vm_terminate(json_dict, one):
         
     return {"action": "vm terminated"}
 
+
 def vm_action(json_dict, one):
     """
     VM action:
@@ -680,10 +716,14 @@ def vm_action(json_dict, one):
     """
     if not (json_dict.get('vm_id') is None):
         vm_id = json_dict['vm_id']
+        if type(vm_id) is not int:
+            return {"error": "Parameter vm_id that is supposed to be integer is not"}               
     else:
         return {"error": "not set vm id"}
     if not (json_dict.get('user_id') is None):
         user_id = json_dict['user_id']
+        if type(user_id) is not int:
+            return {"error": "Parameter user_id that is supposed to be integer is not"}               
     else:
         return {"error": "not set user id"}
     if not (json_dict.get('action') is None):
@@ -709,7 +749,8 @@ def vm_action(json_dict, one):
         
     
     return {"vm_action": action, "vm_id": vm_id,}
-        
+
+
 def get_template_id(template_name, one):
     """
     Getting TEMPLATE ID by TEMPLATE NAME.
@@ -719,6 +760,7 @@ def get_template_id(template_name, one):
     for template in templatelist:
         if template.NAME == template_name:
             return template.ID
+
 
 def template_terminate(template_name, one, image_remove = False):
     """
@@ -732,7 +774,8 @@ def template_terminate(template_name, one, image_remove = False):
             return {"error": str(e)}  
     else:
         return {"error": "not found template name"}
-        
+ 
+ 
 def create_start_script(vm_root_password,vm_user_password,vm_user):
     """"""
     script = '#!/bin/sh\n' +\
