@@ -3178,3 +3178,9 @@
 29-Sep-20 17:04:16 - __main__ - INFO - Worker 4 received  session ID: DCA89120
 29-Sep-20 17:04:16 - commands.commands - INFO - Session ID: DCA89120, Received request: {u'vm_id': 342, u'cmd': u'vm_terminate', u'user_id': 30}
 29-Sep-20 17:04:19 - commands.commands - INFO - Session ID: DCA89120, Sended reply: {'action': 'vm terminated'}
+07-Oct-20 20:55:54 - __main__ - INFO - Worker 0 received  session ID: C9AFED02
+07-Oct-20 20:55:54 - commands.commands - INFO - Session ID: C9AFED02, Received request: {u'user_password': u'*******', u'cmd': u'user_allocate', u'user_name': u'nikolaj@microlines.lv'}
+07-Oct-20 20:55:55 - commands.commands - INFO - Session ID: C9AFED02, Sended reply: {'user_name': u'nikolaj@microlines.lv', 'user_id': 85, 'user_group_id_array': [176]}
+07-Oct-20 20:55:55 - __main__ - INFO - Worker 3 received  session ID: 381D7062
+07-Oct-20 20:55:55 - commands.commands - INFO - Session ID: 381D7062, Received request: {u'vm_name': u'v1p248.clouds365.host', u'user_id': 85, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.248', u'template_id': 6}
+07-Oct-20 20:55:57 - commands.commands - INFO - Session ID: 381D7062, Sended reply: {'user_id': 85, 'vm_root_password': u'*******', 'vm_id': 343, 'vm_user_password': u'*******', 'vm_user': 'debian'}

@@ -13,13 +13,15 @@ from config import *
 from security.aes_cbc import *
 from commands.commands import *
 
+
 def session_id_generator(size = 8):
     """
     Generating session id for writing to log file
     """
     s = "0123456789ABCDEF"
     return "".join(random.sample(s,size ))  
-  
+
+
 def worker_routine(worker_url, key, worker_number, context=None):
     """
     Worker routine
@@ -50,8 +52,7 @@ def worker_routine(worker_url, key, worker_number, context=None):
         #send reply back to client
         #socket.send(json_reply)
         #socket.send(AESobj.encrypt(json_reply))
-       
-            
+
 
 def main(workers_quantity, server_ip, server_port, key):
     """
@@ -87,6 +88,7 @@ def main(workers_quantity, server_ip, server_port, key):
     clients.close()
     workers.close()
     context.term()
+
 
 if __name__ == "__main__":
     pid = str(os.getpid())
