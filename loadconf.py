@@ -2,8 +2,17 @@
 # -*- coding: utf-8 -*-
 #
 import configparser
+import argparse
 
-def config_parser(config_file='config.ini'):
+def args_parse():
+    parser = argparse.ArgumentParser()
+    parser.add_argument('-c', default='config.ini')
+    args = parser.parse_args()
+    
+    return args
+    
+    
+def config_parser(config_file):
     config = configparser.ConfigParser()
     config.read(config_file)
     cinfig_dict = {'one_auth_file': config.get('auth_file','one_auth_file'),
@@ -21,4 +30,4 @@ def config_parser(config_file='config.ini'):
     return cinfig_dict
 
 if __name__ == "__main__":
-    print config_parser()
+    print config_parser(args_parse().c)
