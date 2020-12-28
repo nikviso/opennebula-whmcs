@@ -3196,3 +3196,46 @@
 24-Dec-20 23:02:58 - __main__ - INFO - Worker 2 started
 24-Dec-20 23:02:58 - __main__ - INFO - Worker 4 started
 24-Dec-20 23:02:58 - __main__ - INFO - Worker 1 started
+28-Dec-20 13:38:25 - __main__ - INFO - Worker 3 received  session ID: 72B541A8
+28-Dec-20 13:38:25 - commands.commands - INFO - Session ID: 72B541A8, Received request: {u'user_id': 30, u'cmd': u'get_vm_state', u'vm_id': 342}
+28-Dec-20 13:38:25 - commands.commands - ERROR - Session ID: 72B541A8, Sended reply: {'error': 'list index out of range'}
+28-Dec-20 13:39:01 - __main__ - INFO - Worker 0 received  session ID: 0ACB846F
+28-Dec-20 13:39:01 - commands.commands - INFO - Session ID: 0ACB846F, Received request: {u'user_id': 30, u'cmd': u'get_vm_state', u'vm_id': 343}
+28-Dec-20 13:39:01 - commands.commands - ERROR - Session ID: 0ACB846F, Sended reply: {'error': 'list index out of range'}
+28-Dec-20 13:39:39 - __main__ - INFO - Worker 2 received  session ID: 0B18C9A2
+28-Dec-20 13:39:39 - commands.commands - INFO - Session ID: 0B18C9A2, Received request: {u'user_id': 85, u'cmd': u'get_vm_state', u'vm_id': 343}
+28-Dec-20 13:39:39 - commands.commands - INFO - Session ID: 0B18C9A2, Sended reply: {'vm_state': 'ACTIVE', 'vm_id': 343}
+28-Dec-20 15:43:44 - __main__ - INFO - Routing server started
+28-Dec-20 15:44:02 - __main__ - INFO - Routing server started
+28-Dec-20 15:44:02 - __main__ - INFO - Worker 0 started
+28-Dec-20 15:44:02 - __main__ - INFO - Worker 4 started
+28-Dec-20 15:44:02 - __main__ - INFO - Worker 1 started
+28-Dec-20 15:44:02 - __main__ - INFO - Worker 3 started
+28-Dec-20 15:44:02 - __main__ - INFO - Worker 2 started
+28-Dec-20 15:44:15 - __main__ - INFO - Worker 0 received  session ID: F98CE1BD
+28-Dec-20 15:44:15 - commands.commands - INFO - Session ID: F98CE1BD, Received request: {u'user_id': 85, u'cmd': u'get_vm_state', u'vm_id': 343}
+28-Dec-20 15:44:15 - commands.commands - INFO - Session ID: F98CE1BD, Sended reply: {'vm_state': 'ACTIVE', 'vm_id': 343}
+28-Dec-20 15:46:32 - __main__ - INFO - Routing server started
+28-Dec-20 15:46:32 - __main__ - INFO - Worker 3 started
+28-Dec-20 15:46:32 - __main__ - INFO - Worker 0 started
+28-Dec-20 15:46:32 - __main__ - INFO - Worker 1 started
+28-Dec-20 15:46:32 - __main__ - INFO - Worker 2 started
+28-Dec-20 15:46:32 - __main__ - INFO - Worker 4 started
+28-Dec-20 15:46:36 - __main__ - INFO - Worker 3 received  session ID: 915FB4D8
+28-Dec-20 15:46:36 - commands.commands - INFO - Session ID: 915FB4D8, Received request: {u'user_id': 85, u'cmd': u'get_vm_state', u'vm_id': 343}
+28-Dec-20 15:46:36 - commands.commands - INFO - Session ID: 915FB4D8, Sended reply: {'vm_state': 'ACTIVE', 'vm_id': 343}
+28-Dec-20 15:48:46 - __main__ - INFO - Routing server started
+28-Dec-20 15:48:46 - __main__ - INFO - Worker 1 started
+28-Dec-20 15:48:46 - __main__ - INFO - Worker 3 started
+28-Dec-20 15:48:46 - __main__ - INFO - Worker 4 started
+28-Dec-20 15:48:46 - __main__ - INFO - Worker 0 started
+28-Dec-20 15:48:46 - __main__ - INFO - Worker 2 started
+28-Dec-20 15:48:48 - __main__ - INFO - Worker 1 received  session ID: 1E3FC560
+28-Dec-20 15:48:48 - commands.commands - INFO - Session ID: 1E3FC560, Received request: {u'user_id': 85, u'cmd': u'get_vm_state', u'vm_id': 343}
+28-Dec-20 15:48:48 - commands.commands - INFO - Session ID: 1E3FC560, Sended reply: {'vm_state': 'ACTIVE', 'vm_id': 343}
+28-Dec-20 16:02:04 - __main__ - INFO - Routing server started
+28-Dec-20 16:02:04 - __main__ - INFO - Worker 0 started
+28-Dec-20 16:02:04 - __main__ - INFO - Worker 1 started
+28-Dec-20 16:02:04 - __main__ - INFO - Worker 2 started
+28-Dec-20 16:02:04 - __main__ - INFO - Worker 3 started
+28-Dec-20 16:02:04 - __main__ - INFO - Worker 4 started

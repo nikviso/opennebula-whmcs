@@ -11,11 +11,17 @@ import pyone
 import logging.config
 import configparser
 import argparse
-from config import *
+import base64
+# from config import *
 from security.aes_cbc import *
 from commands.commands import *
 
 def args_parse():
+    """
+    Arguments parsing:
+    -c [/path/to/file]- configuration file path (default - current directory, file config.ini)  
+    """
+    
     parser = argparse.ArgumentParser()
     parser.add_argument('-c', default='config.ini')
     args = parser.parse_args()
@@ -23,7 +29,22 @@ def args_parse():
     return args
     
     
-def config_parser(config_file='config.ini'):
+def config_parser(config_file):
+    """
+    Configuration file parsing.
+    Returns dictionary with configuration parameters:
+    'one_auth_file' - Opennebula sessions credential file path,
+    'key_file' - AES key file path,
+    'workers_quantity' - ZMQ workers quantity,
+    'server_ip' - IP address for ZMQ routing server binding,
+    'server_port' - Port number for ZMQ routing server binding,
+    'pidfile' - PID file path,
+    'vm_user' - VM user name,
+    'password_size' - Size password for VM users,
+    'password_complexity' - Complexity password for VM users,
+    'loggerconf_file' - Logger configuration file path. 
+    """
+    
     config = configparser.ConfigParser()
     config.read(config_file)
     cinfig_dict = {'one_auth_file': config.get('auth_file','one_auth_file'),
@@ -49,7 +70,7 @@ def session_id_generator(size = 8):
     return "".join(random.sample(s,size ))  
 
 
-def worker_routine(worker_url, key, worker_number, context=None):
+def worker_routine(url_worker, key, worker_number, config_params, context=None):
     """
     Worker routine
     """
@@ -61,7 +82,7 @@ def worker_routine(worker_url, key, worker_number, context=None):
     # Socket to talk to dispatcher
     socket = context.socket(zmq.REP)
 
-    socket.connect(worker_url)
+    socket.connect(url_worker)
     logger.info(("Worker %s started") % worker_number) 
 
     while True:
@@ -81,17 +102,24 @@ def worker_routine(worker_url, key, worker_number, context=None):
         #socket.send(AESobj.encrypt(json_reply))
 
 
-def main(workers_quantity, server_ip, server_port, key):
+# def main(workers_quantity, server_ip, server_port, key):
+def main(config_params):
     """
     Routing server
     """
-    #Configuration for logging
+
+    # Getting AES key
+    key_file = open(config_params['key_file'],"r")
+    key = base64.b64decode(key_file.read())
+    key_file.close() 
+
+    # Configuration for logging
     logging.config.fileConfig(fname=loggerconf_file, disable_existing_loggers=False)
     logger = logging.getLogger(__name__)
     logger.info("Routing server started")
 
     url_worker = "inproc://workers"
-    url_client = "tcp://" + server_ip + ":" + server_port
+    url_client = "tcp://" + config_params['server_ip'] + ":" + config_params['server_port']
 
     # Prepare our context and sockets
     context = zmq.Context.instance()
@@ -105,8 +133,8 @@ def main(workers_quantity, server_ip, server_port, key):
     workers.bind(url_worker)
 
     # Launch pool of worker threads
-    for worker_number in range(workers_quantity):
-        thread = threading.Thread(target=worker_routine, args=(url_worker, key, worker_number))
+    for worker_number in range(config_params['workers_quantity']):
+        thread = threading.Thread(target=worker_routine, args=(url_worker, key, worker_number, config_params))
         thread.start()
 
     zmq.proxy(clients, workers)
@@ -118,8 +146,11 @@ def main(workers_quantity, server_ip, server_port, key):
 
 
 if __name__ == "__main__":
+    config_params = config_parser(args_parse().c)
+    # print config_params
     pid = str(os.getpid())
-    file(pidfile, 'w').write(pid)
-
-    main(workers_quantity, server_ip, server_port, key)
+    file(config_params['pidfile'], 'w').write(pid)
+    
+    main(config_params)
+    # main(workers_quantity, server_ip, server_port, key)
   
