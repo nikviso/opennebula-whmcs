@@ -3,7 +3,7 @@ import random
 import time
 import logging
 import copy
-from config import *
+#from config import *
 
 """
 Configuration for logging
@@ -21,7 +21,7 @@ f = CustomFilter()
 logger.addFilter(f)
 """
 
-def command_switcher(json_message, session_id, one):
+def command_switcher(json_message, session_id, one, config_params):
     """
     Getting command from JSON message. Selecting by command and execute function.  
     """
@@ -43,7 +43,7 @@ def command_switcher(json_message, session_id, one):
         # Get the function from switcher dictionary
         cmd_execute = switcher.get(cmd, lambda null_argument: {"error": "invalid command"})
         # Execute the function
-        json_reply = cmd_execute(json_dict, one)
+        json_reply = cmd_execute(json_dict, one, config_params)
         logging_local("Sended reply" , json_reply, session_id)
         return json_reply
     except ValueError:
@@ -110,6 +110,7 @@ def switch_vm_state(state):
     10	CLONING             clon    The VM is waiting for one or more disk images to finish the initial copy to the repository (image state still in lock)
     11	CLONING_FAILURE     fail    Failure during a CLONING. One or more of the images went into the ERROR state
     """
+    
     switcher = {
         0: "INIT",
         1: "PENDING",
@@ -123,13 +124,15 @@ def switch_vm_state(state):
         10: "CLONING",
         11: "CLONING_FAILURE"
     }
+    
     return switcher.get(state, "Invalid STATE")
 
 
-def get_vm_state(json_dict, one):
+def get_vm_state(json_dict, one, config_params):
     """
     Getting state of one VM of user by VM NAME or VM ID.
     """
+
     if not (json_dict.get('user_name') is None):
         user_name = json_dict['user_name']
     else:
@@ -199,7 +202,7 @@ def get_vm_state(json_dict, one):
     return return_message
 
 
-def get_all_vm_state(json_dict, one):
+def get_all_vm_state(json_dict, one, config_params):
     """
     Getting state all VMs of user by USERNAME or USER ID.
     """
@@ -241,10 +244,11 @@ def get_all_vm_state(json_dict, one):
     return json.loads(return_message)
 
 
-def user_group_allocate(group_name, one):
+def user_group_allocate(group_name, one, config_params):
     """
     Allocate users group with name like user name.
     """
+    
     try:
         group_id = one.group.allocate(group_name)
     except Exception as e:
@@ -253,10 +257,11 @@ def user_group_allocate(group_name, one):
     return group_id    
  
  
-def user_allocate(json_dict, one):
+def user_allocate(json_dict, one, config_params):
     """
     Allocate user.
     """
+    
     if not (json_dict.get('user_name') is None):
         user_name = json_dict['user_name']
     else:
@@ -286,10 +291,11 @@ def user_allocate(json_dict, one):
     return return_message
 
 
-def user_delete(json_dict, one):
+def user_delete(json_dict, one, config_params):
     """    
     Deletes the given user from the pool.
     """
+    
     if not (json_dict.get('user_id') is None):
         user_id = json_dict['user_id']
         if type(user_id) is not int:
@@ -327,10 +333,11 @@ def user_delete(json_dict, one):
     return {"error": "vm allocated", "user_id": user_id, "vms_used": vms_used}                 
 
 
-def get_user_info(json_dict, one):
+def get_user_info(json_dict, one, config_params):
     """
     Getting information about user by ID
     """
+    
     if not (json_dict.get('user_id') is None):
         user_id = json_dict['user_id']
         if type(user_id) is not int:
@@ -348,10 +355,11 @@ def get_user_info(json_dict, one):
     return {"user_id": user_id, "vms": vms, "vms_used": vms_used,"running_vms_used": running_vms_used}
 
 
-def template_instantiate(json_dict, one):
+def template_instantiate(json_dict, one, config_params):
     """
     Instantiates a new virtual machine from a template.
     """
+   
     if not (json_dict.get('vm_name') is None):
         vm_name = json_dict['vm_name']
         try:
@@ -412,8 +420,8 @@ def template_instantiate(json_dict, one):
     else:
         return {"error": "not set network address"}   
     
-    vm_root_password = password_generator(password_size, password_complexity) # Generating password for root user.
-    vm_user_password = password_generator(password_size, password_complexity) # Generating password for a simple user.
+    vm_root_password = password_generator(config_params['password_size'], config_params['password_complexity']) # Generating password for root user.
+    vm_user_password = password_generator(config_params['password_size'], config_params['password_complexity']) # Generating password for a simple user.
 
     # Instantiate a new VM from a tempate
     try:    
@@ -424,8 +432,8 @@ def template_instantiate(json_dict, one):
           'SSH_PUBLIC_KEY': '',
           'NETWORK': "YES",
         #  'START_SCRIPT_BASE64': base64.b64encode('echo -e "' + vm_root_password + '\n' + vm_root_password + '" | passwd root; echo -e "'
-        #                         + vm_user_password + '\n' + vm_user_password + '" | passwd ' + vm_user),
-           'START_SCRIPT_BASE64': base64.b64encode(create_start_script(vm_root_password,vm_user_password,vm_user))
+        #                         + vm_user_password + '\n' + vm_user_password + '" | passwd ' + config_params['vm_user']),
+           'START_SCRIPT_BASE64': base64.b64encode(create_start_script(vm_root_password,vm_user_password,config_params['vm_user']))
         },
         'NIC': {
           'IP': ip_address,
@@ -504,10 +512,11 @@ def template_instantiate(json_dict, one):
     return return_message
 
 
-def template_instantiate_user(json_dict, one):
+def template_instantiate_user(json_dict, one, config_params):
     """
     Instantiates a new virtual machine from a template.
     """
+    
     if not (json_dict.get('vm_name') is None):
         vm_name = json_dict['vm_name']
         try:
@@ -582,8 +591,8 @@ def template_instantiate_user(json_dict, one):
     session=user_name+":"+user_password
     one_user = pyone.OneServer("http://localhost:2633/RPC2", session)
     
-    vm_root_password = password_generator(password_size, password_complexity) # Generating password for root user.
-    vm_user_password = password_generator(password_size, password_complexity) # Generating password for a simple user.
+    vm_root_password = password_generator(config_params['password_size'], config_params['password_complexity']) # Generating password for root user.
+    vm_user_password = password_generator(config_params['password_size'], config_params['password_complexity']) # Generating password for a simple user.
 
     # Instantiate a new VM from a tempate
     try:    
@@ -652,10 +661,11 @@ def template_instantiate_user(json_dict, one):
     return return_message
 
 
-def vm_terminate(json_dict, one):
+def vm_terminate(json_dict, one, config_params):
     """
     Terminate VM
     """
+    
     if not (json_dict.get('vm_id') is None):
         vm_id = json_dict['vm_id']
         if type(vm_id) is not int:
@@ -705,7 +715,7 @@ def vm_terminate(json_dict, one):
     return {"action": "vm terminated"}
 
 
-def vm_action(json_dict, one):
+def vm_action(json_dict, one, config_params):
     """
     VM action:
     poweroff-hard
@@ -714,6 +724,7 @@ def vm_action(json_dict, one):
     reboot
     resume
     """
+    
     if not (json_dict.get('vm_id') is None):
         vm_id = json_dict['vm_id']
         if type(vm_id) is not int:
@@ -751,10 +762,11 @@ def vm_action(json_dict, one):
     return {"vm_action": action, "vm_id": vm_id,}
 
 
-def get_template_id(template_name, one):
+def get_template_id(template_name, one, config_params):
     """
     Getting TEMPLATE ID by TEMPLATE NAME.
     """
+    
     templatepoolInfo = one.templatepool.info(-2, -1, -1)
     templatelist = templatepoolInfo.get_VMTEMPLATE()
     for template in templatelist:
@@ -766,6 +778,7 @@ def template_terminate(template_name, one, image_remove = False):
     """
     Terminating VM template
     """
+    
     template_id = get_template_id(template_name, one)
     if template_id:
         try:
@@ -777,7 +790,9 @@ def template_terminate(template_name, one, image_remove = False):
  
  
 def create_start_script(vm_root_password,vm_user_password,vm_user):
-    """"""
+    """
+    """
+    
     script = '#!/bin/sh\n' +\
     'vm_root_password="' + vm_root_password + '"\n' + \
     'vm_user_password="' + vm_user_password + '"\n' + \

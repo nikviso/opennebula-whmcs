@@ -3239,3 +3239,79 @@
 28-Dec-20 16:02:04 - __main__ - INFO - Worker 2 started
 28-Dec-20 16:02:04 - __main__ - INFO - Worker 3 started
 28-Dec-20 16:02:04 - __main__ - INFO - Worker 4 started
+28-Dec-20 16:20:56 - __main__ - INFO - Routing server started
+28-Dec-20 16:20:56 - __main__ - INFO - Worker 0 started
+28-Dec-20 16:20:56 - __main__ - INFO - Worker 1 started
+28-Dec-20 16:20:56 - __main__ - INFO - Worker 2 started
+28-Dec-20 16:20:56 - __main__ - INFO - Worker 3 started
+28-Dec-20 16:20:56 - __main__ - INFO - Worker 4 started
+28-Dec-20 16:21:01 - __main__ - INFO - Worker 0 received  session ID: 516B4E70
+28-Dec-20 16:24:04 - __main__ - INFO - Routing server started
+28-Dec-20 16:24:04 - __main__ - INFO - Worker 0 started
+28-Dec-20 16:24:04 - __main__ - INFO - Worker 1 started
+28-Dec-20 16:24:04 - __main__ - INFO - Worker 4 started
+28-Dec-20 16:24:04 - __main__ - INFO - Worker 3 started
+28-Dec-20 16:24:04 - __main__ - INFO - Worker 2 started
+28-Dec-20 16:24:06 - __main__ - INFO - Worker 0 received  session ID: 497106F8
+28-Dec-20 16:24:06 - commands.commands - INFO - Session ID: 497106F8, Received request: {u'user_id': 85, u'cmd': u'get_vm_state', u'vm_id': 343}
+28-Dec-20 16:24:06 - commands.commands - INFO - Session ID: 497106F8, Sended reply: {'vm_state': 'ACTIVE', 'vm_id': 343}
+28-Dec-20 16:25:56 - __main__ - INFO - Routing server started
+28-Dec-20 16:25:56 - __main__ - INFO - Worker 0 started
+28-Dec-20 16:25:56 - __main__ - INFO - Worker 1 started
+28-Dec-20 16:25:56 - __main__ - INFO - Worker 2 started
+28-Dec-20 16:25:56 - __main__ - INFO - Worker 3 started
+28-Dec-20 16:25:56 - __main__ - INFO - Worker 4 started
+28-Dec-20 16:25:58 - __main__ - INFO - Worker 0 received  session ID: A1F956D2
+28-Dec-20 16:25:58 - commands.commands - INFO - Session ID: A1F956D2, Received request: {u'user_id': 85, u'cmd': u'get_vm_state', u'vm_id': 343}
+28-Dec-20 16:25:58 - commands.commands - INFO - Session ID: A1F956D2, Sended reply: {'vm_state': 'ACTIVE', 'vm_id': 343}
+28-Dec-20 16:25:59 - __main__ - INFO - Worker 1 received  session ID: 63BC2F71
+28-Dec-20 16:25:59 - commands.commands - INFO - Session ID: 63BC2F71, Received request: {u'user_id': 85, u'cmd': u'get_vm_state', u'vm_id': 343}
+28-Dec-20 16:25:59 - commands.commands - INFO - Session ID: 63BC2F71, Sended reply: {'vm_state': 'ACTIVE', 'vm_id': 343}
+28-Dec-20 16:25:59 - __main__ - INFO - Worker 2 received  session ID: 0B8A1235
+28-Dec-20 16:25:59 - commands.commands - INFO - Session ID: 0B8A1235, Received request: {u'user_id': 85, u'cmd': u'get_vm_state', u'vm_id': 343}
+28-Dec-20 16:25:59 - commands.commands - INFO - Session ID: 0B8A1235, Sended reply: {'vm_state': 'ACTIVE', 'vm_id': 343}
+28-Dec-20 16:26:00 - __main__ - INFO - Worker 3 received  session ID: 47ABD2E9
+28-Dec-20 16:26:00 - commands.commands - INFO - Session ID: 47ABD2E9, Received request: {u'user_id': 85, u'cmd': u'get_vm_state', u'vm_id': 343}
+28-Dec-20 16:26:00 - commands.commands - INFO - Session ID: 47ABD2E9, Sended reply: {'vm_state': 'ACTIVE', 'vm_id': 343}
+28-Dec-20 16:26:00 - __main__ - INFO - Worker 4 received  session ID: 63A2F4DC
+28-Dec-20 16:26:00 - commands.commands - INFO - Session ID: 63A2F4DC, Received request: {u'user_id': 85, u'cmd': u'get_vm_state', u'vm_id': 343}
+28-Dec-20 16:26:01 - commands.commands - INFO - Session ID: 63A2F4DC, Sended reply: {'vm_state': 'ACTIVE', 'vm_id': 343}
+28-Dec-20 16:53:03 - __main__ - INFO - Routing server started
+28-Dec-20 16:53:03 - __main__ - INFO - Worker 1 started
+28-Dec-20 16:53:03 - __main__ - INFO - Worker 4 started
+28-Dec-20 16:53:03 - __main__ - INFO - Worker 2 started
+28-Dec-20 16:53:03 - __main__ - INFO - Worker 0 started
+28-Dec-20 16:53:03 - __main__ - INFO - Worker 3 started
+28-Dec-20 19:54:21 - __main__ - INFO - Routing server started
+28-Dec-20 19:54:21 - __main__ - INFO - Worker 0 started
+28-Dec-20 19:54:21 - __main__ - INFO - Worker 2 started
+28-Dec-20 19:54:21 - __main__ - INFO - Worker 3 started
+28-Dec-20 19:54:21 - __main__ - INFO - Worker 4 started
+28-Dec-20 19:54:21 - __main__ - INFO - Worker 1 started
+28-Dec-20 19:54:24 - __main__ - INFO - Worker 0 received  session ID: BF1E8A20
+28-Dec-20 20:09:14 - __main__ - INFO - Routing server started
+28-Dec-20 20:09:14 - __main__ - INFO - Worker 1 started
+28-Dec-20 20:09:14 - __main__ - INFO - Worker 2 started
+28-Dec-20 20:09:14 - __main__ - INFO - Worker 4 started
+28-Dec-20 20:09:14 - __main__ - INFO - Worker 0 started
+28-Dec-20 20:09:14 - __main__ - INFO - Worker 3 started
+28-Dec-20 20:09:16 - __main__ - INFO - Worker 1 received  session ID: 1C0269DF
+28-Dec-20 20:09:16 - commands.commands - INFO - Session ID: 1C0269DF, Received request: {u'user_id': 85, u'cmd': u'get_vm_state', u'vm_id': 343}
+28-Dec-20 20:09:16 - commands.commands - INFO - Session ID: 1C0269DF, Sended reply: {'vm_state': 'ACTIVE', 'vm_id': 343}
+28-Dec-20 20:10:34 - __main__ - INFO - Routing server started
+28-Dec-20 20:10:34 - __main__ - INFO - Worker 0 started
+28-Dec-20 20:10:34 - __main__ - INFO - Worker 3 started
+28-Dec-20 20:10:34 - __main__ - INFO - Worker 4 started
+28-Dec-20 20:10:34 - __main__ - INFO - Worker 2 started
+28-Dec-20 20:10:34 - __main__ - INFO - Worker 1 started
+28-Dec-20 20:10:37 - __main__ - INFO - Worker 0 received  session ID: A685E074
+28-Dec-20 20:10:37 - commands.commands - INFO - Session ID: A685E074, Received request: {u'user_id': 85, u'cmd': u'get_vm_state', u'vm_id': 343}
+28-Dec-20 20:14:42 - __main__ - INFO - Routing server started
+28-Dec-20 20:14:42 - __main__ - INFO - Worker 1 started
+28-Dec-20 20:14:42 - __main__ - INFO - Worker 0 started
+28-Dec-20 20:14:42 - __main__ - INFO - Worker 2 started
+28-Dec-20 20:14:42 - __main__ - INFO - Worker 3 started
+28-Dec-20 20:14:42 - __main__ - INFO - Worker 4 started
+28-Dec-20 20:14:45 - __main__ - INFO - Worker 1 received  session ID: 8129630A
+28-Dec-20 20:14:45 - commands.commands - INFO - Session ID: 8129630A, Received request: {u'user_id': 85, u'cmd': u'get_vm_state', u'vm_id': 343}
+28-Dec-20 20:14:45 - commands.commands - INFO - Session ID: 8129630A, Sended reply: {'vm_state': 'ACTIVE', 'vm_id': 343}

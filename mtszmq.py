@@ -12,7 +12,6 @@ import logging.config
 import configparser
 import argparse
 import base64
-# from config import *
 from security.aes_cbc import *
 from commands.commands import *
 
@@ -41,7 +40,7 @@ def config_parser(config_file):
     'pidfile' - PID file path,
     'vm_user' - VM user name,
     'password_size' - Size password for VM users,
-    'password_complexity' - Complexity password for VM users,
+    'password_complexity' - Complexity password for VM users(bool),
     'loggerconf_file' - Logger configuration file path. 
     """
     
@@ -66,6 +65,7 @@ def session_id_generator(size = 8):
     """
     Generating session id for writing to log file
     """
+    
     s = "0123456789ABCDEF"
     return "".join(random.sample(s,size ))  
 
@@ -74,8 +74,14 @@ def worker_routine(url_worker, key, worker_number, config_params, context=None):
     """
     Worker routine
     """
+    
     logger = logging.getLogger(__name__)    
     AESobj = AESCipher(key)
+    
+    # Getting Opennebula sessions credential
+    one_auth_file = open(config_params['one_auth_file'],"r")
+    session = one_auth_file.read().replace('\n', '')
+    one_auth_file.close()
     one = pyone.OneServer("http://localhost:2633/RPC2", session)
     
     context = context or zmq.Context.instance()
@@ -91,7 +97,7 @@ def worker_routine(url_worker, key, worker_number, config_params, context=None):
         session_id = session_id_generator()
         if json_receive:
             logger.info(("Worker %s received  session ID: %s") % (worker_number, session_id))         
-            json_reply = json.dumps(command_switcher(json_receive, session_id, one))
+            json_reply = json.dumps(command_switcher(json_receive, session_id, one, config_params))
             socket.send(AESobj.encrypt(json_reply))
         else:
             logger.info(("Session ID: %s. Worker %s received a message with an unsupported encryption method. ") % (session_id, worker_number))
@@ -102,7 +108,6 @@ def worker_routine(url_worker, key, worker_number, config_params, context=None):
         #socket.send(AESobj.encrypt(json_reply))
 
 
-# def main(workers_quantity, server_ip, server_port, key):
 def main(config_params):
     """
     Routing server
@@ -114,7 +119,7 @@ def main(config_params):
     key_file.close() 
 
     # Configuration for logging
-    logging.config.fileConfig(fname=loggerconf_file, disable_existing_loggers=False)
+    logging.config.fileConfig(fname=config_params['loggerconf_file'], disable_existing_loggers=False)
     logger = logging.getLogger(__name__)
     logger.info("Routing server started")
 
