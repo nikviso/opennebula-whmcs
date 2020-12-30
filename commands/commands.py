@@ -75,6 +75,13 @@ def password_generator(size = 16, complexity = True):
         s = "abcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()?{}[]\/<>.,~"
     return "".join(random.sample(s,size ))
 
+def user_generator():
+    """
+    VM user name generator.
+    """    
+    s = "abcdefghijklmnopqrstuvwxyz"
+    digits = "0123456789"
+    return "".join(random.sample(s,5 ) + random.sample(digits,2 ))
 
 def get_user_id(user_name, one):
     """
@@ -239,7 +246,7 @@ def get_all_vm_state(json_dict, one, config_params):
             "vm_state": switch_vm_state(vm.STATE),
         },)
     return_message = '{"vms_state": ' + json.dumps(return_message) + '}'
-
+    
     return json.loads(return_message)
 
 
@@ -419,6 +426,11 @@ def template_instantiate(json_dict, one, config_params):
     else:
         return {"error": "not set network address"}   
     
+    if config_params['vm_user'] == '':
+        vm_user = user_generator()
+    else:
+        vm_user = config_params['vm_user']
+    
     try: 
         password_size = config_params['password_size']
         password_complexity = config_params['password_complexity']
@@ -436,8 +448,8 @@ def template_instantiate(json_dict, one, config_params):
           'SSH_PUBLIC_KEY': '',
           'NETWORK': "YES",
         #  'START_SCRIPT_BASE64': base64.b64encode('echo -e "' + vm_root_password + '\n' + vm_root_password + '" | passwd root; echo -e "'
-        #                         + vm_user_password + '\n' + vm_user_password + '" | passwd ' + config_params['vm_user']),
-           'START_SCRIPT_BASE64': base64.b64encode(create_start_script(vm_root_password,vm_user_password,config_params['vm_user']))
+        #                         + vm_user_password + '\n' + vm_user_password + '" | passwd ' + vm_user),
+           'START_SCRIPT_BASE64': base64.b64encode(create_start_script(vm_root_password, vm_user_password, vm_user))
         },
         'NIC': {
           'IP': ip_address,
@@ -509,7 +521,7 @@ def template_instantiate(json_dict, one, config_params):
             "user_id": user_id,
             "vm_id": vm_id,
             "vm_root_password": vm_root_password,
-            "vm_user": config_params['vm_user'],
+            "vm_user": vm_user,
             "vm_user_password": vm_user_password,
         }
     
@@ -809,10 +821,20 @@ def create_start_script(vm_root_password,vm_user_password,vm_user):
     'OS="`uname`"\n\
 case $OS in\n\
 \'Linux\')\n\
+check=`id $vm_user`\n\
+if ! [ "$check" ];\n\
+then\n\
+useradd -m -s /bin/sh $vm_user\n\
+fi\n\
 echo $vm_root_password\'\\n\'$vm_root_password | passwd root;\n\
 echo $vm_user_password\'\\n\'$vm_user_password | passwd $vm_user;\n\
 ;;\n\
 \'FreeBSD\')\n\
+check=`pw usershow $vm_user`\n\
+if ! [ "$check" ];\n\
+then\n\
+pw user add -n $vm_user -G wheel;\n\
+fi\n\
 echo $vm_root_password | pw mod user root -h 0;\n\
 echo $vm_user_password | pw mod user $vm_user -h 0;\n\
 ;;\n\

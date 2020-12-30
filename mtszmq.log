@@ -3746,3 +3746,256 @@
 29-Dec-20 22:05:25 - __main__ - INFO - Worker 2 received  session ID: ED75390B
 29-Dec-20 22:05:25 - commands.commands - INFO - Session ID: ED75390B, Received request: {u'vm_id': 350, u'cmd': u'vm_terminate', u'user_id': 85}
 29-Dec-20 22:05:28 - commands.commands - INFO - Session ID: ED75390B, Sended reply: {'action': 'vm terminated'}
+30-Dec-20 13:44:01 - __main__ - INFO - Routing server started
+30-Dec-20 13:44:01 - __main__ - INFO - Worker 0 started
+30-Dec-20 13:44:01 - __main__ - INFO - Worker 4 started
+30-Dec-20 13:44:01 - __main__ - INFO - Worker 2 started
+30-Dec-20 13:44:01 - __main__ - INFO - Worker 3 started
+30-Dec-20 13:44:01 - __main__ - INFO - Worker 1 started
+30-Dec-20 13:44:04 - __main__ - INFO - Worker 0 received  session ID: 9D45318F
+30-Dec-20 13:44:04 - commands.commands - INFO - Session ID: 9D45318F, Received request: {u'cmd': u'get_all_vm_state', u'user_id': 85}
+30-Dec-20 13:44:04 - commands.commands - INFO - Session ID: 9D45318F, Sended reply: {u'vms_state': [{u'vm_name': u'v1p248.clouds365.host', u'vm_state': u'ACTIVE', u'vm_id': 343}]}
+30-Dec-20 13:58:15 - __main__ - INFO - Routing server started
+30-Dec-20 13:58:15 - __main__ - INFO - Worker 0 started
+30-Dec-20 13:58:15 - __main__ - INFO - Worker 4 started
+30-Dec-20 13:58:15 - __main__ - INFO - Worker 3 started
+30-Dec-20 13:58:15 - __main__ - INFO - Worker 1 started
+30-Dec-20 13:58:15 - __main__ - INFO - Worker 2 started
+30-Dec-20 13:58:17 - __main__ - INFO - Worker 0 received  session ID: D4F89C12
+30-Dec-20 13:58:17 - commands.commands - INFO - Session ID: D4F89C12, Received request: {u'cmd': u'get_all_vm_state', u'user_id': 85}
+30-Dec-20 13:58:17 - commands.commands - INFO - Session ID: D4F89C12, Sended reply: {u'vms_state': [{u'vm_name': u'v1p248.clouds365.host', u'vm_state': u'ACTIVE', u'vm_id': 343}]}
+30-Dec-20 13:58:30 - __main__ - INFO - Routing server started
+30-Dec-20 13:58:30 - __main__ - INFO - Worker 0 started
+30-Dec-20 13:58:30 - __main__ - INFO - Worker 2 started
+30-Dec-20 13:58:30 - __main__ - INFO - Worker 4 started
+30-Dec-20 13:58:30 - __main__ - INFO - Worker 3 started
+30-Dec-20 13:58:30 - __main__ - INFO - Worker 1 started
+30-Dec-20 13:58:31 - __main__ - INFO - Worker 0 received  session ID: 39CBE70D
+30-Dec-20 13:58:31 - commands.commands - INFO - Session ID: 39CBE70D, Received request: {u'cmd': u'get_all_vm_state', u'user_id': 85}
+30-Dec-20 13:58:31 - commands.commands - INFO - Session ID: 39CBE70D, Sended reply: {u'vms_state': [{u'vm_name': u'v1p248.clouds365.host', u'vm_state': u'ACTIVE', u'vm_id': 343}]}
+30-Dec-20 13:59:19 - __main__ - INFO - Worker 2 received  session ID: E7F510DA
+30-Dec-20 13:59:19 - commands.commands - INFO - Session ID: E7F510DA, Received request: {u'cmd': u'get_all_vm_state', u'user_id': 85}
+30-Dec-20 13:59:19 - commands.commands - INFO - Session ID: E7F510DA, Sended reply: {u'vms_state': [{u'vm_name': u'v1p248.clouds365.host', u'vm_state': u'ACTIVE', u'vm_id': 343}]}
+30-Dec-20 13:59:39 - __main__ - INFO - Worker 4 received  session ID: BF18C694
+30-Dec-20 13:59:39 - commands.commands - INFO - Session ID: BF18C694, Received request: {u'cmd': u'get_all_vm_state', u'user_id': 85}
+30-Dec-20 13:59:39 - commands.commands - INFO - Session ID: BF18C694, Sended reply: {u'vms_state': [{u'vm_name': u'v1p248.clouds365.host', u'vm_state': u'ACTIVE', u'vm_id': 343}]}
+30-Dec-20 13:59:41 - __main__ - INFO - Worker 3 received  session ID: 0318459B
+30-Dec-20 13:59:41 - commands.commands - INFO - Session ID: 0318459B, Received request: {u'cmd': u'get_all_vm_state', u'user_id': 85}
+30-Dec-20 13:59:41 - commands.commands - INFO - Session ID: 0318459B, Sended reply: {u'vms_state': [{u'vm_name': u'v1p248.clouds365.host', u'vm_state': u'ACTIVE', u'vm_id': 343}]}
+30-Dec-20 13:59:42 - __main__ - INFO - Worker 1 received  session ID: 7D81C036
+30-Dec-20 13:59:42 - commands.commands - INFO - Session ID: 7D81C036, Received request: {u'cmd': u'get_all_vm_state', u'user_id': 85}
+30-Dec-20 13:59:42 - commands.commands - INFO - Session ID: 7D81C036, Sended reply: {u'vms_state': [{u'vm_name': u'v1p248.clouds365.host', u'vm_state': u'ACTIVE', u'vm_id': 343}]}
+30-Dec-20 13:59:43 - __main__ - INFO - Worker 0 received  session ID: EF5CB732
+30-Dec-20 13:59:43 - commands.commands - INFO - Session ID: EF5CB732, Received request: {u'cmd': u'get_all_vm_state', u'user_id': 85}
+30-Dec-20 13:59:43 - commands.commands - INFO - Session ID: EF5CB732, Sended reply: {u'vms_state': [{u'vm_name': u'v1p248.clouds365.host', u'vm_state': u'ACTIVE', u'vm_id': 343}]}
+30-Dec-20 14:02:16 - __main__ - INFO - Routing server started
+30-Dec-20 14:02:16 - __main__ - INFO - Worker 3 started
+30-Dec-20 14:02:16 - __main__ - INFO - Worker 2 started
+30-Dec-20 14:02:16 - __main__ - INFO - Worker 1 started
+30-Dec-20 14:02:16 - __main__ - INFO - Worker 0 started
+30-Dec-20 14:02:16 - __main__ - INFO - Worker 4 started
+30-Dec-20 14:02:18 - __main__ - INFO - Worker 3 received  session ID: B14F0D62
+30-Dec-20 14:02:18 - commands.commands - INFO - Session ID: B14F0D62, Received request: {u'cmd': u'get_all_vm_state', u'user_id': 85}
+30-Dec-20 14:02:18 - commands.commands - INFO - Session ID: B14F0D62, Sended reply: {u'vms_state': [{u'vm_name': u'v1p248.clouds365.host', u'vm_state': u'ACTIVE', u'vm_id': 343}]}
+30-Dec-20 14:02:37 - __main__ - INFO - Worker 2 received  session ID: 57AC4320
+30-Dec-20 14:02:37 - commands.commands - INFO - Session ID: 57AC4320, Received request: {u'cmd': u'get_all_vm_state', u'user_id': 85}
+30-Dec-20 14:02:37 - commands.commands - INFO - Session ID: 57AC4320, Sended reply: {u'vms_state': [{u'vm_name': u'v1p248.clouds365.host', u'vm_state': u'ACTIVE', u'vm_id': 343}]}
+30-Dec-20 14:02:42 - __main__ - INFO - Worker 1 received  session ID: 4A56983D
+30-Dec-20 14:02:42 - commands.commands - INFO - Session ID: 4A56983D, Received request: {u'cmd': u'get_all_vm_state', u'user_id': 85}
+30-Dec-20 14:02:42 - commands.commands - INFO - Session ID: 4A56983D, Sended reply: {u'vms_state': [{u'vm_name': u'v1p248.clouds365.host', u'vm_state': u'ACTIVE', u'vm_id': 343}]}
+30-Dec-20 14:02:54 - __main__ - INFO - Routing server started
+30-Dec-20 14:02:54 - __main__ - INFO - Worker 0 started
+30-Dec-20 14:02:54 - __main__ - INFO - Worker 3 started
+30-Dec-20 14:02:54 - __main__ - INFO - Worker 2 started
+30-Dec-20 14:02:54 - __main__ - INFO - Worker 1 started
+30-Dec-20 14:02:54 - __main__ - INFO - Worker 4 started
+30-Dec-20 14:02:55 - __main__ - INFO - Worker 0 received  session ID: 36AF89ED
+30-Dec-20 14:02:55 - commands.commands - INFO - Session ID: 36AF89ED, Received request: {u'cmd': u'get_all_vm_state', u'user_id': 85}
+30-Dec-20 14:02:55 - commands.commands - INFO - Session ID: 36AF89ED, Sended reply: {u'vms_state': [{u'vm_name': u'v1p248.clouds365.host', u'vm_state': u'ACTIVE', u'vm_id': 343}]}
+30-Dec-20 14:03:02 - __main__ - INFO - Worker 3 received  session ID: 25A1E40D
+30-Dec-20 14:03:02 - commands.commands - INFO - Session ID: 25A1E40D, Received request: {u'cmd': u'get_all_vm_state', u'user_id': 85}
+30-Dec-20 14:03:02 - commands.commands - INFO - Session ID: 25A1E40D, Sended reply: {u'vms_state': [{u'vm_name': u'v1p248.clouds365.host', u'vm_state': u'ACTIVE', u'vm_id': 343}]}
+30-Dec-20 14:03:04 - __main__ - INFO - Worker 2 received  session ID: F9D308A5
+30-Dec-20 14:03:04 - commands.commands - INFO - Session ID: F9D308A5, Received request: {u'cmd': u'get_all_vm_state', u'user_id': 85}
+30-Dec-20 14:03:04 - commands.commands - INFO - Session ID: F9D308A5, Sended reply: {u'vms_state': [{u'vm_name': u'v1p248.clouds365.host', u'vm_state': u'ACTIVE', u'vm_id': 343}]}
+30-Dec-20 14:03:06 - __main__ - INFO - Worker 1 received  session ID: 27FA901D
+30-Dec-20 14:03:06 - commands.commands - INFO - Session ID: 27FA901D, Received request: {u'cmd': u'get_all_vm_state', u'user_id': 85}
+30-Dec-20 14:03:06 - commands.commands - INFO - Session ID: 27FA901D, Sended reply: {u'vms_state': [{u'vm_name': u'v1p248.clouds365.host', u'vm_state': u'ACTIVE', u'vm_id': 343}]}
+30-Dec-20 14:03:14 - __main__ - INFO - Worker 4 received  session ID: 2F86ABE5
+30-Dec-20 14:03:14 - commands.commands - INFO - Session ID: 2F86ABE5, Received request: {u'cmd': u'get_all_vm_state', u'user_id': 85}
+30-Dec-20 14:03:14 - commands.commands - INFO - Session ID: 2F86ABE5, Sended reply: {u'vms_state': [{u'vm_name': u'v1p248.clouds365.host', u'vm_state': u'ACTIVE', u'vm_id': 343}]}
+30-Dec-20 14:03:18 - __main__ - INFO - Worker 0 received  session ID: C89BF6E5
+30-Dec-20 14:03:18 - commands.commands - INFO - Session ID: C89BF6E5, Received request: {u'cmd': u'get_all_vm_state', u'user_id': 85}
+30-Dec-20 14:03:18 - commands.commands - INFO - Session ID: C89BF6E5, Sended reply: {u'vms_state': [{u'vm_name': u'v1p248.clouds365.host', u'vm_state': u'ACTIVE', u'vm_id': 343}]}
+30-Dec-20 14:03:19 - __main__ - INFO - Worker 3 received  session ID: 560287FA
+30-Dec-20 14:03:19 - commands.commands - INFO - Session ID: 560287FA, Received request: {u'cmd': u'get_all_vm_state', u'user_id': 85}
+30-Dec-20 14:03:19 - commands.commands - INFO - Session ID: 560287FA, Sended reply: {u'vms_state': [{u'vm_name': u'v1p248.clouds365.host', u'vm_state': u'ACTIVE', u'vm_id': 343}]}
+30-Dec-20 14:03:22 - __main__ - INFO - Worker 2 received  session ID: 3AB1D926
+30-Dec-20 14:03:22 - commands.commands - INFO - Session ID: 3AB1D926, Received request: {u'cmd': u'get_all_vm_state', u'user_id': 85}
+30-Dec-20 14:03:22 - commands.commands - INFO - Session ID: 3AB1D926, Sended reply: {u'vms_state': [{u'vm_name': u'v1p248.clouds365.host', u'vm_state': u'ACTIVE', u'vm_id': 343}]}
+30-Dec-20 14:03:23 - __main__ - INFO - Worker 1 received  session ID: C45761A9
+30-Dec-20 14:03:23 - commands.commands - INFO - Session ID: C45761A9, Received request: {u'cmd': u'get_all_vm_state', u'user_id': 85}
+30-Dec-20 14:03:23 - commands.commands - INFO - Session ID: C45761A9, Sended reply: {u'vms_state': [{u'vm_name': u'v1p248.clouds365.host', u'vm_state': u'ACTIVE', u'vm_id': 343}]}
+30-Dec-20 14:03:27 - __main__ - INFO - Worker 4 received  session ID: 956F23A8
+30-Dec-20 14:03:27 - commands.commands - INFO - Session ID: 956F23A8, Received request: {u'cmd': u'get_all_vm_state', u'user_id': 85}
+30-Dec-20 14:03:27 - commands.commands - INFO - Session ID: 956F23A8, Sended reply: {u'vms_state': [{u'vm_name': u'v1p248.clouds365.host', u'vm_state': u'ACTIVE', u'vm_id': 343}]}
+30-Dec-20 14:04:12 - __main__ - INFO - Routing server started
+30-Dec-20 14:04:12 - __main__ - INFO - Worker 0 started
+30-Dec-20 14:04:12 - __main__ - INFO - Worker 3 started
+30-Dec-20 14:04:12 - __main__ - INFO - Worker 1 started
+30-Dec-20 14:04:12 - __main__ - INFO - Worker 2 started
+30-Dec-20 14:04:12 - __main__ - INFO - Worker 4 started
+30-Dec-20 14:04:12 - __main__ - INFO - Worker 0 received  session ID: 7FB91432
+30-Dec-20 14:04:12 - commands.commands - INFO - Session ID: 7FB91432, Received request: {u'cmd': u'get_all_vm_state', u'user_id': 85}
+30-Dec-20 14:04:12 - commands.commands - INFO - Session ID: 7FB91432, Sended reply: {u'vms_state': [{u'vm_name': u'v1p248.clouds365.host', u'vm_state': u'ACTIVE', u'vm_id': 343}]}
+30-Dec-20 14:04:18 - __main__ - INFO - Worker 3 received  session ID: 8632F59B
+30-Dec-20 14:04:18 - commands.commands - INFO - Session ID: 8632F59B, Received request: {u'cmd': u'get_all_vm_state', u'user_id': 85}
+30-Dec-20 14:04:18 - commands.commands - INFO - Session ID: 8632F59B, Sended reply: {u'vms_state': [{u'vm_name': u'v1p248.clouds365.host', u'vm_state': u'ACTIVE', u'vm_id': 343}]}
+30-Dec-20 14:51:28 - __main__ - INFO - Routing server started
+30-Dec-20 14:51:28 - __main__ - INFO - Worker 2 started
+30-Dec-20 14:51:28 - __main__ - INFO - Worker 1 started
+30-Dec-20 14:51:28 - __main__ - INFO - Worker 4 started
+30-Dec-20 14:51:28 - __main__ - INFO - Worker 0 started
+30-Dec-20 14:51:28 - __main__ - INFO - Worker 3 started
+30-Dec-20 14:51:51 - __main__ - INFO - Worker 2 received  session ID: 789CF3DE
+30-Dec-20 14:51:51 - commands.commands - INFO - Session ID: 789CF3DE, Received request: {u'vm_name': u'v1p247.clouds365.host', u'user_id': 85, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.247', u'template_id': 329}
+30-Dec-20 14:51:52 - commands.commands - INFO - Session ID: 789CF3DE, Sended reply: {'user_id': 85, 'vm_root_password': u'*******', 'vm_id': 351, 'vm_user_password': u'*******', 'vm_user': u'user'}
+30-Dec-20 14:52:33 - __main__ - INFO - Worker 1 received  session ID: C95EF23D
+30-Dec-20 14:52:33 - commands.commands - INFO - Session ID: C95EF23D, Received request: {u'vm_id': 351, u'cmd': u'vm_terminate', u'user_id': 85}
+30-Dec-20 14:52:33 - commands.commands - INFO - Session ID: C95EF23D, Sended reply: {'action': 'vm terminated'}
+30-Dec-20 14:56:18 - __main__ - INFO - Routing server started
+30-Dec-20 14:56:18 - __main__ - INFO - Worker 4 started
+30-Dec-20 14:56:18 - __main__ - INFO - Worker 2 started
+30-Dec-20 14:56:18 - __main__ - INFO - Worker 1 started
+30-Dec-20 14:56:18 - __main__ - INFO - Worker 0 started
+30-Dec-20 14:56:18 - __main__ - INFO - Worker 3 started
+30-Dec-20 14:56:36 - __main__ - INFO - Worker 4 received  session ID: 2F47315A
+30-Dec-20 14:56:36 - commands.commands - INFO - Session ID: 2F47315A, Received request: {u'vm_name': u'v1p247.clouds365.host', u'user_id': 85, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.247', u'template_id': 329}
+30-Dec-20 14:56:37 - commands.commands - INFO - Session ID: 2F47315A, Sended reply: {'user_id': 85, 'vm_root_password': u'*******', 'vm_id': 352, 'vm_user_password': u'*******', 'vm_user': u'user'}
+30-Dec-20 14:57:10 - __main__ - INFO - Worker 2 received  session ID: 3D26BE78
+30-Dec-20 14:57:10 - commands.commands - INFO - Session ID: 3D26BE78, Received request: {u'vm_id': 352, u'cmd': u'vm_terminate', u'user_id': 85}
+30-Dec-20 14:57:10 - commands.commands - ERROR - Session ID: 3D26BE78, Sended reply: {'error': '[one.vm.action] Error performing action "terminate-hard": Could not terminate VM 352, wrong state BOOT.'}
+30-Dec-20 14:57:25 - __main__ - INFO - Worker 1 received  session ID: 19427FB6
+30-Dec-20 14:57:25 - commands.commands - INFO - Session ID: 19427FB6, Received request: {u'vm_id': 352, u'cmd': u'vm_terminate', u'user_id': 85}
+30-Dec-20 14:57:28 - commands.commands - INFO - Session ID: 19427FB6, Sended reply: {'action': 'vm terminated'}
+30-Dec-20 14:58:24 - __main__ - INFO - Routing server started
+30-Dec-20 14:58:24 - __main__ - INFO - Worker 1 started
+30-Dec-20 14:58:24 - __main__ - INFO - Worker 0 started
+30-Dec-20 14:58:24 - __main__ - INFO - Worker 3 started
+30-Dec-20 14:58:24 - __main__ - INFO - Worker 4 started
+30-Dec-20 14:58:24 - __main__ - INFO - Worker 2 started
+30-Dec-20 14:58:42 - __main__ - INFO - Worker 1 received  session ID: 34E6BDC2
+30-Dec-20 14:58:42 - commands.commands - INFO - Session ID: 34E6BDC2, Received request: {u'vm_name': u'v1p247.clouds365.host', u'user_id': 85, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.247', u'template_id': 329}
+30-Dec-20 14:58:42 - commands.commands - INFO - Session ID: 34E6BDC2, Sended reply: {'user_id': 85, 'vm_root_password': u'*******', 'vm_id': 353, 'vm_user_password': u'*******', 'vm_user': u''}
+30-Dec-20 14:59:54 - __main__ - INFO - Worker 0 received  session ID: 304D159A
+30-Dec-20 15:00:11 - __main__ - INFO - Worker 3 received  session ID: D7A04BE8
+30-Dec-20 15:00:11 - commands.commands - INFO - Session ID: D7A04BE8, Received request: {u'vm_id': 353, u'cmd': u'vm_terminate', u'user_id': 85}
+30-Dec-20 15:00:14 - commands.commands - INFO - Session ID: D7A04BE8, Sended reply: {'action': 'vm terminated'}
+30-Dec-20 16:54:02 - __main__ - INFO - Routing server started
+30-Dec-20 16:54:02 - __main__ - INFO - Worker 3 started
+30-Dec-20 16:54:02 - __main__ - INFO - Worker 1 started
+30-Dec-20 16:54:02 - __main__ - INFO - Worker 4 started
+30-Dec-20 16:54:02 - __main__ - INFO - Worker 0 started
+30-Dec-20 16:54:02 - __main__ - INFO - Worker 2 started
+30-Dec-20 16:54:18 - __main__ - INFO - Worker 3 received  session ID: B394D1EF
+30-Dec-20 16:54:18 - commands.commands - INFO - Session ID: B394D1EF, Received request: {u'vm_name': u'v1p247.clouds365.host', u'user_id': 85, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.247', u'template_id': 329}
+30-Dec-20 16:54:18 - commands.commands - INFO - Session ID: B394D1EF, Sended reply: {'user_id': 85, 'vm_root_password': u'*******', 'vm_id': 354, 'vm_user_password': u'*******', 'vm_user': u''}
+30-Dec-20 16:54:51 - __main__ - INFO - Worker 1 received  session ID: 503FC287
+30-Dec-20 16:54:51 - commands.commands - INFO - Session ID: 503FC287, Received request: {u'vm_id': 353, u'cmd': u'vm_terminate', u'user_id': 85}
+30-Dec-20 16:54:51 - commands.commands - ERROR - Session ID: 503FC287, Sended reply: {'error': 'list vm index out of range'}
+30-Dec-20 16:55:03 - __main__ - INFO - Worker 4 received  session ID: 27D34698
+30-Dec-20 16:55:03 - commands.commands - INFO - Session ID: 27D34698, Received request: {u'vm_id': 354, u'cmd': u'vm_terminate', u'user_id': 85}
+30-Dec-20 16:55:03 - commands.commands - INFO - Session ID: 27D34698, Sended reply: {'action': 'vm terminated'}
+30-Dec-20 16:59:44 - __main__ - INFO - Routing server started
+30-Dec-20 16:59:44 - __main__ - INFO - Worker 0 started
+30-Dec-20 16:59:44 - __main__ - INFO - Worker 4 started
+30-Dec-20 16:59:44 - __main__ - INFO - Worker 1 started
+30-Dec-20 16:59:44 - __main__ - INFO - Worker 3 started
+30-Dec-20 16:59:44 - __main__ - INFO - Worker 2 started
+30-Dec-20 17:00:03 - __main__ - INFO - Worker 0 received  session ID: D026B7FC
+30-Dec-20 17:00:03 - commands.commands - INFO - Session ID: D026B7FC, Received request: {u'vm_name': u'v1p247.clouds365.host', u'user_id': 85, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.247', u'template_id': 329}
+30-Dec-20 17:00:03 - commands.commands - INFO - Session ID: D026B7FC, Sended reply: {'user_id': 85, 'vm_root_password': u'*******', 'vm_id': 355, 'vm_user_password': u'*******', 'vm_user': u''}
+30-Dec-20 17:00:52 - __main__ - INFO - Worker 4 received  session ID: E2DB9CF0
+30-Dec-20 17:00:52 - commands.commands - INFO - Session ID: E2DB9CF0, Received request: {u'vm_id': 355, u'cmd': u'vm_terminate', u'user_id': 85}
+30-Dec-20 17:00:56 - commands.commands - INFO - Session ID: E2DB9CF0, Sended reply: {'action': 'vm terminated'}
+30-Dec-20 17:01:39 - __main__ - INFO - Routing server started
+30-Dec-20 17:01:39 - __main__ - INFO - Worker 2 started
+30-Dec-20 17:01:39 - __main__ - INFO - Worker 1 started
+30-Dec-20 17:01:39 - __main__ - INFO - Worker 0 started
+30-Dec-20 17:01:39 - __main__ - INFO - Worker 3 started
+30-Dec-20 17:01:39 - __main__ - INFO - Worker 4 started
+30-Dec-20 17:01:54 - __main__ - INFO - Worker 2 received  session ID: 8DC2EA35
+30-Dec-20 17:01:54 - commands.commands - INFO - Session ID: 8DC2EA35, Received request: {u'vm_name': u'v1p247.clouds365.host', u'user_id': 85, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.247', u'template_id': 329}
+30-Dec-20 17:01:54 - commands.commands - INFO - Session ID: 8DC2EA35, Sended reply: {'user_id': 85, 'vm_root_password': u'*******', 'vm_id': 356, 'vm_user_password': u'*******', 'vm_user': u''}
+30-Dec-20 17:02:30 - __main__ - INFO - Worker 1 received  session ID: ED05F6A9
+30-Dec-20 17:02:30 - commands.commands - INFO - Session ID: ED05F6A9, Received request: {u'vm_id': 356, u'cmd': u'vm_terminate', u'user_id': 85}
+30-Dec-20 17:02:30 - commands.commands - INFO - Session ID: ED05F6A9, Sended reply: {'action': 'vm terminated'}
+30-Dec-20 17:03:21 - __main__ - INFO - Routing server started
+30-Dec-20 17:03:21 - __main__ - INFO - Worker 1 started
+30-Dec-20 17:03:21 - __main__ - INFO - Worker 3 started
+30-Dec-20 17:03:21 - __main__ - INFO - Worker 0 started
+30-Dec-20 17:03:21 - __main__ - INFO - Worker 2 started
+30-Dec-20 17:03:21 - __main__ - INFO - Worker 4 started
+30-Dec-20 17:03:36 - __main__ - INFO - Worker 1 received  session ID: 0CB645A3
+30-Dec-20 17:03:36 - commands.commands - INFO - Session ID: 0CB645A3, Received request: {u'vm_name': u'v1p247.clouds365.host', u'user_id': 85, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.247', u'template_id': 329}
+30-Dec-20 17:03:36 - commands.commands - INFO - Session ID: 0CB645A3, Sended reply: {'user_id': 85, 'vm_root_password': u'*******', 'vm_id': 357, 'vm_user_password': u'*******', 'vm_user': 'nltsp12'}
+30-Dec-20 17:22:13 - __main__ - INFO - Routing server started
+30-Dec-20 17:22:13 - __main__ - INFO - Worker 1 started
+30-Dec-20 17:22:13 - __main__ - INFO - Worker 0 started
+30-Dec-20 17:22:13 - __main__ - INFO - Worker 2 started
+30-Dec-20 17:22:13 - __main__ - INFO - Worker 4 started
+30-Dec-20 17:22:13 - __main__ - INFO - Worker 3 started
+30-Dec-20 17:22:20 - __main__ - INFO - Worker 1 received  session ID: C30692FB
+30-Dec-20 17:22:20 - commands.commands - INFO - Session ID: C30692FB, Received request: {u'vm_name': u'v1p247.clouds365.host', u'user_id': 85, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.247', u'template_id': 329}
+30-Dec-20 17:22:20 - commands.commands - ERROR - Session ID: C30692FB, Sended reply: {'error': 'vm with this name already allocated'}
+30-Dec-20 17:37:41 - __main__ - INFO - Worker 0 received  session ID: 9846F0DB
+30-Dec-20 17:37:41 - commands.commands - INFO - Session ID: 9846F0DB, Received request: {u'vm_id': 357, u'cmd': u'vm_terminate', u'user_id': 85}
+30-Dec-20 17:37:44 - commands.commands - INFO - Session ID: 9846F0DB, Sended reply: {'action': 'vm terminated'}
+30-Dec-20 17:46:32 - __main__ - INFO - Routing server started
+30-Dec-20 17:46:32 - __main__ - INFO - Worker 4 started
+30-Dec-20 17:46:32 - __main__ - INFO - Worker 3 started
+30-Dec-20 17:46:32 - __main__ - INFO - Worker 0 started
+30-Dec-20 17:46:32 - __main__ - INFO - Worker 2 started
+30-Dec-20 17:46:32 - __main__ - INFO - Worker 1 started
+30-Dec-20 17:47:39 - __main__ - INFO - Worker 4 received  session ID: 035A2DCF
+30-Dec-20 17:47:39 - commands.commands - INFO - Session ID: 035A2DCF, Received request: {u'vm_name': u'v1p247.clouds365.host', u'user_id': 85, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.247', u'template_id': 329}
+30-Dec-20 17:47:39 - commands.commands - INFO - Session ID: 035A2DCF, Sended reply: {'user_id': 85, 'vm_root_password': u'*******', 'vm_id': 358, 'vm_user_password': u'*******', 'vm_user': 'vzcpr68'}
+30-Dec-20 17:50:26 - __main__ - INFO - Worker 3 received  session ID: 4AB7FE61
+30-Dec-20 17:50:26 - commands.commands - INFO - Session ID: 4AB7FE61, Received request: {u'vm_id': 358, u'cmd': u'vm_terminate', u'user_id': 85}
+30-Dec-20 17:50:29 - commands.commands - INFO - Session ID: 4AB7FE61, Sended reply: {'action': 'vm terminated'}
+30-Dec-20 17:51:54 - __main__ - INFO - Routing server started
+30-Dec-20 17:51:54 - __main__ - INFO - Worker 2 started
+30-Dec-20 17:51:54 - __main__ - INFO - Worker 3 started
+30-Dec-20 17:51:54 - __main__ - INFO - Worker 1 started
+30-Dec-20 17:51:54 - __main__ - INFO - Worker 0 started
+30-Dec-20 17:51:54 - __main__ - INFO - Worker 4 started
+30-Dec-20 17:52:11 - __main__ - INFO - Worker 2 received  session ID: 2ECB19A3
+30-Dec-20 17:52:11 - commands.commands - INFO - Session ID: 2ECB19A3, Received request: {u'vm_name': u'v1p247.clouds365.host', u'user_id': 85, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.247', u'template_id': 329}
+30-Dec-20 17:52:12 - commands.commands - INFO - Session ID: 2ECB19A3, Sended reply: {'user_id': 85, 'vm_root_password': u'*******', 'vm_id': 359, 'vm_user_password': u'*******', 'vm_user': 'snixr61'}
+30-Dec-20 20:01:02 - __main__ - INFO - Worker 3 received  session ID: D4F0E265
+30-Dec-20 20:01:02 - commands.commands - INFO - Session ID: D4F0E265, Received request: {u'vm_id': 358, u'cmd': u'vm_terminate', u'user_id': 85}
+30-Dec-20 20:01:02 - commands.commands - ERROR - Session ID: D4F0E265, Sended reply: {'error': 'list vm index out of range'}
+30-Dec-20 20:01:14 - __main__ - INFO - Worker 1 received  session ID: 563F9B12
+30-Dec-20 20:01:14 - commands.commands - INFO - Session ID: 563F9B12, Received request: {u'vm_id': 359, u'cmd': u'vm_terminate', u'user_id': 85}
+30-Dec-20 20:01:17 - commands.commands - INFO - Session ID: 563F9B12, Sended reply: {'action': 'vm terminated'}
+30-Dec-20 20:03:12 - __main__ - INFO - Worker 0 received  session ID: F08B5ECD
+30-Dec-20 20:03:12 - commands.commands - INFO - Session ID: F08B5ECD, Received request: {u'vm_name': u'v1p247.clouds365.host', u'user_id': 85, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.247', u'template_id': 329}
+30-Dec-20 20:03:12 - commands.commands - INFO - Session ID: F08B5ECD, Sended reply: {'user_id': 85, 'vm_root_password': u'*******', 'vm_id': 360, 'vm_user_password': u'*******', 'vm_user': 'ldqon05'}
+30-Dec-20 20:33:17 - __main__ - INFO - Routing server started
+30-Dec-20 20:33:17 - __main__ - INFO - Worker 0 started
+30-Dec-20 20:33:17 - __main__ - INFO - Worker 4 started
+30-Dec-20 20:33:17 - __main__ - INFO - Worker 3 started
+30-Dec-20 20:33:17 - __main__ - INFO - Worker 2 started
+30-Dec-20 20:33:17 - __main__ - INFO - Worker 1 started
+30-Dec-20 20:34:19 - __main__ - INFO - Worker 0 received  session ID: 6EB9C185
+30-Dec-20 20:34:19 - commands.commands - INFO - Session ID: 6EB9C185, Received request: {u'vm_name': u'v1p247.clouds365.host', u'user_id': 85, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.246', u'template_id': 348}
+30-Dec-20 20:34:19 - commands.commands - ERROR - Session ID: 6EB9C185, Sended reply: {'error': 'vm with this name already allocated'}
+30-Dec-20 20:34:33 - __main__ - INFO - Worker 4 received  session ID: FC871065
+30-Dec-20 20:34:33 - commands.commands - INFO - Session ID: FC871065, Received request: {u'vm_name': u'v1p246.clouds365.host', u'user_id': 85, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.246', u'template_id': 348}
+30-Dec-20 20:34:33 - commands.commands - INFO - Session ID: FC871065, Sended reply: {'user_id': 85, 'vm_root_password': u'*******', 'vm_id': 361, 'vm_user_password': u'*******', 'vm_user': 'wkrbp07'}
+30-Dec-20 20:42:22 - __main__ - INFO - Worker 3 received  session ID: 9E74C81B
+30-Dec-20 20:42:22 - commands.commands - INFO - Session ID: 9E74C81B, Received request: {u'vm_id': 360, u'cmd': u'vm_terminate', u'user_id': 85}
+30-Dec-20 20:42:25 - commands.commands - INFO - Session ID: 9E74C81B, Sended reply: {'action': 'vm terminated'}
+30-Dec-20 20:42:31 - __main__ - INFO - Worker 2 received  session ID: D6CF80B3
+30-Dec-20 20:42:31 - commands.commands - INFO - Session ID: D6CF80B3, Received request: {u'vm_id': 361, u'cmd': u'vm_terminate', u'user_id': 85}
+30-Dec-20 20:42:34 - commands.commands - INFO - Session ID: D6CF80B3, Sended reply: {'action': 'vm terminated'}
