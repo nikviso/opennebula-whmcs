@@ -53,7 +53,7 @@ def config_parser(config_file):
                    'server_port': config.get('ip_address_port','server_port'),
                    'pidfile': config.get('pid_file','pidfile'),
                    'vm_user': config.get('vm_user_name','vm_user'),
-                   'password_size': config.get('password_vm_users','password_size'),
+                   'password_size': int(config.get('password_vm_users','password_size')),
                    'password_complexity': config.getboolean('password_vm_users','password_complexity'),
                    'loggerconf_file': config.get('logger_config_file','loggerconf_file')
                   }

@@ -3315,3 +3315,434 @@
 28-Dec-20 20:14:45 - __main__ - INFO - Worker 1 received  session ID: 8129630A
 28-Dec-20 20:14:45 - commands.commands - INFO - Session ID: 8129630A, Received request: {u'user_id': 85, u'cmd': u'get_vm_state', u'vm_id': 343}
 28-Dec-20 20:14:45 - commands.commands - INFO - Session ID: 8129630A, Sended reply: {'vm_state': 'ACTIVE', 'vm_id': 343}
+28-Dec-20 21:52:24 - __main__ - INFO - Routing server started
+28-Dec-20 21:52:24 - __main__ - INFO - Worker 0 started
+28-Dec-20 21:52:24 - __main__ - INFO - Worker 3 started
+28-Dec-20 21:52:24 - __main__ - INFO - Worker 1 started
+28-Dec-20 21:52:24 - __main__ - INFO - Worker 4 started
+28-Dec-20 21:52:24 - __main__ - INFO - Worker 2 started
+28-Dec-20 21:53:24 - __main__ - INFO - Worker 0 received  session ID: DB4E1053
+28-Dec-20 21:53:24 - commands.commands - INFO - Session ID: DB4E1053, Received request: {u'action': u'poweroff-hard', u'vm_id': 343, u'cmd': u'vm_action', u'user_id': 85}
+28-Dec-20 21:53:24 - commands.commands - INFO - Session ID: DB4E1053, Sended reply: {'vm_id': 343, 'vm_action': u'poweroff-hard'}
+28-Dec-20 21:54:57 - __main__ - INFO - Worker 3 received  session ID: 91B70DAC
+28-Dec-20 21:54:57 - commands.commands - INFO - Session ID: 91B70DAC, Received request: {u'action': u'resume', u'vm_id': 343, u'cmd': u'vm_action', u'user_id': 85}
+28-Dec-20 21:54:57 - commands.commands - INFO - Session ID: 91B70DAC, Sended reply: {'vm_id': 343, 'vm_action': u'resume'}
+29-Dec-20 13:38:18 - __main__ - INFO - Routing server started
+29-Dec-20 13:38:18 - __main__ - INFO - Worker 1 started
+29-Dec-20 13:38:18 - __main__ - INFO - Worker 0 started
+29-Dec-20 13:38:18 - __main__ - INFO - Worker 4 started
+29-Dec-20 13:38:18 - __main__ - INFO - Worker 2 started
+29-Dec-20 13:38:18 - __main__ - INFO - Worker 3 started
+29-Dec-20 13:38:43 - __main__ - INFO - Routing server started
+29-Dec-20 13:38:43 - __main__ - INFO - Worker 1 started
+29-Dec-20 13:38:43 - __main__ - INFO - Worker 0 started
+29-Dec-20 13:38:43 - __main__ - INFO - Worker 2 started
+29-Dec-20 13:38:43 - __main__ - INFO - Worker 3 started
+29-Dec-20 13:38:43 - __main__ - INFO - Worker 4 started
+29-Dec-20 13:38:44 - __main__ - INFO - Worker 1 received  session ID: F9E52D3B
+29-Dec-20 13:38:44 - commands.commands - INFO - Session ID: F9E52D3B, Received request: {u'action': u'resume', u'vm_id': 343, u'cmd': u'vm_action', u'user_id': 85}
+29-Dec-20 13:38:45 - commands.commands - ERROR - Session ID: F9E52D3B, Sended reply: {'error': '[one.vm.action] Error performing action "resume": This action is not available for state RUNNING'}
+29-Dec-20 13:51:18 - __main__ - INFO - Routing server started
+29-Dec-20 13:51:18 - __main__ - INFO - Worker 0 started
+29-Dec-20 13:51:18 - __main__ - INFO - Worker 1 started
+29-Dec-20 13:51:18 - __main__ - INFO - Worker 3 started
+29-Dec-20 13:51:18 - __main__ - INFO - Worker 4 started
+29-Dec-20 13:51:18 - __main__ - INFO - Worker 2 started
+29-Dec-20 13:51:24 - __main__ - INFO - Worker 0 received  session ID: 09158F46
+29-Dec-20 13:51:24 - commands.commands - INFO - Session ID: 09158F46, Received request: {u'action': u'resume', u'vm_id': 343, u'cmd': u'vm_action', u'user_id': 85}
+29-Dec-20 13:51:24 - commands.commands - ERROR - Session ID: 09158F46, Sended reply: {'error': '[one.vm.action] Error performing action "resume": This action is not available for state RUNNING'}
+29-Dec-20 13:51:59 - __main__ - INFO - Worker 1 received  session ID: 031A9462
+29-Dec-20 13:51:59 - commands.commands - INFO - Session ID: 031A9462, Received request: {u'vm_name': u'v1p246.clouds365.host', u'user_id': 85, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.246', u'template_id': 329}
+29-Dec-20 13:51:59 - commands.commands - ERROR - Session ID: 031A9462, Sended reply: {'error': 'string could not be converted to json'}
+29-Dec-20 13:53:47 - __main__ - INFO - Worker 3 received  session ID: 30BA156F
+29-Dec-20 13:53:47 - commands.commands - INFO - Session ID: 30BA156F, Received request: {u'vm_name': u'v1p246.clouds365.host', u'user_id': 85, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.246', u'template_id': 329}
+29-Dec-20 13:53:47 - commands.commands - ERROR - Session ID: 30BA156F, Sended reply: {'error': 'string could not be converted to json'}
+29-Dec-20 18:19:42 - __main__ - INFO - Routing server started
+29-Dec-20 18:19:42 - __main__ - INFO - Worker 0 started
+29-Dec-20 18:19:42 - __main__ - INFO - Worker 1 started
+29-Dec-20 18:19:42 - __main__ - INFO - Worker 2 started
+29-Dec-20 18:19:42 - __main__ - INFO - Worker 3 started
+29-Dec-20 18:19:42 - __main__ - INFO - Worker 4 started
+29-Dec-20 18:19:44 - __main__ - INFO - Worker 0 received  session ID: 1D8375FA
+29-Dec-20 18:19:44 - commands.commands - INFO - Session ID: 1D8375FA, Received request: {u'vm_name': u'v1p246.clouds365.host', u'user_id': 85, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.246', u'template_id': 329}
+29-Dec-20 18:19:44 - commands.commands - ERROR - Session ID: 1D8375FA, Sended reply: {'error': 'string could not be converted to json'}
+29-Dec-20 18:25:28 - __main__ - INFO - Routing server started
+29-Dec-20 18:25:28 - __main__ - INFO - Worker 1 started
+29-Dec-20 18:25:28 - __main__ - INFO - Worker 2 started
+29-Dec-20 18:25:28 - __main__ - INFO - Worker 0 started
+29-Dec-20 18:25:28 - __main__ - INFO - Worker 4 started
+29-Dec-20 18:25:28 - __main__ - INFO - Worker 3 started
+29-Dec-20 18:25:30 - __main__ - INFO - Worker 1 received  session ID: 3F45EABC
+29-Dec-20 18:25:30 - commands.commands - INFO - Session ID: 3F45EABC, Received request: {u'vm_name': u'v1p246.clouds365.host', u'user_id': 85, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.246', u'template_id': 329}
+29-Dec-20 18:25:30 - commands.commands - ERROR - Session ID: 3F45EABC, Sended reply: {'error': 'string could not be converted to json'}
+29-Dec-20 18:30:08 - __main__ - INFO - Routing server started
+29-Dec-20 18:30:08 - __main__ - INFO - Worker 0 started
+29-Dec-20 18:30:08 - __main__ - INFO - Worker 4 started
+29-Dec-20 18:30:08 - __main__ - INFO - Worker 1 started
+29-Dec-20 18:30:08 - __main__ - INFO - Worker 3 started
+29-Dec-20 18:30:08 - __main__ - INFO - Worker 2 started
+29-Dec-20 18:30:11 - __main__ - INFO - Worker 0 received  session ID: 32C07A18
+29-Dec-20 18:30:11 - commands.commands - INFO - Session ID: 32C07A18, Received request: {u'vm_name': u'v1p246.clouds365.host', u'user_id': 85, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.246', u'template_id': 329}
+29-Dec-20 18:30:11 - commands.commands - ERROR - Session ID: 32C07A18, Sended reply: {'error': 'string could not be converted to json'}
+29-Dec-20 18:32:38 - __main__ - INFO - Routing server started
+29-Dec-20 18:32:38 - __main__ - INFO - Worker 0 started
+29-Dec-20 18:32:38 - __main__ - INFO - Worker 4 started
+29-Dec-20 18:32:38 - __main__ - INFO - Worker 1 started
+29-Dec-20 18:32:38 - __main__ - INFO - Worker 3 started
+29-Dec-20 18:32:38 - __main__ - INFO - Worker 2 started
+29-Dec-20 18:32:41 - __main__ - INFO - Worker 0 received  session ID: FCE201AD
+29-Dec-20 18:32:41 - commands.commands - INFO - Session ID: FCE201AD, Received request: {u'vm_name': u'v1p246.clouds365.host', u'user_id': 85, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.246', u'template_id': 329}
+29-Dec-20 18:32:41 - commands.commands - ERROR - Session ID: FCE201AD, Sended reply: {'error': 'string could not be converted to json'}
+29-Dec-20 18:33:50 - __main__ - INFO - Routing server started
+29-Dec-20 18:33:50 - __main__ - INFO - Worker 2 started
+29-Dec-20 18:33:50 - __main__ - INFO - Worker 3 started
+29-Dec-20 18:33:50 - __main__ - INFO - Worker 0 started
+29-Dec-20 18:33:50 - __main__ - INFO - Worker 4 started
+29-Dec-20 18:33:50 - __main__ - INFO - Worker 1 started
+29-Dec-20 18:33:52 - __main__ - INFO - Worker 2 received  session ID: F3154B6A
+29-Dec-20 18:33:52 - commands.commands - INFO - Session ID: F3154B6A, Received request: {u'vm_name': u'v1p246.clouds365.host', u'user_id': 85, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.246', u'template_id': 329}
+29-Dec-20 18:33:52 - commands.commands - ERROR - Session ID: F3154B6A, Sended reply: {'error': 'string could not be converted to json'}
+29-Dec-20 18:43:07 - __main__ - INFO - Routing server started
+29-Dec-20 18:43:07 - __main__ - INFO - Worker 0 started
+29-Dec-20 18:43:07 - __main__ - INFO - Worker 3 started
+29-Dec-20 18:43:07 - __main__ - INFO - Worker 2 started
+29-Dec-20 18:43:07 - __main__ - INFO - Worker 4 started
+29-Dec-20 18:43:07 - __main__ - INFO - Worker 1 started
+29-Dec-20 18:43:09 - __main__ - INFO - Worker 0 received  session ID: 4381BC92
+29-Dec-20 18:43:09 - commands.commands - INFO - Session ID: 4381BC92, Received request: {u'vm_name': u'v1p246.clouds365.host', u'user_id': 85, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.246', u'template_id': 329}
+29-Dec-20 18:43:09 - commands.commands - ERROR - Session ID: 4381BC92, Sended reply: {'error': ValueError('sample larger than population',)}
+29-Dec-20 18:44:45 - __main__ - INFO - Routing server started
+29-Dec-20 18:44:45 - __main__ - INFO - Worker 0 started
+29-Dec-20 18:44:45 - __main__ - INFO - Worker 3 started
+29-Dec-20 18:44:45 - __main__ - INFO - Worker 2 started
+29-Dec-20 18:44:45 - __main__ - INFO - Worker 1 started
+29-Dec-20 18:44:45 - __main__ - INFO - Worker 4 started
+29-Dec-20 18:44:48 - __main__ - INFO - Worker 0 received  session ID: D342F05E
+29-Dec-20 18:44:48 - commands.commands - INFO - Session ID: D342F05E, Received request: {u'vm_name': u'v1p246.clouds365.host', u'user_id': 85, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.246', u'template_id': 329}
+29-Dec-20 18:44:48 - commands.commands - INFO - Session ID: D342F05E, Sended reply: {'user_id': 85, 'vm_root_password': u'*******', 'vm_id': 344, 'vm_user_password': u'*******', 'vm_user': 'debian'}
+29-Dec-20 18:46:25 - __main__ - INFO - Routing server started
+29-Dec-20 18:46:25 - __main__ - INFO - Worker 2 started
+29-Dec-20 18:46:25 - __main__ - INFO - Worker 4 started
+29-Dec-20 18:46:25 - __main__ - INFO - Worker 3 started
+29-Dec-20 18:46:25 - __main__ - INFO - Worker 0 started
+29-Dec-20 18:46:25 - __main__ - INFO - Worker 1 started
+29-Dec-20 18:46:26 - __main__ - INFO - Worker 2 received  session ID: 132CBE09
+29-Dec-20 18:46:26 - commands.commands - INFO - Session ID: 132CBE09, Received request: {u'vm_name': u'v1p246.clouds365.host', u'user_id': 85, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.246', u'template_id': 329}
+29-Dec-20 18:46:26 - commands.commands - ERROR - Session ID: 132CBE09, Sended reply: {'error': ValueError('sample larger than population',)}
+29-Dec-20 18:46:46 - __main__ - INFO - Worker 4 received  session ID: BD5CFA98
+29-Dec-20 18:46:46 - commands.commands - INFO - Session ID: BD5CFA98, Received request: {u'vm_name': u'v1p246.clouds365.host', u'user_id': 85, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.246', u'template_id': 329}
+29-Dec-20 18:46:46 - commands.commands - ERROR - Session ID: BD5CFA98, Sended reply: {'error': ValueError('sample larger than population',)}
+29-Dec-20 18:49:30 - __main__ - INFO - Routing server started
+29-Dec-20 18:49:30 - __main__ - INFO - Worker 0 started
+29-Dec-20 18:49:30 - __main__ - INFO - Worker 1 started
+29-Dec-20 18:49:30 - __main__ - INFO - Worker 3 started
+29-Dec-20 18:49:30 - __main__ - INFO - Worker 4 started
+29-Dec-20 18:49:30 - __main__ - INFO - Worker 2 started
+29-Dec-20 18:49:33 - __main__ - INFO - Worker 0 received  session ID: 2B9D3ACE
+29-Dec-20 18:49:33 - commands.commands - INFO - Session ID: 2B9D3ACE, Received request: {u'vm_name': u'v1p246.clouds365.host', u'user_id': 85, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.246', u'template_id': 329}
+29-Dec-20 18:49:33 - commands.commands - ERROR - Session ID: 2B9D3ACE, Sended reply: {'error': 'string could not be converted to json'}
+29-Dec-20 18:51:15 - __main__ - INFO - Routing server started
+29-Dec-20 18:51:15 - __main__ - INFO - Worker 0 started
+29-Dec-20 18:51:15 - __main__ - INFO - Worker 2 started
+29-Dec-20 18:51:15 - __main__ - INFO - Worker 3 started
+29-Dec-20 18:51:15 - __main__ - INFO - Worker 1 started
+29-Dec-20 18:51:15 - __main__ - INFO - Worker 4 started
+29-Dec-20 18:51:17 - __main__ - INFO - Worker 0 received  session ID: CA843521
+29-Dec-20 18:51:17 - commands.commands - INFO - Session ID: CA843521, Received request: {u'vm_name': u'v1p246.clouds365.host', u'user_id': 85, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.246', u'template_id': 329}
+29-Dec-20 18:51:18 - commands.commands - ERROR - Session ID: CA843521, Sended reply: {'error': 'string could not be converted to json'}
+29-Dec-20 18:51:41 - __main__ - INFO - Routing server started
+29-Dec-20 18:51:41 - __main__ - INFO - Worker 0 started
+29-Dec-20 18:51:41 - __main__ - INFO - Worker 1 started
+29-Dec-20 18:51:41 - __main__ - INFO - Worker 3 started
+29-Dec-20 18:51:41 - __main__ - INFO - Worker 2 started
+29-Dec-20 18:51:41 - __main__ - INFO - Worker 4 started
+29-Dec-20 18:51:43 - __main__ - INFO - Worker 0 received  session ID: A5EC9041
+29-Dec-20 18:51:43 - commands.commands - INFO - Session ID: A5EC9041, Received request: {u'vm_name': u'v1p246.clouds365.host', u'user_id': 85, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.246', u'template_id': 329}
+29-Dec-20 18:51:43 - commands.commands - ERROR - Session ID: A5EC9041, Sended reply: {'error': 'string could not be converted to json'}
+29-Dec-20 18:52:59 - __main__ - INFO - Routing server started
+29-Dec-20 18:52:59 - __main__ - INFO - Worker 0 started
+29-Dec-20 18:52:59 - __main__ - INFO - Worker 2 started
+29-Dec-20 18:52:59 - __main__ - INFO - Worker 4 started
+29-Dec-20 18:52:59 - __main__ - INFO - Worker 3 started
+29-Dec-20 18:52:59 - __main__ - INFO - Worker 1 started
+29-Dec-20 18:53:01 - __main__ - INFO - Worker 0 received  session ID: 52BA4DF3
+29-Dec-20 18:53:01 - commands.commands - INFO - Session ID: 52BA4DF3, Received request: {u'vm_name': u'v1p246.clouds365.host', u'user_id': 85, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.246', u'template_id': 329}
+29-Dec-20 18:54:23 - __main__ - INFO - Routing server started
+29-Dec-20 18:54:23 - __main__ - INFO - Worker 0 started
+29-Dec-20 18:54:23 - __main__ - INFO - Worker 3 started
+29-Dec-20 18:54:23 - __main__ - INFO - Worker 2 started
+29-Dec-20 18:54:23 - __main__ - INFO - Worker 4 started
+29-Dec-20 18:54:23 - __main__ - INFO - Worker 1 started
+29-Dec-20 18:54:25 - __main__ - INFO - Worker 0 received  session ID: 7A426D9B
+29-Dec-20 18:54:25 - commands.commands - INFO - Session ID: 7A426D9B, Received request: {u'vm_name': u'v1p246.clouds365.host', u'user_id': 85, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.246', u'template_id': 329}
+29-Dec-20 18:54:45 - __main__ - INFO - Worker 1 received  session ID: EF54607A
+29-Dec-20 18:54:45 - commands.commands - INFO - Session ID: EF54607A, Received request: {u'vm_name': u'v1p246.clouds365.host', u'user_id': 85, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.246', u'template_id': 329}
+29-Dec-20 18:55:05 - __main__ - INFO - Worker 3 received  session ID: CF9D870A
+29-Dec-20 18:55:05 - commands.commands - INFO - Session ID: CF9D870A, Received request: {u'vm_name': u'v1p246.clouds365.host', u'user_id': 85, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.246', u'template_id': 329}
+29-Dec-20 18:56:06 - __main__ - INFO - Routing server started
+29-Dec-20 18:56:06 - __main__ - INFO - Worker 1 started
+29-Dec-20 18:56:06 - __main__ - INFO - Worker 2 started
+29-Dec-20 18:56:06 - __main__ - INFO - Worker 3 started
+29-Dec-20 18:56:06 - __main__ - INFO - Worker 0 started
+29-Dec-20 18:56:06 - __main__ - INFO - Worker 4 started
+29-Dec-20 18:56:08 - __main__ - INFO - Worker 1 received  session ID: ADB018F4
+29-Dec-20 18:56:08 - commands.commands - INFO - Session ID: ADB018F4, Received request: {u'vm_name': u'v1p246.clouds365.host', u'user_id': 85, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.246', u'template_id': 329}
+29-Dec-20 18:56:08 - commands.commands - ERROR - Session ID: ADB018F4, Sended reply: {'error': 'sample larger than population'}
+29-Dec-20 18:58:13 - __main__ - INFO - Routing server started
+29-Dec-20 18:58:13 - __main__ - INFO - Worker 0 started
+29-Dec-20 18:58:13 - __main__ - INFO - Worker 3 started
+29-Dec-20 18:58:13 - __main__ - INFO - Worker 1 started
+29-Dec-20 18:58:13 - __main__ - INFO - Worker 2 started
+29-Dec-20 18:58:13 - __main__ - INFO - Worker 4 started
+29-Dec-20 18:58:15 - __main__ - INFO - Worker 0 received  session ID: 3F2B187D
+29-Dec-20 18:58:15 - commands.commands - INFO - Session ID: 3F2B187D, Received request: {u'vm_name': u'v1p246.clouds365.host', u'user_id': 85, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.246', u'template_id': 329}
+29-Dec-20 18:58:15 - commands.commands - ERROR - Session ID: 3F2B187D, Sended reply: {'error': 'sample larger than population'}
+29-Dec-20 19:01:10 - __main__ - INFO - Routing server started
+29-Dec-20 19:01:10 - __main__ - INFO - Worker 2 started
+29-Dec-20 19:01:10 - __main__ - INFO - Worker 4 started
+29-Dec-20 19:01:10 - __main__ - INFO - Worker 0 started
+29-Dec-20 19:01:10 - __main__ - INFO - Worker 3 started
+29-Dec-20 19:01:10 - __main__ - INFO - Worker 1 started
+29-Dec-20 19:01:13 - __main__ - INFO - Worker 2 received  session ID: C37AD0B5
+29-Dec-20 19:01:13 - commands.commands - INFO - Session ID: C37AD0B5, Received request: {u'vm_name': u'v1p246.clouds365.host', u'user_id': 85, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.246', u'template_id': 329}
+29-Dec-20 19:01:13 - commands.commands - ERROR - Session ID: C37AD0B5, Sended reply: {'error': 'sample larger than population'}
+29-Dec-20 19:02:10 - __main__ - INFO - Routing server started
+29-Dec-20 19:02:10 - __main__ - INFO - Worker 1 started
+29-Dec-20 19:02:10 - __main__ - INFO - Worker 0 started
+29-Dec-20 19:02:10 - __main__ - INFO - Worker 3 started
+29-Dec-20 19:02:10 - __main__ - INFO - Worker 4 started
+29-Dec-20 19:02:10 - __main__ - INFO - Worker 2 started
+29-Dec-20 19:02:12 - __main__ - INFO - Worker 1 received  session ID: DC802713
+29-Dec-20 19:02:12 - commands.commands - INFO - Session ID: DC802713, Received request: {u'vm_name': u'v1p246.clouds365.host', u'user_id': 85, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.246', u'template_id': 329}
+29-Dec-20 19:02:32 - __main__ - INFO - Worker 0 received  session ID: DE64C7A9
+29-Dec-20 19:02:32 - commands.commands - INFO - Session ID: DE64C7A9, Received request: {u'vm_name': u'v1p246.clouds365.host', u'user_id': 85, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.246', u'template_id': 329}
+29-Dec-20 19:02:52 - __main__ - INFO - Worker 3 received  session ID: 974F3561
+29-Dec-20 19:02:52 - commands.commands - INFO - Session ID: 974F3561, Received request: {u'vm_name': u'v1p246.clouds365.host', u'user_id': 85, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.246', u'template_id': 329}
+29-Dec-20 19:32:28 - __main__ - INFO - Routing server started
+29-Dec-20 19:32:28 - __main__ - INFO - Worker 0 started
+29-Dec-20 19:32:28 - __main__ - INFO - Worker 2 started
+29-Dec-20 19:32:28 - __main__ - INFO - Worker 1 started
+29-Dec-20 19:32:28 - __main__ - INFO - Worker 4 started
+29-Dec-20 19:32:28 - __main__ - INFO - Worker 3 started
+29-Dec-20 19:32:30 - __main__ - INFO - Worker 0 received  session ID: C0FA1567
+29-Dec-20 19:32:30 - commands.commands - INFO - Session ID: C0FA1567, Received request: {u'vm_name': u'v1p246.clouds365.host', u'user_id': 85, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.246', u'template_id': 329}
+29-Dec-20 19:32:50 - __main__ - INFO - Worker 2 received  session ID: 589370CD
+29-Dec-20 19:32:50 - commands.commands - INFO - Session ID: 589370CD, Received request: {u'vm_name': u'v1p246.clouds365.host', u'user_id': 85, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.246', u'template_id': 329}
+29-Dec-20 19:34:10 - __main__ - INFO - Routing server started
+29-Dec-20 19:34:10 - __main__ - INFO - Worker 0 started
+29-Dec-20 19:34:10 - __main__ - INFO - Worker 1 started
+29-Dec-20 19:34:10 - __main__ - INFO - Worker 4 started
+29-Dec-20 19:34:10 - __main__ - INFO - Worker 2 started
+29-Dec-20 19:34:10 - __main__ - INFO - Worker 3 started
+29-Dec-20 19:34:12 - __main__ - INFO - Worker 0 received  session ID: 20FDCA61
+29-Dec-20 19:34:12 - commands.commands - INFO - Session ID: 20FDCA61, Received request: {u'vm_name': u'v1p246.clouds365.host', u'user_id': 85, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.246', u'template_id': 329}
+29-Dec-20 19:34:12 - commands.commands - ERROR - Session ID: 20FDCA61, Sended reply: {'error': 'sample larger than population'}
+29-Dec-20 19:34:47 - __main__ - INFO - Routing server started
+29-Dec-20 19:34:47 - __main__ - INFO - Worker 0 started
+29-Dec-20 19:34:47 - __main__ - INFO - Worker 2 started
+29-Dec-20 19:34:47 - __main__ - INFO - Worker 3 started
+29-Dec-20 19:34:47 - __main__ - INFO - Worker 1 started
+29-Dec-20 19:34:47 - __main__ - INFO - Worker 4 started
+29-Dec-20 19:34:48 - __main__ - INFO - Worker 0 received  session ID: ADF2950C
+29-Dec-20 19:34:48 - commands.commands - INFO - Session ID: ADF2950C, Received request: {u'vm_name': u'v1p246.clouds365.host', u'user_id': 85, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.246', u'template_id': 329}
+29-Dec-20 19:34:48 - commands.commands - ERROR - Session ID: ADF2950C, Sended reply: {'error': 'sample larger than population'}
+29-Dec-20 19:35:24 - __main__ - INFO - Routing server started
+29-Dec-20 19:35:24 - __main__ - INFO - Worker 1 started
+29-Dec-20 19:35:24 - __main__ - INFO - Worker 0 started
+29-Dec-20 19:35:24 - __main__ - INFO - Worker 3 started
+29-Dec-20 19:35:24 - __main__ - INFO - Worker 2 started
+29-Dec-20 19:35:24 - __main__ - INFO - Worker 4 started
+29-Dec-20 19:35:26 - __main__ - INFO - Worker 1 received  session ID: 7F5286B0
+29-Dec-20 19:35:26 - commands.commands - INFO - Session ID: 7F5286B0, Received request: {u'vm_name': u'v1p246.clouds365.host', u'user_id': 85, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.246', u'template_id': 329}
+29-Dec-20 19:35:26 - commands.commands - ERROR - Session ID: 7F5286B0, Sended reply: {'error': 'sample larger than population'}
+29-Dec-20 19:39:01 - __main__ - INFO - Routing server started
+29-Dec-20 19:39:01 - __main__ - INFO - Worker 0 started
+29-Dec-20 19:39:01 - __main__ - INFO - Worker 3 started
+29-Dec-20 19:39:01 - __main__ - INFO - Worker 4 started
+29-Dec-20 19:39:01 - __main__ - INFO - Worker 2 started
+29-Dec-20 19:39:01 - __main__ - INFO - Worker 1 started
+29-Dec-20 19:39:02 - __main__ - INFO - Worker 0 received  session ID: FE5BD407
+29-Dec-20 19:39:02 - commands.commands - INFO - Session ID: FE5BD407, Received request: {u'vm_name': u'v1p246.clouds365.host', u'user_id': 85, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.246', u'template_id': 329}
+29-Dec-20 19:39:02 - commands.commands - ERROR - Session ID: FE5BD407, Sended reply: {'error': 'sample larger than population'}
+29-Dec-20 19:40:52 - __main__ - INFO - Routing server started
+29-Dec-20 19:40:52 - __main__ - INFO - Worker 0 started
+29-Dec-20 19:40:52 - __main__ - INFO - Worker 2 started
+29-Dec-20 19:40:52 - __main__ - INFO - Worker 3 started
+29-Dec-20 19:40:52 - __main__ - INFO - Worker 4 started
+29-Dec-20 19:40:52 - __main__ - INFO - Worker 1 started
+29-Dec-20 19:40:54 - __main__ - INFO - Worker 0 received  session ID: 81AC2D40
+29-Dec-20 19:40:54 - commands.commands - INFO - Session ID: 81AC2D40, Received request: {u'vm_name': u'v1p246.clouds365.host', u'user_id': 85, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.246', u'template_id': 329}
+29-Dec-20 19:41:14 - __main__ - INFO - Worker 2 received  session ID: 3FE58417
+29-Dec-20 19:41:14 - commands.commands - INFO - Session ID: 3FE58417, Received request: {u'vm_name': u'v1p246.clouds365.host', u'user_id': 85, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.246', u'template_id': 329}
+29-Dec-20 19:41:57 - __main__ - INFO - Routing server started
+29-Dec-20 19:41:57 - __main__ - INFO - Worker 0 started
+29-Dec-20 19:41:57 - __main__ - INFO - Worker 4 started
+29-Dec-20 19:41:57 - __main__ - INFO - Worker 1 started
+29-Dec-20 19:41:57 - __main__ - INFO - Worker 3 started
+29-Dec-20 19:41:57 - __main__ - INFO - Worker 2 started
+29-Dec-20 19:41:59 - __main__ - INFO - Worker 0 received  session ID: 796D580E
+29-Dec-20 19:41:59 - commands.commands - INFO - Session ID: 796D580E, Received request: {u'vm_name': u'v1p246.clouds365.host', u'user_id': 85, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.246', u'template_id': 329}
+29-Dec-20 19:41:59 - commands.commands - ERROR - Session ID: 796D580E, Sended reply: {'error': "global name 'base64' is not defined"}
+29-Dec-20 19:43:19 - __main__ - INFO - Routing server started
+29-Dec-20 19:43:19 - __main__ - INFO - Worker 1 started
+29-Dec-20 19:43:19 - __main__ - INFO - Worker 3 started
+29-Dec-20 19:43:19 - __main__ - INFO - Worker 2 started
+29-Dec-20 19:43:19 - __main__ - INFO - Worker 0 started
+29-Dec-20 19:43:19 - __main__ - INFO - Worker 4 started
+29-Dec-20 19:43:21 - __main__ - INFO - Worker 1 received  session ID: 78091DBF
+29-Dec-20 19:43:21 - commands.commands - INFO - Session ID: 78091DBF, Received request: {u'vm_name': u'v1p246.clouds365.host', u'user_id': 85, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.246', u'template_id': 329}
+29-Dec-20 19:43:21 - commands.commands - ERROR - Session ID: 78091DBF, Sended reply: {'error': 'sample larger than population'}
+29-Dec-20 19:45:15 - __main__ - INFO - Routing server started
+29-Dec-20 19:45:15 - __main__ - INFO - Worker 0 started
+29-Dec-20 19:45:15 - __main__ - INFO - Worker 1 started
+29-Dec-20 19:45:15 - __main__ - INFO - Worker 2 started
+29-Dec-20 19:45:15 - __main__ - INFO - Worker 3 started
+29-Dec-20 19:45:15 - __main__ - INFO - Worker 4 started
+29-Dec-20 19:45:16 - __main__ - INFO - Worker 0 received  session ID: A6C23B08
+29-Dec-20 19:45:16 - commands.commands - INFO - Session ID: A6C23B08, Received request: {u'vm_name': u'v1p246.clouds365.host', u'user_id': 85, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.246', u'template_id': 329}
+29-Dec-20 19:45:16 - commands.commands - ERROR - Session ID: A6C23B08, Sended reply: {'error': 'sample larger than population'}
+29-Dec-20 19:45:47 - __main__ - INFO - Routing server started
+29-Dec-20 19:45:47 - __main__ - INFO - Worker 0 started
+29-Dec-20 19:45:47 - __main__ - INFO - Worker 1 started
+29-Dec-20 19:45:47 - __main__ - INFO - Worker 3 started
+29-Dec-20 19:45:47 - __main__ - INFO - Worker 2 started
+29-Dec-20 19:45:47 - __main__ - INFO - Worker 4 started
+29-Dec-20 19:45:48 - __main__ - INFO - Worker 0 received  session ID: 5B01968D
+29-Dec-20 19:45:48 - commands.commands - INFO - Session ID: 5B01968D, Received request: {u'vm_name': u'v1p246.clouds365.host', u'user_id': 85, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.246', u'template_id': 329}
+29-Dec-20 19:46:17 - __main__ - INFO - Routing server started
+29-Dec-20 19:46:17 - __main__ - INFO - Worker 1 started
+29-Dec-20 19:46:17 - __main__ - INFO - Worker 2 started
+29-Dec-20 19:46:17 - __main__ - INFO - Worker 0 started
+29-Dec-20 19:46:17 - __main__ - INFO - Worker 4 started
+29-Dec-20 19:46:17 - __main__ - INFO - Worker 3 started
+29-Dec-20 19:46:17 - __main__ - INFO - Worker 1 received  session ID: 7E5239DB
+29-Dec-20 19:46:17 - commands.commands - INFO - Session ID: 7E5239DB, Received request: {u'vm_name': u'v1p246.clouds365.host', u'user_id': 85, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.246', u'template_id': 329}
+29-Dec-20 19:46:17 - commands.commands - ERROR - Session ID: 7E5239DB, Sended reply: {'error': "global name 'base64' is not defined"}
+29-Dec-20 19:46:21 - __main__ - INFO - Worker 1 received  session ID: 156CDF4B
+29-Dec-20 19:46:21 - commands.commands - INFO - Session ID: 156CDF4B, Received request: {u'vm_name': u'v1p246.clouds365.host', u'user_id': 85, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.246', u'template_id': 329}
+29-Dec-20 19:46:21 - commands.commands - ERROR - Session ID: 156CDF4B, Sended reply: {'error': "global name 'base64' is not defined"}
+29-Dec-20 19:48:00 - __main__ - INFO - Routing server started
+29-Dec-20 19:48:00 - __main__ - INFO - Worker 2 started
+29-Dec-20 19:48:00 - __main__ - INFO - Worker 4 started
+29-Dec-20 19:48:00 - __main__ - INFO - Worker 1 started
+29-Dec-20 19:48:00 - __main__ - INFO - Worker 3 started
+29-Dec-20 19:48:00 - __main__ - INFO - Worker 0 started
+29-Dec-20 19:48:02 - __main__ - INFO - Worker 2 received  session ID: B0FC5674
+29-Dec-20 19:48:02 - commands.commands - INFO - Session ID: B0FC5674, Received request: {u'vm_name': u'v1p246.clouds365.host', u'user_id': 85, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.246', u'template_id': 329}
+29-Dec-20 19:48:02 - commands.commands - ERROR - Session ID: B0FC5674, Sended reply: {'error': "local variable 'vm_root_password' referenced before assignment"}
+29-Dec-20 19:58:33 - __main__ - INFO - Routing server started
+29-Dec-20 19:58:33 - __main__ - INFO - Worker 0 started
+29-Dec-20 19:58:33 - __main__ - INFO - Worker 2 started
+29-Dec-20 19:58:33 - __main__ - INFO - Worker 1 started
+29-Dec-20 19:58:33 - __main__ - INFO - Worker 3 started
+29-Dec-20 19:58:33 - __main__ - INFO - Worker 4 started
+29-Dec-20 19:58:39 - __main__ - INFO - Worker 0 received  session ID: 6C245AEF
+29-Dec-20 19:58:39 - commands.commands - INFO - Session ID: 6C245AEF, Received request: {u'vm_name': u'v1p246.clouds365.host', u'user_id': 85, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.246', u'template_id': 329}
+29-Dec-20 19:58:39 - commands.commands - ERROR - Session ID: 6C245AEF, Sended reply: {'error': "local variable 'vm_root_password' referenced before assignment"}
+29-Dec-20 19:59:49 - __main__ - INFO - Routing server started
+29-Dec-20 19:59:49 - __main__ - INFO - Worker 1 started
+29-Dec-20 19:59:49 - __main__ - INFO - Worker 0 started
+29-Dec-20 19:59:49 - __main__ - INFO - Worker 2 started
+29-Dec-20 19:59:49 - __main__ - INFO - Worker 4 started
+29-Dec-20 19:59:49 - __main__ - INFO - Worker 3 started
+29-Dec-20 19:59:51 - __main__ - INFO - Worker 1 received  session ID: 7BF24A65
+29-Dec-20 19:59:51 - commands.commands - INFO - Session ID: 7BF24A65, Received request: {u'vm_name': u'v1p246.clouds365.host', u'user_id': 85, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.246', u'template_id': 329}
+29-Dec-20 19:59:51 - commands.commands - ERROR - Session ID: 7BF24A65, Sended reply: {'error': "local variable 'vm_root_password' referenced before assignment"}
+29-Dec-20 20:01:55 - __main__ - INFO - Routing server started
+29-Dec-20 20:01:55 - __main__ - INFO - Worker 1 started
+29-Dec-20 20:01:55 - __main__ - INFO - Worker 4 started
+29-Dec-20 20:01:55 - __main__ - INFO - Worker 0 started
+29-Dec-20 20:01:55 - __main__ - INFO - Worker 3 started
+29-Dec-20 20:01:55 - __main__ - INFO - Worker 2 started
+29-Dec-20 20:01:58 - __main__ - INFO - Worker 1 received  session ID: 69DFA4B7
+29-Dec-20 20:01:58 - commands.commands - INFO - Session ID: 69DFA4B7, Received request: {u'vm_name': u'v1p246.clouds365.host', u'user_id': 85, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.246', u'template_id': 329}
+29-Dec-20 20:01:58 - commands.commands - ERROR - Session ID: 69DFA4B7, Sended reply: {'error': "local variable 'vm_root_password' referenced before assignment"}
+29-Dec-20 20:03:12 - __main__ - INFO - Routing server started
+29-Dec-20 20:03:12 - __main__ - INFO - Worker 4 started
+29-Dec-20 20:03:12 - __main__ - INFO - Worker 2 started
+29-Dec-20 20:03:12 - __main__ - INFO - Worker 1 started
+29-Dec-20 20:03:12 - __main__ - INFO - Worker 3 started
+29-Dec-20 20:03:12 - __main__ - INFO - Worker 0 started
+29-Dec-20 20:03:15 - __main__ - INFO - Worker 4 received  session ID: 25C8EB61
+29-Dec-20 20:03:15 - commands.commands - INFO - Session ID: 25C8EB61, Received request: {u'vm_name': u'v1p246.clouds365.host', u'user_id': 85, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.246', u'template_id': 329}
+29-Dec-20 20:03:15 - commands.commands - ERROR - Session ID: 25C8EB61, Sended reply: {'error': 'sample larger than population'}
+29-Dec-20 20:27:34 - __main__ - INFO - Routing server started
+29-Dec-20 20:27:34 - __main__ - INFO - Worker 0 started
+29-Dec-20 20:27:34 - __main__ - INFO - Worker 1 started
+29-Dec-20 20:27:34 - __main__ - INFO - Worker 4 started
+29-Dec-20 20:27:34 - __main__ - INFO - Worker 3 started
+29-Dec-20 20:27:34 - __main__ - INFO - Worker 2 started
+29-Dec-20 20:27:37 - __main__ - INFO - Worker 0 received  session ID: D1264CAE
+29-Dec-20 20:27:37 - commands.commands - INFO - Session ID: D1264CAE, Received request: {u'vm_name': u'v1p246.clouds365.host', u'user_id': 85, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.246', u'template_id': 329}
+29-Dec-20 20:27:37 - commands.commands - ERROR - Session ID: D1264CAE, Sended reply: {'error': 'sample larger than population'}
+29-Dec-20 20:34:42 - __main__ - INFO - Routing server started
+29-Dec-20 20:34:42 - __main__ - INFO - Worker 4 started
+29-Dec-20 20:34:42 - __main__ - INFO - Worker 0 started
+29-Dec-20 20:34:42 - __main__ - INFO - Worker 1 started
+29-Dec-20 20:34:42 - __main__ - INFO - Worker 2 started
+29-Dec-20 20:34:42 - __main__ - INFO - Worker 3 started
+29-Dec-20 20:34:44 - __main__ - INFO - Worker 4 received  session ID: 1530698A
+29-Dec-20 20:34:44 - commands.commands - INFO - Session ID: 1530698A, Received request: {u'vm_name': u'v1p246.clouds365.host', u'user_id': 85, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.246', u'template_id': 329}
+29-Dec-20 20:34:44 - commands.commands - ERROR - Session ID: 1530698A, Sended reply: {'error': 'sample larger than population'}
+29-Dec-20 20:36:10 - __main__ - INFO - Routing server started
+29-Dec-20 20:36:10 - __main__ - INFO - Worker 0 started
+29-Dec-20 20:36:10 - __main__ - INFO - Worker 1 started
+29-Dec-20 20:36:10 - __main__ - INFO - Worker 3 started
+29-Dec-20 20:36:10 - __main__ - INFO - Worker 4 started
+29-Dec-20 20:36:10 - __main__ - INFO - Worker 2 started
+29-Dec-20 20:36:12 - __main__ - INFO - Worker 0 received  session ID: 534B2E9F
+29-Dec-20 20:36:12 - commands.commands - INFO - Session ID: 534B2E9F, Received request: {u'vm_name': u'v1p246.clouds365.host', u'user_id': 85, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.246', u'template_id': 329}
+29-Dec-20 20:39:11 - __main__ - INFO - Routing server started
+29-Dec-20 20:39:11 - __main__ - INFO - Worker 0 started
+29-Dec-20 20:39:11 - __main__ - INFO - Worker 4 started
+29-Dec-20 20:39:11 - __main__ - INFO - Worker 2 started
+29-Dec-20 20:39:11 - __main__ - INFO - Worker 1 started
+29-Dec-20 20:39:11 - __main__ - INFO - Worker 3 started
+29-Dec-20 20:39:14 - __main__ - INFO - Worker 0 received  session ID: 346B9D1A
+29-Dec-20 20:39:14 - commands.commands - INFO - Session ID: 346B9D1A, Received request: {u'vm_name': u'v1p246.clouds365.host', u'user_id': 85, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.246', u'template_id': 329}
+29-Dec-20 20:39:15 - commands.commands - INFO - Session ID: 346B9D1A, Sended reply: {'user_id': 85, 'vm_root_password': u'*******', 'vm_id': 346, 'vm_user_password': u'*******', 'vm_user': u"'user'"}
+29-Dec-20 20:48:49 - __main__ - INFO - Routing server started
+29-Dec-20 20:48:49 - __main__ - INFO - Worker 2 started
+29-Dec-20 20:48:49 - __main__ - INFO - Worker 1 started
+29-Dec-20 20:48:49 - __main__ - INFO - Worker 3 started
+29-Dec-20 20:48:49 - __main__ - INFO - Worker 4 started
+29-Dec-20 20:48:49 - __main__ - INFO - Worker 0 started
+29-Dec-20 20:48:51 - __main__ - INFO - Worker 2 received  session ID: 9C0A782E
+29-Dec-20 20:48:51 - commands.commands - INFO - Session ID: 9C0A782E, Received request: {u'vm_name': u'v1p246.clouds365.host', u'user_id': 85, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.246', u'template_id': 329}
+29-Dec-20 20:48:51 - commands.commands - INFO - Session ID: 9C0A782E, Sended reply: {'user_id': 85, 'vm_root_password': u'*******', 'vm_id': 347, 'vm_user_password': u'*******', 'vm_user': u'user'}
+29-Dec-20 21:26:16 - __main__ - INFO - Routing server started
+29-Dec-20 21:26:16 - __main__ - INFO - Worker 0 started
+29-Dec-20 21:26:16 - __main__ - INFO - Worker 3 started
+29-Dec-20 21:26:16 - __main__ - INFO - Worker 1 started
+29-Dec-20 21:26:16 - __main__ - INFO - Worker 2 started
+29-Dec-20 21:26:16 - __main__ - INFO - Worker 4 started
+29-Dec-20 21:38:05 - __main__ - INFO - Routing server started
+29-Dec-20 21:38:05 - __main__ - INFO - Worker 3 started
+29-Dec-20 21:38:05 - __main__ - INFO - Worker 0 started
+29-Dec-20 21:38:05 - __main__ - INFO - Worker 2 started
+29-Dec-20 21:38:05 - __main__ - INFO - Worker 1 started
+29-Dec-20 21:38:05 - __main__ - INFO - Worker 4 started
+29-Dec-20 21:38:08 - __main__ - INFO - Worker 3 received  session ID: 604B8C53
+29-Dec-20 21:38:08 - commands.commands - INFO - Session ID: 604B8C53, Received request: {u'vm_name': u'v1p246.clouds365.host', u'user_id': 85, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.246', u'template_id': 329}
+29-Dec-20 21:38:08 - commands.commands - INFO - Session ID: 604B8C53, Sended reply: {'user_id': 85, 'vm_root_password': u'*******', 'vm_id': 348, 'vm_user_password': u'*******', 'vm_user': u'user1'}
+29-Dec-20 21:56:07 - __main__ - INFO - Worker 0 received  session ID: E0CD3AF9
+29-Dec-20 21:56:07 - commands.commands - INFO - Session ID: E0CD3AF9, Received request: {u'vm_id': 348, u'cmd': u'vm_terminate', u'user_id': 85}
+29-Dec-20 21:56:10 - commands.commands - INFO - Session ID: E0CD3AF9, Sended reply: {'action': 'vm terminated'}
+29-Dec-20 22:02:01 - __main__ - INFO - Worker 2 received  session ID: 4021F87E
+29-Dec-20 22:02:01 - commands.commands - INFO - Session ID: 4021F87E, Received request: {u'vm_name': u'v1p246.clouds365.host', u'user_id': 85, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.246', u'template_id': 329}
+29-Dec-20 22:02:02 - commands.commands - INFO - Session ID: 4021F87E, Sended reply: {'user_id': 85, 'vm_root_password': u'*******', 'vm_id': 349, 'vm_user_password': u'*******', 'vm_user': u'user1'}
+29-Dec-20 22:02:30 - __main__ - INFO - Worker 1 received  session ID: 293A8F64
+29-Dec-20 22:02:30 - commands.commands - INFO - Session ID: 293A8F64, Received request: {u'vm_name': u'v1p247.clouds365.host', u'user_id': 85, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.247', u'template_id': 329}
+29-Dec-20 22:02:30 - commands.commands - INFO - Session ID: 293A8F64, Sended reply: {'user_id': 85, 'vm_root_password': u'*******', 'vm_id': 350, 'vm_user_password': u'*******', 'vm_user': u'user1'}
+29-Dec-20 22:03:55 - __main__ - INFO - Worker 4 received  session ID: 9EBAF683
+29-Dec-20 22:03:55 - commands.commands - INFO - Session ID: 9EBAF683, Received request: {u'cmd': u'get_user_info', u'user_id': 85}
+29-Dec-20 22:03:55 - commands.commands - INFO - Session ID: 9EBAF683, Sended reply: {'vms_used': '3', 'user_id': 85, 'vms': '-1', 'running_vms_used': '5'}
+29-Dec-20 22:04:42 - __main__ - INFO - Worker 3 received  session ID: D564293A
+29-Dec-20 22:04:42 - commands.commands - INFO - Session ID: D564293A, Received request: {u'cmd': u'get_all_vm_state', u'user_id': 85}
+29-Dec-20 22:04:42 - commands.commands - INFO - Session ID: D564293A, Sended reply: {u'vms_state': [{u'vm_name': u'v1p247.clouds365.host', u'vm_state': u'ACTIVE', u'vm_id': 350}, {u'vm_name': u'v1p246.clouds365.host', u'vm_state': u'ACTIVE', u'vm_id': 349}, {u'vm_name': u'v1p248.clouds365.host', u'vm_state': u'ACTIVE', u'vm_id': 343}]}
+29-Dec-20 22:05:14 - __main__ - INFO - Worker 0 received  session ID: 74C29A3F
+29-Dec-20 22:05:14 - commands.commands - INFO - Session ID: 74C29A3F, Received request: {u'vm_id': 349, u'cmd': u'vm_terminate', u'user_id': 85}
+29-Dec-20 22:05:17 - commands.commands - INFO - Session ID: 74C29A3F, Sended reply: {'action': 'vm terminated'}
+29-Dec-20 22:05:25 - __main__ - INFO - Worker 2 received  session ID: ED75390B
+29-Dec-20 22:05:25 - commands.commands - INFO - Session ID: ED75390B, Received request: {u'vm_id': 350, u'cmd': u'vm_terminate', u'user_id': 85}
+29-Dec-20 22:05:28 - commands.commands - INFO - Session ID: ED75390B, Sended reply: {'action': 'vm terminated'}

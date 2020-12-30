@@ -3,7 +3,7 @@ import random
 import time
 import logging
 import copy
-#from config import *
+import base64
 
 """
 Configuration for logging
@@ -46,10 +46,11 @@ def command_switcher(json_message, session_id, one, config_params):
         json_reply = cmd_execute(json_dict, one, config_params)
         logging_local("Sended reply" , json_reply, session_id)
         return json_reply
-    except ValueError:
-        logging_local("Sended reply" , {"error": "string could not be converted to json"}, session_id)
-        return {"error": "string could not be converted to json"}
-
+    except ValueError as e:
+        # logging_local("Sended reply" , {"error": "string could not be converted to json"}, session_id)
+        # return {"error": "string could not be converted to json"}
+        logging_local("Sended reply" , {"error":  str(e)}, session_id)
+        return {"error": str(e)}
 
 def logging_local(sendreceive, in_message, session_id):
     out_message = copy.copy(in_message)
@@ -64,7 +65,7 @@ def logging_local(sendreceive, in_message, session_id):
         logger.info("Session ID: %s, %s: %s" % (session_id, sendreceive, out_message))
 
 
-def password_generator(size = 16, complexity = 1):
+def password_generator(size = 16, complexity = True):
     """
     Password generator.
     """    
@@ -72,7 +73,6 @@ def password_generator(size = 16, complexity = 1):
         s = "abcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
     else:
         s = "abcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()?{}[]\/<>.,~"
-    
     return "".join(random.sample(s,size ))
 
 
@@ -124,7 +124,6 @@ def switch_vm_state(state):
         10: "CLONING",
         11: "CLONING_FAILURE"
     }
-    
     return switcher.get(state, "Invalid STATE")
 
 
@@ -198,7 +197,7 @@ def get_vm_state(json_dict, one, config_params):
         }
     else:
         return_message = {"error": "error vm state return"}
-        
+    
     return return_message
 
 
@@ -359,7 +358,7 @@ def template_instantiate(json_dict, one, config_params):
     """
     Instantiates a new virtual machine from a template.
     """
-   
+
     if not (json_dict.get('vm_name') is None):
         vm_name = json_dict['vm_name']
         try:
@@ -420,9 +419,14 @@ def template_instantiate(json_dict, one, config_params):
     else:
         return {"error": "not set network address"}   
     
-    vm_root_password = password_generator(config_params['password_size'], config_params['password_complexity']) # Generating password for root user.
-    vm_user_password = password_generator(config_params['password_size'], config_params['password_complexity']) # Generating password for a simple user.
-
+    try: 
+        password_size = config_params['password_size']
+        password_complexity = config_params['password_complexity']
+        vm_root_password = password_generator(password_size, password_complexity) # Generating password for root user.
+        vm_user_password = password_generator(password_size, password_complexity) # Generating password for a simple user.
+    except Exception as e:
+        return {"error": str(e)}
+        
     # Instantiate a new VM from a tempate
     try:    
         vm_id = one.template.instantiate(template_id, vm_name, False, 
@@ -446,7 +450,7 @@ def template_instantiate(json_dict, one, config_params):
         }}, 
         True)   
     except Exception as e:
-        template_terminate(vm_name, one, True)       
+        template_terminate(vm_name, one, True) 
         return {"error": str(e)}
 
     
@@ -505,7 +509,7 @@ def template_instantiate(json_dict, one, config_params):
             "user_id": user_id,
             "vm_id": vm_id,
             "vm_root_password": vm_root_password,
-            "vm_user": vm_user,
+            "vm_user": config_params['vm_user'],
             "vm_user_password": vm_user_password,
         }
     
@@ -591,8 +595,13 @@ def template_instantiate_user(json_dict, one, config_params):
     session=user_name+":"+user_password
     one_user = pyone.OneServer("http://localhost:2633/RPC2", session)
     
-    vm_root_password = password_generator(config_params['password_size'], config_params['password_complexity']) # Generating password for root user.
-    vm_user_password = password_generator(config_params['password_size'], config_params['password_complexity']) # Generating password for a simple user.
+    try: 
+        password_size = config_params['password_size']
+        password_complexity = config_params['password_complexity']
+        vm_root_password = password_generator(password_size, password_complexity) # Generating password for root user.
+        vm_user_password = password_generator(password_size, password_complexity) # Generating password for a simple user.
+    except Exception as e:
+        return {"error": str(e)}
 
     # Instantiate a new VM from a tempate
     try:    
@@ -654,7 +663,7 @@ def template_instantiate_user(json_dict, one, config_params):
             "user_id": user_id,    
             "vm_id": vm_id,
             "vm_root_password": vm_root_password,
-            "vm_user": vm_user,
+            "vm_user": config_params['vm_user'],
             "vm_user_password": vm_user_password,
         }
 
@@ -762,7 +771,7 @@ def vm_action(json_dict, one, config_params):
     return {"vm_action": action, "vm_id": vm_id,}
 
 
-def get_template_id(template_name, one, config_params):
+def get_template_id(template_name, one):
     """
     Getting TEMPLATE ID by TEMPLATE NAME.
     """
