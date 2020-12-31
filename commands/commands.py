@@ -41,7 +41,7 @@ def command_switcher(json_message, session_id, one, config_params):
             'vm_action': vm_action,
         }
         # Get the function from switcher dictionary
-        cmd_execute = switcher.get(cmd, lambda null_argument: {"error": "invalid command"})
+        cmd_execute = switcher.get(cmd, lambda null_arg0,null_arg1,null_arg2: {"error": "invalid command"})
         # Execute the function
         json_reply = cmd_execute(json_dict, one, config_params)
         logging_local("Sended reply" , json_reply, session_id)

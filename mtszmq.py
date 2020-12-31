@@ -14,6 +14,7 @@ import argparse
 import base64
 from security.aes_cbc import *
 from commands.commands import *
+# from commands.Dispatcher import CommandsDispatcher
 
 def args_parse():
     """
@@ -77,6 +78,7 @@ def worker_routine(url_worker, key, worker_number, config_params, context=None):
     
     logger = logging.getLogger(__name__)    
     AESobj = AESCipher(key)
+    # CDobj = CommandsDispatcher()
     
     # Getting Opennebula sessions credential
     one_auth_file = open(config_params['one_auth_file'],"r")
