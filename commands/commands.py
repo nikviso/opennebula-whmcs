@@ -5,20 +5,13 @@ import logging
 import copy
 import base64
 
-"""
-Configuration for logging
-"""
+
 """
 class CustomFilter(logging.Filter):
     def filter(self, record):
         if 'commands.commands' in getattr(record, 'name', ''):
             return True
         return False
-"""
-logger = logging.getLogger(__name__)
-"""
-f = CustomFilter()
-logger.addFilter(f)
 """
 
 def command_switcher(json_message, session_id, one, config_params):
@@ -52,7 +45,17 @@ def command_switcher(json_message, session_id, one, config_params):
         logging_local("Sended reply" , {"error":  str(e)}, session_id)
         return {"error": str(e)}
 
+
 def logging_local(sendreceive, in_message, session_id):
+    """
+    Logging messages
+    """
+    
+    logger = logging.getLogger(__name__)
+    
+    # f = CustomFilter()
+    # logger.addFilter(f)
+    
     out_message = copy.copy(in_message)
     if 'error' in out_message:
         logger.error("Session ID: %s, %s: %s" % (session_id, sendreceive, out_message))
@@ -63,6 +66,7 @@ def logging_local(sendreceive, in_message, session_id):
             out_message['vm_user_password'] = u'*******'
             out_message['vm_root_password'] = u'*******'            
         logger.info("Session ID: %s, %s: %s" % (session_id, sendreceive, out_message))
+
 
 
 def password_generator(size = 16, complexity = True):

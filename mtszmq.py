@@ -14,7 +14,7 @@ import argparse
 import base64
 from security.aes_cbc import *
 from commands.commands import *
-# from commands.Dispatcher import CommandsDispatcher
+from commands.Dispatcher import CommandsDispatcher
 
 def args_parse():
     """
@@ -78,7 +78,7 @@ def worker_routine(url_worker, key, worker_number, config_params, context=None):
     
     logger = logging.getLogger(__name__)    
     AESobj = AESCipher(key)
-    # CDobj = CommandsDispatcher()
+    CDobj = CommandsDispatcher(config_params)
     
     # Getting Opennebula sessions credential
     one_auth_file = open(config_params['one_auth_file'],"r")
@@ -99,7 +99,7 @@ def worker_routine(url_worker, key, worker_number, config_params, context=None):
         session_id = session_id_generator()
         if json_receive:
             logger.info(("Worker %s received  session ID: %s") % (worker_number, session_id))         
-            json_reply = json.dumps(command_switcher(json_receive, session_id, one, config_params))
+            json_reply = json.dumps(CDobj.command_switcher(json_receive, session_id, one, config_params))
             socket.send(AESobj.encrypt(json_reply))
         else:
             logger.info(("Session ID: %s. Worker %s received a message with an unsupported encryption method. ") % (session_id, worker_number))

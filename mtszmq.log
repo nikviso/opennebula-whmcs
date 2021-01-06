@@ -4140,3 +4140,387 @@
 31-Dec-20 16:34:44 - __main__ - INFO - Worker 0 received  session ID: 1BF6E5D7
 31-Dec-20 16:34:44 - commands.commands - INFO - Session ID: 1BF6E5D7, Received request: {u'cmd': u'get__all_vm_state', u'user_id': 85}
 31-Dec-20 16:34:44 - commands.commands - ERROR - Session ID: 1BF6E5D7, Sended reply: {'error': 'invalid command'}
+31-Dec-20 16:48:22 - __main__ - INFO - Routing server started
+31-Dec-20 16:48:22 - __main__ - INFO - Worker 0 started
+31-Dec-20 16:48:22 - __main__ - INFO - Worker 2 started
+31-Dec-20 16:48:22 - __main__ - INFO - Worker 3 started
+31-Dec-20 16:48:22 - __main__ - INFO - Worker 4 started
+31-Dec-20 16:48:22 - __main__ - INFO - Worker 1 started
+31-Dec-20 16:48:24 - __main__ - INFO - Worker 0 received  session ID: F7D015A4
+31-Dec-20 16:48:24 - commands.commands - INFO - Session ID: F7D015A4, Received request: {u'cmd': u'get__all_vm_state', u'user_id': 85}
+31-Dec-20 16:48:24 - commands.commands - ERROR - Session ID: F7D015A4, Sended reply: {'error': 'invalid command'}
+31-Dec-20 16:51:38 - __main__ - INFO - Worker 2 received  session ID: 041D879B
+31-Dec-20 16:51:38 - commands.commands - INFO - Session ID: 041D879B, Received request: {u'cmd': u'get__all_vm_state', u'user_id': 85}
+31-Dec-20 16:51:38 - commands.commands - ERROR - Session ID: 041D879B, Sended reply: {'error': 'invalid command'}
+31-Dec-20 16:51:54 - __main__ - INFO - Worker 3 received  session ID: 3AD8460B
+31-Dec-20 16:51:54 - commands.commands - INFO - Session ID: 3AD8460B, Received request: {u'cmd': u'get_all_vm_state', u'user_id': 85}
+31-Dec-20 16:51:54 - commands.commands - INFO - Session ID: 3AD8460B, Sended reply: {u'vms_state': [{u'vm_name': u'v1p248.clouds365.host', u'vm_state': u'ACTIVE', u'vm_id': 343}]}
+31-Dec-20 16:52:06 - __main__ - INFO - Worker 4 received  session ID: C239086A
+31-Dec-20 16:52:06 - commands.commands - INFO - Session ID: C239086A, Received request: {u'cmd': u'get_all_vm_state', u'user_id': 85}
+31-Dec-20 16:52:06 - commands.commands - INFO - Session ID: C239086A, Sended reply: {u'vms_state': [{u'vm_name': u'v1p248.clouds365.host', u'vm_state': u'ACTIVE', u'vm_id': 343}]}
+31-Dec-20 16:53:56 - __main__ - INFO - Routing server started
+31-Dec-20 16:53:56 - __main__ - INFO - Worker 4 started
+31-Dec-20 16:53:56 - __main__ - INFO - Worker 1 started
+31-Dec-20 16:53:56 - __main__ - INFO - Worker 0 started
+31-Dec-20 16:53:56 - __main__ - INFO - Worker 3 started
+31-Dec-20 16:53:56 - __main__ - INFO - Worker 2 started
+31-Dec-20 16:53:58 - __main__ - INFO - Worker 4 received  session ID: A8763DE2
+31-Dec-20 16:55:12 - __main__ - INFO - Routing server started
+31-Dec-20 16:55:12 - __main__ - INFO - Worker 1 started
+31-Dec-20 16:55:12 - __main__ - INFO - Worker 2 started
+31-Dec-20 16:55:12 - __main__ - INFO - Worker 4 started
+31-Dec-20 16:55:12 - __main__ - INFO - Worker 3 started
+31-Dec-20 16:55:12 - __main__ - INFO - Worker 0 started
+31-Dec-20 16:55:14 - __main__ - INFO - Worker 1 received  session ID: 7D3B2E45
+31-Dec-20 16:57:07 - __main__ - INFO - Routing server started
+31-Dec-20 16:57:07 - __main__ - INFO - Worker 0 started
+31-Dec-20 16:57:07 - __main__ - INFO - Worker 2 started
+31-Dec-20 16:57:07 - __main__ - INFO - Worker 1 started
+31-Dec-20 16:57:07 - __main__ - INFO - Worker 3 started
+31-Dec-20 16:57:07 - __main__ - INFO - Worker 4 started
+31-Dec-20 16:57:09 - __main__ - INFO - Worker 0 received  session ID: B807FC51
+31-Dec-20 16:57:42 - __main__ - INFO - Worker 2 received  session ID: 8B02AF19
+31-Dec-20 16:59:18 - __main__ - INFO - Routing server started
+31-Dec-20 16:59:18 - __main__ - INFO - Worker 0 started
+31-Dec-20 16:59:18 - __main__ - INFO - Worker 2 started
+31-Dec-20 16:59:18 - __main__ - INFO - Worker 4 started
+31-Dec-20 16:59:18 - __main__ - INFO - Worker 1 started
+31-Dec-20 16:59:18 - __main__ - INFO - Worker 3 started
+31-Dec-20 16:59:25 - __main__ - INFO - Worker 0 received  session ID: C8D04EA2
+31-Dec-20 16:59:25 - commands.commands - INFO - Session ID: C8D04EA2, Received request: {u'cmd': u'get_all_vm_state', u'user_id': 85}
+31-Dec-20 16:59:25 - commands.commands - INFO - Session ID: C8D04EA2, Sended reply: {u'vms_state': [{u'vm_name': u'v1p248.clouds365.host', u'vm_state': u'ACTIVE', u'vm_id': 343}]}
+31-Dec-20 17:54:40 - __main__ - INFO - Routing server started
+31-Dec-20 17:54:40 - __main__ - INFO - Worker 1 started
+31-Dec-20 17:54:40 - __main__ - INFO - Worker 2 started
+31-Dec-20 17:54:40 - __main__ - INFO - Worker 4 started
+31-Dec-20 17:54:40 - __main__ - INFO - Worker 3 started
+31-Dec-20 17:54:40 - __main__ - INFO - Worker 0 started
+31-Dec-20 17:54:59 - __main__ - INFO - Worker 1 received  session ID: D1956F23
+31-Dec-20 17:54:59 - commands.commands - INFO - Session ID: D1956F23, Received request: {u'cmd': u'get_all_vm_state', u'user_id': 85}
+31-Dec-20 17:54:59 - commands.commands - INFO - Session ID: D1956F23, Sended reply: {u'vms_state': [{u'vm_name': u'v1p248.clouds365.host', u'vm_state': u'ACTIVE', u'vm_id': 343}]}
+31-Dec-20 17:56:25 - __main__ - INFO - Routing server started
+31-Dec-20 17:56:25 - __main__ - INFO - Worker 0 started
+31-Dec-20 17:56:25 - __main__ - INFO - Worker 4 started
+31-Dec-20 17:56:25 - __main__ - INFO - Worker 2 started
+31-Dec-20 17:56:25 - __main__ - INFO - Worker 1 started
+31-Dec-20 17:56:25 - __main__ - INFO - Worker 3 started
+31-Dec-20 17:56:32 - __main__ - INFO - Worker 0 received  session ID: 526741BC
+31-Dec-20 17:57:23 - __main__ - INFO - Routing server started
+31-Dec-20 17:57:23 - __main__ - INFO - Worker 1 started
+31-Dec-20 17:57:23 - __main__ - INFO - Worker 0 started
+31-Dec-20 17:57:23 - __main__ - INFO - Worker 2 started
+31-Dec-20 17:57:23 - __main__ - INFO - Worker 4 started
+31-Dec-20 17:57:23 - __main__ - INFO - Worker 3 started
+31-Dec-20 17:57:27 - __main__ - INFO - Worker 1 received  session ID: 8CDFB579
+31-Dec-20 17:57:27 - commands.commands - INFO - Session ID: 8CDFB579, Received request: {u'cmd': u'get_all_vm_state', u'user_id': 85}
+31-Dec-20 17:57:27 - commands.commands - INFO - Session ID: 8CDFB579, Sended reply: {u'vms_state': [{u'vm_name': u'v1p248.clouds365.host', u'vm_state': u'ACTIVE', u'vm_id': 343}]}
+31-Dec-20 17:59:14 - __main__ - INFO - Routing server started
+31-Dec-20 17:59:14 - __main__ - INFO - Worker 0 started
+31-Dec-20 17:59:14 - __main__ - INFO - Worker 1 started
+31-Dec-20 17:59:14 - __main__ - INFO - Worker 2 started
+31-Dec-20 17:59:14 - __main__ - INFO - Worker 3 started
+31-Dec-20 17:59:14 - __main__ - INFO - Worker 4 started
+31-Dec-20 17:59:21 - __main__ - INFO - Worker 0 received  session ID: 407D235F
+31-Dec-20 17:59:21 - commands.commands - INFO - Session ID: 407D235F, Received request: {u'cmd': u'get_all_vm_state', u'user_id': 85}
+31-Dec-20 17:59:21 - commands.commands - INFO - Session ID: 407D235F, Sended reply: {u'vms_state': [{u'vm_name': u'v1p248.clouds365.host', u'vm_state': u'ACTIVE', u'vm_id': 343}]}
+31-Dec-20 18:07:04 - __main__ - INFO - Routing server started
+31-Dec-20 18:07:04 - __main__ - INFO - Worker 0 started
+31-Dec-20 18:07:04 - __main__ - INFO - Worker 1 started
+31-Dec-20 18:07:04 - __main__ - INFO - Worker 4 started
+31-Dec-20 18:07:04 - __main__ - INFO - Worker 3 started
+31-Dec-20 18:07:04 - __main__ - INFO - Worker 2 started
+31-Dec-20 18:07:14 - __main__ - INFO - Worker 0 received  session ID: 98F146B0
+31-Dec-20 18:09:28 - __main__ - INFO - Routing server started
+31-Dec-20 18:09:28 - __main__ - INFO - Worker 0 started
+31-Dec-20 18:09:28 - __main__ - INFO - Worker 4 started
+31-Dec-20 18:09:28 - __main__ - INFO - Worker 3 started
+31-Dec-20 18:09:28 - __main__ - INFO - Worker 1 started
+31-Dec-20 18:09:28 - __main__ - INFO - Worker 2 started
+31-Dec-20 18:09:29 - __main__ - INFO - Worker 0 received  session ID: D0237C9A
+31-Dec-20 18:11:48 - __main__ - INFO - Routing server started
+31-Dec-20 18:11:48 - __main__ - INFO - Worker 0 started
+31-Dec-20 18:11:48 - __main__ - INFO - Worker 1 started
+31-Dec-20 18:11:48 - __main__ - INFO - Worker 2 started
+31-Dec-20 18:11:48 - __main__ - INFO - Worker 3 started
+31-Dec-20 18:11:48 - __main__ - INFO - Worker 4 started
+31-Dec-20 18:11:51 - __main__ - INFO - Worker 0 received  session ID: 4B81FC75
+31-Dec-20 18:21:05 - __main__ - INFO - Routing server started
+31-Dec-20 18:21:05 - __main__ - INFO - Worker 0 started
+31-Dec-20 18:21:05 - __main__ - INFO - Worker 3 started
+31-Dec-20 18:21:05 - __main__ - INFO - Worker 1 started
+31-Dec-20 18:21:05 - __main__ - INFO - Worker 4 started
+31-Dec-20 18:21:05 - __main__ - INFO - Worker 2 started
+31-Dec-20 18:21:07 - __main__ - INFO - Worker 0 received  session ID: 1039BF24
+31-Dec-20 18:23:18 - __main__ - INFO - Routing server started
+31-Dec-20 18:23:18 - __main__ - INFO - Worker 0 started
+31-Dec-20 18:23:18 - __main__ - INFO - Worker 4 started
+31-Dec-20 18:23:18 - __main__ - INFO - Worker 2 started
+31-Dec-20 18:23:18 - __main__ - INFO - Worker 3 started
+31-Dec-20 18:23:18 - __main__ - INFO - Worker 1 started
+31-Dec-20 18:23:19 - __main__ - INFO - Worker 0 received  session ID: 1BE7D496
+31-Dec-20 18:26:21 - __main__ - INFO - Routing server started
+31-Dec-20 18:26:21 - __main__ - INFO - Worker 0 started
+31-Dec-20 18:26:21 - __main__ - INFO - Worker 1 started
+31-Dec-20 18:26:21 - __main__ - INFO - Worker 2 started
+31-Dec-20 18:26:21 - __main__ - INFO - Worker 3 started
+31-Dec-20 18:26:21 - __main__ - INFO - Worker 4 started
+31-Dec-20 18:26:23 - __main__ - INFO - Worker 0 received  session ID: 093F12D6
+31-Dec-20 18:27:16 - __main__ - INFO - Routing server started
+31-Dec-20 18:27:16 - __main__ - INFO - Worker 1 started
+31-Dec-20 18:27:16 - __main__ - INFO - Worker 4 started
+31-Dec-20 18:27:16 - __main__ - INFO - Worker 3 started
+31-Dec-20 18:27:16 - __main__ - INFO - Worker 2 started
+31-Dec-20 18:27:16 - __main__ - INFO - Worker 0 started
+31-Dec-20 18:27:18 - __main__ - INFO - Worker 1 received  session ID: CE02AB76
+31-Dec-20 18:29:19 - __main__ - INFO - Routing server started
+31-Dec-20 18:29:19 - __main__ - INFO - Worker 1 started
+31-Dec-20 18:29:19 - __main__ - INFO - Worker 0 started
+31-Dec-20 18:29:19 - __main__ - INFO - Worker 2 started
+31-Dec-20 18:29:19 - __main__ - INFO - Worker 3 started
+31-Dec-20 18:29:19 - __main__ - INFO - Worker 4 started
+31-Dec-20 18:29:21 - __main__ - INFO - Worker 1 received  session ID: E9AC0346
+31-Dec-20 18:29:21 - commands.commands - INFO - Session ID: E9AC0346, Received request: {u'cmd': u'get_all_vm_state', u'user_id': 85}
+31-Dec-20 18:29:21 - commands.commands - INFO - Session ID: E9AC0346, Sended reply: {u'vms_state': [{u'vm_name': u'v1p248.clouds365.host', u'vm_state': u'ACTIVE', u'vm_id': 343}]}
+31-Dec-20 18:55:59 - __main__ - INFO - Routing server started
+31-Dec-20 18:55:59 - __main__ - INFO - Worker 0 started
+31-Dec-20 18:55:59 - __main__ - INFO - Worker 1 started
+31-Dec-20 18:55:59 - __main__ - INFO - Worker 2 started
+31-Dec-20 18:55:59 - __main__ - INFO - Worker 4 started
+31-Dec-20 18:55:59 - __main__ - INFO - Worker 3 started
+31-Dec-20 18:56:02 - __main__ - INFO - Worker 0 received  session ID: F2AB1650
+31-Dec-20 18:57:20 - __main__ - INFO - Routing server started
+31-Dec-20 18:57:20 - __main__ - INFO - Worker 0 started
+31-Dec-20 18:57:20 - __main__ - INFO - Worker 1 started
+31-Dec-20 18:57:20 - __main__ - INFO - Worker 4 started
+31-Dec-20 18:57:20 - __main__ - INFO - Worker 3 started
+31-Dec-20 18:57:20 - __main__ - INFO - Worker 2 started
+31-Dec-20 18:57:22 - __main__ - INFO - Worker 0 received  session ID: 8A34CB79
+31-Dec-20 18:57:22 - __main__ - INFO - Session ID: 8A34CB79, Received request: {u'cmd': u'get_all_vm_state', u'user_id': 85}
+31-Dec-20 18:57:22 - __main__ - INFO - Session ID: 8A34CB79, Sended reply: {u'vms_state': [{u'vm_name': u'v1p248.clouds365.host', u'vm_state': u'ACTIVE', u'vm_id': 343}]}
+31-Dec-20 18:59:08 - __main__ - INFO - Routing server started
+31-Dec-20 18:59:08 - __main__ - INFO - Worker 0 started
+31-Dec-20 18:59:08 - __main__ - INFO - Worker 3 started
+31-Dec-20 18:59:08 - __main__ - INFO - Worker 1 started
+31-Dec-20 18:59:08 - __main__ - INFO - Worker 2 started
+31-Dec-20 18:59:08 - __main__ - INFO - Worker 4 started
+31-Dec-20 18:59:09 - __main__ - INFO - Worker 0 received  session ID: E390467B
+31-Dec-20 18:59:09 - commands.commands - INFO - Session ID: E390467B, Received request: {u'cmd': u'get_all_vm_state', u'user_id': 85}
+31-Dec-20 18:59:09 - commands.commands - INFO - Session ID: E390467B, Sended reply: {u'vms_state': [{u'vm_name': u'v1p248.clouds365.host', u'vm_state': u'ACTIVE', u'vm_id': 343}]}
+31-Dec-20 19:24:56 - __main__ - INFO - Routing server started
+31-Dec-20 19:24:56 - __main__ - INFO - Worker 0 started
+31-Dec-20 19:24:56 - __main__ - INFO - Worker 2 started
+31-Dec-20 19:24:56 - __main__ - INFO - Worker 3 started
+31-Dec-20 19:24:56 - __main__ - INFO - Worker 4 started
+31-Dec-20 19:24:56 - __main__ - INFO - Worker 1 started
+31-Dec-20 19:24:58 - __main__ - INFO - Worker 0 received  session ID: 0A6B49FE
+31-Dec-20 19:26:19 - __main__ - INFO - Routing server started
+31-Dec-20 19:26:19 - __main__ - INFO - Worker 1 started
+31-Dec-20 19:26:19 - __main__ - INFO - Worker 4 started
+31-Dec-20 19:26:19 - __main__ - INFO - Worker 3 started
+31-Dec-20 19:26:19 - __main__ - INFO - Worker 2 started
+31-Dec-20 19:26:19 - __main__ - INFO - Worker 0 started
+31-Dec-20 19:26:23 - __main__ - INFO - Worker 1 received  session ID: 8156D4FA
+31-Dec-20 19:28:01 - __main__ - INFO - Routing server started
+31-Dec-20 19:28:01 - __main__ - INFO - Worker 0 started
+31-Dec-20 19:28:01 - __main__ - INFO - Worker 1 started
+31-Dec-20 19:28:01 - __main__ - INFO - Worker 4 started
+31-Dec-20 19:28:01 - __main__ - INFO - Worker 2 started
+31-Dec-20 19:28:01 - __main__ - INFO - Worker 3 started
+31-Dec-20 19:28:04 - __main__ - INFO - Worker 0 received  session ID: 3B597FDE
+31-Dec-20 19:30:51 - __main__ - INFO - Routing server started
+31-Dec-20 19:30:51 - __main__ - INFO - Worker 0 started
+31-Dec-20 19:30:51 - __main__ - INFO - Worker 1 started
+31-Dec-20 19:30:51 - __main__ - INFO - Worker 4 started
+31-Dec-20 19:30:51 - __main__ - INFO - Worker 2 started
+31-Dec-20 19:30:51 - __main__ - INFO - Worker 3 started
+31-Dec-20 19:31:33 - __main__ - INFO - Routing server started
+31-Dec-20 19:31:33 - __main__ - INFO - Worker 0 started
+31-Dec-20 19:31:33 - __main__ - INFO - Worker 4 started
+31-Dec-20 19:31:33 - __main__ - INFO - Worker 2 started
+31-Dec-20 19:31:33 - __main__ - INFO - Worker 1 started
+31-Dec-20 19:31:33 - __main__ - INFO - Worker 3 started
+31-Dec-20 19:31:36 - __main__ - INFO - Worker 0 received  session ID: 7D0FE42C
+31-Dec-20 19:34:00 - __main__ - INFO - Routing server started
+31-Dec-20 19:34:00 - __main__ - INFO - Worker 0 started
+31-Dec-20 19:34:00 - __main__ - INFO - Worker 2 started
+31-Dec-20 19:34:00 - __main__ - INFO - Worker 4 started
+31-Dec-20 19:34:00 - __main__ - INFO - Worker 3 started
+31-Dec-20 19:34:00 - __main__ - INFO - Worker 1 started
+31-Dec-20 19:34:05 - __main__ - INFO - Worker 0 received  session ID: 3E1D58A7
+31-Dec-20 20:06:43 - __main__ - INFO - Routing server started
+31-Dec-20 20:06:43 - __main__ - INFO - Worker 2 started
+31-Dec-20 20:06:43 - __main__ - INFO - Worker 0 started
+31-Dec-20 20:06:43 - __main__ - INFO - Worker 1 started
+31-Dec-20 20:06:43 - __main__ - INFO - Worker 4 started
+31-Dec-20 20:06:43 - __main__ - INFO - Worker 3 started
+31-Dec-20 20:06:46 - __main__ - INFO - Worker 1 received  session ID: 41BA3852
+31-Dec-20 20:09:37 - __main__ - INFO - Routing server started
+31-Dec-20 20:09:37 - __main__ - INFO - Worker 0 started
+31-Dec-20 20:09:37 - __main__ - INFO - Worker 1 started
+31-Dec-20 20:09:37 - __main__ - INFO - Worker 2 started
+31-Dec-20 20:09:37 - __main__ - INFO - Worker 4 started
+31-Dec-20 20:09:37 - __main__ - INFO - Worker 3 started
+31-Dec-20 20:09:39 - __main__ - INFO - Worker 0 received  session ID: 59FA04E8
+31-Dec-20 20:16:13 - __main__ - INFO - Routing server started
+31-Dec-20 20:16:13 - __main__ - INFO - Worker 0 started
+31-Dec-20 20:16:13 - __main__ - INFO - Worker 4 started
+31-Dec-20 20:16:13 - __main__ - INFO - Worker 3 started
+31-Dec-20 20:16:13 - __main__ - INFO - Worker 2 started
+31-Dec-20 20:16:13 - __main__ - INFO - Worker 1 started
+31-Dec-20 20:16:15 - __main__ - INFO - Worker 0 received  session ID: C5AD8132
+31-Dec-20 20:16:47 - __main__ - INFO - Routing server started
+31-Dec-20 20:16:47 - __main__ - INFO - Worker 0 started
+31-Dec-20 20:16:47 - __main__ - INFO - Worker 2 started
+31-Dec-20 20:16:47 - __main__ - INFO - Worker 1 started
+31-Dec-20 20:16:47 - __main__ - INFO - Worker 3 started
+31-Dec-20 20:16:47 - __main__ - INFO - Worker 4 started
+31-Dec-20 20:16:48 - __main__ - INFO - Worker 0 received  session ID: A467C5B2
+31-Dec-20 20:17:56 - __main__ - INFO - Routing server started
+31-Dec-20 20:18:15 - __main__ - INFO - Routing server started
+31-Dec-20 20:18:15 - __main__ - INFO - Worker 0 started
+31-Dec-20 20:18:15 - __main__ - INFO - Worker 4 started
+31-Dec-20 20:18:15 - __main__ - INFO - Worker 2 started
+31-Dec-20 20:18:15 - __main__ - INFO - Worker 1 started
+31-Dec-20 20:18:15 - __main__ - INFO - Worker 3 started
+31-Dec-20 20:18:16 - __main__ - INFO - Worker 0 received  session ID: 53461A89
+31-Dec-20 20:22:58 - __main__ - INFO - Routing server started
+31-Dec-20 20:23:24 - __main__ - INFO - Routing server started
+31-Dec-20 20:23:24 - __main__ - INFO - Worker 0 started
+31-Dec-20 20:23:24 - __main__ - INFO - Worker 2 started
+31-Dec-20 20:23:24 - __main__ - INFO - Worker 1 started
+31-Dec-20 20:23:24 - __main__ - INFO - Worker 3 started
+31-Dec-20 20:23:24 - __main__ - INFO - Worker 4 started
+31-Dec-20 20:23:25 - __main__ - INFO - Worker 0 received  session ID: EB5CF980
+31-Dec-20 20:24:16 - __main__ - INFO - Routing server started
+31-Dec-20 20:24:16 - __main__ - INFO - Worker 1 started
+31-Dec-20 20:24:16 - __main__ - INFO - Worker 3 started
+31-Dec-20 20:24:16 - __main__ - INFO - Worker 0 started
+31-Dec-20 20:24:16 - __main__ - INFO - Worker 2 started
+31-Dec-20 20:24:16 - __main__ - INFO - Worker 4 started
+31-Dec-20 20:24:18 - __main__ - INFO - Worker 1 received  session ID: C28F9A5E
+31-Dec-20 20:25:15 - __main__ - INFO - Routing server started
+31-Dec-20 20:25:15 - __main__ - INFO - Worker 1 started
+31-Dec-20 20:25:15 - __main__ - INFO - Worker 0 started
+31-Dec-20 20:25:15 - __main__ - INFO - Worker 4 started
+31-Dec-20 20:25:15 - __main__ - INFO - Worker 2 started
+31-Dec-20 20:25:15 - __main__ - INFO - Worker 3 started
+31-Dec-20 20:25:17 - __main__ - INFO - Worker 1 received  session ID: 762DF50C
+31-Dec-20 21:07:24 - __main__ - INFO - Routing server started
+31-Dec-20 21:07:24 - __main__ - INFO - Worker 0 started
+31-Dec-20 21:07:24 - __main__ - INFO - Worker 4 started
+31-Dec-20 21:07:24 - __main__ - INFO - Worker 2 started
+31-Dec-20 21:07:24 - __main__ - INFO - Worker 3 started
+31-Dec-20 21:07:24 - __main__ - INFO - Worker 1 started
+31-Dec-20 21:07:26 - __main__ - INFO - Worker 0 received  session ID: 745B208D
+31-Dec-20 21:07:55 - __main__ - INFO - Routing server started
+31-Dec-20 21:07:55 - __main__ - INFO - Worker 1 started
+31-Dec-20 21:07:55 - __main__ - INFO - Worker 3 started
+31-Dec-20 21:07:55 - __main__ - INFO - Worker 2 started
+31-Dec-20 21:07:55 - __main__ - INFO - Worker 0 started
+31-Dec-20 21:07:55 - __main__ - INFO - Worker 4 started
+31-Dec-20 21:07:57 - __main__ - INFO - Worker 1 received  session ID: B0EF1924
+31-Dec-20 22:52:03 - __main__ - INFO - Routing server started
+31-Dec-20 22:53:42 - __main__ - INFO - Routing server started
+31-Dec-20 22:54:15 - __main__ - INFO - Routing server started
+31-Dec-20 22:54:15 - __main__ - INFO - Worker 2 started
+31-Dec-20 22:54:15 - __main__ - INFO - Worker 1 started
+31-Dec-20 22:54:15 - __main__ - INFO - Worker 4 started
+31-Dec-20 22:54:15 - __main__ - INFO - Worker 0 started
+31-Dec-20 22:54:15 - __main__ - INFO - Worker 3 started
+31-Dec-20 22:54:17 - __main__ - INFO - Worker 2 received  session ID: 4FABC1E0
+31-Dec-20 22:54:49 - __main__ - INFO - Routing server started
+31-Dec-20 22:54:49 - __main__ - INFO - Worker 0 started
+31-Dec-20 22:54:49 - __main__ - INFO - Worker 2 started
+31-Dec-20 22:54:49 - __main__ - INFO - Worker 1 started
+31-Dec-20 22:54:49 - __main__ - INFO - Worker 3 started
+31-Dec-20 22:54:49 - __main__ - INFO - Worker 4 started
+31-Dec-20 22:54:51 - __main__ - INFO - Worker 0 received  session ID: F8E6ABC9
+31-Dec-20 22:57:59 - __main__ - INFO - Routing server started
+31-Dec-20 22:57:59 - __main__ - INFO - Worker 1 started
+31-Dec-20 22:57:59 - __main__ - INFO - Worker 0 started
+31-Dec-20 22:57:59 - __main__ - INFO - Worker 2 started
+31-Dec-20 22:57:59 - __main__ - INFO - Worker 4 started
+31-Dec-20 22:57:59 - __main__ - INFO - Worker 3 started
+31-Dec-20 22:58:01 - __main__ - INFO - Worker 1 received  session ID: 3142D8FE
+31-Dec-20 22:58:21 - __main__ - INFO - Routing server started
+31-Dec-20 22:58:21 - __main__ - INFO - Worker 2 started
+31-Dec-20 22:58:21 - __main__ - INFO - Worker 4 started
+31-Dec-20 22:58:21 - __main__ - INFO - Worker 3 started
+31-Dec-20 22:58:21 - __main__ - INFO - Worker 1 started
+31-Dec-20 22:58:21 - __main__ - INFO - Worker 0 started
+31-Dec-20 22:58:23 - __main__ - INFO - Worker 2 received  session ID: 753F9E84
+31-Dec-20 22:59:38 - __main__ - INFO - Routing server started
+31-Dec-20 22:59:38 - __main__ - INFO - Worker 4 started
+31-Dec-20 22:59:38 - __main__ - INFO - Worker 2 started
+31-Dec-20 22:59:38 - __main__ - INFO - Worker 1 started
+31-Dec-20 22:59:38 - __main__ - INFO - Worker 0 started
+31-Dec-20 22:59:38 - __main__ - INFO - Worker 3 started
+31-Dec-20 22:59:40 - __main__ - INFO - Worker 4 received  session ID: D2F31C84
+31-Dec-20 23:09:29 - __main__ - INFO - Routing server started
+31-Dec-20 23:09:29 - __main__ - INFO - Worker 3 started
+31-Dec-20 23:09:29 - __main__ - INFO - Worker 0 started
+31-Dec-20 23:09:29 - __main__ - INFO - Worker 4 started
+31-Dec-20 23:09:29 - __main__ - INFO - Worker 1 started
+31-Dec-20 23:09:29 - __main__ - INFO - Worker 2 started
+31-Dec-20 23:09:31 - __main__ - INFO - Worker 3 received  session ID: F5AD2C38
+31-Dec-20 23:10:09 - __main__ - INFO - Routing server started
+31-Dec-20 23:10:09 - __main__ - INFO - Worker 0 started
+31-Dec-20 23:10:09 - __main__ - INFO - Worker 4 started
+31-Dec-20 23:10:09 - __main__ - INFO - Worker 2 started
+31-Dec-20 23:10:09 - __main__ - INFO - Worker 1 started
+31-Dec-20 23:10:09 - __main__ - INFO - Worker 3 started
+31-Dec-20 23:10:11 - __main__ - INFO - Worker 0 received  session ID: C581D2BF
+31-Dec-20 23:13:15 - __main__ - INFO - Routing server started
+31-Dec-20 23:13:15 - __main__ - INFO - Worker 0 started
+31-Dec-20 23:13:15 - __main__ - INFO - Worker 4 started
+31-Dec-20 23:13:15 - __main__ - INFO - Worker 1 started
+31-Dec-20 23:13:15 - __main__ - INFO - Worker 3 started
+31-Dec-20 23:13:15 - __main__ - INFO - Worker 2 started
+31-Dec-20 23:13:20 - __main__ - INFO - Worker 0 received  session ID: 6D820E3A
+31-Dec-20 23:25:50 - __main__ - INFO - Routing server started
+31-Dec-20 23:25:50 - __main__ - INFO - Worker 2 started
+31-Dec-20 23:25:50 - __main__ - INFO - Worker 3 started
+31-Dec-20 23:25:50 - __main__ - INFO - Worker 1 started
+31-Dec-20 23:25:50 - __main__ - INFO - Worker 4 started
+31-Dec-20 23:25:50 - __main__ - INFO - Worker 0 started
+31-Dec-20 23:25:52 - __main__ - INFO - Worker 2 received  session ID: 0E9CD2B7
+31-Dec-20 23:30:33 - __main__ - INFO - Routing server started
+31-Dec-20 23:30:33 - __main__ - INFO - Worker 0 started
+31-Dec-20 23:30:33 - __main__ - INFO - Worker 3 started
+31-Dec-20 23:30:33 - __main__ - INFO - Worker 1 started
+31-Dec-20 23:30:33 - __main__ - INFO - Worker 2 started
+31-Dec-20 23:30:33 - __main__ - INFO - Worker 4 started
+31-Dec-20 23:30:39 - __main__ - INFO - Worker 0 received  session ID: 2879F3AE
+31-Dec-20 23:53:59 - __main__ - INFO - Routing server started
+31-Dec-20 23:53:59 - __main__ - INFO - Worker 0 started
+31-Dec-20 23:53:59 - __main__ - INFO - Worker 3 started
+31-Dec-20 23:53:59 - __main__ - INFO - Worker 2 started
+31-Dec-20 23:53:59 - __main__ - INFO - Worker 4 started
+31-Dec-20 23:53:59 - __main__ - INFO - Worker 1 started
+31-Dec-20 23:55:47 - __main__ - INFO - Routing server started
+31-Dec-20 23:55:47 - __main__ - INFO - Worker 0 started
+31-Dec-20 23:55:47 - __main__ - INFO - Worker 1 started
+31-Dec-20 23:55:47 - __main__ - INFO - Worker 2 started
+31-Dec-20 23:55:47 - __main__ - INFO - Worker 3 started
+31-Dec-20 23:55:47 - __main__ - INFO - Worker 4 started
+31-Dec-20 23:55:49 - __main__ - INFO - Worker 0 received  session ID: 320C8561
+31-Dec-20 23:55:49 - commands.commands - INFO - Session ID: 320C8561, Received request: {u'cmd': u'get_all_vm_state', u'user_id': 85}
+31-Dec-20 23:55:49 - commands.commands - INFO - Session ID: 320C8561, Sended reply: {u'vms_state': [{u'vm_name': u'v1p248.clouds365.host', u'vm_state': u'ACTIVE', u'vm_id': 343}]}
+01-Jan-21 00:37:41 - __main__ - INFO - Routing server started
+01-Jan-21 00:37:41 - __main__ - INFO - Worker 1 started
+01-Jan-21 00:37:41 - __main__ - INFO - Worker 3 started
+01-Jan-21 00:37:41 - __main__ - INFO - Worker 0 started
+01-Jan-21 00:37:41 - __main__ - INFO - Worker 4 started
+01-Jan-21 00:37:41 - __main__ - INFO - Worker 2 started
+01-Jan-21 00:38:17 - __main__ - INFO - Routing server started
+01-Jan-21 00:38:17 - __main__ - INFO - Worker 0 started
+01-Jan-21 00:38:17 - __main__ - INFO - Worker 1 started
+01-Jan-21 00:38:17 - __main__ - INFO - Worker 4 started
+01-Jan-21 00:38:17 - __main__ - INFO - Worker 2 started
+01-Jan-21 00:38:17 - __main__ - INFO - Worker 3 started
+01-Jan-21 00:38:20 - __main__ - INFO - Worker 0 received  session ID: 568CADE9
+01-Jan-21 00:38:20 - commands.Dispatcher - INFO - Session ID: 568CADE9, Received request: {u'cmd': u'get_all_vm_state', u'user_id': 85}
+01-Jan-21 00:38:20 - commands.Dispatcher - INFO - Session ID: 568CADE9, Sended reply: {u'vms_state': [{u'vm_name': u'v1p248.clouds365.host', u'vm_state': u'ACTIVE', u'vm_id': 343}]}
+01-Jan-21 00:38:32 - __main__ - INFO - Worker 1 received  session ID: B2968AF4
+01-Jan-21 00:38:32 - commands.Dispatcher - INFO - Session ID: B2968AF4, Received request: {u'cmd': u'get_all_vm_state', u'user_id': 85}
+01-Jan-21 00:38:32 - commands.Dispatcher - INFO - Session ID: B2968AF4, Sended reply: {u'vms_state': [{u'vm_name': u'v1p248.clouds365.host', u'vm_state': u'ACTIVE', u'vm_id': 343}]}
