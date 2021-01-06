@@ -11,6 +11,7 @@ class CommandsDispatcher(object):
     def __init__(self, config_params):
         self.logger = logging.getLogger(__name__)
 
+
     def command_switcher(self, json_message, session_id, one, config_params):
         """
         Getting command from JSON message. Selecting by command and execute function.  
@@ -42,7 +43,6 @@ class CommandsDispatcher(object):
             return {"error": "string could not be converted to json"}
 
 
-    # @staticmethod
     def logging_local(self, sendreceive, in_message, session_id, ):
         """
         Logging messages
