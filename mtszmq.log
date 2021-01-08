@@ -4524,3 +4524,308 @@
 01-Jan-21 00:38:32 - __main__ - INFO - Worker 1 received  session ID: B2968AF4
 01-Jan-21 00:38:32 - commands.Dispatcher - INFO - Session ID: B2968AF4, Received request: {u'cmd': u'get_all_vm_state', u'user_id': 85}
 01-Jan-21 00:38:32 - commands.Dispatcher - INFO - Session ID: B2968AF4, Sended reply: {u'vms_state': [{u'vm_name': u'v1p248.clouds365.host', u'vm_state': u'ACTIVE', u'vm_id': 343}]}
+08-Jan-21 12:57:52 - __main__ - INFO - Routing server started
+08-Jan-21 12:57:52 - __main__ - INFO - Worker 3 started
+08-Jan-21 12:57:52 - __main__ - INFO - Worker 0 started
+08-Jan-21 12:57:52 - __main__ - INFO - Worker 4 started
+08-Jan-21 12:57:52 - __main__ - INFO - Worker 1 started
+08-Jan-21 12:57:52 - __main__ - INFO - Worker 2 started
+08-Jan-21 12:58:18 - __main__ - INFO - Worker 3 received  session ID: CA976E23
+08-Jan-21 12:58:18 - commands.Dispatcher - INFO - Session ID: CA976E23, Received request: {u'cmd': u'get_all_vm_state', u'user_id': 85}
+08-Jan-21 12:58:18 - commands.Dispatcher - INFO - Session ID: CA976E23, Sended reply: {u'vms_state': [{u'vm_name': u'v1p248.clouds365.host', u'vm_state': u'ACTIVE', u'vm_id': 343}]}
+08-Jan-21 13:00:45 - __main__ - INFO - Routing server started
+08-Jan-21 13:00:45 - __main__ - INFO - Worker 2 started
+08-Jan-21 13:00:45 - __main__ - INFO - Worker 0 started
+08-Jan-21 13:00:45 - __main__ - INFO - Worker 4 started
+08-Jan-21 13:00:45 - __main__ - INFO - Worker 3 started
+08-Jan-21 13:00:45 - __main__ - INFO - Worker 1 started
+08-Jan-21 13:00:51 - __main__ - INFO - Worker 2 received  session ID: 01AF8976
+08-Jan-21 13:00:51 - commands.Dispatcher - INFO - Session ID: 01AF8976, Received request: {u'cmd': u'get_all_vm_state', u'user_id': 85}
+08-Jan-21 13:00:51 - commands.Dispatcher - INFO - Session ID: 01AF8976, Sended reply: {u'vms_state': [{u'vm_name': u'v1p248.clouds365.host', u'vm_state': u'ACTIVE', u'vm_id': 343}]}
+08-Jan-21 13:01:18 - __main__ - INFO - Routing server started
+08-Jan-21 13:01:18 - __main__ - INFO - Worker 0 started
+08-Jan-21 13:01:18 - __main__ - INFO - Worker 4 started
+08-Jan-21 13:01:18 - __main__ - INFO - Worker 1 started
+08-Jan-21 13:01:18 - __main__ - INFO - Worker 2 started
+08-Jan-21 13:01:18 - __main__ - INFO - Worker 3 started
+08-Jan-21 13:01:22 - __main__ - INFO - Worker 0 received  session ID: 296507C3
+08-Jan-21 13:01:22 - commands.Dispatcher - INFO - Session ID: 296507C3, Received request: {u'cmd': u'get_all_vm_state', u'user_id': 85}
+08-Jan-21 13:02:46 - __main__ - INFO - Routing server started
+08-Jan-21 13:02:46 - __main__ - INFO - Worker 0 started
+08-Jan-21 13:02:46 - __main__ - INFO - Worker 1 started
+08-Jan-21 13:02:46 - __main__ - INFO - Worker 2 started
+08-Jan-21 13:02:46 - __main__ - INFO - Worker 3 started
+08-Jan-21 13:02:46 - __main__ - INFO - Worker 4 started
+08-Jan-21 13:02:48 - __main__ - INFO - Worker 0 received  session ID: A297368B
+08-Jan-21 13:06:02 - __main__ - INFO - Routing server started
+08-Jan-21 13:06:02 - __main__ - INFO - Worker 0 started
+08-Jan-21 13:06:02 - __main__ - INFO - Worker 1 started
+08-Jan-21 13:06:02 - __main__ - INFO - Worker 2 started
+08-Jan-21 13:06:02 - __main__ - INFO - Worker 3 started
+08-Jan-21 13:06:02 - __main__ - INFO - Worker 4 started
+08-Jan-21 13:06:05 - __main__ - INFO - Worker 0 received  session ID: 4B6A9FC7
+08-Jan-21 13:08:51 - __main__ - INFO - Routing server started
+08-Jan-21 13:08:51 - __main__ - INFO - Worker 0 started
+08-Jan-21 13:08:51 - __main__ - INFO - Worker 1 started
+08-Jan-21 13:08:51 - __main__ - INFO - Worker 4 started
+08-Jan-21 13:08:51 - __main__ - INFO - Worker 3 started
+08-Jan-21 13:08:52 - __main__ - INFO - Worker 2 started
+08-Jan-21 13:08:53 - __main__ - INFO - Worker 0 received  session ID: 91648FB3
+08-Jan-21 13:08:53 - commands.Dispatcher - INFO - Session ID: 91648FB3, Received request: {u'cmd': u'get_all_vm_state', u'user_id': 85}
+08-Jan-21 13:09:51 - __main__ - INFO - Routing server started
+08-Jan-21 13:09:51 - __main__ - INFO - Worker 0 started
+08-Jan-21 13:09:51 - __main__ - INFO - Worker 1 started
+08-Jan-21 13:09:51 - __main__ - INFO - Worker 4 started
+08-Jan-21 13:09:51 - __main__ - INFO - Worker 3 started
+08-Jan-21 13:09:51 - __main__ - INFO - Worker 2 started
+08-Jan-21 13:09:53 - __main__ - INFO - Worker 0 received  session ID: 0A5389F1
+08-Jan-21 13:09:53 - commands.Dispatcher - INFO - Session ID: 0A5389F1, Received request: {u'cmd': u'get_all_vm_state', u'user_id': 85}
+08-Jan-21 13:13:04 - __main__ - INFO - Routing server started
+08-Jan-21 13:13:04 - __main__ - INFO - Worker 0 started
+08-Jan-21 13:13:04 - __main__ - INFO - Worker 1 started
+08-Jan-21 13:13:04 - __main__ - INFO - Worker 2 started
+08-Jan-21 13:13:04 - __main__ - INFO - Worker 4 started
+08-Jan-21 13:13:04 - __main__ - INFO - Worker 3 started
+08-Jan-21 13:13:07 - __main__ - INFO - Worker 0 received  session ID: 471693ED
+08-Jan-21 13:13:07 - commands.Dispatcher - INFO - Session ID: 471693ED, Received request: {u'cmd': u'get_all_vm_state', u'user_id': 85}
+08-Jan-21 13:13:54 - __main__ - INFO - Routing server started
+08-Jan-21 13:13:54 - __main__ - INFO - Worker 1 started
+08-Jan-21 13:13:54 - __main__ - INFO - Worker 0 started
+08-Jan-21 13:13:54 - __main__ - INFO - Worker 4 started
+08-Jan-21 13:13:54 - __main__ - INFO - Worker 2 started
+08-Jan-21 13:13:54 - __main__ - INFO - Worker 3 started
+08-Jan-21 13:13:56 - __main__ - INFO - Worker 1 received  session ID: 6F8254CA
+08-Jan-21 13:13:56 - commands.Dispatcher - INFO - Session ID: 6F8254CA, Received request: {u'cmd': u'get_all_vm_state', u'user_id': 85}
+08-Jan-21 13:13:56 - commands.Dispatcher - INFO - Session ID: 6F8254CA, Sended reply: {u'vms_state': [{u'vm_name': u'v1p248.clouds365.host', u'vm_state': u'ACTIVE', u'vm_id': 343}]}
+08-Jan-21 13:19:38 - __main__ - INFO - Routing server started
+08-Jan-21 13:19:38 - __main__ - INFO - Worker 2 started
+08-Jan-21 13:19:38 - __main__ - INFO - Worker 1 started
+08-Jan-21 13:19:38 - __main__ - INFO - Worker 4 started
+08-Jan-21 13:19:38 - __main__ - INFO - Worker 0 started
+08-Jan-21 13:19:38 - __main__ - INFO - Worker 3 started
+08-Jan-21 13:19:40 - __main__ - INFO - Worker 2 received  session ID: 0E681FD4
+08-Jan-21 13:19:40 - commands.Dispatcher - INFO - Session ID: 0E681FD4, Received request: {u'cmd': u'get_all_vm_state', u'user_id': 85}
+08-Jan-21 13:19:40 - commands.Dispatcher - INFO - Session ID: 0E681FD4, Sended reply: {u'vms_state': [{u'vm_name': u'v1p248.clouds365.host', u'vm_state': u'ACTIVE', u'vm_id': 343}]}
+08-Jan-21 13:22:05 - __main__ - INFO - Worker 1 received  session ID: FB869C72
+08-Jan-21 13:22:05 - commands.Dispatcher - INFO - Session ID: FB869C72, Received request: {u'user_id': 85, u'cmd': u'get_vm_state', u'vm_id': 343}
+08-Jan-21 13:22:05 - commands.Dispatcher - INFO - Session ID: FB869C72, Sended reply: {'vm_state': 'ACTIVE', 'vm_id': 343}
+08-Jan-21 13:23:24 - __main__ - INFO - Worker 4 received  session ID: 4BFD1308
+08-Jan-21 13:23:24 - commands.Dispatcher - INFO - Session ID: 4BFD1308, Received request: {u'cmd': u'user_delete', u'user_id': 30}
+08-Jan-21 13:23:25 - commands.Dispatcher - INFO - Session ID: 4BFD1308, Sended reply: {'action': 'user and user group deleted', 'user_group_id': 121, 'user_id': 30}
+08-Jan-21 13:24:12 - __main__ - INFO - Worker 0 received  session ID: 18E4639D
+08-Jan-21 13:24:12 - commands.Dispatcher - INFO - Session ID: 18E4639D, Received request: {u'cmd': u'user_delete', u'user_id': 29}
+08-Jan-21 13:24:12 - commands.Dispatcher - INFO - Session ID: 18E4639D, Sended reply: {'action': 'user and user group deleted', 'user_group_id': 120, 'user_id': 29}
+08-Jan-21 13:25:00 - __main__ - INFO - Worker 3 received  session ID: EF1695CA
+08-Jan-21 13:25:00 - commands.Dispatcher - INFO - Session ID: EF1695CA, Received request: {u'cmd': u'get_user_info', u'user_id': 85}
+08-Jan-21 13:25:00 - commands.Dispatcher - INFO - Session ID: EF1695CA, Sended reply: {'vms_used': '1', 'user_id': 85, 'vms': '-1', 'running_vms_used': '3'}
+08-Jan-21 13:25:40 - __main__ - INFO - Worker 2 received  session ID: 79DE1826
+08-Jan-21 13:26:56 - __main__ - INFO - Routing server started
+08-Jan-21 13:26:56 - __main__ - INFO - Worker 0 started
+08-Jan-21 13:26:56 - __main__ - INFO - Worker 3 started
+08-Jan-21 13:26:56 - __main__ - INFO - Worker 1 started
+08-Jan-21 13:26:56 - __main__ - INFO - Worker 2 started
+08-Jan-21 13:26:56 - __main__ - INFO - Worker 4 started
+08-Jan-21 13:27:11 - __main__ - INFO - Worker 0 received  session ID: 07546B2A
+08-Jan-21 13:27:11 - commands.Dispatcher - INFO - Session ID: 07546B2A, Received request: {u'user_id': 85, u'cmd': u'get__vm_state', u'vm_id': 343}
+08-Jan-21 13:27:11 - commands.Dispatcher - ERROR - Session ID: 07546B2A, Sended reply: {'error': 'invalid command'}
+08-Jan-21 13:38:25 - __main__ - INFO - Worker 3 received  session ID: 1CA65F28
+08-Jan-21 13:38:29 - __main__ - INFO - Worker 1 received  session ID: ED03497F
+08-Jan-21 13:38:40 - __main__ - INFO - Worker 0 received  session ID: 4D61AE5C
+08-Jan-21 13:38:59 - __main__ - INFO - Worker 4 received  session ID: 8A94C251
+08-Jan-21 13:39:05 - __main__ - INFO - Worker 2 received  session ID: AED8913F
+08-Jan-21 13:40:50 - __main__ - INFO - Routing server started
+08-Jan-21 13:40:51 - __main__ - INFO - Worker 4 started
+08-Jan-21 13:40:51 - __main__ - INFO - Worker 0 started
+08-Jan-21 13:40:51 - __main__ - INFO - Worker 1 started
+08-Jan-21 13:40:51 - __main__ - INFO - Worker 3 started
+08-Jan-21 13:40:51 - __main__ - INFO - Worker 2 started
+08-Jan-21 13:40:52 - __main__ - INFO - Worker 4 received  session ID: A296BD8F
+08-Jan-21 13:41:38 - __main__ - INFO - Routing server started
+08-Jan-21 13:41:38 - __main__ - INFO - Worker 1 started
+08-Jan-21 13:41:38 - __main__ - INFO - Worker 4 started
+08-Jan-21 13:41:38 - __main__ - INFO - Worker 0 started
+08-Jan-21 13:41:38 - __main__ - INFO - Worker 3 started
+08-Jan-21 13:41:38 - __main__ - INFO - Worker 2 started
+08-Jan-21 13:41:41 - __main__ - INFO - Worker 1 received  session ID: 1C4D5AB7
+08-Jan-21 13:42:09 - __main__ - INFO - Routing server started
+08-Jan-21 13:42:09 - __main__ - INFO - Worker 0 started
+08-Jan-21 13:42:09 - __main__ - INFO - Worker 2 started
+08-Jan-21 13:42:09 - __main__ - INFO - Worker 3 started
+08-Jan-21 13:42:09 - __main__ - INFO - Worker 1 started
+08-Jan-21 13:42:09 - __main__ - INFO - Worker 4 started
+08-Jan-21 13:42:10 - __main__ - INFO - Worker 0 received  session ID: 2596C18D
+08-Jan-21 13:42:10 - commands.Dispatcher - INFO - Session ID: 2596C18D, Received request: {u'user_id': 85, u'cmd': u'get_vm_state', u'vm_id': 343}
+08-Jan-21 13:42:10 - commands.Dispatcher - INFO - Session ID: 2596C18D, Sended reply: {'vm_state': 'ACTIVE', 'vm_id': 343}
+08-Jan-21 13:42:22 - __main__ - INFO - Worker 2 received  session ID: 43EBCF72
+08-Jan-21 13:45:59 - __main__ - INFO - Routing server started
+08-Jan-21 13:45:59 - __main__ - INFO - Worker 1 started
+08-Jan-21 13:45:59 - __main__ - INFO - Worker 0 started
+08-Jan-21 13:45:59 - __main__ - INFO - Worker 3 started
+08-Jan-21 13:45:59 - __main__ - INFO - Worker 2 started
+08-Jan-21 13:45:59 - __main__ - INFO - Worker 4 started
+08-Jan-21 13:46:02 - __main__ - INFO - Worker 1 received  session ID: E2DF5638
+08-Jan-21 13:47:33 - __main__ - INFO - Routing server started
+08-Jan-21 13:47:33 - __main__ - INFO - Worker 1 started
+08-Jan-21 13:47:33 - __main__ - INFO - Worker 4 started
+08-Jan-21 13:47:33 - __main__ - INFO - Worker 3 started
+08-Jan-21 13:47:33 - __main__ - INFO - Worker 0 started
+08-Jan-21 13:47:33 - __main__ - INFO - Worker 2 started
+08-Jan-21 13:47:37 - __main__ - INFO - Worker 1 received  session ID: 3AF2E406
+08-Jan-21 13:49:06 - __main__ - INFO - Routing server started
+08-Jan-21 13:49:06 - __main__ - INFO - Worker 1 started
+08-Jan-21 13:49:06 - __main__ - INFO - Worker 4 started
+08-Jan-21 13:49:06 - __main__ - INFO - Worker 3 started
+08-Jan-21 13:49:06 - __main__ - INFO - Worker 0 started
+08-Jan-21 13:49:06 - __main__ - INFO - Worker 2 started
+08-Jan-21 13:49:09 - __main__ - INFO - Worker 1 received  session ID: 98317EBA
+08-Jan-21 13:49:16 - __main__ - INFO - Routing server started
+08-Jan-21 13:49:16 - __main__ - INFO - Worker 2 started
+08-Jan-21 13:49:16 - __main__ - INFO - Worker 0 started
+08-Jan-21 13:49:16 - __main__ - INFO - Worker 1 started
+08-Jan-21 13:49:16 - __main__ - INFO - Worker 4 started
+08-Jan-21 13:49:16 - __main__ - INFO - Worker 3 started
+08-Jan-21 13:49:17 - __main__ - INFO - Worker 2 received  session ID: 4C382A7B
+08-Jan-21 13:50:21 - __main__ - INFO - Routing server started
+08-Jan-21 13:50:21 - __main__ - INFO - Worker 1 started
+08-Jan-21 13:50:21 - __main__ - INFO - Worker 3 started
+08-Jan-21 13:50:21 - __main__ - INFO - Worker 0 started
+08-Jan-21 13:50:21 - __main__ - INFO - Worker 2 started
+08-Jan-21 13:50:21 - __main__ - INFO - Worker 4 started
+08-Jan-21 13:50:27 - __main__ - INFO - Worker 1 received  session ID: 172540D9
+08-Jan-21 13:52:57 - __main__ - INFO - Routing server started
+08-Jan-21 13:52:57 - __main__ - INFO - Worker 0 started
+08-Jan-21 13:52:57 - __main__ - INFO - Worker 2 started
+08-Jan-21 13:52:57 - __main__ - INFO - Worker 3 started
+08-Jan-21 13:52:57 - __main__ - INFO - Worker 1 started
+08-Jan-21 13:52:57 - __main__ - INFO - Worker 4 started
+08-Jan-21 13:53:00 - __main__ - INFO - Worker 0 received  session ID: 27109DAE
+08-Jan-21 13:55:37 - __main__ - INFO - Routing server started
+08-Jan-21 13:55:37 - __main__ - INFO - Worker 0 started
+08-Jan-21 13:55:37 - __main__ - INFO - Worker 4 started
+08-Jan-21 13:55:37 - __main__ - INFO - Worker 2 started
+08-Jan-21 13:55:37 - __main__ - INFO - Worker 1 started
+08-Jan-21 13:55:37 - __main__ - INFO - Worker 3 started
+08-Jan-21 13:55:41 - __main__ - INFO - Worker 0 received  session ID: 0B527AD9
+08-Jan-21 13:55:41 - commands.Dispatcher - INFO - Session ID: 0B527AD9, error: string could not be converted to json
+08-Jan-21 14:09:17 - __main__ - INFO - Worker 2 received  session ID: 412F6789
+08-Jan-21 14:09:17 - commands.Dispatcher - INFO - Session ID: 412F6789, Received request: {u'user_password': u'*******', u'cmd': u'user_allocate', u'user_name': u'test_user4'}
+08-Jan-21 14:09:18 - commands.Dispatcher - INFO - Session ID: 412F6789, Sended reply: {'user_name': u'test_user4', 'user_id': 86, 'user_group_id_array': [177]}
+08-Jan-21 14:09:34 - __main__ - INFO - Worker 4 received  session ID: D348EB26
+08-Jan-21 14:09:34 - commands.Dispatcher - INFO - Session ID: D348EB26, Received request: {u'user_password': u'*******', u'cmd': u'user_allocate', u'user_name': u'test_user5'}
+08-Jan-21 14:09:35 - commands.Dispatcher - INFO - Session ID: D348EB26, Sended reply: {'user_name': u'test_user5', 'user_id': 87, 'user_group_id_array': [178]}
+08-Jan-21 14:10:08 - __main__ - INFO - Worker 1 received  session ID: 4D569ABE
+08-Jan-21 14:10:08 - commands.Dispatcher - INFO - Session ID: 4D569ABE, Received request: {u'user_password': u'*******', u'cmd': u'user_allocate', u'user_name': u'test_user6', u'user_group_id_array': [100]}
+08-Jan-21 14:10:08 - commands.Dispatcher - INFO - Session ID: 4D569ABE, Sended reply: {'user_name': u'test_user6', 'user_id': 88, 'user_group_id_array': [100]}
+08-Jan-21 14:11:15 - __main__ - INFO - Worker 3 received  session ID: 3C76A91F
+08-Jan-21 14:11:15 - commands.Dispatcher - INFO - Session ID: 3C76A91F, Received request: {u'cmd': u'user_delete', u'user_id': 86}
+08-Jan-21 14:11:15 - commands.Dispatcher - INFO - Session ID: 3C76A91F, Sended reply: {'action': 'user and user group deleted', 'user_group_id': 177, 'user_id': 86}
+08-Jan-21 14:11:26 - __main__ - INFO - Worker 0 received  session ID: 5823AD1F
+08-Jan-21 14:11:26 - commands.Dispatcher - INFO - Session ID: 5823AD1F, Received request: {u'cmd': u'user_delete', u'user_id': 87}
+08-Jan-21 14:11:26 - commands.Dispatcher - INFO - Session ID: 5823AD1F, Sended reply: {'action': 'user and user group deleted', 'user_group_id': 178, 'user_id': 87}
+08-Jan-21 14:11:52 - __main__ - INFO - Routing server started
+08-Jan-21 14:11:52 - __main__ - INFO - Worker 0 started
+08-Jan-21 14:11:52 - __main__ - INFO - Worker 3 started
+08-Jan-21 14:11:52 - __main__ - INFO - Worker 2 started
+08-Jan-21 14:11:52 - __main__ - INFO - Worker 1 started
+08-Jan-21 14:11:52 - __main__ - INFO - Worker 4 started
+08-Jan-21 14:11:53 - __main__ - INFO - Worker 0 received  session ID: A63CB924
+08-Jan-21 14:11:53 - commands.Dispatcher - INFO - Session ID: A63CB924, Received request: {u'cmd': u'user_delete', u'user_id': 88}
+08-Jan-21 14:12:33 - __main__ - INFO - Routing server started
+08-Jan-21 14:12:33 - __main__ - INFO - Worker 0 started
+08-Jan-21 14:12:33 - __main__ - INFO - Worker 4 started
+08-Jan-21 14:12:33 - __main__ - INFO - Worker 1 started
+08-Jan-21 14:12:33 - __main__ - INFO - Worker 2 started
+08-Jan-21 14:12:33 - __main__ - INFO - Worker 3 started
+08-Jan-21 14:12:35 - __main__ - INFO - Worker 0 received  session ID: 9FCB3124
+08-Jan-21 14:12:35 - commands.Dispatcher - INFO - Session ID: 9FCB3124, Received request: {u'cmd': u'user_delete', u'user_id': 88}
+08-Jan-21 14:12:35 - commands.Dispatcher - INFO - Session ID: 9FCB3124, Sended reply: {'action': 'user deleted', 'user_id': 88}
+08-Jan-21 14:13:15 - __main__ - INFO - Routing server started
+08-Jan-21 14:13:15 - __main__ - INFO - Worker 0 started
+08-Jan-21 14:13:15 - __main__ - INFO - Worker 4 started
+08-Jan-21 14:13:15 - __main__ - INFO - Worker 3 started
+08-Jan-21 14:13:15 - __main__ - INFO - Worker 1 started
+08-Jan-21 14:13:15 - __main__ - INFO - Worker 2 started
+08-Jan-21 14:13:26 - __main__ - INFO - Worker 0 received  session ID: 58EC9126
+08-Jan-21 14:13:26 - commands.Dispatcher - INFO - Session ID: 58EC9126, Received request: {u'cmd': u'user_delete', u'user_id': 88}
+08-Jan-21 14:13:26 - commands.Dispatcher - ERROR - Session ID: 58EC9126, Sended reply: {'error': '[one.user.info] Error getting user [88].'}
+08-Jan-21 14:14:06 - __main__ - INFO - Worker 4 received  session ID: FE0B3126
+08-Jan-21 14:14:06 - commands.Dispatcher - INFO - Session ID: FE0B3126, Received request: {u'cmd': u'get_user_info', u'user_id': 85}
+08-Jan-21 14:14:07 - commands.Dispatcher - INFO - Session ID: FE0B3126, Sended reply: {'vms_used': '1', 'user_id': 85, 'vms': '-1', 'running_vms_used': '3'}
+08-Jan-21 14:16:16 - __main__ - INFO - Routing server started
+08-Jan-21 14:16:16 - __main__ - INFO - Worker 0 started
+08-Jan-21 14:16:16 - __main__ - INFO - Worker 2 started
+08-Jan-21 14:16:16 - __main__ - INFO - Worker 1 started
+08-Jan-21 14:16:16 - __main__ - INFO - Worker 3 started
+08-Jan-21 14:16:16 - __main__ - INFO - Worker 4 started
+08-Jan-21 14:16:23 - __main__ - INFO - Worker 0 received  session ID: 9CF8E7D4
+08-Jan-21 14:16:23 - commands.Dispatcher - INFO - Session ID: 9CF8E7D4, Received request: {u'cmd': u'get_user_info', u'user_id': 85}
+08-Jan-21 14:16:23 - commands.Dispatcher - INFO - Session ID: 9CF8E7D4, Sended reply: {'vms_used': '1', 'user_id': 85, 'vms': '-1', 'running_vms_used': '3'}
+08-Jan-21 14:17:18 - __main__ - INFO - Worker 2 received  session ID: A892EF4B
+08-Jan-21 14:17:18 - commands.Dispatcher - INFO - Session ID: A892EF4B, Received request: {u'user_id': 85, u'cmd': u'get_vm_state', u'vm_id': 343}
+08-Jan-21 14:17:18 - commands.Dispatcher - INFO - Session ID: A892EF4B, Sended reply: {'vm_state': 'ACTIVE', 'vm_id': 343}
+08-Jan-21 14:17:57 - __main__ - INFO - Routing server started
+08-Jan-21 14:17:57 - __main__ - INFO - Worker 0 started
+08-Jan-21 14:17:57 - __main__ - INFO - Worker 2 started
+08-Jan-21 14:17:57 - __main__ - INFO - Worker 3 started
+08-Jan-21 14:17:57 - __main__ - INFO - Worker 4 started
+08-Jan-21 14:17:57 - __main__ - INFO - Worker 1 started
+08-Jan-21 14:18:09 - __main__ - INFO - Worker 0 received  session ID: B76C84FD
+08-Jan-21 14:18:09 - commands.Dispatcher - INFO - Session ID: B76C84FD, Received request: {u'cmd': u'get_all_vm_state', u'user_id': 85}
+08-Jan-21 14:18:09 - commands.Dispatcher - INFO - Session ID: B76C84FD, Sended reply: {u'vms_state': [{u'vm_name': u'v1p248.clouds365.host', u'vm_state': u'ACTIVE', u'vm_id': 343}]}
+08-Jan-21 14:18:34 - __main__ - INFO - Worker 2 received  session ID: D46BF125
+08-Jan-21 14:18:34 - commands.Dispatcher - INFO - Session ID: D46BF125, error: string could not be converted to json
+08-Jan-21 14:19:58 - __main__ - INFO - Routing server started
+08-Jan-21 14:19:58 - __main__ - INFO - Worker 2 started
+08-Jan-21 14:19:58 - __main__ - INFO - Worker 1 started
+08-Jan-21 14:19:58 - __main__ - INFO - Worker 4 started
+08-Jan-21 14:19:58 - __main__ - INFO - Worker 3 started
+08-Jan-21 14:19:58 - __main__ - INFO - Worker 0 started
+08-Jan-21 14:20:11 - __main__ - INFO - Worker 2 received  session ID: 347D2C10
+08-Jan-21 14:20:11 - commands.Dispatcher - INFO - Session ID: 347D2C10, Received request: {u'user_id': 85, u'cmd': u'get_vm_state', u'vm_id': 343}
+08-Jan-21 14:20:32 - __main__ - INFO - Routing server started
+08-Jan-21 14:20:32 - __main__ - INFO - Worker 4 started
+08-Jan-21 14:20:32 - __main__ - INFO - Worker 0 started
+08-Jan-21 14:20:32 - __main__ - INFO - Worker 1 started
+08-Jan-21 14:20:32 - __main__ - INFO - Worker 2 started
+08-Jan-21 14:20:32 - __main__ - INFO - Worker 3 started
+08-Jan-21 14:20:33 - __main__ - INFO - Worker 4 received  session ID: C73064A9
+08-Jan-21 14:20:33 - commands.Dispatcher - INFO - Session ID: C73064A9, Received request: {u'user_id': 85, u'cmd': u'get_vm_state', u'vm_id': 343}
+08-Jan-21 14:21:04 - __main__ - INFO - Routing server started
+08-Jan-21 14:21:04 - __main__ - INFO - Worker 0 started
+08-Jan-21 14:21:04 - __main__ - INFO - Worker 1 started
+08-Jan-21 14:21:04 - __main__ - INFO - Worker 2 started
+08-Jan-21 14:21:04 - __main__ - INFO - Worker 4 started
+08-Jan-21 14:21:04 - __main__ - INFO - Worker 3 started
+08-Jan-21 14:21:05 - __main__ - INFO - Worker 0 received  session ID: 3F85BE92
+08-Jan-21 14:21:05 - commands.Dispatcher - INFO - Session ID: 3F85BE92, Received request: {u'user_id': 85, u'cmd': u'get_vm_state', u'vm_id': 343}
+08-Jan-21 14:21:05 - commands.Dispatcher - INFO - Session ID: 3F85BE92, Sended reply: {'vm_state': 'ACTIVE', 'vm_id': 343}
+08-Jan-21 14:21:21 - __main__ - INFO - Worker 1 received  session ID: 8260ECF5
+08-Jan-21 14:21:21 - commands.Dispatcher - INFO - Session ID: 8260ECF5, Received request: {u'cmd': u'get_all_vm_state', u'user_id': 85}
+08-Jan-21 14:21:21 - commands.Dispatcher - INFO - Session ID: 8260ECF5, Sended reply: {u'vms_state': [{u'vm_name': u'v1p248.clouds365.host', u'vm_state': u'ACTIVE', u'vm_id': 343}]}
+08-Jan-21 14:21:36 - __main__ - INFO - Worker 2 received  session ID: 71DAE64F
+08-Jan-21 14:21:36 - commands.Dispatcher - INFO - Session ID: 71DAE64F, Received request: {u'cmd': u'get_user_info', u'user_id': 85}
+08-Jan-21 14:21:36 - commands.Dispatcher - INFO - Session ID: 71DAE64F, Sended reply: {'vms_used': '1', 'user_id': 85, 'vms': '-1', 'running_vms_used': '3'}
+08-Jan-21 14:22:02 - __main__ - INFO - Worker 4 received  session ID: 19A75362
+08-Jan-21 14:22:02 - commands.Dispatcher - INFO - Session ID: 19A75362, Received request: {u'user_password': u'*******', u'cmd': u'user_allocate', u'user_name': u'test_user4'}
+08-Jan-21 14:22:02 - commands.Dispatcher - INFO - Session ID: 19A75362, Sended reply: {'user_name': u'test_user4', 'user_id': 89, 'user_group_id_array': [179]}
+08-Jan-21 14:22:18 - __main__ - INFO - Worker 3 received  session ID: 57036184
+08-Jan-21 14:22:18 - commands.Dispatcher - INFO - Session ID: 57036184, Received request: {u'user_password': u'*******', u'cmd': u'user_allocate', u'user_name': u'test_user5', u'user_group_id_array': [100]}
+08-Jan-21 14:22:18 - commands.Dispatcher - INFO - Session ID: 57036184, Sended reply: {'user_name': u'test_user5', 'user_id': 90, 'user_group_id_array': [100]}
+08-Jan-21 14:23:00 - __main__ - INFO - Worker 0 received  session ID: AC2E780B
+08-Jan-21 14:23:00 - commands.Dispatcher - INFO - Session ID: AC2E780B, Received request: {u'cmd': u'user_delete', u'user_id': 89}
+08-Jan-21 14:23:00 - commands.Dispatcher - INFO - Session ID: AC2E780B, Sended reply: {'action': 'user and user group deleted', 'user_group_id': 179, 'user_id': 89}
+08-Jan-21 14:23:11 - __main__ - INFO - Worker 1 received  session ID: 3D0EFC9B
+08-Jan-21 14:23:11 - commands.Dispatcher - INFO - Session ID: 3D0EFC9B, Received request: {u'cmd': u'user_delete', u'user_id': 90}
+08-Jan-21 14:23:11 - commands.Dispatcher - INFO - Session ID: 3D0EFC9B, Sended reply: {'action': 'user deleted', 'user_id': 90}
+08-Jan-21 14:23:38 - __main__ - INFO - Worker 2 received  session ID: 2AFD5049
+08-Jan-21 14:23:38 - commands.Dispatcher - INFO - Session ID: 2AFD5049, Received request: {u'cmd': u'get_all_vm_state', u'user_id': 85}
+08-Jan-21 14:23:38 - commands.Dispatcher - INFO - Session ID: 2AFD5049, Sended reply: {u'vms_state': [{u'vm_name': u'v1p248.clouds365.host', u'vm_state': u'ACTIVE', u'vm_id': 343}]}
+08-Jan-21 14:44:44 - __main__ - INFO - Routing server started
+08-Jan-21 14:44:44 - __main__ - INFO - Worker 1 started
+08-Jan-21 14:44:44 - __main__ - INFO - Worker 2 started
+08-Jan-21 14:44:44 - __main__ - INFO - Worker 0 started
+08-Jan-21 14:44:44 - __main__ - INFO - Worker 4 started
+08-Jan-21 14:44:44 - __main__ - INFO - Worker 3 started
+08-Jan-21 14:44:47 - __main__ - INFO - Worker 1 received  session ID: 71D24A06
+08-Jan-21 14:44:47 - commands.Dispatcher - INFO - Session ID: 71D24A06, Received request: {u'cmd': u'get_all_vm_state', u'user_id': 85}
+08-Jan-21 14:44:47 - commands.Dispatcher - INFO - Session ID: 71D24A06, Sended reply: {u'vms_state': [{u'vm_name': u'v1p248.clouds365.host', u'vm_state': u'ACTIVE', u'vm_id': 343}]}

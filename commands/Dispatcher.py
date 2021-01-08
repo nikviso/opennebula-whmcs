@@ -2,6 +2,8 @@ import json
 import logging
 import copy
 from Commands import *
+from VM import *
+from Users import *
 
 class CommandsDispatcher(object):
     """
@@ -16,19 +18,25 @@ class CommandsDispatcher(object):
         """
         Getting command from JSON message. Selecting by command and execute function.  
         """
-
+        
+        UsersObj = Users()
+        VMobj = VM()
+        
         try:
             json_dict = json.loads(json_message)
+            if not json_dict:
+                self.logger.info("Session ID: %s, error: string could not be converted to json" %session_id)
+                return {"error": "string could not be converted to json"}
             self.logging_local("Received request" , json_dict, session_id)
             cmd =  json_dict['cmd']
             switcher = {
-                'get_vm_state': get_vm_state,
-                'get_all_vm_state': get_all_vm_state,
-                'get_user_info': get_user_info,
-                'user_allocate': user_allocate,
-                'user_delete': user_delete,
+                'user_allocate': UsersObj.user_allocate,
+                'user_delete': UsersObj.user_delete,
+                'get_user_info': UsersObj.get_user_info,
+                'get_all_vm_state': UsersObj.get_all_vm_state,
+                'get_vm_state': UsersObj.get_vm_state,
                 'template_instantiate': template_instantiate,
-                #'template_instantiate_user': template_instantiate_user,
+                # 'template_instantiate_user': template_instantiate_user,
                 'vm_terminate': vm_terminate,
                 'vm_action': vm_action,
             }
