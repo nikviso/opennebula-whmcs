@@ -4829,3 +4829,143 @@
 08-Jan-21 14:44:47 - __main__ - INFO - Worker 1 received  session ID: 71D24A06
 08-Jan-21 14:44:47 - commands.Dispatcher - INFO - Session ID: 71D24A06, Received request: {u'cmd': u'get_all_vm_state', u'user_id': 85}
 08-Jan-21 14:44:47 - commands.Dispatcher - INFO - Session ID: 71D24A06, Sended reply: {u'vms_state': [{u'vm_name': u'v1p248.clouds365.host', u'vm_state': u'ACTIVE', u'vm_id': 343}]}
+08-Jan-21 16:43:10 - __main__ - INFO - Routing server started
+08-Jan-21 16:43:10 - __main__ - INFO - Worker 0 started
+08-Jan-21 16:43:10 - __main__ - INFO - Worker 1 started
+08-Jan-21 16:43:10 - __main__ - INFO - Worker 4 started
+08-Jan-21 16:43:10 - __main__ - INFO - Worker 3 started
+08-Jan-21 16:43:10 - __main__ - INFO - Worker 2 started
+08-Jan-21 16:43:13 - __main__ - INFO - Worker 0 received  session ID: A5691B3D
+08-Jan-21 16:43:13 - commands.Dispatcher - INFO - Session ID: A5691B3D, Received request: {u'vm_name': u'v1p246.clouds365.host', u'user_id': 85, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.246', u'template_id': 348}
+08-Jan-21 17:01:33 - __main__ - INFO - Routing server started
+08-Jan-21 17:01:33 - __main__ - INFO - Worker 1 started
+08-Jan-21 17:01:33 - __main__ - INFO - Worker 2 started
+08-Jan-21 17:01:33 - __main__ - INFO - Worker 3 started
+08-Jan-21 17:01:33 - __main__ - INFO - Worker 0 started
+08-Jan-21 17:01:33 - __main__ - INFO - Worker 4 started
+08-Jan-21 17:01:35 - __main__ - INFO - Worker 1 received  session ID: CB31F80D
+08-Jan-21 17:01:35 - commands.Dispatcher - INFO - Session ID: CB31F80D, Received request: {u'vm_name': u'v1p246.clouds365.host', u'user_id': 85, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.246', u'template_id': 348}
+08-Jan-21 17:02:27 - __main__ - INFO - Routing server started
+08-Jan-21 17:02:27 - __main__ - INFO - Worker 4 started
+08-Jan-21 17:02:27 - __main__ - INFO - Worker 0 started
+08-Jan-21 17:02:27 - __main__ - INFO - Worker 2 started
+08-Jan-21 17:02:27 - __main__ - INFO - Worker 1 started
+08-Jan-21 17:02:27 - __main__ - INFO - Worker 3 started
+08-Jan-21 17:02:29 - __main__ - INFO - Worker 4 received  session ID: 7F96EC5A
+08-Jan-21 17:02:29 - commands.Dispatcher - INFO - Session ID: 7F96EC5A, Received request: {u'vm_name': u'v1p246.clouds365.host', u'user_id': 85, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.246', u'template_id': 348}
+08-Jan-21 17:02:49 - __main__ - INFO - Worker 0 received  session ID: DE073C25
+08-Jan-21 17:02:49 - commands.Dispatcher - INFO - Session ID: DE073C25, Received request: {u'vm_name': u'v1p246.clouds365.host', u'user_id': 85, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.246', u'template_id': 348}
+08-Jan-21 17:13:24 - __main__ - INFO - Routing server started
+08-Jan-21 17:13:24 - __main__ - INFO - Worker 1 started
+08-Jan-21 17:13:24 - __main__ - INFO - Worker 3 started
+08-Jan-21 17:13:24 - __main__ - INFO - Worker 0 started
+08-Jan-21 17:13:24 - __main__ - INFO - Worker 4 started
+08-Jan-21 17:13:24 - __main__ - INFO - Worker 2 started
+08-Jan-21 17:13:26 - __main__ - INFO - Worker 1 received  session ID: 4C80DB69
+08-Jan-21 17:13:26 - commands.Dispatcher - INFO - Session ID: 4C80DB69, Received request: {u'vm_name': u'v1p246.clouds365.host', u'user_id': 85, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.246', u'template_id': 348}
+08-Jan-21 17:15:31 - __main__ - INFO - Routing server started
+08-Jan-21 17:15:31 - __main__ - INFO - Worker 1 started
+08-Jan-21 17:15:31 - __main__ - INFO - Worker 2 started
+08-Jan-21 17:15:31 - __main__ - INFO - Worker 0 started
+08-Jan-21 17:15:31 - __main__ - INFO - Worker 3 started
+08-Jan-21 17:15:31 - __main__ - INFO - Worker 4 started
+08-Jan-21 17:15:33 - __main__ - INFO - Worker 1 received  session ID: 7C18DF9B
+08-Jan-21 17:15:33 - commands.Dispatcher - INFO - Session ID: 7C18DF9B, Received request: {u'vm_name': u'v1p246.clouds365.host', u'user_id': 85, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.246', u'template_id': 348}
+08-Jan-21 17:16:00 - __main__ - INFO - Routing server started
+08-Jan-21 17:16:00 - __main__ - INFO - Worker 0 started
+08-Jan-21 17:16:00 - __main__ - INFO - Worker 3 started
+08-Jan-21 17:16:00 - __main__ - INFO - Worker 1 started
+08-Jan-21 17:16:00 - __main__ - INFO - Worker 4 started
+08-Jan-21 17:16:00 - __main__ - INFO - Worker 2 started
+08-Jan-21 17:16:01 - __main__ - INFO - Worker 0 received  session ID: 543A9D26
+08-Jan-21 17:16:01 - commands.Dispatcher - INFO - Session ID: 543A9D26, Received request: {u'vm_name': u'v1p246.clouds365.host', u'user_id': 85, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.246', u'template_id': 348}
+08-Jan-21 18:40:27 - __main__ - INFO - Routing server started
+08-Jan-21 18:40:27 - __main__ - INFO - Worker 1 started
+08-Jan-21 18:40:27 - __main__ - INFO - Worker 4 started
+08-Jan-21 18:40:27 - __main__ - INFO - Worker 3 started
+08-Jan-21 18:40:27 - __main__ - INFO - Worker 2 started
+08-Jan-21 18:40:27 - __main__ - INFO - Worker 0 started
+08-Jan-21 18:40:29 - __main__ - INFO - Worker 1 received  session ID: 406D91FE
+08-Jan-21 18:40:29 - commands.Dispatcher - INFO - Session ID: 406D91FE, Received request: {u'vm_name': u'v1p246.clouds365.host', u'user_id': 85, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.246', u'template_id': 348}
+08-Jan-21 18:51:37 - __main__ - INFO - Routing server started
+08-Jan-21 18:51:37 - __main__ - INFO - Worker 1 started
+08-Jan-21 18:51:37 - __main__ - INFO - Worker 3 started
+08-Jan-21 18:51:37 - __main__ - INFO - Worker 0 started
+08-Jan-21 18:51:37 - __main__ - INFO - Worker 4 started
+08-Jan-21 18:51:37 - __main__ - INFO - Worker 2 started
+08-Jan-21 18:51:38 - __main__ - INFO - Worker 1 received  session ID: 0C37861D
+08-Jan-21 18:51:38 - commands.Dispatcher - INFO - Session ID: 0C37861D, Received request: {u'vm_name': u'v1p246.clouds365.host', u'user_id': 85, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.246', u'template_id': 348}
+08-Jan-21 18:51:38 - commands.Dispatcher - ERROR - Session ID: 0C37861D, Sended reply: {'error': "global name 'create_start_script' is not defined"}
+08-Jan-21 18:52:32 - __main__ - INFO - Routing server started
+08-Jan-21 18:52:32 - __main__ - INFO - Worker 1 started
+08-Jan-21 18:52:32 - __main__ - INFO - Worker 2 started
+08-Jan-21 18:52:32 - __main__ - INFO - Worker 4 started
+08-Jan-21 18:52:32 - __main__ - INFO - Worker 3 started
+08-Jan-21 18:52:32 - __main__ - INFO - Worker 0 started
+08-Jan-21 18:52:34 - __main__ - INFO - Worker 1 received  session ID: E8675213
+08-Jan-21 18:52:34 - commands.Dispatcher - INFO - Session ID: E8675213, Received request: {u'vm_name': u'v1p246.clouds365.host', u'user_id': 85, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.246', u'template_id': 348}
+08-Jan-21 18:52:34 - commands.Dispatcher - ERROR - Session ID: E8675213, Sended reply: {'error': "global name 'create_start_script' is not defined"}
+08-Jan-21 18:53:06 - __main__ - INFO - Routing server started
+08-Jan-21 18:53:06 - __main__ - INFO - Worker 0 started
+08-Jan-21 18:53:06 - __main__ - INFO - Worker 2 started
+08-Jan-21 18:53:06 - __main__ - INFO - Worker 1 started
+08-Jan-21 18:53:06 - __main__ - INFO - Worker 4 started
+08-Jan-21 18:53:06 - __main__ - INFO - Worker 3 started
+08-Jan-21 18:53:08 - __main__ - INFO - Worker 0 received  session ID: 9C47F213
+08-Jan-21 18:53:08 - commands.Dispatcher - INFO - Session ID: 9C47F213, Received request: {u'vm_name': u'v1p246.clouds365.host', u'user_id': 85, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.246', u'template_id': 348}
+08-Jan-21 18:53:08 - commands.Dispatcher - ERROR - Session ID: 9C47F213, Sended reply: {'error': "global name 'create_start_script' is not defined"}
+08-Jan-21 18:53:25 - __main__ - INFO - Routing server started
+08-Jan-21 18:53:25 - __main__ - INFO - Worker 2 started
+08-Jan-21 18:53:25 - __main__ - INFO - Worker 0 started
+08-Jan-21 18:53:25 - __main__ - INFO - Worker 3 started
+08-Jan-21 18:53:25 - __main__ - INFO - Worker 4 started
+08-Jan-21 18:53:25 - __main__ - INFO - Worker 1 started
+08-Jan-21 18:53:31 - __main__ - INFO - Worker 2 received  session ID: 374F2896
+08-Jan-21 18:53:31 - commands.Dispatcher - INFO - Session ID: 374F2896, Received request: {u'vm_name': u'v1p246.clouds365.host', u'user_id': 85, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.246', u'template_id': 348}
+08-Jan-21 18:53:31 - commands.Dispatcher - ERROR - Session ID: 374F2896, Sended reply: {'error': "global name 'create_start_script' is not defined"}
+08-Jan-21 18:54:06 - __main__ - INFO - Routing server started
+08-Jan-21 18:54:06 - __main__ - INFO - Worker 0 started
+08-Jan-21 18:54:06 - __main__ - INFO - Worker 1 started
+08-Jan-21 18:54:06 - __main__ - INFO - Worker 3 started
+08-Jan-21 18:54:06 - __main__ - INFO - Worker 2 started
+08-Jan-21 18:54:06 - __main__ - INFO - Worker 4 started
+08-Jan-21 18:54:08 - __main__ - INFO - Worker 0 received  session ID: D7C6B09E
+08-Jan-21 18:54:08 - commands.Dispatcher - INFO - Session ID: D7C6B09E, Received request: {u'vm_name': u'v1p246.clouds365.host', u'user_id': 85, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.246', u'template_id': 348}
+08-Jan-21 18:54:08 - commands.Dispatcher - ERROR - Session ID: D7C6B09E, Sended reply: {'error': 'create_start_script() takes exactly 4 arguments (3 given)'}
+08-Jan-21 18:55:19 - __main__ - INFO - Routing server started
+08-Jan-21 18:55:19 - __main__ - INFO - Worker 0 started
+08-Jan-21 18:55:19 - __main__ - INFO - Worker 2 started
+08-Jan-21 18:55:19 - __main__ - INFO - Worker 3 started
+08-Jan-21 18:55:19 - __main__ - INFO - Worker 4 started
+08-Jan-21 18:55:19 - __main__ - INFO - Worker 1 started
+08-Jan-21 18:55:21 - __main__ - INFO - Worker 0 received  session ID: 9A6DC108
+08-Jan-21 18:55:21 - commands.Dispatcher - INFO - Session ID: 9A6DC108, Received request: {u'vm_name': u'v1p246.clouds365.host', u'user_id': 85, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.246', u'template_id': 348}
+08-Jan-21 18:55:22 - commands.Dispatcher - INFO - Session ID: 9A6DC108, Sended reply: {'user_id': 85, 'vm_root_password': u'*******', 'vm_id': 362, 'vm_user_password': u'*******', 'vm_user': 'pkyzt05'}
+08-Jan-21 18:59:54 - __main__ - INFO - Worker 2 received  session ID: 4B2613F0
+08-Jan-21 18:59:54 - commands.Dispatcher - INFO - Session ID: 4B2613F0, Received request: {u'vm_id': 362, u'cmd': u'vm_terminate', u'user_id': 85}
+08-Jan-21 18:59:57 - commands.Dispatcher - INFO - Session ID: 4B2613F0, Sended reply: {'action': 'vm terminated'}
+08-Jan-21 20:15:48 - __main__ - INFO - Routing server started
+08-Jan-21 20:15:48 - __main__ - INFO - Worker 0 started
+08-Jan-21 20:15:48 - __main__ - INFO - Worker 4 started
+08-Jan-21 20:15:48 - __main__ - INFO - Worker 3 started
+08-Jan-21 20:15:48 - __main__ - INFO - Worker 2 started
+08-Jan-21 20:15:48 - __main__ - INFO - Worker 1 started
+08-Jan-21 20:16:07 - __main__ - INFO - Worker 0 received  session ID: 39256B0E
+08-Jan-21 20:16:07 - commands.Dispatcher - INFO - Session ID: 39256B0E, Received request: {u'vm_name': u'v1p246.clouds365.host', u'user_id': 85, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.246', u'template_id': 348}
+08-Jan-21 20:44:58 - __main__ - INFO - Routing server started
+08-Jan-21 20:44:58 - __main__ - INFO - Worker 1 started
+08-Jan-21 20:44:58 - __main__ - INFO - Worker 2 started
+08-Jan-21 20:44:58 - __main__ - INFO - Worker 3 started
+08-Jan-21 20:44:58 - __main__ - INFO - Worker 0 started
+08-Jan-21 20:44:58 - __main__ - INFO - Worker 4 started
+08-Jan-21 20:45:00 - __main__ - INFO - Worker 1 received  session ID: 40ADF69B
+08-Jan-21 20:45:00 - commands.Dispatcher - INFO - Session ID: 40ADF69B, Received request: {u'vm_name': u'v1p246.clouds365.host', u'user_id': 85, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.246', u'template_id': 348}
+08-Jan-21 20:45:00 - commands.Dispatcher - ERROR - Session ID: 40ADF69B, Sended reply: {'error': 'vm with this name already allocated'}
+08-Jan-21 20:47:07 - __main__ - INFO - Worker 2 received  session ID: 6B2F0C89
+08-Jan-21 20:47:07 - commands.Dispatcher - INFO - Session ID: 6B2F0C89, Received request: {u'vm_name': u'v1p246.clouds365.host', u'user_id': 85, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.246', u'template_id': 348}
+08-Jan-21 20:47:07 - commands.Dispatcher - INFO - Session ID: 6B2F0C89, Sended reply: {'user_id': 85, 'vm_root_password': u'*******', 'vm_id': 364, 'vm_user_password': u'*******', 'vm_user': 'qhmoc46'}
+08-Jan-21 20:48:45 - __main__ - INFO - Worker 3 received  session ID: BAF86532
+08-Jan-21 20:48:45 - commands.Dispatcher - INFO - Session ID: BAF86532, error: string could not be converted to json
+08-Jan-21 20:49:21 - __main__ - INFO - Worker 0 received  session ID: 3F0E127D
+08-Jan-21 20:49:21 - commands.Dispatcher - INFO - Session ID: 3F0E127D, Received request: {u'vm_id': 364, u'cmd': u'vm_terminate', u'user_id': 85}
+08-Jan-21 20:49:24 - commands.Dispatcher - INFO - Session ID: 3F0E127D, Sended reply: {'action': 'vm terminated'}

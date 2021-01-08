@@ -1,7 +1,6 @@
 import json
 import logging
 import copy
-from Commands import *
 from VM import *
 from Users import *
 
@@ -35,10 +34,10 @@ class CommandsDispatcher(object):
                 'get_user_info': UsersObj.get_user_info,
                 'get_all_vm_state': UsersObj.get_all_vm_state,
                 'get_vm_state': UsersObj.get_vm_state,
-                'template_instantiate': template_instantiate,
-                # 'template_instantiate_user': template_instantiate_user,
-                'vm_terminate': vm_terminate,
-                'vm_action': vm_action,
+                'template_instantiate': VMobj.template_instantiate,
+                # 'template_instantiate_user': VMobj.template_instantiate_user,
+                'vm_terminate': VMobj.vm_terminate,
+                'vm_action': VMobj.vm_action,
             }
             # Get the function from switcher dictionary
             cmd_execute = switcher.get(cmd, lambda null_arg0,null_arg1,null_arg2: {"error": "invalid command"})

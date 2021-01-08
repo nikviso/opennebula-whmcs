@@ -114,7 +114,7 @@ class VM(object):
               'NETWORK': "YES",
             #  'START_SCRIPT_BASE64': base64.b64encode('echo -e "' + vm_root_password + '\n' + vm_root_password + '" | passwd root; echo -e "'
             #                         + vm_user_password + '\n' + vm_user_password + '" | passwd ' + vm_user),
-               'START_SCRIPT_BASE64': base64.b64encode(create_start_script(vm_root_password, vm_user_password, vm_user))
+               'START_SCRIPT_BASE64': base64.b64encode(self.create_start_script(vm_root_password, vm_user_password, vm_user))
             },
             'NIC': {
               'IP': ip_address,
@@ -127,7 +127,7 @@ class VM(object):
             }}, 
             True)   
         except Exception as e:
-            template_terminate(vm_name, one, True) 
+            self.template_terminate(vm_name, one, True) 
             return {"error": str(e)}
 
         
@@ -157,7 +157,7 @@ class VM(object):
             return {"error": str(e)}
         """ 
         #Removing VM template.
-        template_terminate(vm_name, one, False)
+        self.template_terminate(vm_name, one, False)
             
         #Changing VM owner.
         try:
@@ -294,7 +294,7 @@ class VM(object):
                       'NETWORK': "YES",
         #              'START_SCRIPT_BASE64': base64.b64encode('echo -e "' + vm_root_password + '\n' + vm_root_password + '" | passwd root; echo -e "'
         #                                     + vm_user_password + '\n' + vm_user_password + '" | passwd ' + vm_user),
-                       'START_SCRIPT_BASE64': base64.b64encode(create_start_script(vm_root_password,vm_user_password,vm_user)) 
+                       'START_SCRIPT_BASE64': base64.b64encode(self.create_start_script(vm_root_password,vm_user_password,vm_user)) 
                     },
                     'NIC': {
                       'IP': ip_address,
@@ -308,7 +308,7 @@ class VM(object):
             }, 
             True)
         except Exception as e:
-            template_terminate(vm_name, one, True)
+            self.template_terminate(vm_name, one, True)
             return {"error": str(e)}
         
         """ 
@@ -338,7 +338,7 @@ class VM(object):
         """   
 
         #Removing VM template.
-        template_terminate(vm_name, one, False)
+        self.template_terminate(vm_name, one, False)
         
         return_message = {
                 "user_id": user_id,    
@@ -451,7 +451,7 @@ class VM(object):
         
         return {"vm_action": action, "vm_id": vm_id,}
 
-    @staticmethod
+    @staticmethod   
     def get_template_id(template_name, one):
         """
         Getting TEMPLATE ID by TEMPLATE NAME.
@@ -463,13 +463,13 @@ class VM(object):
             if template.NAME == template_name:
                 return template.ID
 
-    @staticmethod
-    def template_terminate(template_name, one, image_remove = False):
+
+    def template_terminate(self, template_name, one, image_remove = False):
         """
         Terminating VM template
         """
         
-        template_id = get_template_id(template_name, one)
+        template_id = self.get_template_id(template_name, one)
         if template_id:
             try:
                 return one.template.delete(template_id, image_remove)
@@ -477,9 +477,10 @@ class VM(object):
                 return {"error": str(e)}  
         else:
             return {"error": "not found template name"}
-     
+
+
     @staticmethod     
-    def create_start_script(vm_root_password,vm_user_password,vm_user):
+    def create_start_script(vm_root_password, vm_user_password, vm_user):
         """
         """
         
