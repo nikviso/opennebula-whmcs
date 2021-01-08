@@ -4969,3 +4969,32 @@
 08-Jan-21 20:49:21 - __main__ - INFO - Worker 0 received  session ID: 3F0E127D
 08-Jan-21 20:49:21 - commands.Dispatcher - INFO - Session ID: 3F0E127D, Received request: {u'vm_id': 364, u'cmd': u'vm_terminate', u'user_id': 85}
 08-Jan-21 20:49:24 - commands.Dispatcher - INFO - Session ID: 3F0E127D, Sended reply: {'action': 'vm terminated'}
+08-Jan-21 22:46:04 - __main__ - INFO - Routing server started
+08-Jan-21 22:46:04 - __main__ - INFO - Worker 0 started
+08-Jan-21 22:46:04 - __main__ - INFO - Worker 1 started
+08-Jan-21 22:46:04 - __main__ - INFO - Worker 2 started
+08-Jan-21 22:46:04 - __main__ - INFO - Worker 3 started
+08-Jan-21 22:46:04 - __main__ - INFO - Worker 4 started
+08-Jan-21 22:47:11 - __main__ - INFO - Routing server started
+08-Jan-21 22:47:11 - __main__ - INFO - Worker 0 started
+08-Jan-21 22:47:11 - __main__ - INFO - Worker 3 started
+08-Jan-21 22:47:11 - __main__ - INFO - Worker 2 started
+08-Jan-21 22:47:11 - __main__ - INFO - Worker 1 started
+08-Jan-21 22:47:11 - __main__ - INFO - Worker 4 started
+08-Jan-21 22:47:13 - __main__ - INFO - Worker 0 received  session ID: B064E85A
+08-Jan-21 22:47:13 - commands.Dispatcher - INFO - Session ID: B064E85A, Received request: {u'vm_id': 364, u'cmd': u'vm_terminate', u'user_id': 85}
+08-Jan-21 22:47:13 - commands.Dispatcher - ERROR - Session ID: B064E85A, Sended reply: {'error': 'list vm index out of range'}
+08-Jan-21 22:48:14 - __main__ - INFO - Worker 3 received  session ID: ED8FC462
+08-Jan-21 22:48:14 - commands.Dispatcher - INFO - Session ID: ED8FC462, Received request: {u'cmd': u'get_all_vm_state', u'user_id': 85}
+08-Jan-21 22:48:14 - commands.Dispatcher - INFO - Session ID: ED8FC462, Sended reply: {u'vms_state': [{u'vm_name': u'v1p248.clouds365.host', u'vm_state': u'ACTIVE', u'vm_id': 343}]}
+08-Jan-21 22:48:28 - __main__ - INFO - Worker 2 received  session ID: 01F9D86E
+08-Jan-21 22:48:28 - commands.Dispatcher - INFO - Session ID: 01F9D86E, Received request: {u'user_id': 85, u'cmd': u'get_vm_state', u'vm_id': 343}
+08-Jan-21 22:48:28 - commands.Dispatcher - INFO - Session ID: 01F9D86E, Sended reply: {'vm_state': 'ACTIVE', 'vm_id': 343}
+08-Jan-21 22:48:40 - __main__ - INFO - Worker 1 received  session ID: 2B3706DC
+08-Jan-21 22:48:40 - commands.Dispatcher - INFO - Session ID: 2B3706DC, error: string could not be converted to json
+08-Jan-21 22:49:11 - __main__ - INFO - Worker 4 received  session ID: 09C3FE85
+08-Jan-21 22:49:11 - commands.Dispatcher - INFO - Session ID: 09C3FE85, Received request: {u'vm_name': u'v1p246.clouds365.host', u'user_id': 85, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.246', u'template_id': 348}
+08-Jan-21 22:49:11 - commands.Dispatcher - INFO - Session ID: 09C3FE85, Sended reply: {'user_id': 85, 'vm_root_password': u'*******', 'vm_id': 365, 'vm_user_password': u'*******', 'vm_user': 'mxwhc83'}
+08-Jan-21 22:49:31 - __main__ - INFO - Worker 0 received  session ID: 23AED780
+08-Jan-21 22:49:31 - commands.Dispatcher - INFO - Session ID: 23AED780, Received request: {u'vm_id': 365, u'cmd': u'vm_terminate', u'user_id': 85}
+08-Jan-21 22:49:32 - commands.Dispatcher - INFO - Session ID: 23AED780, Sended reply: {'action': 'vm terminated'}

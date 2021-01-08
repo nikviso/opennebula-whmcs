@@ -12,8 +12,8 @@ import logging.config
 import configparser
 import argparse
 import base64
+import random
 from security.aes_cbc import *
-from commands.commands import *
 from commands.Dispatcher import CommandsDispatcher
 
 def args_parse():
