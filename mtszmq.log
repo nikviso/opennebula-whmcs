@@ -5213,3 +5213,95 @@
 23-Jan-21 00:10:14 - commands.Dispatcher - INFO - Session ID: C62B951A, Received request: {u'vm_id': 369, u'cmd': u'vm_terminate', u'user_id': 3}
 23-Jan-21 00:10:17 - commands.Dispatcher - INFO - Session ID: 1B95A8E3, Sended reply: {'action': 'vm terminated'}
 23-Jan-21 00:10:17 - commands.Dispatcher - INFO - Session ID: C62B951A, Sended reply: {'action': 'vm terminated'}
+25-Jan-21 13:10:30 - __main__ - INFO - Worker 0 received  session ID: 9BD412C8
+25-Jan-21 13:10:30 - commands.Dispatcher - INFO - Session ID: 9BD412C8, Received request: {u'vm_name': u'v1p245.clouds365.host', u'user_id': 85, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.245', u'template_id': 348}
+25-Jan-21 13:10:33 - commands.Dispatcher - INFO - Session ID: 9BD412C8, Sended reply: {'user_id': 85, 'vm_root_password': u'*******', 'vm_id': 371, 'vm_user_password': u'*******', 'vm_user': 'dbzot08'}
+25-Jan-21 16:21:10 - __main__ - INFO - Worker 3 received  session ID: 9A24B8EC
+25-Jan-21 16:21:10 - commands.Dispatcher - INFO - Session ID: 9A24B8EC, Received request: {u'vm_id': 371, u'cmd': u'vm_terminate', u'user_id': 85}
+25-Jan-21 16:21:15 - commands.Dispatcher - INFO - Session ID: 9A24B8EC, Sended reply: {'action': 'vm terminated'}
+25-Jan-21 20:58:00 - __main__ - INFO - Worker 1 received  session ID: A1B03C74
+25-Jan-21 20:58:00 - commands.Dispatcher - INFO - Session ID: A1B03C74, Received request: {u'vm_name': u'v1p245.clouds365.host', u'user_id': 85, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.245', u'template_id': 348}
+25-Jan-21 20:58:03 - commands.Dispatcher - INFO - Session ID: A1B03C74, Sended reply: {'user_id': 85, 'vm_root_password': u'*******', 'vm_id': 372, 'vm_user_password': u'*******', 'vm_user': 'odzuy24'}
+26-Jan-21 15:00:20 - __main__ - INFO - Worker 4 received  session ID: 3BF89D64
+26-Jan-21 15:00:20 - commands.Dispatcher - INFO - Session ID: 3BF89D64, Received request: {u'vm_id': 372, u'cmd': u'vm_terminate', u'user_id': 85}
+26-Jan-21 15:00:22 - commands.Dispatcher - INFO - Session ID: 3BF89D64, Sended reply: {'action': 'vm terminated'}
+26-Jan-21 15:01:39 - __main__ - INFO - Worker 2 received  session ID: 930D45B1
+26-Jan-21 15:01:39 - commands.Dispatcher - INFO - Session ID: 930D45B1, Received request: {u'vm_name': u'v1p245.clouds365.host', u'user_id': 85, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.245', u'template_id': 385}
+26-Jan-21 15:01:42 - commands.Dispatcher - INFO - Session ID: 930D45B1, Sended reply: {'user_id': 85, 'vm_root_password': u'*******', 'vm_id': 374, 'vm_user_password': u'*******', 'vm_user': 'ocvzh81'}
+26-Jan-21 15:03:30 - __main__ - INFO - Worker 0 received  session ID: 2B6CAE74
+26-Jan-21 15:03:30 - commands.Dispatcher - INFO - Session ID: 2B6CAE74, Received request: {u'vm_id': 374, u'cmd': u'vm_terminate', u'user_id': 85}
+26-Jan-21 15:03:33 - commands.Dispatcher - INFO - Session ID: 2B6CAE74, Sended reply: {'action': 'vm terminated'}
+26-Jan-21 16:12:12 - __main__ - INFO - Worker 3 received  session ID: C0451798
+26-Jan-21 16:12:12 - commands.Dispatcher - INFO - Session ID: C0451798, Received request: {u'vm_name': u'v1p245.clouds365.host', u'user_id': 85, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.245', u'template_id': 387}
+26-Jan-21 16:12:15 - commands.Dispatcher - INFO - Session ID: C0451798, Sended reply: {'user_id': 85, 'vm_root_password': u'*******', 'vm_id': 376, 'vm_user_password': u'*******', 'vm_user': 'fbtrq04'}
+26-Jan-21 16:34:52 - __main__ - INFO - Worker 1 received  session ID: 10C28FB6
+26-Jan-21 16:34:52 - commands.Dispatcher - INFO - Session ID: 10C28FB6, Received request: {u'vm_name': u'v1p246.clouds365.host', u'user_id': 85, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.246', u'template_id': 348}
+26-Jan-21 16:34:55 - commands.Dispatcher - INFO - Session ID: 10C28FB6, Sended reply: {'user_id': 85, 'vm_root_password': u'*******', 'vm_id': 377, 'vm_user_password': u'*******', 'vm_user': 'jeyrk45'}
+26-Jan-21 16:38:09 - __main__ - INFO - Worker 4 received  session ID: 42F5AEC6
+26-Jan-21 16:38:09 - commands.Dispatcher - INFO - Session ID: 42F5AEC6, Received request: {u'vm_id': 377, u'cmd': u'vm_terminate', u'user_id': 85}
+26-Jan-21 16:38:12 - commands.Dispatcher - INFO - Session ID: 42F5AEC6, Sended reply: {'action': 'vm terminated'}
+26-Jan-21 16:44:20 - __main__ - INFO - Worker 2 received  session ID: 7C42B031
+26-Jan-21 16:44:20 - commands.Dispatcher - INFO - Session ID: 7C42B031, Received request: {u'vm_id': 376, u'cmd': u'vm_terminate', u'user_id': 85}
+26-Jan-21 16:44:23 - commands.Dispatcher - INFO - Session ID: 7C42B031, Sended reply: {'action': 'vm terminated'}
+26-Jan-21 16:51:54 - __main__ - INFO - Worker 0 received  session ID: AB0E67F1
+26-Jan-21 16:51:54 - commands.Dispatcher - INFO - Session ID: AB0E67F1, error: string could not be converted to json
+26-Jan-21 16:52:11 - __main__ - INFO - Worker 3 received  session ID: 563E20F8
+26-Jan-21 16:52:11 - commands.Dispatcher - INFO - Session ID: 563E20F8, Received request: {u'vm_name': u'v1p246.clouds365.host', u'user_id': 85, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.246', u'template_id': 390}
+26-Jan-21 16:52:14 - commands.Dispatcher - INFO - Session ID: 563E20F8, Sended reply: {'user_id': 85, 'vm_root_password': u'*******', 'vm_id': 378, 'vm_user_password': u'*******', 'vm_user': 'crtln02'}
+26-Jan-21 19:27:40 - __main__ - INFO - Worker 1 received  session ID: 53EC8D79
+26-Jan-21 19:27:40 - commands.Dispatcher - INFO - Session ID: 53EC8D79, Received request: {u'vm_name': u'v1p247.clouds365.host', u'user_id': 85, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.247', u'template_id': 329}
+26-Jan-21 19:27:43 - commands.Dispatcher - INFO - Session ID: 53EC8D79, Sended reply: {'user_id': 85, 'vm_root_password': u'*******', 'vm_id': 379, 'vm_user_password': u'*******', 'vm_user': 'vncpk05'}
+26-Jan-21 19:31:32 - __main__ - INFO - Worker 4 received  session ID: C6B812E7
+26-Jan-21 19:31:32 - commands.Dispatcher - INFO - Session ID: C6B812E7, Received request: {u'vm_id': 379, u'cmd': u'vm_terminate', u'user_id': 85}
+26-Jan-21 19:31:35 - commands.Dispatcher - INFO - Session ID: C6B812E7, Sended reply: {'action': 'vm terminated'}
+26-Jan-21 20:34:28 - __main__ - INFO - Worker 2 received  session ID: DFB6137E
+26-Jan-21 20:34:28 - commands.Dispatcher - INFO - Session ID: DFB6137E, Received request: {u'vm_id': 378, u'cmd': u'vm_terminate', u'user_id': 85}
+26-Jan-21 20:34:33 - commands.Dispatcher - INFO - Session ID: DFB6137E, Sended reply: {'action': 'vm terminated'}
+26-Jan-21 21:04:23 - __main__ - INFO - Worker 0 received  session ID: E289C0A1
+26-Jan-21 21:04:23 - commands.Dispatcher - INFO - Session ID: E289C0A1, Received request: {u'vm_name': u'v1p247.clouds365.host', u'user_id': 85, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.247', u'template_id': 390}
+26-Jan-21 21:04:26 - commands.Dispatcher - INFO - Session ID: E289C0A1, Sended reply: {'user_id': 85, 'vm_root_password': u'*******', 'vm_id': 381, 'vm_user_password': u'*******', 'vm_user': 'ngzcw90'}
+26-Jan-21 21:07:25 - __main__ - INFO - Worker 3 received  session ID: 607DC4FE
+26-Jan-21 21:07:25 - commands.Dispatcher - INFO - Session ID: 607DC4FE, Received request: {u'vm_id': 381, u'cmd': u'vm_terminate', u'user_id': 85}
+26-Jan-21 21:07:28 - commands.Dispatcher - INFO - Session ID: 607DC4FE, Sended reply: {'action': 'vm terminated'}
+26-Jan-21 21:11:12 - __main__ - INFO - Worker 1 received  session ID: 17946EBF
+26-Jan-21 21:11:12 - commands.Dispatcher - INFO - Session ID: 17946EBF, Received request: {u'vm_name': u'v1p247.clouds365.host', u'user_id': 85, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.247', u'template_id': 390}
+26-Jan-21 21:11:14 - commands.Dispatcher - INFO - Session ID: 17946EBF, Sended reply: {'user_id': 85, 'vm_root_password': u'*******', 'vm_id': 383, 'vm_user_password': u'*******', 'vm_user': 'mtjpk62'}
+26-Jan-21 21:20:12 - __main__ - INFO - Worker 4 received  session ID: 9F5473AE
+26-Jan-21 21:20:12 - commands.Dispatcher - INFO - Session ID: 9F5473AE, Received request: {u'vm_id': 383, u'cmd': u'vm_terminate', u'user_id': 85}
+26-Jan-21 21:20:15 - commands.Dispatcher - INFO - Session ID: 9F5473AE, Sended reply: {'action': 'vm terminated'}
+26-Jan-21 21:31:48 - __main__ - INFO - Worker 2 received  session ID: 4175D026
+26-Jan-21 21:31:48 - commands.Dispatcher - INFO - Session ID: 4175D026, Received request: {u'vm_name': u'v1p247.clouds365.host', u'user_id': 85, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.247', u'template_id': 390}
+26-Jan-21 21:31:51 - commands.Dispatcher - INFO - Session ID: 4175D026, Sended reply: {'user_id': 85, 'vm_root_password': u'*******', 'vm_id': 385, 'vm_user_password': u'*******', 'vm_user': 'pbako20'}
+28-Jan-21 20:12:22 - __main__ - INFO - Routing server started
+28-Jan-21 20:12:22 - __main__ - INFO - Worker 0 started
+28-Jan-21 20:12:22 - __main__ - INFO - Worker 2 started
+28-Jan-21 20:12:22 - __main__ - INFO - Worker 1 started
+28-Jan-21 20:12:22 - __main__ - INFO - Worker 3 started
+28-Jan-21 20:12:22 - __main__ - INFO - Worker 4 started
+28-Jan-21 20:12:59 - __main__ - INFO - Worker 0 received  session ID: 379CEB86
+28-Jan-21 20:12:59 - commands.Dispatcher - INFO - Session ID: 379CEB86, Received request: {u'cmd': u'get_all_vm_state', u'user_id': 85}
+28-Jan-21 20:12:59 - commands.Dispatcher - INFO - Session ID: 379CEB86, Sended reply: {u'vms_state': [{u'vm_name': u'v1p247.clouds365.host', u'vm_state': u'ACTIVE', u'vm_id': 385}]}
+28-Jan-21 20:17:06 - __main__ - INFO - Routing server started
+28-Jan-21 20:17:06 - __main__ - INFO - Worker 0 started
+28-Jan-21 20:17:06 - __main__ - INFO - Worker 3 started
+28-Jan-21 20:17:06 - __main__ - INFO - Worker 2 started
+28-Jan-21 20:17:06 - __main__ - INFO - Worker 1 started
+28-Jan-21 20:17:06 - __main__ - INFO - Worker 4 started
+28-Jan-21 20:17:13 - __main__ - INFO - Worker 0 received  session ID: F58A9320
+28-Jan-21 20:17:13 - commands.Dispatcher - INFO - Session ID: F58A9320, Received request: {u'cmd': u'get_all_vm_state', u'user_id': 85}
+28-Jan-21 20:17:13 - commands.Dispatcher - INFO - Session ID: F58A9320, Sended reply: {u'vms_state': [{u'vm_name': u'v1p247.clouds365.host', u'vm_state': u'ACTIVE', u'vm_lcm_state': 3, u'vm_id': 385}]}
+28-Jan-21 20:24:27 - __main__ - INFO - Worker 3 received  session ID: 051963A4
+28-Jan-21 20:24:27 - commands.Dispatcher - INFO - Session ID: 051963A4, Received request: {u'cmd': u'get_all_vm_state', u'user_id': 85}
+28-Jan-21 20:24:27 - commands.Dispatcher - INFO - Session ID: 051963A4, Sended reply: {u'vms_state': [{u'vm_name': u'v1p247.clouds365.host', u'vm_state': u'ACTIVE', u'vm_lcm_state': 18, u'vm_id': 385}]}
+28-Jan-21 20:24:42 - __main__ - INFO - Worker 2 received  session ID: 162DA870
+28-Jan-21 20:24:42 - commands.Dispatcher - INFO - Session ID: 162DA870, Received request: {u'cmd': u'get_all_vm_state', u'user_id': 85}
+28-Jan-21 20:24:42 - commands.Dispatcher - INFO - Session ID: 162DA870, Sended reply: {u'vms_state': [{u'vm_name': u'v1p247.clouds365.host', u'vm_state': u'POWEROFF', u'vm_lcm_state': 0, u'vm_id': 385}]}
+28-Jan-21 20:44:56 - __main__ - INFO - Worker 1 received  session ID: 78E43DF5
+28-Jan-21 20:44:56 - commands.Dispatcher - INFO - Session ID: 78E43DF5, Received request: {u'user_id': 85, u'cmd': u'get_vm_state', u'vm_id': 385}
+28-Jan-21 20:44:56 - commands.Dispatcher - INFO - Session ID: 78E43DF5, Sended reply: {'vm_state': 'POWEROFF', 'vm_id': 385}
+28-Jan-21 21:31:58 - __main__ - INFO - Worker 4 received  session ID: 70659AB2
+28-Jan-21 21:31:58 - commands.Dispatcher - INFO - Session ID: 70659AB2, Received request: {u'user_id': 85, u'cmd': u'get_vm_state', u'vm_id': 385}
+28-Jan-21 21:31:58 - commands.Dispatcher - INFO - Session ID: 70659AB2, Sended reply: {'vm_state': 'POWEROFF', 'vm_id': 385}
+28-Jan-21 21:33:45 - __main__ - INFO - Worker 0 received  session ID: 179CB365
+28-Jan-21 21:33:45 - commands.Dispatcher - INFO - Session ID: 179CB365, Received request: {u'vm_id': 385, u'cmd': u'vm_terminate', u'user_id': 85}
+28-Jan-21 21:33:47 - commands.Dispatcher - INFO - Session ID: 179CB365, Sended reply: {'action': 'vm terminated'}

@@ -19,6 +19,7 @@ class Users(object):
     @staticmethod
     def switch_vm_state(state):
         """
+        See http://docs.opennebula.io/5.10/operation/references/vm_states.html#list-of-states
         VM STATE:
         0	INIT                init    Internal initialization state right after VM creation, this state is not visible for the end users. 
                                         And hence this state cannot be used to hook any action.
