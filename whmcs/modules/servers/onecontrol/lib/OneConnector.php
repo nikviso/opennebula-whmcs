@@ -5,6 +5,7 @@ use WHMCS\Database\Capsule;
 
 class OneConnector {
 
+
     private function client_socket(ZMQContext $context, $dsn)
     {
         $client = new ZMQSocket($context,ZMQ::SOCKET_REQ);
@@ -12,9 +13,9 @@ class OneConnector {
 
         //  Configure socket to not wait at close time
         $client->setSockOpt(ZMQ::SOCKOPT_LINGER, 0);
-
         return $client;
     }
+
 
     public function connector($arr)
     {
@@ -106,9 +107,9 @@ class OneConnector {
                 }
             }
         }
-        
         return $reply;
     }
+
 
     public function generate_password()
     {
@@ -124,7 +125,6 @@ class OneConnector {
             echo $e->getMessage();
             return $e->getMessage();
         }            
-        
         
         $arr_strong = array(
                      'a','b','c','d','e','f',
@@ -152,6 +152,7 @@ class OneConnector {
                      'T','U','V','X','Y','Z',
                      '1','2','3','4','5','6',
                      '7','8','9','0');
+                     
         if ($one_user_password_strong) {
            $arr = $arr_strong;
         } else {
@@ -167,6 +168,7 @@ class OneConnector {
         return $pass;
     }
 
+
     /*
     * Encryption message function 
     */
@@ -178,6 +180,7 @@ class OneConnector {
         $ciphertext = base64_encode( $iv.$ciphertext_raw );
         return $ciphertext;
     }
+
 
     /*
     * Decryption message function 
@@ -191,7 +194,8 @@ class OneConnector {
         $plaintext = openssl_decrypt($ciphertext_raw, $cipher, $key, $options=OPENSSL_RAW_DATA, $iv);
         return $plaintext;
     }
-    
+ 
+ 
     private function array_collapse($arr, $x, $y) {
         $carr = array();
         if ($arr)

@@ -243,36 +243,6 @@
     </div>
 </div>
 
-<div class="row">
-    <div class="col-sm-5">
-        {$LANG.vmclientareastatus}
-    </div>
-    <div id="vmstate" class="col-sm-7">
-        {$status}
-    </div>
-</div>
-
-<script type="text/javascript">
-refresh()
-$(document).ready(function() {
-    var pageRefresh = 5000; //5 s
-        setInterval(function() {
-            refresh();
-        }, pageRefresh);
-});
-
-function refresh() {
-    $.ajax({
-    url: '/aux.php?id={$id}&a=get_vm_state',
-    method: "GET",
-    dataType: "html",
-    success: function(response) {
-       $('#vmstate').html(response);
-    } 
-    });
-}
-</script>
-
 {if $suspendreason}
     <div class="row">
         <div class="col-sm-5">
@@ -315,5 +285,3 @@ function refresh() {
         </a>
     </div>
 </div>
-
-
