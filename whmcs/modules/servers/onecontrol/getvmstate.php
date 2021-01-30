@@ -23,15 +23,20 @@ use WHMCS\Database\Capsule;
 #use WHMCS\Smarty ;
 
 
-function get_vm_state($id)
+function get_vm_state($id, $token)
 {
     require_once('lib/OneConnector.php');
     $oneconnector = new OneConnector;
     
     $result_onevm = Capsule::table('mod_onecontrol_onevm')
             ->select('vm_id','user_id')
-            ->where('service_id',$_GET['id'])
+            ->where('service_id',$id)
+            ->where('vm_token',$token)
             ->first();
+    
+    if(!$result_onevm){
+        return '<p style="color:red;"> Oops! Something went wrong! </p>';
+    }
     
     //var_dump($result_onevm);
     
@@ -40,7 +45,7 @@ function get_vm_state($id)
         "vm_id" => $result_onevm->{'vm_id'},
         "user_id" => $result_onevm->{'user_id'}    
     );
-    
+        
     $one_reply = $oneconnector->connector($arr);  
       
     if($one_reply->{'error'}){

@@ -111,6 +111,24 @@ class OneConnector {
     }
 
 
+    public function generate_token()
+    {
+        $arr = array(
+                 'a','b','c','d','e','f',
+                 '1','2','3','4','5','6',
+                 '7','8','9','0');        
+
+        $token = "";
+        for($i = 0; $i < 16; $i++)
+        {
+          $index = rand(0, count($arr) - 1);
+          $token .= $arr[$index];
+        }
+        
+        return $token;
+    }    
+
+
     public function generate_password()
     {
         try {
@@ -165,6 +183,7 @@ class OneConnector {
           $index = rand(0, count($arr) - 1);
           $pass .= $arr[$index];
         }
+        
         return $pass;
     }
 

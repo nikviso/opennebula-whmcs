@@ -1030,8 +1030,8 @@ function onecontrol_ClientArea(array $params)
     // the action.
     $requestedAction = isset($_REQUEST['customAction']) ? $_REQUEST['customAction'] : '';
     
-    
-    
+    require_once('lib/OneConnector.php');
+    $oneconnector = new OneConnector;
     
     if ($requestedAction == 'manage') {
         $serviceAction = 'get_usage';
@@ -1039,6 +1039,14 @@ function onecontrol_ClientArea(array $params)
     } else {
         $serviceAction = 'get_stats';
         $templateFile = 'templates/overview.tpl';
+        $token = $oneconnector->generate_token();
+        Capsule::table('mod_onecontrol_onevm')->where('service_id',$params['serviceid'])
+            ->update(
+                array(
+                    'vm_token'=>$token,
+                    )
+        );    
+
         //echo "SID:".$params['serviceid']."; OID:".$params['attributes']['orderid'];
         //var_dump($params);
     }
@@ -1053,12 +1061,13 @@ function onecontrol_ClientArea(array $params)
         //$extraVariable1 = var_dump($params);
         $extraVariable1 = $params['configoption1'];
         $extraVariable2 = $params["configoptions"]["OS Type"]. ", " . $params["clientsdetails"]["email"];
-
+        
         return array(
             'tabOverviewReplacementTemplate' => $templateFile,
             'templateVariables' => array(
                 'extraVariable1' => $extraVariable1,
-                'extraVariable2' => $extraVariable2,
+                'extraVariable2' => $token,
+                'token' => $token,
             ),
         );
     } catch (Exception $e) {
