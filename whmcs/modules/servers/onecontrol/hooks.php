@@ -36,6 +36,26 @@
  *
  * @return mixed Return dependant upon hook function
  */
+/*
+use WHMCS\View\Menu\Item as MenuItem;
+ 
+add_hook('ClientAreaSidebars', 1, function() {
+    $primarySidebar = Menu::primarySidebar();
+    $secondarySidebar = Menu::secondarySidebar();
+ 
+    $id = 'Primary_Sidebar-Service_Details_Actions-Change_Password';
+ 
+    if ($primarySidebar && !is_null($primarySidebar->getChild($id))) {
+        $objectToWorkWith = $primarySidebar->removeChild($id);
+    } elseif ($secondarySidebar && !is_null($secondarySidebar->getChild($id))) {
+        $objectToWorkWith = $secondarySidebar->removeChild($id);
+    }
+ 
+    if ($objectToWorkWith) {
+        $objectToWorkWith->removeChild($id);
+    }
+});
+*/
 function hook_onecontrol_clientedit(array $params)
 {
     try {
@@ -89,6 +109,7 @@ add_hook('ClientAreaPrimaryNavbar', 1, function ($menu)
  *
  * @param \WHMCS\View\Menu\Item $secondarySidebar
  */
+ 
 add_hook('ClientAreaSecondarySidebar', 1, function ($secondarySidebar)
 {
     // determine if we are on a page containing My Services Actions

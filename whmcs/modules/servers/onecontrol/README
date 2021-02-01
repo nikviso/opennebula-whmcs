@@ -1,0 +1,13 @@
+Add to language file in directory "lang":
+
+//english.php
+$_LANG['vmclientareastatus'] = "VPS status";
+$_LANG['rebootvps'] = "Reboot VPS";
+$_LANG['poweroffvps'] = "Poweroff VPS";
+...
+
+//russian.php
+$_LANG['vmclientareastatus'] = "Статус VPS";
+$_LANG['rebootvps'] = "Рестарт VPS";
+$_LANG['poweroffvps'] = "Выключить VPS";
+...

@@ -315,6 +315,12 @@ function refresh() {
             {/if}
         </a>
     </div>
+    
+    <div class="col-sm-4">
+        <a href="/clientarea.php?action=productdetails&amp;id={$id}&amp;modop=custom&amp;a=poweroff_vm" class="btn btn-success btn-block{if $pendingcancellation}disabled{/if}">
+            {$LANG.poweroffvps}
+        </a>
+    </div>
 </div>
 
 
