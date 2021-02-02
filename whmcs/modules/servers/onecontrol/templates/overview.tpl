@@ -1,3 +1,4 @@
+<!--
 <h2>Overview</h2>
 
 <p>Overview output goes here...</p>
@@ -8,7 +9,7 @@ product details and information that are normally displayed on this page. These 
 <div class="alert alert-info">
     Any variables you define inside the ClientArea module function can also be accessed and used here, for example: {$extraVariable1} &amp; {$extraVariable2}
 </div>
-
+-->
 <h3>{$LANG.clientareaproductdetails}</h3>
 
 <hr>
@@ -30,6 +31,7 @@ product details and information that are normally displayed on this page. These 
         {$groupname} - {$product}
     </div>
 </div>
+
 
 {if $type eq "server"}
     {if $domain}
@@ -244,6 +246,7 @@ product details and information that are normally displayed on this page. These 
     </div>
 </div>
 
+<!--
 <div class="row">
     <div class="col-sm-5">
         {$LANG.vmclientareastatus}
@@ -255,6 +258,7 @@ product details and information that are normally displayed on this page. These 
 
 <script type="text/javascript">
 refresh()
+
 $(document).ready(function() {
     var pageRefresh = 5000; //5 s
         setInterval(function() {
@@ -273,6 +277,7 @@ function refresh() {
     });
 }
 </script>
+-->
 
 {if $suspendreason}
     <div class="row">
@@ -288,16 +293,17 @@ function refresh() {
 <hr>
 
 <div class="row">
+    {if ! $suspendreason}
     <div class="col-sm-4">
         <form method="post" action="clientarea.php?action=productdetails">
             <input type="hidden" name="id" value="{$serviceid}" />
             <input type="hidden" name="customAction" value="manage" />
             <button type="submit" class="btn btn-default btn-block">
-                Custom Client Area Page
+                VPS Management
             </button>
         </form>
     </div>
-
+    {/if}
     {if $packagesupgrade}
         <div class="col-sm-4">
             <a href="upgrade.php?type=package&amp;id={$id}" class="btn btn-success btn-block">
@@ -316,11 +322,26 @@ function refresh() {
         </a>
     </div>
     
+</div>
+<!--
+
+<hr>
+
+{if ! $suspendreason}
+<div class="row">
+    
     <div class="col-sm-4">
         <a href="/clientarea.php?action=productdetails&amp;id={$id}&amp;modop=custom&amp;a=poweroff_vm" class="btn btn-success btn-block{if $pendingcancellation}disabled{/if}">
             {$LANG.poweroffvps}
         </a>
     </div>
+    
+    <div class="col-sm-4">
+        <a href="/clientarea.php?action=productdetails&amp;id={$id}&amp;modop=custom&amp;a=resume_vm" class="btn btn-success btn-block{if $pendingcancellation}disabled{/if}">
+            {$LANG.resumevps}
+        </a>
+    </div>
+    
 </div>
-
-
+{/if}
+-->

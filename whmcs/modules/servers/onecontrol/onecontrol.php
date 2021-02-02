@@ -215,6 +215,7 @@ function onecontrol_SuspendAccount(array $params)
     try {
         // Call the service's suspend function, using the values provided by
         // WHMCS in `$params`.
+        onecontrol_poweroff_vm($params);
     } catch (Exception $e) {
         // Record the error in WHMCS's module log.
         logModuleCall(
@@ -249,6 +250,7 @@ function onecontrol_UnsuspendAccount(array $params)
     try {
         // Call the service's unsuspend function, using the values provided by
         // WHMCS in `$params`.
+        onecontrol_resume_vm($params);
     } catch (Exception $e) {
         // Record the error in WHMCS's module log.
         logModuleCall(
@@ -315,7 +317,8 @@ function onecontrol_TerminateAccount(array $params)
  * @see https://developers.whmcs.com/provisioning-modules/module-parameters/
  *
  * @return string "success" or an error message
- */
+*/ 
+/*
 function onecontrol_ChangePassword(array $params)
 {
     try {
@@ -345,6 +348,7 @@ function onecontrol_ChangePassword(array $params)
 
     return 'success';
 }
+*/
 
 /**
  * Upgrade or downgrade an instance of a product/service.
@@ -1109,6 +1113,13 @@ function onecontrol_ClientArea(array $params)
     if ($requestedAction == 'manage') {
         $serviceAction = 'get_usage';
         $templateFile = 'templates/manage.tpl';
+        $token = $secgenerators->generate_token();
+        Capsule::table('mod_onecontrol_onevm')->where('service_id',$params['serviceid'])
+            ->update(
+                array(
+                    'vm_token'=>$token,
+                    )
+        );            
     } else {
         $serviceAction = 'get_stats';
         $templateFile = 'templates/overview.tpl';
