@@ -532,9 +532,7 @@ function onecontrol_buttonOneFunction(array $params)
  */
 function onecontrol_instantiate_vm(array $params)
 {
-    require_once('lib/SecGenerators.php');
-    $secgenerators = new SecGenerators;
-    
+ 
     try {
             // Call the service's function, using the values provided by WHMCS in
             // `$params`.
@@ -597,6 +595,8 @@ function onecontrol_instantiate_vm(array $params)
                 }
                 
             } else {
+                require_once('lib/SecGenerators.php');
+                $secgenerators = new SecGenerators;
                 $one_user_password =  $secgenerators->generate_password();
                 $arr = array(
                             "cmd" => "user_allocate",
@@ -1106,10 +1106,10 @@ function onecontrol_ClientArea(array $params)
     // Determine the requested action and set service call parameters based on
     // the action.
     $requestedAction = isset($_REQUEST['customAction']) ? $_REQUEST['customAction'] : '';
-    
+
     require_once('lib/SecGenerators.php');
     $secgenerators = new SecGenerators;
-    
+
     if ($requestedAction == 'manage') {
         $serviceAction = 'get_usage';
         $templateFile = 'templates/manage.tpl';
@@ -1119,7 +1119,7 @@ function onecontrol_ClientArea(array $params)
                 array(
                     'vm_token'=>$token,
                     )
-        );            
+        ); 
     } else {
         $serviceAction = 'get_stats';
         $templateFile = 'templates/overview.tpl';
@@ -1129,11 +1129,12 @@ function onecontrol_ClientArea(array $params)
                 array(
                     'vm_token'=>$token,
                     )
-        );    
+        );   
 
         //echo "SID:".$params['serviceid']."; OID:".$params['attributes']['orderid'];
         //var_dump($params);
     }
+
 
     try {
         // Call the service's function based on the request action, using the
@@ -1143,14 +1144,16 @@ function onecontrol_ClientArea(array $params)
         //$extraVariable1 = 'abc';
         //$extraVariable2 = '123';
         //$extraVariable1 = var_dump($params);
-        $extraVariable1 = $params['configoption1'];
+        //$extraVariable1 = $params['configoption1'];
         $extraVariable2 = $params["configoptions"]["OS Type"]. ", " . $params["clientsdetails"]["email"];
-        
+        //$extraVariable1 = $_SESSION['uid'];
+        $extraVariable2 = $params["clientsdetails"]["email"];
+
         return array(
             'tabOverviewReplacementTemplate' => $templateFile,
             'templateVariables' => array(
                 'extraVariable1' => $extraVariable1,
-                'extraVariable2' => $token,
+                'extraVariable2' => $extraVariable2,
                 'token' => $token,
             ),
         );

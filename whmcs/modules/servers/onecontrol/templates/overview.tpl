@@ -1,4 +1,4 @@
-<!--
+
 <h2>Overview</h2>
 
 <p>Overview output goes here...</p>
@@ -9,7 +9,7 @@ product details and information that are normally displayed on this page. These 
 <div class="alert alert-info">
     Any variables you define inside the ClientArea module function can also be accessed and used here, for example: {$extraVariable1} &amp; {$extraVariable2}
 </div>
--->
+
 <h3>{$LANG.clientareaproductdetails}</h3>
 
 <hr>
@@ -246,7 +246,7 @@ product details and information that are normally displayed on this page. These 
     </div>
 </div>
 
-<!--
+
 <div class="row">
     <div class="col-sm-5">
         {$LANG.vmclientareastatus}
@@ -256,28 +256,65 @@ product details and information that are normally displayed on this page. These 
     </div>
 </div>
 
+<div id="tkvm" class="hidden">{$token}</div>
+
+<div id="alert"></div>
+
 <script type="text/javascript">
-refresh()
+refresh(0);
 
-$(document).ready(function() {
+function startrefresh() {
     var pageRefresh = 5000; //5 s
-        setInterval(function() {
-            refresh();
-        }, pageRefresh);
-});
+    refInt = setInterval(function() {
+                refresh(refInt);
+            }, pageRefresh);
+}
 
-function refresh() {
+function refresh(refInt) {
     $.ajax({
-    url: '/auxiliary.php?id={$id}&a=get_vm_state&token={$token}',
+    url: '/auxiliary.php?id={$id}&a=get_vm_state&token='+$('#tkvm').text(),
     method: "GET",
     dataType: "html",
     success: function(response) {
-       $('#vmstate').html(response);
+        state = $('#vmstate').text();
+        if (response == 'POWEROFF') {
+            $('#vmstate').html('<p style="color:red;">'+response+'</p>');
+        } else if (response == 'ACTIVE') {
+            $('#vmstate').html('<p style="color:green;">'+response+'</p>');
+        } else {
+            $('#vmstate').html('<p style="color:#CC9933;">'+response+'</p>');
+        }
+        if (response != state || refInt == 0 ) {
+            clearInterval(refInt);
+        }    
     } 
     });
 }
+
+function action(astion) {
+    $.ajax({
+        url: '/clientarea.php?action=productdetails&id={$id}&modop=custom&a='+astion,
+        method: "GET",
+        dataType: "html",
+        success: function(response) {
+            $('#tkvm').html($(response).find('#tkvm').text());
+            if ($(response).find('#alertModuleCustomButtonFailed').text()) {
+                var alert = $(response).find('#alertModuleCustomButtonFailed').text();
+                $('#alert').attr('class','alert alert-danger text-center');
+                $('#alert').html(alert);
+                return;
+            } else if ($(response).find('#alertModuleCustomButtonSuccess').text()) {
+                var alert = $(response).find('#alertModuleCustomButtonSuccess').text();
+                $('#alert').attr('class','alert alert-success text-center');
+                $('#alert').html(alert);
+                startrefresh();
+            }
+        } 
+    });
+}
+
 </script>
--->
+
 
 {if $suspendreason}
     <div class="row">
@@ -323,25 +360,22 @@ function refresh() {
     </div>
     
 </div>
-<!--
 
 <hr>
-
 {if ! $suspendreason}
 <div class="row">
-    
     <div class="col-sm-4">
-        <a href="/clientarea.php?action=productdetails&amp;id={$id}&amp;modop=custom&amp;a=poweroff_vm" class="btn btn-success btn-block{if $pendingcancellation}disabled{/if}">
-            {$LANG.poweroffvps}
-        </a>
+    <button id="resumevm" onclick="action('resume_vm')" class="btn btn-success btn-block{if $pendingcancellation}disabled{/if}" >Resume</button>
     </div>
-    
+   
+
     <div class="col-sm-4">
-        <a href="/clientarea.php?action=productdetails&amp;id={$id}&amp;modop=custom&amp;a=resume_vm" class="btn btn-success btn-block{if $pendingcancellation}disabled{/if}">
-            {$LANG.resumevps}
-        </a>
+    <button id="poweroffvm" onclick="action('poweroff_vm')" class="btn btn-success btn-block{if $pendingcancellation}disabled{/if}" >Poweroff</button>
     </div>
-    
-</div>
-{/if}
--->
+  
+
+    <div class="col-sm-4">
+    <button id="refresh" onclick="action('reboot_vm')" class="btn btn-success btn-block{if $pendingcancellation}disabled{/if}" >Reboot</button>
+    </div>
+</div> 
+{/if}   

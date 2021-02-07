@@ -54,7 +54,7 @@ function hook_onecontrol_clientedit(array $params)
  * add_hook(string $hookPointName, int $priority, string|array|Closure $function)
  */
  
-add_hook('ClientEdit', 1, 'hook_onecontrol_clientedit');
+//add_hook('ClientEdit', 1, 'hook_onecontrol_clientedit');
 
 /**
  * Insert a service item to the client area navigation bar.

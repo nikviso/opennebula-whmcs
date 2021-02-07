@@ -22,7 +22,6 @@ require_once(ROOTDIR . '/includes/dbfunctions.php');
 use WHMCS\Database\Capsule;
 #use WHMCS\Smarty ;
 
-
 function get_vm_state($id, $token)
 {
     require_once('lib/OneConnector.php');
@@ -45,17 +44,23 @@ function get_vm_state($id, $token)
         "vm_id" => $result_onevm->{'vm_id'},
         "user_id" => $result_onevm->{'user_id'}    
     );
-        
+    
     $one_reply = $oneconnector->connector($arr);  
       
     if($one_reply->{'error'}){
         return '<p style="color:red;"> Oops! Something went wrong! </p>';
+    } else {
+        return $one_reply->{'vm_state'};
     }
     
+    /*
     if ($one_reply->{'vm_state'} == 'ACTIVE') {
         return '<p style="color:green;">'.$one_reply->{'vm_state'}.'</p>';
-    } else {
+    } elseif ($one_reply->{'vm_state'} == 'POWEROFF') {
         return '<p style="color:red;">'.$one_reply->{'vm_state'}.'</p>';
-    }    
+    } else {
+        return '<p style="color:#CC9933;">'.$one_reply->{'vm_state'}.'</p>';
+    }
+    */
 }
 ?>
