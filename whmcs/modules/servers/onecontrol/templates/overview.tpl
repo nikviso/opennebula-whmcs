@@ -264,13 +264,14 @@ product details and information that are normally displayed on this page. These 
 refresh(0);
 
 function startrefresh() {
-    var pageRefresh = 5000; //5 s
+    var pageRefresh = 5000; 
     refInt = setInterval(function() {
                 refresh(refInt);
             }, pageRefresh);
 }
 
 function refresh(refInt) {
+console.log(refInt);
     $.ajax({
     url: '/auxiliary.php?id={$id}&a=get_vm_state&token='+$('#tkvm').text(),
     method: "GET",
@@ -284,7 +285,7 @@ function refresh(refInt) {
         } else {
             $('#vmstate').html('<p style="color:#CC9933;">'+response+'</p>');
         }
-        if (response != state || refInt == 0 ) {
+        if (response != state) {
             clearInterval(refInt);
         }    
     } 
@@ -307,7 +308,11 @@ function action(astion) {
                 var alert = $(response).find('#alertModuleCustomButtonSuccess').text();
                 $('#alert').attr('class','alert alert-success text-center');
                 $('#alert').html(alert);
-                startrefresh();
+                if (astion == 'reboot_vm') {
+                    refresh();
+                } else {
+                    startrefresh();
+                }
             }
         } 
     });
@@ -365,17 +370,17 @@ function action(astion) {
 {if ! $suspendreason}
 <div class="row">
     <div class="col-sm-4">
-    <button id="resumevm" onclick="action('resume_vm')" class="btn btn-success btn-block{if $pendingcancellation}disabled{/if}" >Resume</button>
+    <button id="resumevm" onclick="action('resume_vm')" class="btn btn-success btn-block{if $pendingcancellation}disabled{/if}">Resume</button>
     </div>
    
 
     <div class="col-sm-4">
-    <button id="poweroffvm" onclick="action('poweroff_vm')" class="btn btn-success btn-block{if $pendingcancellation}disabled{/if}" >Poweroff</button>
+    <button id="poweroffvm" onclick="action('poweroff_vm')" class="btn btn-success btn-block{if $pendingcancellation}disabled{/if}">Poweroff</button>
     </div>
   
 
     <div class="col-sm-4">
-    <button id="refresh" onclick="action('reboot_vm')" class="btn btn-success btn-block{if $pendingcancellation}disabled{/if}" >Reboot</button>
+    <button id="reboot" onclick="action('reboot_vm')" class="btn btn-success btn-block{if $pendingcancellation}disabled{/if}">Reboot</button>
     </div>
 </div> 
 {/if}   
