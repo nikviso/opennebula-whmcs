@@ -64,7 +64,7 @@ def config_parser(config_file):
 
 def session_id_generator(size = 8):
     """
-    Generating session id for writing to log file
+    Generating session id
     """
     
     s = "0123456789ABCDEF"
@@ -154,10 +154,9 @@ def main(config_params):
 
 if __name__ == "__main__":
     config_params = config_parser(args_parse().c)
-    # print config_params
     pid = str(os.getpid())
     file(config_params['pidfile'], 'w').write(pid)
-    
+
     main(config_params)
-    # main(workers_quantity, server_ip, server_port, key)
+
   
