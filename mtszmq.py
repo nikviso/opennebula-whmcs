@@ -94,7 +94,6 @@ def worker_routine(url_worker, key, worker_number, config_params, context=None):
     logger.info(("Worker %s started") % worker_number) 
 
     while True:
-
         json_receive  = AESobj.decrypt(socket.recv())
         session_id = session_id_generator()
         if json_receive:

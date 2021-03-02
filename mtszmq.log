@@ -4,3 +4,674 @@
 13-Feb-21 13:58:12 - __main__ - INFO - Worker 1 started
 13-Feb-21 13:58:12 - __main__ - INFO - Worker 3 started
 13-Feb-21 13:58:12 - __main__ - INFO - Worker 4 started
+01-Mar-21 23:30:48 - __main__ - INFO - Routing server started
+01-Mar-21 23:30:48 - __main__ - INFO - Worker 1 started
+01-Mar-21 23:30:48 - __main__ - INFO - Worker 0 started
+01-Mar-21 23:30:48 - __main__ - INFO - Worker 3 started
+01-Mar-21 23:30:48 - __main__ - INFO - Worker 2 started
+01-Mar-21 23:30:48 - __main__ - INFO - Worker 4 started
+01-Mar-21 23:41:33 - __main__ - INFO - Routing server started
+01-Mar-21 23:43:35 - __main__ - INFO - Routing server started
+01-Mar-21 23:43:35 - __main__ - INFO - Worker 0 started
+01-Mar-21 23:43:35 - __main__ - INFO - Worker 4 started
+01-Mar-21 23:43:35 - __main__ - INFO - Worker 1 started
+01-Mar-21 23:43:35 - __main__ - INFO - Worker 3 started
+01-Mar-21 23:43:35 - __main__ - INFO - Worker 2 started
+01-Mar-21 23:43:56 - __main__ - INFO - Worker 0 received  session ID: E1870C94
+01-Mar-21 23:43:56 - commands.Dispatcher - INFO - Session ID: E1870C94, Received request: {u'cmd': u'get_all_vm_state', u'user_id': 85}
+01-Mar-21 23:43:56 - commands.Dispatcher - INFO - Session ID: E1870C94, Sended reply: {u'vms_state': []}
+01-Mar-21 23:44:13 - __main__ - INFO - Worker 4 received  session ID: 462A8F7E
+01-Mar-21 23:44:13 - commands.Dispatcher - INFO - Session ID: 462A8F7E, Received request: {u'cmd': u'get_all_vm_state', u'user_id': 85}
+01-Mar-21 23:44:13 - commands.Dispatcher - INFO - Session ID: 462A8F7E, Sended reply: {u'vms_state': []}
+01-Mar-21 23:45:11 - __main__ - INFO - Routing server started
+01-Mar-21 23:45:11 - __main__ - INFO - Worker 0 started
+01-Mar-21 23:45:11 - __main__ - INFO - Worker 2 started
+01-Mar-21 23:45:11 - __main__ - INFO - Worker 1 started
+01-Mar-21 23:45:11 - __main__ - INFO - Worker 3 started
+01-Mar-21 23:45:11 - __main__ - INFO - Worker 4 started
+01-Mar-21 23:49:26 - __main__ - INFO - Routing server started
+01-Mar-21 23:49:26 - __main__ - INFO - Worker 1 started
+01-Mar-21 23:49:26 - __main__ - INFO - Worker 0 started
+01-Mar-21 23:49:26 - __main__ - INFO - Worker 2 started
+01-Mar-21 23:49:26 - __main__ - INFO - Worker 3 started
+01-Mar-21 23:49:26 - __main__ - INFO - Worker 4 started
+01-Mar-21 23:55:44 - __main__ - INFO - Routing server started
+01-Mar-21 23:55:44 - __main__ - INFO - Worker 0 started
+01-Mar-21 23:55:44 - __main__ - INFO - Worker 3 started
+01-Mar-21 23:55:44 - __main__ - INFO - Worker 1 started
+01-Mar-21 23:55:44 - __main__ - INFO - Worker 2 started
+01-Mar-21 23:55:44 - __main__ - INFO - Worker 4 started
+01-Mar-21 23:55:54 - __main__ - INFO - Worker 0 received  session ID: 9F5C12B8
+01-Mar-21 23:55:54 - commands.Dispatcher - INFO - Session ID: 9F5C12B8, Received request: {u'cmd': u'get_all_vm_state', u'user_id': 85}
+01-Mar-21 23:55:55 - commands.Dispatcher - INFO - Session ID: 9F5C12B8, Sended reply: {u'vms_state': []}
+01-Mar-21 23:56:31 - __main__ - INFO - Routing server started
+01-Mar-21 23:56:31 - __main__ - INFO - Worker 3 started
+01-Mar-21 23:56:31 - __main__ - INFO - Worker 2 started
+01-Mar-21 23:56:31 - __main__ - INFO - Worker 4 started
+01-Mar-21 23:56:31 - __main__ - INFO - Worker 1 started
+01-Mar-21 23:56:31 - __main__ - INFO - Worker 0 started
+01-Mar-21 23:56:51 - __main__ - INFO - Worker 3 received  session ID: B28746C1
+01-Mar-21 23:56:51 - commands.Dispatcher - INFO - Session ID: B28746C1, Received request: {u'cmd': u'get_all_vm_state', u'user_id': 85}
+01-Mar-21 23:56:51 - commands.Dispatcher - INFO - Session ID: B28746C1, Sended reply: {u'vms_state': []}
+02-Mar-21 13:05:50 - __main__ - INFO - Worker 2 received  session ID: C987F0A5
+02-Mar-21 13:05:50 - commands.Dispatcher - INFO - Session ID: C987F0A5, Received request: {u'cmd': u'get_all_vm_state', u'user_id': 96}
+02-Mar-21 13:05:50 - commands.Dispatcher - INFO - Session ID: C987F0A5, Sended reply: {u'vms_state': [{u'vm_name': u'v1p249.clouds365.host', u'vm_state': u'POWEROFF', u'vm_id': 391}]}
+02-Mar-21 13:06:03 - __main__ - INFO - Worker 4 received  session ID: FA7158B6
+02-Mar-21 13:06:03 - commands.Dispatcher - INFO - Session ID: FA7158B6, Received request: {u'cmd': u'get_all_vm_state', u'user_id': 85}
+02-Mar-21 13:06:03 - commands.Dispatcher - INFO - Session ID: FA7158B6, Sended reply: {u'vms_state': []}
+02-Mar-21 13:08:08 - __main__ - INFO - Worker 1 received  session ID: 53BC97F4
+02-Mar-21 13:08:08 - commands.Dispatcher - INFO - Session ID: 53BC97F4, Received request: {u'cmd': u'get_all_vm_state', u'user_id': 95}
+02-Mar-21 13:08:08 - commands.Dispatcher - INFO - Session ID: 53BC97F4, Sended reply: {u'vms_state': [{u'vm_name': u'v1p248.clouds365.host', u'vm_state': u'POWEROFF', u'vm_id': 390}]}
+02-Mar-21 13:10:33 - __main__ - INFO - Worker 0 received  session ID: 796A403D
+02-Mar-21 13:10:33 - commands.Dispatcher - INFO - Session ID: 796A403D, Received request: {u'cmd': u'get_all_vm_state', u'user_id': 995}
+02-Mar-21 13:10:33 - commands.Dispatcher - INFO - Session ID: 796A403D, Sended reply: {u'vms_state': []}
+02-Mar-21 13:13:00 - __main__ - INFO - Worker 3 received  session ID: 75D904B2
+02-Mar-21 13:13:00 - commands.Dispatcher - INFO - Session ID: 75D904B2, Received request: {u'user_id': 85, u'cmd': u'get_vm_state', u'vm_id': 385}
+02-Mar-21 13:13:00 - commands.Dispatcher - ERROR - Session ID: 75D904B2, Sended reply: {'error': 'list index out of range'}
+02-Mar-21 13:17:50 - __main__ - INFO - Worker 2 received  session ID: D62EC985
+02-Mar-21 13:17:50 - commands.Dispatcher - INFO - Session ID: D62EC985, Received request: {u'cmd': u'get_user_info', u'user_id': 91}
+02-Mar-21 13:17:50 - commands.Dispatcher - ERROR - Session ID: D62EC985, Sended reply: {'error': '[one.user.info] Error getting user [91].'}
+02-Mar-21 13:19:56 - __main__ - INFO - Worker 4 received  session ID: B9CAD08E
+02-Mar-21 13:19:56 - commands.Dispatcher - INFO - Session ID: B9CAD08E, Received request: {u'user_id': 85, u'cmd': u'get_vm_state', u'vm_id': 385}
+02-Mar-21 13:19:56 - commands.Dispatcher - ERROR - Session ID: B9CAD08E, Sended reply: {'error': 'list index out of range'}
+02-Mar-21 13:20:06 - __main__ - INFO - Worker 1 received  session ID: 710382BC
+02-Mar-21 13:20:06 - commands.Dispatcher - INFO - Session ID: 710382BC, Received request: {u'user_id': 95, u'cmd': u'get_vm_state', u'vm_id': 385}
+02-Mar-21 13:20:06 - commands.Dispatcher - ERROR - Session ID: 710382BC, Sended reply: {'error': 'list index out of range'}
+02-Mar-21 13:20:46 - __main__ - INFO - Worker 0 received  session ID: 961FBADC
+02-Mar-21 13:20:46 - commands.Dispatcher - INFO - Session ID: 961FBADC, Received request: {u'user_id': 95, u'cmd': u'get_vm_state', u'vm_id': 385}
+02-Mar-21 13:20:46 - commands.Dispatcher - ERROR - Session ID: 961FBADC, Sended reply: {'error': 'list index out of range'}
+02-Mar-21 13:20:47 - __main__ - INFO - Worker 3 received  session ID: 2B3147E0
+02-Mar-21 13:20:47 - commands.Dispatcher - INFO - Session ID: 2B3147E0, Received request: {u'user_id': 29, u'cmd': u'get_vm_state', u'vm_id': 247}
+02-Mar-21 13:20:47 - commands.Dispatcher - ERROR - Session ID: 2B3147E0, Sended reply: {'error': 'list index out of range'}
+02-Mar-21 13:20:54 - __main__ - INFO - Worker 2 received  session ID: 6D1B9F54
+02-Mar-21 13:20:54 - __main__ - INFO - Worker 4 received  session ID: 0DC75496
+02-Mar-21 13:20:54 - commands.Dispatcher - INFO - Session ID: 6D1B9F54, Received request: {u'user_id': 29, u'cmd': u'get_vm_state', u'vm_id': 247}
+02-Mar-21 13:20:54 - commands.Dispatcher - INFO - Session ID: 0DC75496, Received request: {u'user_id': 95, u'cmd': u'get_vm_state', u'vm_id': 385}
+02-Mar-21 13:20:54 - commands.Dispatcher - ERROR - Session ID: 6D1B9F54, Sended reply: {'error': 'list index out of range'}
+02-Mar-21 13:20:54 - commands.Dispatcher - ERROR - Session ID: 0DC75496, Sended reply: {'error': 'list index out of range'}
+02-Mar-21 13:21:17 - __main__ - INFO - Worker 1 received  session ID: 6D7801CA
+02-Mar-21 13:21:17 - __main__ - INFO - Worker 0 received  session ID: 5E068B7C
+02-Mar-21 13:21:17 - commands.Dispatcher - INFO - Session ID: 6D7801CA, Received request: {u'user_id': 95, u'cmd': u'get_vm_state', u'vm_id': 385}
+02-Mar-21 13:21:17 - commands.Dispatcher - INFO - Session ID: 5E068B7C, Received request: {u'user_id': 29, u'cmd': u'get_vm_state', u'vm_id': 247}
+02-Mar-21 13:21:17 - commands.Dispatcher - ERROR - Session ID: 6D7801CA, Sended reply: {'error': 'list index out of range'}
+02-Mar-21 13:21:17 - commands.Dispatcher - ERROR - Session ID: 5E068B7C, Sended reply: {'error': 'list index out of range'}
+02-Mar-21 13:21:19 - __main__ - INFO - Worker 3 received  session ID: FE09734C
+02-Mar-21 13:21:19 - commands.Dispatcher - INFO - Session ID: FE09734C, Received request: {u'user_id': 29, u'cmd': u'get_vm_state', u'vm_id': 247}
+02-Mar-21 13:21:19 - __main__ - INFO - Worker 2 received  session ID: 45DFCA01
+02-Mar-21 13:21:19 - commands.Dispatcher - ERROR - Session ID: FE09734C, Sended reply: {'error': 'list index out of range'}
+02-Mar-21 13:21:19 - commands.Dispatcher - INFO - Session ID: 45DFCA01, Received request: {u'user_id': 95, u'cmd': u'get_vm_state', u'vm_id': 385}
+02-Mar-21 13:21:19 - commands.Dispatcher - ERROR - Session ID: 45DFCA01, Sended reply: {'error': 'list index out of range'}
+02-Mar-21 13:21:22 - __main__ - INFO - Worker 4 received  session ID: E85F10A4
+02-Mar-21 13:21:22 - commands.Dispatcher - INFO - Session ID: E85F10A4, Received request: {u'user_id': 29, u'cmd': u'get_vm_state', u'vm_id': 247}
+02-Mar-21 13:21:22 - commands.Dispatcher - ERROR - Session ID: E85F10A4, Sended reply: {'error': 'list index out of range'}
+02-Mar-21 13:21:22 - __main__ - INFO - Worker 1 received  session ID: E561CBA2
+02-Mar-21 13:21:22 - commands.Dispatcher - INFO - Session ID: E561CBA2, Received request: {u'user_id': 95, u'cmd': u'get_vm_state', u'vm_id': 385}
+02-Mar-21 13:21:22 - commands.Dispatcher - ERROR - Session ID: E561CBA2, Sended reply: {'error': 'list index out of range'}
+02-Mar-21 13:21:24 - __main__ - INFO - Worker 0 received  session ID: BF86327D
+02-Mar-21 13:21:24 - commands.Dispatcher - INFO - Session ID: BF86327D, Received request: {u'user_id': 29, u'cmd': u'get_vm_state', u'vm_id': 247}
+02-Mar-21 13:21:24 - __main__ - INFO - Worker 3 received  session ID: B05FD689
+02-Mar-21 13:21:24 - commands.Dispatcher - ERROR - Session ID: BF86327D, Sended reply: {'error': 'list index out of range'}
+02-Mar-21 13:21:24 - commands.Dispatcher - INFO - Session ID: B05FD689, Received request: {u'user_id': 95, u'cmd': u'get_vm_state', u'vm_id': 385}
+02-Mar-21 13:21:24 - commands.Dispatcher - ERROR - Session ID: B05FD689, Sended reply: {'error': 'list index out of range'}
+02-Mar-21 13:21:25 - __main__ - INFO - Worker 2 received  session ID: 5493CF1A
+02-Mar-21 13:21:25 - commands.Dispatcher - INFO - Session ID: 5493CF1A, Received request: {u'user_id': 29, u'cmd': u'get_vm_state', u'vm_id': 247}
+02-Mar-21 13:21:25 - __main__ - INFO - Worker 4 received  session ID: E08A729C
+02-Mar-21 13:21:25 - commands.Dispatcher - ERROR - Session ID: 5493CF1A, Sended reply: {'error': 'list index out of range'}
+02-Mar-21 13:21:25 - commands.Dispatcher - INFO - Session ID: E08A729C, Received request: {u'user_id': 95, u'cmd': u'get_vm_state', u'vm_id': 385}
+02-Mar-21 13:21:25 - commands.Dispatcher - ERROR - Session ID: E08A729C, Sended reply: {'error': 'list index out of range'}
+02-Mar-21 13:21:26 - __main__ - INFO - Worker 1 received  session ID: 641DE97C
+02-Mar-21 13:21:26 - __main__ - INFO - Worker 0 received  session ID: 03DB6485
+02-Mar-21 13:21:26 - commands.Dispatcher - INFO - Session ID: 641DE97C, Received request: {u'user_id': 29, u'cmd': u'get_vm_state', u'vm_id': 247}
+02-Mar-21 13:21:26 - commands.Dispatcher - INFO - Session ID: 03DB6485, Received request: {u'user_id': 95, u'cmd': u'get_vm_state', u'vm_id': 385}
+02-Mar-21 13:21:26 - commands.Dispatcher - ERROR - Session ID: 641DE97C, Sended reply: {'error': 'list index out of range'}
+02-Mar-21 13:21:26 - commands.Dispatcher - ERROR - Session ID: 03DB6485, Sended reply: {'error': 'list index out of range'}
+02-Mar-21 13:21:27 - __main__ - INFO - Worker 3 received  session ID: A8D407EF
+02-Mar-21 13:21:27 - __main__ - INFO - Worker 2 received  session ID: E8316D4B
+02-Mar-21 13:21:27 - commands.Dispatcher - INFO - Session ID: A8D407EF, Received request: {u'user_id': 29, u'cmd': u'get_vm_state', u'vm_id': 247}
+02-Mar-21 13:21:27 - commands.Dispatcher - INFO - Session ID: E8316D4B, Received request: {u'user_id': 95, u'cmd': u'get_vm_state', u'vm_id': 385}
+02-Mar-21 13:21:27 - commands.Dispatcher - ERROR - Session ID: A8D407EF, Sended reply: {'error': 'list index out of range'}
+02-Mar-21 13:21:27 - commands.Dispatcher - ERROR - Session ID: E8316D4B, Sended reply: {'error': 'list index out of range'}
+02-Mar-21 13:21:28 - __main__ - INFO - Worker 4 received  session ID: 3214B067
+02-Mar-21 13:21:28 - commands.Dispatcher - INFO - Session ID: 3214B067, Received request: {u'user_id': 29, u'cmd': u'get_vm_state', u'vm_id': 247}
+02-Mar-21 13:21:28 - __main__ - INFO - Worker 1 received  session ID: CF4961AD
+02-Mar-21 13:21:28 - commands.Dispatcher - ERROR - Session ID: 3214B067, Sended reply: {'error': 'list index out of range'}
+02-Mar-21 13:21:28 - commands.Dispatcher - INFO - Session ID: CF4961AD, Received request: {u'user_id': 95, u'cmd': u'get_vm_state', u'vm_id': 385}
+02-Mar-21 13:21:28 - commands.Dispatcher - ERROR - Session ID: CF4961AD, Sended reply: {'error': 'list index out of range'}
+02-Mar-21 13:21:29 - __main__ - INFO - Worker 0 received  session ID: A6945B8D
+02-Mar-21 13:21:29 - commands.Dispatcher - INFO - Session ID: A6945B8D, Received request: {u'user_id': 29, u'cmd': u'get_vm_state', u'vm_id': 247}
+02-Mar-21 13:21:29 - __main__ - INFO - Worker 3 received  session ID: 574FC32B
+02-Mar-21 13:21:29 - commands.Dispatcher - ERROR - Session ID: A6945B8D, Sended reply: {'error': 'list index out of range'}
+02-Mar-21 13:21:29 - commands.Dispatcher - INFO - Session ID: 574FC32B, Received request: {u'user_id': 95, u'cmd': u'get_vm_state', u'vm_id': 385}
+02-Mar-21 13:21:29 - commands.Dispatcher - ERROR - Session ID: 574FC32B, Sended reply: {'error': 'list index out of range'}
+02-Mar-21 13:21:30 - __main__ - INFO - Worker 2 received  session ID: 4EFDB293
+02-Mar-21 13:21:30 - commands.Dispatcher - INFO - Session ID: 4EFDB293, Received request: {u'user_id': 29, u'cmd': u'get_vm_state', u'vm_id': 247}
+02-Mar-21 13:21:30 - __main__ - INFO - Worker 4 received  session ID: B59C4AE3
+02-Mar-21 13:21:30 - commands.Dispatcher - ERROR - Session ID: 4EFDB293, Sended reply: {'error': 'list index out of range'}
+02-Mar-21 13:21:30 - commands.Dispatcher - INFO - Session ID: B59C4AE3, Received request: {u'user_id': 95, u'cmd': u'get_vm_state', u'vm_id': 385}
+02-Mar-21 13:21:30 - commands.Dispatcher - ERROR - Session ID: B59C4AE3, Sended reply: {'error': 'list index out of range'}
+02-Mar-21 13:22:45 - __main__ - INFO - Worker 1 received  session ID: 3F240857
+02-Mar-21 13:22:45 - __main__ - INFO - Worker 0 received  session ID: 5264BF1A
+02-Mar-21 13:22:45 - commands.Dispatcher - INFO - Session ID: 3F240857, Received request: {u'user_id': 95, u'cmd': u'get_vm_state', u'vm_id': 390}
+02-Mar-21 13:22:45 - commands.Dispatcher - INFO - Session ID: 5264BF1A, Received request: {u'user_id': 96, u'cmd': u'get_vm_state', u'vm_id': 391}
+02-Mar-21 13:22:45 - commands.Dispatcher - INFO - Session ID: 5264BF1A, Sended reply: {'vm_state': 'POWEROFF', 'vm_id': 391}
+02-Mar-21 13:22:45 - commands.Dispatcher - INFO - Session ID: 3F240857, Sended reply: {'vm_state': 'POWEROFF', 'vm_id': 390}
+02-Mar-21 13:22:51 - __main__ - INFO - Worker 3 received  session ID: E728C0F3
+02-Mar-21 13:22:51 - commands.Dispatcher - INFO - Session ID: E728C0F3, Received request: {u'user_id': 96, u'cmd': u'get_vm_state', u'vm_id': 391}
+02-Mar-21 13:22:51 - __main__ - INFO - Worker 2 received  session ID: 1043E8A7
+02-Mar-21 13:22:51 - commands.Dispatcher - INFO - Session ID: 1043E8A7, Received request: {u'user_id': 95, u'cmd': u'get_vm_state', u'vm_id': 390}
+02-Mar-21 13:22:51 - commands.Dispatcher - INFO - Session ID: E728C0F3, Sended reply: {'vm_state': 'POWEROFF', 'vm_id': 391}
+02-Mar-21 13:22:52 - commands.Dispatcher - INFO - Session ID: 1043E8A7, Sended reply: {'vm_state': 'POWEROFF', 'vm_id': 390}
+02-Mar-21 13:22:53 - __main__ - INFO - Worker 4 received  session ID: A38F24C6
+02-Mar-21 13:22:53 - commands.Dispatcher - INFO - Session ID: A38F24C6, Received request: {u'user_id': 96, u'cmd': u'get_vm_state', u'vm_id': 391}
+02-Mar-21 13:22:53 - __main__ - INFO - Worker 1 received  session ID: E7169480
+02-Mar-21 13:22:53 - commands.Dispatcher - INFO - Session ID: E7169480, Received request: {u'user_id': 95, u'cmd': u'get_vm_state', u'vm_id': 390}
+02-Mar-21 13:22:53 - commands.Dispatcher - INFO - Session ID: A38F24C6, Sended reply: {'vm_state': 'POWEROFF', 'vm_id': 391}
+02-Mar-21 13:22:53 - commands.Dispatcher - INFO - Session ID: E7169480, Sended reply: {'vm_state': 'POWEROFF', 'vm_id': 390}
+02-Mar-21 13:22:54 - __main__ - INFO - Worker 0 received  session ID: 0C45EDFB
+02-Mar-21 13:22:54 - commands.Dispatcher - INFO - Session ID: 0C45EDFB, Received request: {u'user_id': 96, u'cmd': u'get_vm_state', u'vm_id': 391}
+02-Mar-21 13:22:54 - __main__ - INFO - Worker 3 received  session ID: 4B1FC89D
+02-Mar-21 13:22:54 - commands.Dispatcher - INFO - Session ID: 4B1FC89D, Received request: {u'user_id': 95, u'cmd': u'get_vm_state', u'vm_id': 390}
+02-Mar-21 13:22:54 - commands.Dispatcher - INFO - Session ID: 0C45EDFB, Sended reply: {'vm_state': 'POWEROFF', 'vm_id': 391}
+02-Mar-21 13:22:54 - commands.Dispatcher - INFO - Session ID: 4B1FC89D, Sended reply: {'vm_state': 'POWEROFF', 'vm_id': 390}
+02-Mar-21 13:22:56 - __main__ - INFO - Worker 2 received  session ID: 7D3B9ECA
+02-Mar-21 13:22:56 - commands.Dispatcher - INFO - Session ID: 7D3B9ECA, Received request: {u'user_id': 96, u'cmd': u'get_vm_state', u'vm_id': 391}
+02-Mar-21 13:22:56 - __main__ - INFO - Worker 4 received  session ID: D9486EB2
+02-Mar-21 13:22:56 - commands.Dispatcher - INFO - Session ID: D9486EB2, Received request: {u'user_id': 95, u'cmd': u'get_vm_state', u'vm_id': 390}
+02-Mar-21 13:22:56 - commands.Dispatcher - INFO - Session ID: 7D3B9ECA, Sended reply: {'vm_state': 'POWEROFF', 'vm_id': 391}
+02-Mar-21 13:22:56 - commands.Dispatcher - INFO - Session ID: D9486EB2, Sended reply: {'vm_state': 'POWEROFF', 'vm_id': 390}
+02-Mar-21 13:23:50 - __main__ - INFO - Worker 1 received  session ID: 0AC51F3E
+02-Mar-21 13:23:50 - commands.Dispatcher - INFO - Session ID: 0AC51F3E, Received request: {u'action': u'resume', u'vm_id': 391, u'cmd': u'vm_action', u'user_id': 96}
+02-Mar-21 13:23:50 - __main__ - INFO - Worker 0 received  session ID: B584E102
+02-Mar-21 13:23:50 - commands.Dispatcher - INFO - Session ID: B584E102, Received request: {u'user_id': 95, u'cmd': u'get_vm_state', u'vm_id': 390}
+02-Mar-21 13:23:50 - commands.Dispatcher - INFO - Session ID: 0AC51F3E, Sended reply: {'vm_id': 391, 'vm_action': u'resume'}
+02-Mar-21 13:23:50 - commands.Dispatcher - INFO - Session ID: B584E102, Sended reply: {'vm_state': 'POWEROFF', 'vm_id': 390}
+02-Mar-21 13:25:16 - __main__ - INFO - Worker 3 received  session ID: E9FA260C
+02-Mar-21 13:25:16 - __main__ - INFO - Worker 2 received  session ID: E162DC3A
+02-Mar-21 13:25:16 - commands.Dispatcher - INFO - Session ID: E9FA260C, Received request: {u'user_id': 96, u'cmd': u'get_vm_state', u'vm_id': 391}
+02-Mar-21 13:25:16 - commands.Dispatcher - INFO - Session ID: E162DC3A, Received request: {u'action': u'resume', u'vm_id': 390, u'cmd': u'vm_action', u'user_id': 95}
+02-Mar-21 13:25:16 - commands.Dispatcher - INFO - Session ID: E9FA260C, Sended reply: {'vm_state': 'ACTIVE', 'vm_id': 391}
+02-Mar-21 13:25:16 - commands.Dispatcher - INFO - Session ID: E162DC3A, Sended reply: {'vm_id': 390, 'vm_action': u'resume'}
+02-Mar-21 13:25:23 - __main__ - INFO - Worker 4 received  session ID: 8CA30B74
+02-Mar-21 13:25:23 - __main__ - INFO - Worker 1 received  session ID: D7034F1E
+02-Mar-21 13:25:23 - commands.Dispatcher - INFO - Session ID: 8CA30B74, Received request: {u'user_id': 96, u'cmd': u'get_vm_state', u'vm_id': 391}
+02-Mar-21 13:25:23 - commands.Dispatcher - INFO - Session ID: D7034F1E, Received request: {u'action': u'resume', u'vm_id': 390, u'cmd': u'vm_action', u'user_id': 95}
+02-Mar-21 13:25:23 - commands.Dispatcher - INFO - Session ID: 8CA30B74, Sended reply: {'vm_state': 'ACTIVE', 'vm_id': 391}
+02-Mar-21 13:25:23 - commands.Dispatcher - ERROR - Session ID: D7034F1E, Sended reply: {'error': '[one.vm.action] Error performing action "resume": This action is not available for state RUNNING'}
+02-Mar-21 13:25:45 - __main__ - INFO - Worker 0 received  session ID: EB30CA52
+02-Mar-21 13:25:45 - __main__ - INFO - Worker 3 received  session ID: 295FA817
+02-Mar-21 13:25:45 - commands.Dispatcher - INFO - Session ID: EB30CA52, Received request: {u'user_id': 96, u'cmd': u'get_vm_state', u'vm_id': 391}
+02-Mar-21 13:25:45 - commands.Dispatcher - INFO - Session ID: 295FA817, Received request: {u'action': u'resume', u'vm_id': 390, u'cmd': u'vm_action', u'user_id': 95}
+02-Mar-21 13:25:45 - commands.Dispatcher - INFO - Session ID: EB30CA52, Sended reply: {'vm_state': 'ACTIVE', 'vm_id': 391}
+02-Mar-21 13:25:45 - commands.Dispatcher - ERROR - Session ID: 295FA817, Sended reply: {'error': '[one.vm.action] Error performing action "resume": This action is not available for state RUNNING'}
+02-Mar-21 13:26:24 - __main__ - INFO - Worker 2 received  session ID: E60C9A7B
+02-Mar-21 13:26:24 - __main__ - INFO - Worker 4 received  session ID: 6E23F410
+02-Mar-21 13:26:24 - commands.Dispatcher - INFO - Session ID: E60C9A7B, Received request: {u'action': u'poweroff', u'vm_id': 390, u'cmd': u'vm_action', u'user_id': 95}
+02-Mar-21 13:26:24 - commands.Dispatcher - INFO - Session ID: 6E23F410, Received request: {u'user_id': 96, u'cmd': u'get_vm_state', u'vm_id': 391}
+02-Mar-21 13:26:24 - commands.Dispatcher - INFO - Session ID: 6E23F410, Sended reply: {'vm_state': 'ACTIVE', 'vm_id': 391}
+02-Mar-21 13:26:24 - commands.Dispatcher - INFO - Session ID: E60C9A7B, Sended reply: {'vm_id': 390, 'vm_action': u'poweroff'}
+02-Mar-21 13:26:34 - __main__ - INFO - Worker 1 received  session ID: 72DE65C4
+02-Mar-21 13:26:34 - __main__ - INFO - Worker 0 received  session ID: 0A618BF3
+02-Mar-21 13:26:34 - commands.Dispatcher - INFO - Session ID: 72DE65C4, Received request: {u'user_id': 96, u'cmd': u'get_vm_state', u'vm_id': 391}
+02-Mar-21 13:26:34 - commands.Dispatcher - INFO - Session ID: 0A618BF3, Received request: {u'action': u'poweroff', u'vm_id': 390, u'cmd': u'vm_action', u'user_id': 95}
+02-Mar-21 13:26:34 - commands.Dispatcher - INFO - Session ID: 72DE65C4, Sended reply: {'vm_state': 'ACTIVE', 'vm_id': 391}
+02-Mar-21 13:26:34 - commands.Dispatcher - ERROR - Session ID: 0A618BF3, Sended reply: {'error': '[one.vm.action] Error performing action "poweroff": This action is not available for state POWEROFF'}
+02-Mar-21 13:27:02 - __main__ - INFO - Worker 3 received  session ID: 57982E3D
+02-Mar-21 13:27:02 - __main__ - INFO - Worker 2 received  session ID: 3B6C80A9
+02-Mar-21 13:27:02 - commands.Dispatcher - INFO - Session ID: 57982E3D, Received request: {u'action': u'resume', u'vm_id': 391, u'cmd': u'vm_action', u'user_id': 96}
+02-Mar-21 13:27:02 - commands.Dispatcher - INFO - Session ID: 3B6C80A9, Received request: {u'action': u'poweroff', u'vm_id': 390, u'cmd': u'vm_action', u'user_id': 95}
+02-Mar-21 13:27:02 - commands.Dispatcher - ERROR - Session ID: 57982E3D, Sended reply: {'error': '[one.vm.action] Error performing action "resume": This action is not available for state RUNNING'}
+02-Mar-21 13:27:02 - commands.Dispatcher - ERROR - Session ID: 3B6C80A9, Sended reply: {'error': '[one.vm.action] Error performing action "poweroff": This action is not available for state POWEROFF'}
+02-Mar-21 13:28:34 - __main__ - INFO - Worker 4 received  session ID: 620C3DAB
+02-Mar-21 13:28:34 - commands.Dispatcher - INFO - Session ID: 620C3DAB, Received request: {u'action': u'poweroff', u'vm_id': 390, u'cmd': u'vm_action', u'user_id': 95}
+02-Mar-21 13:28:34 - __main__ - INFO - Worker 1 received  session ID: 3CB052E6
+02-Mar-21 13:28:34 - commands.Dispatcher - INFO - Session ID: 3CB052E6, Received request: {u'action': u'poweroff', u'vm_id': 391, u'cmd': u'vm_action', u'user_id': 96}
+02-Mar-21 13:28:34 - commands.Dispatcher - INFO - Session ID: 3CB052E6, Sended reply: {'vm_id': 391, 'vm_action': u'poweroff'}
+02-Mar-21 13:28:34 - commands.Dispatcher - ERROR - Session ID: 620C3DAB, Sended reply: {'error': '[one.vm.action] Error performing action "poweroff": This action is not available for state POWEROFF'}
+02-Mar-21 13:31:26 - __main__ - INFO - Worker 0 received  session ID: EB738290
+02-Mar-21 13:31:26 - __main__ - INFO - Worker 3 received  session ID: 589173BE
+02-Mar-21 13:31:26 - commands.Dispatcher - INFO - Session ID: EB738290, Received request: {u'vm_name': u'v1p250.clouds365.host', u'user_id': 96, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.250', u'template_id': 329}
+02-Mar-21 13:31:26 - commands.Dispatcher - INFO - Session ID: 589173BE, Received request: {u'vm_name': u'v1p247.clouds365.host', u'user_id': 95, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.247', u'template_id': 390}
+02-Mar-21 13:31:31 - commands.Dispatcher - INFO - Session ID: EB738290, Sended reply: {'user_id': 96, 'vm_root_password': u'*******', 'vm_id': 392, 'vm_user_password': u'*******', 'vm_user': 'uspbf45'}
+02-Mar-21 13:31:31 - commands.Dispatcher - INFO - Session ID: 589173BE, Sended reply: {'user_id': 95, 'vm_root_password': u'*******', 'vm_id': 393, 'vm_user_password': u'*******', 'vm_user': 'oimzu07'}
+02-Mar-21 13:33:11 - __main__ - INFO - Worker 2 received  session ID: B5D769FC
+02-Mar-21 13:33:11 - commands.Dispatcher - INFO - Session ID: B5D769FC, Received request: {u'user_id': 96, u'cmd': u'get_vm_state', u'vm_id': 393}
+02-Mar-21 13:33:11 - commands.Dispatcher - ERROR - Session ID: B5D769FC, Sended reply: {'error': 'list index out of range'}
+02-Mar-21 13:33:33 - __main__ - INFO - Worker 4 received  session ID: AED83C9F
+02-Mar-21 13:33:33 - commands.Dispatcher - INFO - Session ID: AED83C9F, Received request: {u'user_id': 95, u'cmd': u'get_vm_state', u'vm_id': 393}
+02-Mar-21 13:33:33 - commands.Dispatcher - INFO - Session ID: AED83C9F, Sended reply: {'vm_state': 'ACTIVE', 'vm_id': 393}
+02-Mar-21 13:34:29 - __main__ - INFO - Worker 1 received  session ID: 748B136C
+02-Mar-21 13:34:29 - commands.Dispatcher - INFO - Session ID: 748B136C, Received request: {u'user_id': 96, u'cmd': u'get_vm_state', u'vm_id': 392}
+02-Mar-21 13:34:29 - commands.Dispatcher - INFO - Session ID: 748B136C, Sended reply: {'vm_state': 'ACTIVE', 'vm_id': 392}
+02-Mar-21 13:35:58 - __main__ - INFO - Worker 0 received  session ID: 195E643A
+02-Mar-21 13:35:58 - commands.Dispatcher - INFO - Session ID: 195E643A, Received request: {u'vm_id': 393, u'cmd': u'vm_terminate', u'user_id': 95}
+02-Mar-21 13:35:58 - __main__ - INFO - Worker 3 received  session ID: DBA2E980
+02-Mar-21 13:35:58 - commands.Dispatcher - INFO - Session ID: DBA2E980, Received request: {u'user_id': 96, u'cmd': u'get_vm_state', u'vm_id': 392}
+02-Mar-21 13:35:58 - commands.Dispatcher - INFO - Session ID: DBA2E980, Sended reply: {'vm_state': 'ACTIVE', 'vm_id': 392}
+02-Mar-21 13:36:01 - commands.Dispatcher - INFO - Session ID: 195E643A, Sended reply: {'action': 'vm terminated'}
+02-Mar-21 13:37:26 - __main__ - INFO - Worker 2 received  session ID: 839B51EC
+02-Mar-21 13:37:26 - commands.Dispatcher - INFO - Session ID: 839B51EC, Received request: {u'vm_id': 392, u'cmd': u'vm_terminate', u'user_id': 96}
+02-Mar-21 13:37:29 - commands.Dispatcher - INFO - Session ID: 839B51EC, Sended reply: {'action': 'vm terminated'}
+02-Mar-21 13:39:50 - __main__ - INFO - Worker 4 received  session ID: E39AD042
+02-Mar-21 13:39:51 - commands.Dispatcher - INFO - Session ID: E39AD042, Received request: {u'cmd': u'get_all_vm_state', u'user_id': 15}
+02-Mar-21 13:39:51 - commands.Dispatcher - INFO - Session ID: E39AD042, Sended reply: {u'vms_state': []}
+02-Mar-21 13:46:48 - __main__ - INFO - Routing server started
+02-Mar-21 13:46:48 - __main__ - INFO - Worker 0 started
+02-Mar-21 13:46:48 - __main__ - INFO - Worker 2 started
+02-Mar-21 13:46:48 - __main__ - INFO - Worker 4 started
+02-Mar-21 13:46:48 - __main__ - INFO - Worker 3 started
+02-Mar-21 13:46:48 - __main__ - INFO - Worker 1 started
+02-Mar-21 13:46:58 - __main__ - INFO - Worker 0 received  session ID: E54BD793
+02-Mar-21 13:46:58 - commands.Dispatcher - INFO - Session ID: E54BD793, Received request: {u'cmd': u'get_all_vm_state', u'user_id': 15}
+02-Mar-21 13:46:58 - commands.Dispatcher - INFO - Session ID: E54BD793, Sended reply: {u'vms_state': []}
+02-Mar-21 13:48:18 - __main__ - INFO - Worker 2 received  session ID: 2E84071F
+02-Mar-21 13:48:18 - commands.Dispatcher - INFO - Session ID: 2E84071F, Received request: {u'cmd': u'get_all_vm_state', u'user_name': u'tuta'}
+02-Mar-21 13:51:38 - __main__ - INFO - Routing server started
+02-Mar-21 13:51:38 - __main__ - INFO - Worker 3 started
+02-Mar-21 13:51:38 - __main__ - INFO - Worker 1 started
+02-Mar-21 13:51:38 - __main__ - INFO - Worker 2 started
+02-Mar-21 13:51:38 - __main__ - INFO - Worker 4 started
+02-Mar-21 13:51:38 - __main__ - INFO - Worker 0 started
+02-Mar-21 13:51:46 - __main__ - INFO - Worker 3 received  session ID: 369D5A28
+02-Mar-21 13:51:46 - commands.Dispatcher - INFO - Session ID: 369D5A28, Received request: {u'cmd': u'get_all_vm_state', u'user_name': u'tuta'}
+02-Mar-21 13:52:06 - __main__ - INFO - Worker 1 received  session ID: 2C19DE34
+02-Mar-21 13:52:06 - commands.Dispatcher - INFO - Session ID: 2C19DE34, Received request: {u'cmd': u'get_all_vm_state', u'user_name': u'tuta'}
+02-Mar-21 13:52:26 - __main__ - INFO - Worker 2 received  session ID: 487BA3DE
+02-Mar-21 13:52:26 - commands.Dispatcher - INFO - Session ID: 487BA3DE, Received request: {u'cmd': u'get_all_vm_state', u'user_name': u'tuta'}
+02-Mar-21 13:52:41 - __main__ - INFO - Routing server started
+02-Mar-21 13:52:41 - __main__ - INFO - Worker 0 started
+02-Mar-21 13:52:41 - __main__ - INFO - Worker 2 started
+02-Mar-21 13:52:41 - __main__ - INFO - Worker 4 started
+02-Mar-21 13:52:41 - __main__ - INFO - Worker 3 started
+02-Mar-21 13:52:41 - __main__ - INFO - Worker 1 started
+02-Mar-21 13:52:46 - __main__ - INFO - Worker 0 received  session ID: 107FCB25
+02-Mar-21 13:52:46 - commands.Dispatcher - INFO - Session ID: 107FCB25, Received request: {u'cmd': u'get_all_vm_state', u'user_name': u'tuta'}
+02-Mar-21 13:53:06 - __main__ - INFO - Worker 2 received  session ID: 143FC9E0
+02-Mar-21 13:53:06 - commands.Dispatcher - INFO - Session ID: 143FC9E0, Received request: {u'cmd': u'get_all_vm_state', u'user_name': u'tuta'}
+02-Mar-21 13:53:26 - __main__ - INFO - Worker 4 received  session ID: DB7A1026
+02-Mar-21 13:53:26 - commands.Dispatcher - INFO - Session ID: DB7A1026, Received request: {u'cmd': u'get_all_vm_state', u'user_name': u'tuta'}
+02-Mar-21 13:55:33 - __main__ - INFO - Routing server started
+02-Mar-21 13:55:33 - __main__ - INFO - Worker 1 started
+02-Mar-21 13:55:33 - __main__ - INFO - Worker 2 started
+02-Mar-21 13:55:33 - __main__ - INFO - Worker 0 started
+02-Mar-21 13:55:33 - __main__ - INFO - Worker 3 started
+02-Mar-21 13:55:33 - __main__ - INFO - Worker 4 started
+02-Mar-21 13:55:38 - __main__ - INFO - Worker 1 received  session ID: 2601BACD
+02-Mar-21 13:55:38 - commands.Dispatcher - INFO - Session ID: 2601BACD, Received request: {u'cmd': u'get_all_vm_state', u'user_name': u'tuta'}
+02-Mar-21 13:57:33 - __main__ - INFO - Routing server started
+02-Mar-21 13:57:33 - __main__ - INFO - Worker 0 started
+02-Mar-21 13:57:33 - __main__ - INFO - Worker 1 started
+02-Mar-21 13:57:33 - __main__ - INFO - Worker 3 started
+02-Mar-21 13:57:33 - __main__ - INFO - Worker 2 started
+02-Mar-21 13:57:33 - __main__ - INFO - Worker 4 started
+02-Mar-21 13:57:39 - __main__ - INFO - Worker 0 received  session ID: BE56D403
+02-Mar-21 13:57:39 - commands.Dispatcher - INFO - Session ID: BE56D403, Received request: {u'cmd': u'get_all_vm_state', u'user_name': u'tuta'}
+02-Mar-21 14:05:18 - __main__ - INFO - Routing server started
+02-Mar-21 14:05:18 - __main__ - INFO - Worker 0 started
+02-Mar-21 14:05:18 - __main__ - INFO - Worker 2 started
+02-Mar-21 14:05:18 - __main__ - INFO - Worker 4 started
+02-Mar-21 14:05:18 - __main__ - INFO - Worker 1 started
+02-Mar-21 14:05:18 - __main__ - INFO - Worker 3 started
+02-Mar-21 14:05:23 - __main__ - INFO - Worker 0 received  session ID: C23190EF
+02-Mar-21 14:05:23 - commands.Dispatcher - INFO - Session ID: C23190EF, Received request: {u'cmd': u'get_all_vm_state', u'user_name': u'tuta'}
+02-Mar-21 14:06:33 - __main__ - INFO - Routing server started
+02-Mar-21 14:06:33 - __main__ - INFO - Worker 0 started
+02-Mar-21 14:06:33 - __main__ - INFO - Worker 2 started
+02-Mar-21 14:06:33 - __main__ - INFO - Worker 3 started
+02-Mar-21 14:06:33 - __main__ - INFO - Worker 1 started
+02-Mar-21 14:06:33 - __main__ - INFO - Worker 4 started
+02-Mar-21 14:06:45 - __main__ - INFO - Worker 0 received  session ID: 82DCE47A
+02-Mar-21 14:06:45 - commands.Dispatcher - INFO - Session ID: 82DCE47A, Received request: {u'cmd': u'get_all_vm_state', u'user_name': u'tuta'}
+02-Mar-21 14:08:06 - __main__ - INFO - Routing server started
+02-Mar-21 14:08:06 - __main__ - INFO - Worker 0 started
+02-Mar-21 14:08:06 - __main__ - INFO - Worker 3 started
+02-Mar-21 14:08:06 - __main__ - INFO - Worker 1 started
+02-Mar-21 14:08:06 - __main__ - INFO - Worker 2 started
+02-Mar-21 14:08:06 - __main__ - INFO - Worker 4 started
+02-Mar-21 14:08:10 - __main__ - INFO - Worker 0 received  session ID: 652DBA1F
+02-Mar-21 14:08:10 - commands.Dispatcher - INFO - Session ID: 652DBA1F, Received request: {u'cmd': u'get_all_vm_state', u'user_name': u'tuta'}
+02-Mar-21 14:08:10 - commands.Dispatcher - INFO - Session ID: 652DBA1F, Sended reply: {u'vms_state': []}
+02-Mar-21 14:30:21 - __main__ - INFO - Routing server started
+02-Mar-21 14:30:21 - __main__ - INFO - Worker 0 started
+02-Mar-21 14:30:21 - __main__ - INFO - Worker 2 started
+02-Mar-21 14:30:21 - __main__ - INFO - Worker 3 started
+02-Mar-21 14:30:21 - __main__ - INFO - Worker 1 started
+02-Mar-21 14:30:21 - __main__ - INFO - Worker 4 started
+02-Mar-21 14:30:24 - __main__ - INFO - Worker 0 received  session ID: 7E6258FB
+02-Mar-21 14:30:24 - commands.Dispatcher - INFO - Session ID: 7E6258FB, Received request: {u'cmd': u'get_all_vm_state', u'user_name': u'tuta'}
+02-Mar-21 14:30:24 - commands.Dispatcher - ERROR - Session ID: 7E6258FB, Sended reply: {'error': 'error user name'}
+02-Mar-21 14:33:47 - __main__ - INFO - Routing server started
+02-Mar-21 14:33:47 - __main__ - INFO - Worker 1 started
+02-Mar-21 14:33:47 - __main__ - INFO - Worker 0 started
+02-Mar-21 14:33:47 - __main__ - INFO - Worker 2 started
+02-Mar-21 14:33:47 - __main__ - INFO - Worker 3 started
+02-Mar-21 14:33:47 - __main__ - INFO - Worker 4 started
+02-Mar-21 14:33:49 - __main__ - INFO - Worker 1 received  session ID: D257EAF0
+02-Mar-21 14:33:49 - commands.Dispatcher - INFO - Session ID: D257EAF0, Received request: {u'cmd': u'get_all_vm_state', u'user_name': u'tuta'}
+02-Mar-21 14:33:49 - commands.Dispatcher - ERROR - Session ID: D257EAF0, Sended reply: {'error': 'error user name'}
+02-Mar-21 14:34:42 - __main__ - INFO - Worker 0 received  session ID: B426D3E0
+02-Mar-21 14:34:42 - commands.Dispatcher - INFO - Session ID: B426D3E0, Received request: {u'cmd': u'get_all_vm_state', u'user_name': u'vds@clouds365.host'}
+02-Mar-21 14:35:02 - __main__ - INFO - Worker 2 received  session ID: 9D6F1548
+02-Mar-21 14:35:02 - commands.Dispatcher - INFO - Session ID: 9D6F1548, Received request: {u'cmd': u'get_all_vm_state', u'user_name': u'vds@clouds365.host'}
+02-Mar-21 14:35:22 - __main__ - INFO - Worker 1 received  session ID: 403A17C8
+02-Mar-21 14:35:22 - commands.Dispatcher - INFO - Session ID: 403A17C8, Received request: {u'cmd': u'get_all_vm_state', u'user_name': u'vds@clouds365.host'}
+02-Mar-21 14:39:31 - __main__ - INFO - Routing server started
+02-Mar-21 14:39:31 - __main__ - INFO - Worker 1 started
+02-Mar-21 14:39:31 - __main__ - INFO - Worker 3 started
+02-Mar-21 14:39:31 - __main__ - INFO - Worker 4 started
+02-Mar-21 14:39:31 - __main__ - INFO - Worker 0 started
+02-Mar-21 14:39:31 - __main__ - INFO - Worker 2 started
+02-Mar-21 14:39:33 - __main__ - INFO - Worker 1 received  session ID: 671E8DA4
+02-Mar-21 14:39:33 - commands.Dispatcher - INFO - Session ID: 671E8DA4, Received request: {u'cmd': u'get_all_vm_state', u'user_name': u'vds@clouds365.host'}
+02-Mar-21 20:12:24 - __main__ - INFO - Routing server started
+02-Mar-21 20:12:24 - __main__ - INFO - Worker 0 started
+02-Mar-21 20:12:24 - __main__ - INFO - Worker 1 started
+02-Mar-21 20:12:24 - __main__ - INFO - Worker 3 started
+02-Mar-21 20:12:24 - __main__ - INFO - Worker 2 started
+02-Mar-21 20:12:24 - __main__ - INFO - Worker 4 started
+02-Mar-21 20:12:26 - __main__ - INFO - Worker 0 received  session ID: 09FD6CE7
+02-Mar-21 20:12:26 - commands.Dispatcher - INFO - Session ID: 09FD6CE7, Received request: {u'cmd': u'get_all_vm_state', u'user_name': u'vds@clouds365.host'}
+02-Mar-21 20:12:26 - commands.Dispatcher - ERROR - Session ID: 09FD6CE7, Sended reply: {'error': 'error user name or user id'}
+02-Mar-21 20:53:19 - __main__ - INFO - Routing server started
+02-Mar-21 20:53:19 - __main__ - INFO - Worker 1 started
+02-Mar-21 20:53:19 - __main__ - INFO - Worker 0 started
+02-Mar-21 20:53:19 - __main__ - INFO - Worker 2 started
+02-Mar-21 20:53:19 - __main__ - INFO - Worker 4 started
+02-Mar-21 20:53:19 - __main__ - INFO - Worker 3 started
+02-Mar-21 20:53:22 - __main__ - INFO - Worker 1 received  session ID: B360FA4D
+02-Mar-21 20:53:22 - commands.Dispatcher - INFO - Session ID: B360FA4D, Received request: {u'cmd': u'get_all_vm_state', u'user_name': u'vds@clouds365.host'}
+02-Mar-21 20:53:22 - commands.Dispatcher - INFO - Session ID: B360FA4D, Sended reply: {u'vms_state': [{u'vm_name': u'v1p249.clouds365.host', u'vm_state': u'POWEROFF', u'vm_id': 391}]}
+02-Mar-21 20:53:37 - __main__ - INFO - Worker 0 received  session ID: 5610D27F
+02-Mar-21 20:53:37 - commands.Dispatcher - INFO - Session ID: 5610D27F, Received request: {u'cmd': u'get_all_vm_state', u'user_name': u'vds@clouds365.hos'}
+02-Mar-21 20:53:37 - commands.Dispatcher - ERROR - Session ID: 5610D27F, Sended reply: {'error': 'error user name'}
+02-Mar-21 20:53:50 - __main__ - INFO - Worker 2 received  session ID: C6701DE4
+02-Mar-21 20:53:50 - commands.Dispatcher - INFO - Session ID: C6701DE4, Received request: {u'cmd': u'get_all_vm_state', u'user_name': u'vds@clouds365.host'}
+02-Mar-21 20:53:50 - commands.Dispatcher - INFO - Session ID: C6701DE4, Sended reply: {u'vms_state': [{u'vm_name': u'v1p249.clouds365.host', u'vm_state': u'POWEROFF', u'vm_id': 391}]}
+02-Mar-21 20:55:19 - __main__ - INFO - Worker 4 received  session ID: 182FD9C3
+02-Mar-21 20:55:19 - commands.Dispatcher - INFO - Session ID: 182FD9C3, Received request: {u'vm_name': u'v1p247.clouds365.host', u'user_id': 95, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.247', u'template_id': 390}
+02-Mar-21 20:55:19 - commands.Dispatcher - INFO - Session ID: 182FD9C3, Sended reply: {'user_id': 95, 'vm_root_password': u'*******', 'vm_id': 394, 'vm_user_password': u'*******', 'vm_user': 'ytkbe71'}
+02-Mar-21 20:56:07 - __main__ - INFO - Worker 3 received  session ID: A1825F0E
+02-Mar-21 20:56:07 - commands.Dispatcher - INFO - Session ID: A1825F0E, Received request: {u'cmd': u'get_all_vm_state', u'user_name': u'vds@clouds365.host'}
+02-Mar-21 20:56:07 - commands.Dispatcher - INFO - Session ID: A1825F0E, Sended reply: {u'vms_state': [{u'vm_name': u'v1p249.clouds365.host', u'vm_state': u'POWEROFF', u'vm_id': 391}]}
+02-Mar-21 20:56:48 - __main__ - INFO - Worker 1 received  session ID: 13ABE48D
+02-Mar-21 20:56:48 - commands.Dispatcher - INFO - Session ID: 13ABE48D, Received request: {u'cmd': u'get_all_vm_state', u'user_name': u'nikolaj@microlines.lv'}
+02-Mar-21 20:56:48 - commands.Dispatcher - ERROR - Session ID: 13ABE48D, Sended reply: {'error': 'error user name'}
+02-Mar-21 20:57:35 - __main__ - INFO - Worker 0 received  session ID: F4ADC187
+02-Mar-21 20:57:35 - commands.Dispatcher - INFO - Session ID: F4ADC187, Received request: {u'cmd': u'get_all_vm_state', u'user_name': u'nikolaj@microlines.lv'}
+02-Mar-21 20:57:35 - commands.Dispatcher - ERROR - Session ID: F4ADC187, Sended reply: {'error': 'error user name'}
+02-Mar-21 20:59:25 - __main__ - INFO - Worker 2 received  session ID: 8A34C510
+02-Mar-21 20:59:25 - commands.Dispatcher - INFO - Session ID: 8A34C510, Received request: {u'cmd': u'get_all_vm_state', u'user_name': u'nikolay'}
+02-Mar-21 20:59:25 - commands.Dispatcher - ERROR - Session ID: 8A34C510, Sended reply: {'error': 'error user name'}
+02-Mar-21 21:00:02 - __main__ - INFO - Worker 4 received  session ID: 03AF4E29
+02-Mar-21 21:00:02 - commands.Dispatcher - INFO - Session ID: 03AF4E29, Received request: {u'cmd': u'get_all_vm_state', u'user_name': u'vds@clouds365.host'}
+02-Mar-21 21:00:02 - commands.Dispatcher - INFO - Session ID: 03AF4E29, Sended reply: {u'vms_state': [{u'vm_name': u'v1p249.clouds365.host', u'vm_state': u'POWEROFF', u'vm_id': 391}]}
+02-Mar-21 21:00:47 - __main__ - INFO - Routing server started
+02-Mar-21 21:00:47 - __main__ - INFO - Worker 0 started
+02-Mar-21 21:00:47 - __main__ - INFO - Worker 2 started
+02-Mar-21 21:00:47 - __main__ - INFO - Worker 4 started
+02-Mar-21 21:00:47 - __main__ - INFO - Worker 3 started
+02-Mar-21 21:00:47 - __main__ - INFO - Worker 1 started
+02-Mar-21 21:00:49 - __main__ - INFO - Worker 0 received  session ID: 7615DC2B
+02-Mar-21 21:00:49 - commands.Dispatcher - INFO - Session ID: 7615DC2B, Received request: {u'cmd': u'get_all_vm_state', u'user_name': u'vds@clouds365.host'}
+02-Mar-21 21:00:49 - commands.Dispatcher - INFO - Session ID: 7615DC2B, Sended reply: {u'vms_state': [{u'vm_name': u'v1p249.clouds365.host', u'vm_state': u'POWEROFF', u'vm_id': 391}]}
+02-Mar-21 21:02:03 - __main__ - INFO - Worker 2 received  session ID: 89A5D2F1
+02-Mar-21 21:02:03 - commands.Dispatcher - INFO - Session ID: 89A5D2F1, Received request: {u'cmd': u'get_all_vm_state', u'user_name': u'nikolay'}
+02-Mar-21 21:02:03 - commands.Dispatcher - ERROR - Session ID: 89A5D2F1, Sended reply: {'error': 'error user name'}
+02-Mar-21 21:02:16 - __main__ - INFO - Routing server started
+02-Mar-21 21:02:16 - __main__ - INFO - Worker 1 started
+02-Mar-21 21:02:16 - __main__ - INFO - Worker 0 started
+02-Mar-21 21:02:16 - __main__ - INFO - Worker 2 started
+02-Mar-21 21:02:16 - __main__ - INFO - Worker 3 started
+02-Mar-21 21:02:16 - __main__ - INFO - Worker 4 started
+02-Mar-21 21:02:18 - __main__ - INFO - Worker 1 received  session ID: 356FCE80
+02-Mar-21 21:02:18 - commands.Dispatcher - INFO - Session ID: 356FCE80, Received request: {u'cmd': u'get_all_vm_state', u'user_name': u'nikolay'}
+02-Mar-21 21:02:18 - commands.Dispatcher - ERROR - Session ID: 356FCE80, Sended reply: {'error': 'error user name'}
+02-Mar-21 21:05:34 - __main__ - INFO - Routing server started
+02-Mar-21 21:05:34 - __main__ - INFO - Worker 0 started
+02-Mar-21 21:05:34 - __main__ - INFO - Worker 4 started
+02-Mar-21 21:05:34 - __main__ - INFO - Worker 1 started
+02-Mar-21 21:05:34 - __main__ - INFO - Worker 3 started
+02-Mar-21 21:05:34 - __main__ - INFO - Worker 2 started
+02-Mar-21 21:05:38 - __main__ - INFO - Worker 0 received  session ID: 681427BE
+02-Mar-21 21:05:38 - commands.Dispatcher - INFO - Session ID: 681427BE, Received request: {u'cmd': u'get_all_vm_state', u'user_name': u'nikolay'}
+02-Mar-21 21:05:38 - commands.Dispatcher - ERROR - Session ID: 681427BE, Sended reply: {'error': 'error user name'}
+02-Mar-21 21:07:15 - __main__ - INFO - Routing server started
+02-Mar-21 21:07:15 - __main__ - INFO - Worker 0 started
+02-Mar-21 21:07:15 - __main__ - INFO - Worker 3 started
+02-Mar-21 21:07:15 - __main__ - INFO - Worker 1 started
+02-Mar-21 21:07:15 - __main__ - INFO - Worker 2 started
+02-Mar-21 21:07:15 - __main__ - INFO - Worker 4 started
+02-Mar-21 21:07:18 - __main__ - INFO - Worker 0 received  session ID: D5643EF1
+02-Mar-21 21:07:18 - commands.Dispatcher - INFO - Session ID: D5643EF1, Received request: {u'cmd': u'get_all_vm_state', u'user_name': u'nikolay'}
+02-Mar-21 21:07:18 - commands.Dispatcher - ERROR - Session ID: D5643EF1, Sended reply: {'error': 'error user name'}
+02-Mar-21 21:18:18 - __main__ - INFO - Routing server started
+02-Mar-21 21:18:18 - __main__ - INFO - Worker 0 started
+02-Mar-21 21:18:18 - __main__ - INFO - Worker 2 started
+02-Mar-21 21:18:18 - __main__ - INFO - Worker 1 started
+02-Mar-21 21:18:18 - __main__ - INFO - Worker 4 started
+02-Mar-21 21:18:18 - __main__ - INFO - Worker 3 started
+02-Mar-21 21:18:20 - __main__ - INFO - Worker 0 received  session ID: 7B2490C5
+02-Mar-21 21:18:20 - commands.Dispatcher - INFO - Session ID: 7B2490C5, Received request: {u'cmd': u'get_all_vm_state', u'user_name': u'nikolay'}
+02-Mar-21 21:18:20 - commands.Dispatcher - ERROR - Session ID: 7B2490C5, Sended reply: {'error': 'error user name'}
+02-Mar-21 21:18:47 - __main__ - INFO - Routing server started
+02-Mar-21 21:18:47 - __main__ - INFO - Worker 0 started
+02-Mar-21 21:18:47 - __main__ - INFO - Worker 4 started
+02-Mar-21 21:18:47 - __main__ - INFO - Worker 2 started
+02-Mar-21 21:18:47 - __main__ - INFO - Worker 1 started
+02-Mar-21 21:18:47 - __main__ - INFO - Worker 3 started
+02-Mar-21 21:18:49 - __main__ - INFO - Worker 0 received  session ID: 3B518E7D
+02-Mar-21 21:18:49 - commands.Dispatcher - INFO - Session ID: 3B518E7D, Received request: {u'cmd': u'get_all_vm_state', u'user_name': u'nikolay'}
+02-Mar-21 21:24:00 - __main__ - INFO - Routing server started
+02-Mar-21 21:24:00 - __main__ - INFO - Worker 1 started
+02-Mar-21 21:24:00 - __main__ - INFO - Worker 3 started
+02-Mar-21 21:24:00 - __main__ - INFO - Worker 0 started
+02-Mar-21 21:24:00 - __main__ - INFO - Worker 4 started
+02-Mar-21 21:24:00 - __main__ - INFO - Worker 2 started
+02-Mar-21 21:24:03 - __main__ - INFO - Worker 1 received  session ID: BDC839FA
+02-Mar-21 21:24:03 - commands.Dispatcher - INFO - Session ID: BDC839FA, Received request: {u'cmd': u'get_all_vm_state', u'user_name': u'nikolay'}
+02-Mar-21 21:25:30 - __main__ - INFO - Routing server started
+02-Mar-21 21:25:30 - __main__ - INFO - Worker 3 started
+02-Mar-21 21:25:30 - __main__ - INFO - Worker 2 started
+02-Mar-21 21:25:30 - __main__ - INFO - Worker 0 started
+02-Mar-21 21:25:30 - __main__ - INFO - Worker 1 started
+02-Mar-21 21:25:30 - __main__ - INFO - Worker 4 started
+02-Mar-21 21:25:32 - __main__ - INFO - Worker 3 received  session ID: 465FAB8D
+02-Mar-21 21:25:32 - commands.Dispatcher - INFO - Session ID: 465FAB8D, Received request: {u'cmd': u'get_all_vm_state', u'user_name': u'nikolay'}
+02-Mar-21 21:25:32 - commands.Dispatcher - ERROR - Session ID: 465FAB8D, Sended reply: {'error': 'error user name'}
+02-Mar-21 21:28:13 - __main__ - INFO - Routing server started
+02-Mar-21 21:28:13 - __main__ - INFO - Worker 0 started
+02-Mar-21 21:28:13 - __main__ - INFO - Worker 2 started
+02-Mar-21 21:28:13 - __main__ - INFO - Worker 4 started
+02-Mar-21 21:28:13 - __main__ - INFO - Worker 1 started
+02-Mar-21 21:28:13 - __main__ - INFO - Worker 3 started
+02-Mar-21 21:28:17 - __main__ - INFO - Worker 0 received  session ID: 4659A237
+02-Mar-21 21:28:17 - commands.Dispatcher - INFO - Session ID: 4659A237, Received request: {u'cmd': u'get_all_vm_state', u'user_name': u'nikolay'}
+02-Mar-21 21:28:17 - commands.Dispatcher - ERROR - Session ID: 4659A237, Sended reply: {'error': 'error user name'}
+02-Mar-21 21:30:22 - __main__ - INFO - Routing server started
+02-Mar-21 21:30:22 - __main__ - INFO - Worker 0 started
+02-Mar-21 21:30:22 - __main__ - INFO - Worker 2 started
+02-Mar-21 21:30:22 - __main__ - INFO - Worker 1 started
+02-Mar-21 21:30:22 - __main__ - INFO - Worker 3 started
+02-Mar-21 21:30:22 - __main__ - INFO - Worker 4 started
+02-Mar-21 21:30:24 - __main__ - INFO - Worker 0 received  session ID: 40F876BE
+02-Mar-21 21:30:24 - commands.Dispatcher - INFO - Session ID: 40F876BE, Received request: {u'cmd': u'get_all_vm_state', u'user_name': u'nikolay'}
+02-Mar-21 21:30:44 - __main__ - INFO - Worker 2 received  session ID: 8CED7340
+02-Mar-21 21:30:44 - commands.Dispatcher - INFO - Session ID: 8CED7340, Received request: {u'cmd': u'get_all_vm_state', u'user_name': u'nikolay'}
+02-Mar-21 21:31:04 - __main__ - INFO - Worker 1 received  session ID: 1624A38D
+02-Mar-21 21:31:04 - commands.Dispatcher - INFO - Session ID: 1624A38D, Received request: {u'cmd': u'get_all_vm_state', u'user_name': u'nikolay'}
+02-Mar-21 21:32:01 - __main__ - INFO - Routing server started
+02-Mar-21 21:32:01 - __main__ - INFO - Worker 0 started
+02-Mar-21 21:32:01 - __main__ - INFO - Worker 2 started
+02-Mar-21 21:32:01 - __main__ - INFO - Worker 1 started
+02-Mar-21 21:32:01 - __main__ - INFO - Worker 3 started
+02-Mar-21 21:32:01 - __main__ - INFO - Worker 4 started
+02-Mar-21 21:32:02 - __main__ - INFO - Worker 0 received  session ID: 295FEB3A
+02-Mar-21 21:32:02 - commands.Dispatcher - INFO - Session ID: 295FEB3A, Received request: {u'cmd': u'get_all_vm_state', u'user_name': u'nikolay'}
+02-Mar-21 21:32:02 - commands.Dispatcher - ERROR - Session ID: 295FEB3A, Sended reply: {'error': 'error user name'}
+02-Mar-21 21:32:40 - __main__ - INFO - Routing server started
+02-Mar-21 21:32:40 - __main__ - INFO - Worker 0 started
+02-Mar-21 21:32:40 - __main__ - INFO - Worker 3 started
+02-Mar-21 21:32:40 - __main__ - INFO - Worker 4 started
+02-Mar-21 21:32:40 - __main__ - INFO - Worker 2 started
+02-Mar-21 21:32:40 - __main__ - INFO - Worker 1 started
+02-Mar-21 21:32:41 - __main__ - INFO - Worker 0 received  session ID: 2687B5A4
+02-Mar-21 21:32:41 - commands.Dispatcher - INFO - Session ID: 2687B5A4, Received request: {u'cmd': u'get_all_vm_state', u'user_name': u'nikolay'}
+02-Mar-21 21:33:18 - __main__ - INFO - Routing server started
+02-Mar-21 21:33:18 - __main__ - INFO - Worker 0 started
+02-Mar-21 21:33:18 - __main__ - INFO - Worker 1 started
+02-Mar-21 21:33:18 - __main__ - INFO - Worker 3 started
+02-Mar-21 21:33:18 - __main__ - INFO - Worker 2 started
+02-Mar-21 21:33:18 - __main__ - INFO - Worker 4 started
+02-Mar-21 21:33:18 - __main__ - INFO - Worker 0 received  session ID: FA1C7B08
+02-Mar-21 21:33:18 - commands.Dispatcher - INFO - Session ID: FA1C7B08, Received request: {u'cmd': u'get_all_vm_state', u'user_name': u'nikolay'}
+02-Mar-21 21:33:18 - commands.Dispatcher - ERROR - Session ID: FA1C7B08, Sended reply: {'error': 'error user name'}
+02-Mar-21 21:33:30 - __main__ - INFO - Routing server started
+02-Mar-21 21:33:30 - __main__ - INFO - Worker 1 started
+02-Mar-21 21:33:30 - __main__ - INFO - Worker 2 started
+02-Mar-21 21:33:30 - __main__ - INFO - Worker 4 started
+02-Mar-21 21:33:30 - __main__ - INFO - Worker 0 started
+02-Mar-21 21:33:30 - __main__ - INFO - Worker 3 started
+02-Mar-21 21:33:32 - __main__ - INFO - Worker 1 received  session ID: A8C50EB4
+02-Mar-21 21:33:32 - commands.Dispatcher - INFO - Session ID: A8C50EB4, Received request: {u'cmd': u'get_all_vm_state', u'user_name': u'nikolay'}
+02-Mar-21 21:33:32 - commands.Dispatcher - ERROR - Session ID: A8C50EB4, Sended reply: {'error': 'error user name'}
+02-Mar-21 21:34:17 - __main__ - INFO - Routing server started
+02-Mar-21 21:34:17 - __main__ - INFO - Worker 0 started
+02-Mar-21 21:34:17 - __main__ - INFO - Worker 2 started
+02-Mar-21 21:34:17 - __main__ - INFO - Worker 1 started
+02-Mar-21 21:34:17 - __main__ - INFO - Worker 3 started
+02-Mar-21 21:34:17 - __main__ - INFO - Worker 4 started
+02-Mar-21 21:34:19 - __main__ - INFO - Worker 0 received  session ID: C4698DA2
+02-Mar-21 21:34:19 - commands.Dispatcher - INFO - Session ID: C4698DA2, Received request: {u'cmd': u'get_all_vm_state', u'user_name': u'nikolay'}
+02-Mar-21 21:34:19 - commands.Dispatcher - ERROR - Session ID: C4698DA2, Sended reply: {'error': 'error user name'}
+02-Mar-21 21:51:32 - __main__ - INFO - Routing server started
+02-Mar-21 21:51:32 - __main__ - INFO - Worker 4 started
+02-Mar-21 21:51:32 - __main__ - INFO - Worker 1 started
+02-Mar-21 21:51:32 - __main__ - INFO - Worker 0 started
+02-Mar-21 21:51:32 - __main__ - INFO - Worker 3 started
+02-Mar-21 21:51:32 - __main__ - INFO - Worker 2 started
+02-Mar-21 21:51:34 - __main__ - INFO - Worker 4 received  session ID: 84BCA90F
+02-Mar-21 21:51:34 - commands.Dispatcher - INFO - Session ID: 84BCA90F, Received request: {u'cmd': u'get_all_vm_state', u'user_name': u'nikolay'}
+02-Mar-21 21:51:34 - commands.Dispatcher - ERROR - Session ID: 84BCA90F, Sended reply: {'error': 'error user name'}
+02-Mar-21 21:51:51 - __main__ - INFO - Routing server started
+02-Mar-21 21:51:51 - __main__ - INFO - Worker 0 started
+02-Mar-21 21:51:51 - __main__ - INFO - Worker 3 started
+02-Mar-21 21:51:51 - __main__ - INFO - Worker 2 started
+02-Mar-21 21:51:51 - __main__ - INFO - Worker 1 started
+02-Mar-21 21:51:51 - __main__ - INFO - Worker 4 started
+02-Mar-21 21:51:53 - __main__ - INFO - Worker 0 received  session ID: 6FA81DEB
+02-Mar-21 21:51:53 - commands.Dispatcher - INFO - Session ID: 6FA81DEB, Received request: {u'cmd': u'get_all_vm_state', u'user_name': u'nikolay'}
+02-Mar-21 21:51:53 - commands.Dispatcher - INFO - Session ID: 6FA81DEB, Sended reply: {u'vms_state': []}
+02-Mar-21 21:52:21 - __main__ - INFO - Worker 3 received  session ID: 6FD8BEC3
+02-Mar-21 21:52:21 - commands.Dispatcher - INFO - Session ID: 6FD8BEC3, Received request: {u'cmd': u'get_all_vm_state', u'user_name': u'nikolaj@microlines.lv'}
+02-Mar-21 21:52:21 - commands.Dispatcher - INFO - Session ID: 6FD8BEC3, Sended reply: {u'vms_state': [{u'vm_name': u'v1p247.clouds365.host', u'vm_state': u'ACTIVE', u'vm_id': 394}, {u'vm_name': u'v1p248.clouds365.host', u'vm_state': u'POWEROFF', u'vm_id': 390}]}
+02-Mar-21 21:55:44 - __main__ - INFO - Routing server started
+02-Mar-21 21:55:44 - __main__ - INFO - Worker 2 started
+02-Mar-21 21:55:44 - __main__ - INFO - Worker 0 started
+02-Mar-21 21:55:44 - __main__ - INFO - Worker 1 started
+02-Mar-21 21:55:44 - __main__ - INFO - Worker 4 started
+02-Mar-21 21:55:44 - __main__ - INFO - Worker 3 started
+02-Mar-21 21:55:48 - __main__ - INFO - Worker 2 received  session ID: 941B7CD2
+02-Mar-21 21:55:48 - commands.Dispatcher - INFO - Session ID: 941B7CD2, Received request: {u'cmd': u'get_all_vm_state', u'user_name': u'nikolaj@microlines.lv'}
+02-Mar-21 21:55:48 - commands.Dispatcher - INFO - Session ID: 941B7CD2, Sended reply: {u'vms_state': [{u'vm_name': u'v1p247.clouds365.host', u'vm_state': u'ACTIVE', u'vm_id': 394}, {u'vm_name': u'v1p248.clouds365.host', u'vm_state': u'POWEROFF', u'vm_id': 390}]}
+02-Mar-21 21:56:00 - __main__ - INFO - Worker 0 received  session ID: FC6E074B
+02-Mar-21 21:56:00 - commands.Dispatcher - INFO - Session ID: FC6E074B, Received request: {u'user_nam': u'nikolaj@microlines.lv', u'cmd': u'get_all_vm_state'}
+02-Mar-21 21:56:00 - commands.Dispatcher - ERROR - Session ID: FC6E074B, Sended reply: {'error': 'error user name or user id'}
+02-Mar-21 21:56:17 - __main__ - INFO - Worker 1 received  session ID: 8975AE12
+02-Mar-21 21:56:17 - commands.Dispatcher - INFO - Session ID: 8975AE12, Received request: {u'cmd': u'get_all_vm_state', u'user_name': u'nikola@microlines.lv'}
+02-Mar-21 21:56:37 - __main__ - INFO - Worker 4 received  session ID: 9F453CB6
+02-Mar-21 21:56:37 - commands.Dispatcher - INFO - Session ID: 9F453CB6, Received request: {u'cmd': u'get_all_vm_state', u'user_name': u'nikola@microlines.lv'}
+02-Mar-21 21:57:59 - __main__ - INFO - Routing server started
+02-Mar-21 21:57:59 - __main__ - INFO - Worker 0 started
+02-Mar-21 21:57:59 - __main__ - INFO - Worker 1 started
+02-Mar-21 21:57:59 - __main__ - INFO - Worker 2 started
+02-Mar-21 21:57:59 - __main__ - INFO - Worker 3 started
+02-Mar-21 21:57:59 - __main__ - INFO - Worker 4 started
+02-Mar-21 21:58:01 - __main__ - INFO - Worker 0 received  session ID: 8C9406F2
+02-Mar-21 21:58:01 - commands.Dispatcher - INFO - Session ID: 8C9406F2, Received request: {u'cmd': u'get_all_vm_state', u'user_name': u'nikola@microlines.lv'}
+02-Mar-21 21:58:01 - commands.Dispatcher - ERROR - Session ID: 8C9406F2, Sended reply: {'error': 'error user name'}
+02-Mar-21 22:00:47 - __main__ - INFO - Worker 1 received  session ID: 3D8A9B6E
+02-Mar-21 22:00:47 - commands.Dispatcher - INFO - Session ID: 3D8A9B6E, Received request: {u'cmd': u'get_all_vm_state', u'user_name': u'nikolaj@microlines.lv'}
+02-Mar-21 22:00:47 - commands.Dispatcher - INFO - Session ID: 3D8A9B6E, Sended reply: {u'vms_state': [{u'vm_name': u'v1p247.clouds365.host', u'vm_state': u'ACTIVE', u'vm_id': 394}, {u'vm_name': u'v1p248.clouds365.host', u'vm_state': u'POWEROFF', u'vm_id': 390}]}
+02-Mar-21 22:02:11 - __main__ - INFO - Worker 2 received  session ID: E95FC304
+02-Mar-21 22:02:11 - commands.Dispatcher - INFO - Session ID: E95FC304, Received request: {u'cmd': u'get_all_vm_state', u'user_id': 95}
+02-Mar-21 22:02:11 - commands.Dispatcher - INFO - Session ID: E95FC304, Sended reply: {u'vms_state': [{u'vm_name': u'v1p247.clouds365.host', u'vm_state': u'ACTIVE', u'vm_id': 394}, {u'vm_name': u'v1p248.clouds365.host', u'vm_state': u'POWEROFF', u'vm_id': 390}]}
+02-Mar-21 22:02:38 - __main__ - INFO - Worker 3 received  session ID: 97AD326E
+02-Mar-21 22:02:38 - commands.Dispatcher - INFO - Session ID: 97AD326E, Received request: {u'cmd': u'get_all_vm_state', u'user_id': 95}
+02-Mar-21 22:02:38 - commands.Dispatcher - INFO - Session ID: 97AD326E, Sended reply: {u'vms_state': [{u'vm_name': u'v1p247.clouds365.host', u'vm_state': u'ACTIVE', u'vm_id': 394}, {u'vm_name': u'v1p248.clouds365.host', u'vm_state': u'POWEROFF', u'vm_id': 390}]}
+02-Mar-21 22:04:18 - __main__ - INFO - Worker 4 received  session ID: AF64D29C
+02-Mar-21 22:04:18 - commands.Dispatcher - INFO - Session ID: AF64D29C, Received request: {u'user_name': u'nikolaj@microlines.lv', u'cmd': u'get_vm_state', u'vm_id': 393}
+02-Mar-21 22:28:38 - __main__ - INFO - Routing server started
+02-Mar-21 22:28:38 - __main__ - INFO - Worker 1 started
+02-Mar-21 22:28:38 - __main__ - INFO - Worker 0 started
+02-Mar-21 22:28:38 - __main__ - INFO - Worker 3 started
+02-Mar-21 22:28:38 - __main__ - INFO - Worker 2 started
+02-Mar-21 22:28:38 - __main__ - INFO - Worker 4 started
+02-Mar-21 22:28:40 - __main__ - INFO - Worker 1 received  session ID: BA69C5D4
+02-Mar-21 22:28:40 - commands.Dispatcher - INFO - Session ID: BA69C5D4, Received request: {u'user_name': u'nikolaj@microlines.lv', u'cmd': u'get_vm_state', u'vm_id': 393}
+02-Mar-21 22:33:00 - __main__ - INFO - Routing server started
+02-Mar-21 22:33:00 - __main__ - INFO - Worker 0 started
+02-Mar-21 22:33:00 - __main__ - INFO - Worker 2 started
+02-Mar-21 22:33:00 - __main__ - INFO - Worker 4 started
+02-Mar-21 22:33:00 - __main__ - INFO - Worker 3 started
+02-Mar-21 22:33:00 - __main__ - INFO - Worker 1 started
+02-Mar-21 22:33:02 - __main__ - INFO - Worker 0 received  session ID: CEBA3178
+02-Mar-21 22:33:02 - commands.Dispatcher - INFO - Session ID: CEBA3178, Received request: {u'user_name': u'nikolaj@microlines.lv', u'cmd': u'get_vm_state', u'vm_id': 393}
+02-Mar-21 22:33:02 - commands.Dispatcher - ERROR - Session ID: CEBA3178, Sended reply: {'error': 'list index out of range'}
+02-Mar-21 22:33:40 - __main__ - INFO - Worker 2 received  session ID: 7980D35E
+02-Mar-21 22:33:40 - commands.Dispatcher - INFO - Session ID: 7980D35E, Received request: {u'user_name': u'nikolaj@microlines.lv', u'cmd': u'get_vm_state', u'vm_id': 394}
+02-Mar-21 22:33:40 - commands.Dispatcher - INFO - Session ID: 7980D35E, Sended reply: {'vm_state': 'ACTIVE', 'vm_id': 394}
+02-Mar-21 22:33:53 - __main__ - INFO - Worker 4 received  session ID: 71C3FA8E
+02-Mar-21 22:33:53 - commands.Dispatcher - INFO - Session ID: 71C3FA8E, Received request: {u'user_name': u'nikolaj@microlines.lv', u'cmd': u'get_vm_state', u'vm_id': 390}
+02-Mar-21 22:33:53 - commands.Dispatcher - INFO - Session ID: 71C3FA8E, Sended reply: {'vm_state': 'POWEROFF', 'vm_id': 390}
+02-Mar-21 22:34:17 - __main__ - INFO - Worker 3 received  session ID: F29AD786
+02-Mar-21 22:34:17 - commands.Dispatcher - INFO - Session ID: F29AD786, Received request: {u'user_id': 95, u'cmd': u'get_vm_state', u'vm_id': 393}
+02-Mar-21 22:34:18 - commands.Dispatcher - ERROR - Session ID: F29AD786, Sended reply: {'error': 'list index out of range'}
+02-Mar-21 22:34:57 - __main__ - INFO - Worker 1 received  session ID: 12AD56B3
+02-Mar-21 22:34:57 - commands.Dispatcher - INFO - Session ID: 12AD56B3, Received request: {u'user_id': 96, u'cmd': u'get_vm_state', u'vm_id': 393}
+02-Mar-21 22:34:57 - commands.Dispatcher - ERROR - Session ID: 12AD56B3, Sended reply: {'error': 'list index out of range'}
+02-Mar-21 22:35:10 - __main__ - INFO - Worker 0 received  session ID: CD2E548F
+02-Mar-21 22:35:10 - commands.Dispatcher - INFO - Session ID: CD2E548F, Received request: {u'user_id': 95, u'cmd': u'get_vm_state', u'vm_id': 390}
+02-Mar-21 22:35:10 - commands.Dispatcher - INFO - Session ID: CD2E548F, Sended reply: {'vm_state': 'POWEROFF', 'vm_id': 390}
+02-Mar-21 22:35:24 - __main__ - INFO - Worker 2 received  session ID: 140396F7
+02-Mar-21 22:35:24 - commands.Dispatcher - INFO - Session ID: 140396F7, Received request: {u'user_id': 95, u'cmd': u'get_vm_state', u'vm_id': 395}
+02-Mar-21 22:35:24 - commands.Dispatcher - ERROR - Session ID: 140396F7, Sended reply: {'error': 'list index out of range'}
+02-Mar-21 22:35:45 - __main__ - INFO - Worker 4 received  session ID: 1A07DB65
+02-Mar-21 22:35:45 - commands.Dispatcher - INFO - Session ID: 1A07DB65, Received request: {u'user_id': 95, u'cmd': u'get_vm_state', u'vm_id': 394}
+02-Mar-21 22:35:45 - commands.Dispatcher - INFO - Session ID: 1A07DB65, Sended reply: {'vm_state': 'ACTIVE', 'vm_id': 394}
+02-Mar-21 22:36:31 - __main__ - INFO - Worker 3 received  session ID: 52C8D630
+02-Mar-21 22:36:31 - commands.Dispatcher - INFO - Session ID: 52C8D630, Received request: {u'user_id': 95, u'cmd': u'get_vm_state', u'vm_id': 394}
+02-Mar-21 22:36:31 - commands.Dispatcher - INFO - Session ID: 52C8D630, Sended reply: {'vm_state': 'ACTIVE', 'vm_id': 394}
+02-Mar-21 22:38:46 - __main__ - INFO - Worker 1 received  session ID: 9CD512E0
+02-Mar-21 22:38:46 - commands.Dispatcher - INFO - Session ID: 9CD512E0, Received request: {u'vm_name': u'', u'cmd': u'get_vm_state', u'user_name': u'nikolaj@microlines.lv'}
+02-Mar-21 22:38:46 - commands.Dispatcher - ERROR - Session ID: 9CD512E0, Sended reply: {'error': 'error vm id or vm name'}
+02-Mar-21 22:38:56 - __main__ - INFO - Worker 0 received  session ID: 39F42A5E
+02-Mar-21 22:38:56 - commands.Dispatcher - INFO - Session ID: 39F42A5E, Received request: {u'vm_nam': u'', u'cmd': u'get_vm_state', u'user_name': u'nikolaj@microlines.lv'}
+02-Mar-21 22:38:56 - commands.Dispatcher - ERROR - Session ID: 39F42A5E, Sended reply: {'error': 'error vm id or vm name'}
+02-Mar-21 22:39:38 - __main__ - INFO - Worker 2 received  session ID: 12A5C794
+02-Mar-21 22:39:38 - commands.Dispatcher - INFO - Session ID: 12A5C794, Received request: {u'vm_name': u'v1p248.clouds365.host', u'cmd': u'get_vm_state', u'user_name': u'nikolaj@microlines.lv'}
+02-Mar-21 22:39:38 - commands.Dispatcher - INFO - Session ID: 12A5C794, Sended reply: {'vm_name': u'v1p248.clouds365.host', 'vm_state': 'POWEROFF'}
+02-Mar-21 22:40:24 - __main__ - INFO - Routing server started
+02-Mar-21 22:40:24 - __main__ - INFO - Worker 1 started
+02-Mar-21 22:40:24 - __main__ - INFO - Worker 2 started
+02-Mar-21 22:40:24 - __main__ - INFO - Worker 0 started
+02-Mar-21 22:40:24 - __main__ - INFO - Worker 3 started
+02-Mar-21 22:40:24 - __main__ - INFO - Worker 4 started
+02-Mar-21 22:40:36 - __main__ - INFO - Worker 1 received  session ID: 5C174A8E
+02-Mar-21 22:40:36 - commands.Dispatcher - INFO - Session ID: 5C174A8E, Received request: {u'vm_name': u'v1p248.clouds365.host', u'cmd': u'get_vm_state', u'user_name': u'nikolaj@microlines.lv'}
+02-Mar-21 22:40:36 - commands.Dispatcher - INFO - Session ID: 5C174A8E, Sended reply: {'vm_name': u'v1p248.clouds365.host', 'vm_state': 'POWEROFF'}
+02-Mar-21 22:40:50 - __main__ - INFO - Worker 2 received  session ID: 8E4C5310
+02-Mar-21 22:40:50 - commands.Dispatcher - INFO - Session ID: 8E4C5310, Received request: {u'user_id': 95, u'cmd': u'get_vm_state', u'vm_id': 394}
+02-Mar-21 22:40:50 - commands.Dispatcher - INFO - Session ID: 8E4C5310, Sended reply: {'vm_state': 'ACTIVE', 'vm_id': 394}
+02-Mar-21 22:44:20 - __main__ - INFO - Routing server started
+02-Mar-21 22:44:20 - __main__ - INFO - Worker 1 started
+02-Mar-21 22:44:20 - __main__ - INFO - Worker 2 started
+02-Mar-21 22:44:20 - __main__ - INFO - Worker 4 started
+02-Mar-21 22:44:20 - __main__ - INFO - Worker 3 started
+02-Mar-21 22:44:20 - __main__ - INFO - Worker 0 started
+02-Mar-21 22:44:23 - __main__ - INFO - Worker 1 received  session ID: C9A2DF63
+02-Mar-21 22:44:23 - commands.Dispatcher - INFO - Session ID: C9A2DF63, error: string could not be converted to json
+02-Mar-21 22:45:04 - __main__ - INFO - Worker 2 received  session ID: F85E237A
+02-Mar-21 22:45:04 - commands.Dispatcher - INFO - Session ID: F85E237A, Received request: {u'vm_name': u'v1p248.clouds365.host', u'cmd': u'get_vm_state', u'user_name': u'nikolaj@microlines.lv'}
+02-Mar-21 22:45:04 - commands.Dispatcher - INFO - Session ID: F85E237A, Sended reply: {'vm_name': u'v1p248.clouds365.host', 'vm_state': 'POWEROFF'}
+02-Mar-21 22:45:12 - __main__ - INFO - Worker 4 received  session ID: 8650C31B
+02-Mar-21 22:45:12 - commands.Dispatcher - INFO - Session ID: 8650C31B, Received request: {u'vm_name': u'v1p248.clouds365.host', u'cmd': u'get_vm_state', u'user_name': u'nikolaj@microlines.lv'}
+02-Mar-21 22:45:12 - commands.Dispatcher - INFO - Session ID: 8650C31B, Sended reply: {'vm_name': u'v1p248.clouds365.host', 'vm_state': 'POWEROFF'}

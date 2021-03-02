@@ -7,14 +7,20 @@ class Users(object):
         """
         Getting USER ID by USER NAME. (Asymptotic O(n), FIXME!!!!)
         """
+        
+        user_id = ''
         userpoolInfo = one.userpool.info()
         userlist = userpoolInfo.get_USER()
         for user in userlist:
             if user.NAME == user_name:
                 user_id = user.ID
-    #            print(user.ID, user.NAME)
+                #print(user.ID, user.NAME)
                 break
-        return user_id
+        if  user_id:
+            return {"user_id": user_id,}
+        else:
+            return {"error": "error user name",}        
+
 
     @staticmethod
     def switch_vm_state(state):
@@ -59,17 +65,20 @@ class Users(object):
         """
         Getting state of one VM of user by VM NAME or VM ID.
         """
-
-        if not (json_dict.get('user_name') is None):
-            user_name = json_dict['user_name']
-        else:
-            user_name = ''
+        
         if not (json_dict.get('user_id') is None):
-            user_id =  json_dict['user_id']
+            user_id = json_dict['user_id']
             if type(user_id) is not int:
-                return {"error": "Parameter user_id that is supposed to be integer is not"}            
+                return {"error": "Parameter user_id that is supposed to be integer is not"}          
+        elif not (json_dict.get('user_name') is None):
+            username_to_userid = self.get_user_id(json_dict['user_name'], one)
+            if username_to_userid.get('error'):
+                return username_to_userid
+            else:
+                user_id = username_to_userid['user_id']
         else:
-            user_id = ''
+            return {"error": "error user name or user id"}        
+        
         if not (json_dict.get('vm_name') is None):
             vm_name = json_dict['vm_name']
         else:
@@ -82,33 +91,16 @@ class Users(object):
             vm_id = ''
             
         if vm_name and not vm_id:
-            if user_name and not user_id:
-                try:
-                    vm_state = one.vm.info(one.vmpool.info(self.get_user_id(user_name, one),-1,-1,-1,vm_name).VM[0].get_ID()).STATE
-                except IndexError:
-                    return {"error": "list index out of range"}
-            elif user_id and not user_name:
-                try:
-                    vm_state = one.vm.info(one.vmpool.info(user_id,-1,-1,-1,vm_name).VM[0].get_ID()).STATE
-                except IndexError:
-                    return {"error": "list index out of range"}     
-            else:
-                return {"error": "error user name or user id"}
+            try:
+                vm_state = one.vm.info(one.vmpool.info(user_id,-1,-1,-1,vm_name).VM[0].get_ID()).STATE
+            except IndexError:
+                return {"error": "list index out of range"} 
         elif vm_id and not vm_name:
-            if user_name and not user_id:
-                try:
-            #        vm_state = one.vm.info(vm_id).STATE
-                    vm_state = one.vm.info(one.vmpool.info(self.get_user_id(user_name, one),vm_id,vm_id,-1).VM[0].get_ID()).STATE
-                except IndexError:
-                    return {"error": "list index out of range"}
-            elif user_id and not user_name:        
-                try:
-            #        vm_state = one.vm.info(vm_id).STATE
-                    vm_state = one.vm.info(one.vmpool.info(user_id,vm_id,vm_id,-1).VM[0].get_ID()).STATE
-                except IndexError:
-                    return {"error": "list index out of range"}
-            else:
-                return {"error": "error user name or user id"}        
+            try:
+        #        vm_state = one.vm.info(vm_id).STATE
+                vm_state = one.vm.info(one.vmpool.info(user_id,vm_id,vm_id,-1).VM[0].get_ID()).STATE
+            except IndexError:
+                return {"error": "list index out of range"}   
         else:
             return {"error": "error vm id or vm name"}
         
@@ -133,32 +125,27 @@ class Users(object):
         """
         Getting state all VMs of user by USERNAME or USER ID.
         """
-        if not (json_dict.get('user_name') is None):
-            user_name = json_dict['user_name']
-        else:
-            user_name = ''
+        
         if not (json_dict.get('user_id') is None):
             user_id = json_dict['user_id']
             if type(user_id) is not int:
                 return {"error": "Parameter user_id that is supposed to be integer is not"}          
+        elif not (json_dict.get('user_name') is None):
+            username_to_userid = self.get_user_id(json_dict['user_name'], one)
+            if username_to_userid.get('error'):
+                return username_to_userid
+            else:
+                user_id = username_to_userid['user_id']
         else:
-            user_id = '' 
-        
-        if user_name and not user_id:
-            try:
-                vmpoolInfo = one.vmpool.info(self.get_user_id(user_name, one), -1, -1, -1)
-                vmlist = vmpoolInfo.get_VM()
-            except IndexError:
-                return {"error": "list index out of range"}
-        elif user_id and not user_name:        
-            try:
-                vmpoolInfo = one.vmpool.info(user_id, -1, -1, -1)
-                vmlist = vmpoolInfo.get_VM()
-            except IndexError:
-                return {"error": "list index out of range"}
-        else:
-            return {"error": "error user name or user id"}        
+            return {"error": "error user name or user id"}
 
+   
+        try:
+            vmpoolInfo = one.vmpool.info(user_id, -1, -1, -1)
+            vmlist = vmpoolInfo.get_VM()
+        except IndexError:
+            return {"error": "list index out of range"}
+        
         return_message = []
         for vm in vmlist:
             return_message.append({
