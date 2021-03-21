@@ -1,0 +1,82 @@
+/* *****************************************************
+
+    ** Custom Stylesheet **
+
+    Any custom styling you want to apply should be
+    defined here.
+
+***************************************************** */
+/*Warning modal window*/
+.alert-danger-w {
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+}
+.alert-w {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+.modal-title-w {
+    margin: 0;
+    line-height: 1.42857143;
+}
+/*
+*
+* Preloader
+*
+*/
+.preloader-dots {
+  height: 100%;
+  width: 100%;
+}
+.preloader-dots .dot {
+  display: inline-block;
+  background: #66cc00;
+  height: 8px;
+  width: 8px;
+  opacity: 0.3;
+  border-radius: 50%;
+  animation: moveit 1.8s infinite;
+}
+.dot:nth-child(2) {
+  animation-delay: .15s;
+}
+.dot:nth-child(3) {
+  animation-delay: .3s;
+}
+.dot:nth-child(4) {
+  animation-delay: .45s;
+}
+.dot:nth-child(5) {
+  animation-delay: .6s;
+}
+
+@keyframes moveit {
+  0% {
+    transform: translateY(0px);
+  }
+  35% {
+    transform: translateY(0px);
+    opacity: 0.3;
+  }
+  50% {
+    transform: translateY(-10px);
+    opacity: 0.8;
+  }
+  70% {
+    transform: translateY(3px);
+    opacity: 0.8;
+  }
+  85% {
+    transform: translateY(-3px);
+  }
+}
+
+.alert-vm {
+    height: 30px;
+    padding: 5px;
+    border-radius: 20px;
+    border: 0;    
+}

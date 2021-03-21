@@ -34,7 +34,7 @@ function get_vm_state($id, $token)
             ->first();
     
     if(!$result_onevm){
-        return '<p style="color:red;"> Oops! Something went wrong! </p>';
+        return '<div style="color:red;"> Oops! Something went wrong! </div>';
     }
     
     //var_dump($result_onevm);
@@ -48,7 +48,7 @@ function get_vm_state($id, $token)
     $one_reply = $oneconnector->connector($arr);  
       
     if($one_reply->{'error'}){
-        return '<p style="color:red;"> Oops! Something went wrong! </p>';
+        return '<div style="color:red;"> Oops! Something went wrong! </div>';
     } else {
         return $one_reply->{'vm_state'};
     }

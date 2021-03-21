@@ -90,11 +90,11 @@ function onecontrol_MetaData()
 function onecontrol_ConfigOptions()
 {
     return array(
-        'ONE Template ID' => array(
+        'ONE Templates ID' => array(
             'Type' => 'text',
             'Size' => '25',
             'Default' => '0',
-            'Description' => '',
+            'Description' => 'Example: 110,350,390',
         ),    
     
     /*
@@ -470,6 +470,7 @@ function onecontrol_AdminCustomButtonArray()
  *
  * @return array
  */
+
 function onecontrol_ClientAreaCustomButtonArray()
 {
     return array(
@@ -552,13 +553,6 @@ function onecontrol_instantiate_vm(array $params)
                                 ->first();
                                
                 if($result_onevm){
-                    Capsule::table('mod_onecontrol_onevm')->where('id',$result_onevm->{'id'})
-                        ->update(
-                            array(
-                                'user_id'=>$one_user_id,
-                                'service_id'=>$params['serviceid']
-                                )
-                        );    
 
                     $arr = array(
                         "cmd" => "template_instantiate",
@@ -575,8 +569,37 @@ function onecontrol_instantiate_vm(array $params)
  
                     $one_reply = send_to_one($arr);
                     if($one_reply->{'error'}){
+
+                        $result_onevm_user = Capsule::table('mod_onecontrol_onevm')
+                                    ->select('vm_id')
+                                    ->where('user_id',$result_oneuser->{'one_user_id'})
+                                    ->first();                
+
+                        if (!$result_onevm_user){
+                            $arr = array(
+                                "cmd" => "user_delete",
+                                "user_id" => $result_oneuser->{'one_user_id'},    
+                            );
+                            $one_reply = send_to_one($arr);              
+                            if($one_reply->{'error'}){
+                                return '. Oops! Something went wrong!';
+                            }  
+                            
+                            Capsule::table('mod_onecontrol_oneuser')
+                                ->where('whmcs_user_id',$params['clientsdetails']['id'])
+                                ->delete();
+                        }        
+
                         return '. Oops! Something went wrong!';
                     } 
+
+                    Capsule::table('mod_onecontrol_onevm')->where('id',$result_onevm->{'id'})
+                        ->update(
+                            array(
+                                'user_id'=>$one_user_id,
+                                'service_id'=>$params['serviceid']
+                                )
+                        );    
                     
                     Capsule::table('mod_onecontrol_onevm')->where('id',$result_onevm->{'id'})
                         ->update(
@@ -1105,6 +1128,7 @@ function onecontrol_ClientArea(array $params)
 {
     // Determine the requested action and set service call parameters based on
     // the action.
+        
     $requestedAction = isset($_REQUEST['customAction']) ? $_REQUEST['customAction'] : '';
 
     require_once('lib/SecGenerators.php');
@@ -1144,17 +1168,24 @@ function onecontrol_ClientArea(array $params)
         //$extraVariable1 = 'abc';
         //$extraVariable2 = '123';
         //$extraVariable1 = var_dump($params);
+        //$extraVariable1 = $params['status'];
         //$extraVariable1 = $params['configoption1'];
-        $extraVariable2 = $params["configoptions"]["OS Type"]. ", " . $params["clientsdetails"]["email"];
+        //$extraVariable2 = $params["configoptions"]["OS Type"]. ", " . $params["clientsdetails"]["email"];
         //$extraVariable1 = $_SESSION['uid'];
-        $extraVariable2 = $params["clientsdetails"]["email"];
+        //$extraVariable2 = $params["clientsdetails"]["email"];
 
+        if ($params['status'] == 'Cancelled' or $params['status'] == 'Terminated')
+        {
+            $productstatuscancelled = true;
+        } 
+        
         return array(
             'tabOverviewReplacementTemplate' => $templateFile,
             'templateVariables' => array(
                 'extraVariable1' => $extraVariable1,
                 'extraVariable2' => $extraVariable2,
                 'token' => $token,
+                'productstatuscancelled' => $productstatuscancelled,
             ),
         );
     } catch (Exception $e) {

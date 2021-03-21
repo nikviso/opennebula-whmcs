@@ -36,8 +36,6 @@
  *
  * @return mixed Return dependant upon hook function
  */
- 
-
 function hook_onecontrol_clientedit(array $params)
 {
     try {
@@ -65,6 +63,7 @@ add_hook('ClientEdit', 1, 'hook_onecontrol_clientedit');
  *
  * @param \WHMCS\View\Menu\Item $menu
  */
+/* 
 add_hook('ClientAreaPrimaryNavbar', 1, function ($menu)
 {
     // Check whether the services menu exists.
@@ -80,7 +79,7 @@ add_hook('ClientAreaPrimaryNavbar', 1, function ($menu)
             );
     }
 });
-
+*/
 /**
  * Render a custom sidebar panel in the secondary sidebar.
  *
@@ -91,7 +90,7 @@ add_hook('ClientAreaPrimaryNavbar', 1, function ($menu)
  *
  * @param \WHMCS\View\Menu\Item $secondarySidebar
  */
- 
+/* 
 add_hook('ClientAreaSecondarySidebar', 1, function ($secondarySidebar)
 {
     // determine if we are on a page containing My Services Actions
@@ -121,4 +120,20 @@ add_hook('ClientAreaSecondarySidebar', 1, function ($secondarySidebar)
             );
 
     }
+});
+*/
+/*
+* Remove Sidebars
+*/
+add_hook('ClientAreaPrimarySidebar', 1, function($primarySidebar)
+{
+/*     
+   if (!is_null($primarySidebar->getChild('Service Details Overview'))) {
+            $primarySidebar->removeChild('Service Details Overview');
+   }
+*/  
+   if (!is_null($primarySidebar->getChild('Service Details Actions'))) {
+            $primarySidebar->removeChild('Service Details Actions');
+   }    
+
 });

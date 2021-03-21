@@ -67,7 +67,7 @@ class OneConnector {
                     //  We got a reply from the server
                     $reply = json_decode($this->decrypt($client->recv(), $key, $cipher));
                     if ($reply) {
-                        //error_log ("I: server replied OK." . $reply . PHP_EOL);
+                        //error_log ("I: server replied OK." . json_encode($reply) . PHP_EOL);
                         logModuleCall(
                             'onecontrol',
                             __METHOD__,

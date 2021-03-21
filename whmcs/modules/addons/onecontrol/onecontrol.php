@@ -180,11 +180,13 @@ function onecontrol_activate()
                     $table->text('one_user_token');
                 }
             );
+/*            
     Capsule::schema()
             ->create(
                 'mod_onecontrol_config',
                 function ($table) {
                     /** @var \Illuminate\Database\Schema\Blueprint $table */
+/*
                     $table->text('one_ip_address');
                     $table->text('one_tcp_port');
                     $table->integer('request_timeout');
@@ -193,12 +195,15 @@ function onecontrol_activate()
                     $table->boolean('one_user_password_strong');                    
                 }
             );
+*/            
     Capsule::schema()
             ->create(
                 'mod_onecontrol_onetemplate',
                 function ($table) {
                     /** @var \Illuminate\Database\Schema\Blueprint $table */
+                    $table->increments('id');                    
                     $table->integer('one_template_id');
+                    $table->integer('product_id');
                     $table->text('one_image_os');
                 }
             );             
@@ -237,8 +242,10 @@ function onecontrol_deactivate()
             ->dropIfExists('mod_onecontrol_onevm');
         Capsule::schema()
             ->dropIfExists('mod_onecontrol_oneuser');            
+/*
         Capsule::schema()
             ->dropIfExists('mod_onecontrol_config'); 
+*/
         Capsule::schema()
             ->dropIfExists('mod_onecontrol_onetemplate');             
         return [
