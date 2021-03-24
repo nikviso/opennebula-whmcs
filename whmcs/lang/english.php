@@ -29,15 +29,17 @@ $_LANG['poweroffvps'] = "Power off VPS";
 $_LANG['resumevps'] = "Power on VPS";
 $_LANG['vpsmanagement'] = "VPS Management";
 $_LANG['backtooverview'] = "Back to Overview";
-$_LANG['poweroffwarning'] = "Are you sure want to shutdown this VM?";
-$_LANG['rebootwarning'] = "Are you sure want to reboot this VM?";
+$_LANG['poweroffwarning'] = "Are you sure want to shutdown this VPS?";
+$_LANG['rebootwarning'] = "Are you sure want to reboot this VPS?";
 $_LANG['closewarning'] = "Close";
 $_LANG['proceedwarning'] = "Proceed";
 $_LANG['titlevmwarning'] = "ATTENTION";
 $_LANG['vmstatepoweroff'] = "POWER OFF";
 $_LANG['vmstateactive'] = "ACTIVE";
 $_LANG['vmstateunknown'] = "UNKNOWN";
-$_LANG['vmostypename'] = 'OS Type';
+$_LANG['vmostype'] = 'OS Type';
+$_LANG['vmname'] = 'VPS Name';
+$_LANG['vmipaddress'] = 'VPS IP address';
 $_LANG['vmstateerror'] = "Oops! Something went wrong!";
 
 

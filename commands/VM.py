@@ -130,32 +130,6 @@ class VM(object):
             self.template_terminate(vm_name, one, True) 
             return {"error": str(e)}
 
-        
-        """ 
-        #Removing from VM template "START SCRIPT" for setting a passwords. 
-        try:
-            vm_id = one.vm.updateconf(80, 
-                {
-                'TEMPLATE':{
-                    'CONTEXT':{
-        #             'DISK_ID': '1',
-                      'NETWORK': "YES",
-                      'START_SCRIPT_BASE64': '',
-        #             'TARGET': 'hda'
-                     },  
-                    'GRAPHICS':{ 
-                      'LISTEN': '0.0.0.0',
-                      'PORT': '5980',
-                      'TYPE': 'VNC'
-                    },
-                    'CPU_MODEL':{'host-passthrough'},
-                    'OS':{'ARCH': 'x86_64','MACHINE': 'pc'}
-                },
-                }
-                )
-        except Exception as e:
-            return {"error": str(e)}
-        """ 
         #Removing VM template.
         self.template_terminate(vm_name, one, False)
             
@@ -311,32 +285,6 @@ class VM(object):
             self.template_terminate(vm_name, one, True)
             return {"error": str(e)}
         
-        """ 
-        #Removing from VM template "START SCRIPT" for setting a passwords. 
-        try:
-            vm_id = one_user.vm.updateconf(80, 
-                {
-                'TEMPLATE':{
-                    'CONTEXT':{
-        #             'DISK_ID': '1',
-                      'NETWORK': "YES",
-                      'START_SCRIPT_BASE64': '',
-        #             'TARGET': 'hda'
-                     },  
-                    'GRAPHICS':{ 
-                      'LISTEN': '0.0.0.0',
-                      'PORT': '5980',
-                      'TYPE': 'VNC'
-                    },
-                    'CPU_MODEL':{'host-passthrough'},
-                    'OS':{'ARCH': 'x86_64','MACHINE': 'pc'}
-                },
-                }
-                )
-        except Exception as e:
-            return {"error": str(e)}
-        """   
-
         #Removing VM template.
         self.template_terminate(vm_name, one, False)
         
@@ -479,12 +427,21 @@ class VM(object):
             return {"error": "not found template name"}
 
 
-    @staticmethod     
+    @staticmethod
     def create_start_script(vm_root_password, vm_user_password, vm_user):
         """
         """
         
-        script = '#!/bin/sh\n' +\
+        script = '#!/bin/sh\n\
+if [ -e /etc/wdont ];\n\
+then\n\
+rm -r /var/run/one-context/context*;\n\
+rm /var/run/one-context/one_env;\n\
+exit;\n\
+else\n\
+echo \"1\">/etc/wdont;\n\
+chmod 400 /etc/wdont;\n\
+fi\n'\
         'vm_root_password="' + vm_root_password + '"\n' + \
         'vm_user_password="' + vm_user_password + '"\n' + \
         'vm_user="' + vm_user + '"\n' + \
@@ -509,10 +466,41 @@ echo $vm_root_password | pw mod user root -h 0;\n\
 echo $vm_user_password | pw mod user $vm_user -h 0;\n\
 ;;\n\
 *) ;;\n\
-esac'
+esac\n\
+rm -r /var/run/one-context/context*\n\
+rm /var/run/one-context/one_env\n\
+'
         
         #Linux
         #script = 'echo -e "' + vm_root_password + '\n' + vm_root_password + '" | passwd root; echo -e "' \
         #          + vm_user_password + '\n' + vm_user_password + '" | passwd ' + vm_user
        
         return script
+        
+    @staticmethod           
+    def remove_start_script(vm_id):
+        """ 
+        #Removing from VM template "START SCRIPT" for setting a passwords. 
+        """
+        try:
+            one.vm.updateconf(vm_id, 
+                {
+                'TEMPLATE':{
+                    'CONTEXT':{
+        #             'DISK_ID': '1',
+                      'NETWORK': "YES",
+                      'START_SCRIPT_BASE64': '',
+        #             'TARGET': 'hda'
+                     },  
+                    'GRAPHICS':{ 
+                      'LISTEN': '0.0.0.0',
+                      'PORT': '5980',
+                      'TYPE': 'VNC'
+                    },
+                    'CPU_MODEL':{'host-passthrough'},
+                    'OS':{'ARCH': 'x86_64','MACHINE': 'pc'}
+                },
+                }
+                )
+        except Exception as e:
+            return {"error": str(e)}

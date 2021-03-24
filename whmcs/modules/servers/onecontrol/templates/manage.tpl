@@ -2,6 +2,8 @@
 
 <hr>
 
+
+{if ! $suspendreason && ! $productstatuscancelled}
 <div class="row">
     <div class="col-sm-5">
         {$LANG.orderproduct}
@@ -10,8 +12,31 @@
         {$groupname} - {$product}
     </div>
 </div>
+<div class="row">
+    <div class="col-sm-5">
+        {$LANG.vmostype}
+    </div>
+    <div class="col-sm-7">
+        {$vmostype}
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-5">
+        {$LANG.vmname}
+    </div>
+    <div class="col-sm-7">
+        {$vmname}
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-5">
+        {$LANG.vmipaddress}
+    </div>
+    <div class="col-sm-7">
+        {$vmipaddress}
+    </div>
+</div>
 
-{if ! $suspendreason && ! $productstatuscancelled}
 <div class="row">
     <div class="col-sm-5">
         {$LANG.vmclientareastatus}
@@ -67,7 +92,10 @@ function refresh(refInt) {
                     $('#rebootvm').removeAttr('disabled','disabled');
                     $('#poweroffvm').removeAttr('disabled','disabled');
                 } else {
-                    $('#vmstate').html('<div style="color:#CC9933;">'+response+'</div>');
+                    $('#vmstate').html('<div style="color:#CC9933;">{$LANG.vmstateunknown}</div>');
+                    $('#resumevm').attr('disabled','disabled');
+                    $('#rebootvm').attr('disabled','disabled');
+                    $('#poweroffvm').attr('disabled','disabled');                    
                 }
                     $('#alert').html('');
                     $('#alert').removeClass('alert-success');

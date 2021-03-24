@@ -1,0 +1,615 @@
+<?php
+/**
+ * WHMCS SDK Sample Provisioning Module
+ *
+ * Provisioning Modules, also referred to as Product or Server Modules, allow
+ * you to create modules that allow for the provisioning and management of
+ * products and services in WHMCS.
+ *
+ * This sample file demonstrates how a provisioning module for WHMCS should be
+ * structured and exercises all supported functionality.
+ *
+ * Provisioning Modules are stored in the /modules/servers/ directory. The
+ * module name you choose must be unique, and should be all lowercase,
+ * containing only letters & numbers, always starting with a letter.
+ *
+ * Within the module itself, all functions must be prefixed with the module
+ * filename, followed by an underscore, and then the function name. For this
+ * example file, the filename is "provisioningmodule" and therefore all
+ * functions begin "onecontrol_".
+ *
+ * If your module or third party API does not support a given function, you
+ * should not define that function within your module. Only the _ConfigOptions
+ * function is required.
+ *
+ * For more information, please refer to the online documentation.
+ *
+ * @see https://developers.whmcs.com/provisioning-modules/
+ *
+ * @copyright Copyright (c) WHMCS Limited 2017
+ * @license https://www.whmcs.com/license/ WHMCS Eula
+ */
+
+if (!defined("WHMCS")) {
+    die("This file cannot be accessed directly");
+}
+
+use WHMCS\Database\Capsule;
+
+// Require any libraries needed for the module to function.
+// require_once __DIR__ . '/path/to/library/loader.php';
+//
+// Also, perform any initialization required by the service's library.
+
+/**
+ * Define module related meta data.
+ *
+ * Values returned here are used to determine module related abilities and
+ * settings.
+ *
+ * @see https://developers.whmcs.com/provisioning-modules/meta-data-params/
+ *
+ * @return array
+ */
+function onecontrol_MetaData()
+{
+    return array(
+        'DisplayName' => 'Open Nebula Control(R)',
+        'APIVersion' => '1.0', // Use API Version 1.1
+        'RequiresServer' => true, // Set true if module requires a server to work
+        'DefaultNonSSLPort' => '1111', // Default Non-SSL Connection Port
+        'DefaultSSLPort' => '1112', // Default SSL Connection Port
+        'ServiceSingleSignOnLabel' => 'Login to Panel as User',
+        'AdminSingleSignOnLabel' => 'Login to Panel as Admin',
+    );
+}
+
+/**
+ * Define product configuration options.
+ *
+ * The values you return here define the configuration options that are
+ * presented to a user when configuring a product for use with the module. These
+ * values are then made available in all module function calls with the key name
+ * configoptionX - with X being the index number of the field from 1 to 24.
+ *
+ * You can specify up to 24 parameters, with field types:
+ * * text
+ * * password
+ * * yesno
+ * * dropdown
+ * * radio
+ * * textarea
+ *
+ * Examples of each and their possible configuration parameters are provided in
+ * this sample function.
+ *
+ * @see https://developers.whmcs.com/provisioning-modules/config-options/
+ *
+ * @return array
+ */
+function onecontrol_ConfigOptions()
+{
+    return array(
+        'ONE Template ID' => array(
+            'Type' => 'text',
+            'Size' => '25',
+            'Default' => '0',
+            'Description' => '',
+        ),    
+    
+    /*
+        // a text field type allows for single line text input
+        'Text Field' => array(
+            'Type' => 'text',
+            'Size' => '25',
+            'Default' => '1024',
+            'Description' => 'Enter in megabytes',
+        ),
+        // a password field type allows for masked text input
+        'Password Field' => array(
+            'Type' => 'password',
+            'Size' => '25',
+            'Default' => '',
+            'Description' => 'Enter secret value here',
+        ),
+        // the yesno field type displays a single checkbox option
+        'Checkbox Field' => array(
+            'Type' => 'yesno',
+            'Description' => 'Tick to enable',
+        ),
+        // the dropdown field type renders a select menu of options
+        'Dropdown Field' => array(
+            'Type' => 'dropdown',
+            'Options' => array(
+                'option1' => 'Display Value 1',
+                'option2' => 'Second Option',
+                'option3' => 'Another Option',
+            ),
+            'Description' => 'Choose one',
+        ),
+        // the radio field type displays a series of radio button options
+        'Radio Field' => array(
+            'Type' => 'radio',
+            'Options' => 'First Option,Second Option,Third Option',
+            'Description' => 'Choose your option!',
+        ),
+        // the textarea field type allows for multi-line text input
+        'Textarea Field' => array(
+            'Type' => 'textarea',
+            'Rows' => '3',
+            'Cols' => '60',
+            'Description' => 'Freeform multi-line text input field',
+        ),
+    */    
+    );
+}
+
+/**
+ * Provision a new instance of a product/service.
+ *
+ * Attempt to provision a new instance of a given product/service. This is
+ * called any time provisioning is requested inside of WHMCS. Depending upon the
+ * configuration, this can be any of:
+ * * When a new order is placed
+ * * When an invoice for a new order is paid
+ * * Upon manual request by an admin user
+ *
+ * @param array $params common module parameters
+ *
+ * @see https://developers.whmcs.com/provisioning-modules/module-parameters/
+ *
+ * @return string "success" or an error message
+ */
+function onecontrol_CreateAccount(array $params)
+{
+    try {
+        // Call the service's provisioning function, using the values provided
+        // by WHMCS in `$params`.
+        //
+        // A sample `$params` array may be defined as:
+        //
+        // ```
+        // array(
+        //     'domain' => 'The domain of the service to provision',
+        //     'username' => 'The username to access the new service',
+        //     'password' => 'The password to access the new service',
+        //     'configoption1' => 'The amount of disk space to provision',
+        //     'configoption2' => 'The new services secret key',
+        //     'configoption3' => 'Whether or not to enable FTP',
+        //     ...
+        // )
+        // ```
+        onecontrol_instantiate_vm($params);
+
+    } catch (Exception $e) {
+        // Record the error in WHMCS's module log.
+        logModuleCall(
+            'onecontrol',
+            __FUNCTION__,
+            $params,
+            $e->getMessage(),
+            $e->getTraceAsString()
+        );
+
+        return $e->getMessage();
+    }
+
+    return 'success';
+}
+
+/**
+ * Suspend an instance of a product/service.
+ *
+ * Called when a suspension is requested. This is invoked automatically by WHMCS
+ * when a product becomes overdue on payment or can be called manually by admin
+ * user.
+ *
+ * @param array $params common module parameters
+ *
+ * @see https://developers.whmcs.com/provisioning-modules/module-parameters/
+ *
+ * @return string "success" or an error message
+ */
+function onecontrol_SuspendAccount(array $params)
+{
+    try {
+        // Call the service's suspend function, using the values provided by
+        // WHMCS in `$params`.
+    } catch (Exception $e) {
+        // Record the error in WHMCS's module log.
+        logModuleCall(
+            'onecontrol',
+            __FUNCTION__,
+            $params,
+            $e->getMessage(),
+            $e->getTraceAsString()
+        );
+
+        return $e->getMessage();
+    }
+
+    return 'success';
+}
+
+/**
+ * Un-suspend instance of a product/service.
+ *
+ * Called when an un-suspension is requested. This is invoked
+ * automatically upon payment of an overdue invoice for a product, or
+ * can be called manually by admin user.
+ *
+ * @param array $params common module parameters
+ *
+ * @see https://developers.whmcs.com/provisioning-modules/module-parameters/
+ *
+ * @return string "success" or an error message
+ */
+function onecontrol_UnsuspendAccount(array $params)
+{
+    try {
+        // Call the service's unsuspend function, using the values provided by
+        // WHMCS in `$params`.
+    } catch (Exception $e) {
+        // Record the error in WHMCS's module log.
+        logModuleCall(
+            'onecontrol',
+            __FUNCTION__,
+            $params,
+            $e->getMessage(),
+            $e->getTraceAsString()
+        );
+
+        return $e->getMessage();
+    }
+
+    return 'success';
+}
+
+/**
+ * Terminate instance of a product/service.
+ *
+ * Called when a termination is requested. This can be invoked automatically for
+ * overdue products if enabled, or requested manually by an admin user.
+ *
+ * @param array $params common module parameters
+ *
+ * @see https://developers.whmcs.com/provisioning-modules/module-parameters/
+ *
+ * @return string "success" or an error message
+ */
+function onecontrol_TerminateAccount(array $params)
+{
+    try {
+        // Call the service's terminate function, using the values provided by
+        // WHMCS in `$params`.
+        onecontrol_terminate_vm($params);
+        
+    } catch (Exception $e) {
+        // Record the error in WHMCS's module log.
+        logModuleCall(
+            'onecontrol',
+            __FUNCTION__,
+            $params,
+            $e->getMessage(),
+            $e->getTraceAsString()
+        );
+
+        return $e->getMessage();
+    }
+
+    return 'success';
+}
+
+/**
+ * Change the password for an instance of a product/service.
+ *
+ * Called when a password change is requested. This can occur either due to a
+ * client requesting it via the client area or an admin requesting it from the
+ * admin side.
+ *
+ * This option is only available to client end users when the product is in an
+ * active status.
+ *
+ * @param array $params common module parameters
+ *
+ * @see https://developers.whmcs.com/provisioning-modules/module-parameters/
+ *
+ * @return string "success" or an error message
+ */
+function onecontrol_ChangePassword(array $params)
+{
+    try {
+        // Call the service's change password function, using the values
+        // provided by WHMCS in `$params`.
+        //
+        // A sample `$params` array may be defined as:
+        //
+        // ```
+        // array(
+        //     'username' => 'The service username',
+        //     'password' => 'The new service password',
+        // )
+        // ```
+    } catch (Exception $e) {
+        // Record the error in WHMCS's module log.
+        logModuleCall(
+            'onecontrol',
+            __FUNCTION__,
+            $params,
+            $e->getMessage(),
+            $e->getTraceAsString()
+        );
+
+        return $e->getMessage();
+    }
+
+    return 'success';
+}
+
+/**
+ * Upgrade or downgrade an instance of a product/service.
+ *
+ * Called to apply any change in product assignment or parameters. It
+ * is called to provision upgrade or downgrade orders, as well as being
+ * able to be invoked manually by an admin user.
+ *
+ * This same function is called for upgrades and downgrades of both
+ * products and configurable options.
+ *
+ * @param array $params common module parameters
+ *
+ * @see https://developers.whmcs.com/provisioning-modules/module-parameters/
+ *
+ * @return string "success" or an error message
+ */
+function onecontrol_ChangePackage(array $params)
+{
+    try {
+        // Call the service's change password function, using the values
+        // provided by WHMCS in `$params`.
+        //
+        // A sample `$params` array may be defined as:
+        //
+        // ```
+        // array(
+        //     'username' => 'The service username',
+        //     'configoption1' => 'The new service disk space',
+        //     'configoption3' => 'Whether or not to enable FTP',
+        // )
+        // ```
+    } catch (Exception $e) {
+        // Record the error in WHMCS's module log.
+        logModuleCall(
+            'onecontrol',
+            __FUNCTION__,
+            $params,
+            $e->getMessage(),
+            $e->getTraceAsString()
+        );
+
+        return $e->getMessage();
+    }
+
+    return 'success';
+}
+
+/**
+ * Test connection with the given server parameters.
+ *
+ * Allows an admin user to verify that an API connection can be
+ * successfully made with the given configuration parameters for a
+ * server.
+ *
+ * When defined in a module, a Test Connection button will appear
+ * alongside the Server Type dropdown when adding or editing an
+ * existing server.
+ *
+ * @param array $params common module parameters
+ *
+ * @see https://developers.whmcs.com/provisioning-modules/module-parameters/
+ *
+ * @return array
+ */
+function onecontrol_TestConnection(array $params)
+{
+    try {
+        // Call the service's connection test function.
+
+        $success = true;
+        $errorMsg = '';
+    } catch (Exception $e) {
+        // Record the error in WHMCS's module log.
+        logModuleCall(
+            'onecontrol',
+            __FUNCTION__,
+            $params,
+            $e->getMessage(),
+            $e->getTraceAsString()
+        );
+
+        $success = false;
+        $errorMsg = $e->getMessage();
+    }
+
+    return array(
+        'success' => $success,
+        'error' => $errorMsg,
+    );
+}
+
+/**
+ * Additional actions an admin user can invoke.
+ *
+ * Define additional actions that an admin user can perform for an
+ * instance of a product/service.
+ *
+ * @see onecontrol_buttonOneFunction()
+ *
+ * @return array
+ */
+function onecontrol_AdminCustomButtonArray()
+{
+    return array(
+        "Button 1 Display Value" => "buttonOneFunction",
+        "Button 2 Display Value" => "buttonTwoFunction",
+    );
+}
+
+/**
+ * Additional actions a client user can invoke.
+ *
+ * Define additional actions a client user can perform for an instance of a
+ * product/service.
+ *
+ * Any actions you define here will be automatically displayed in the available
+ * list of actions within the client area.
+ *
+ * @return array
+ */
+function onecontrol_ClientAreaCustomButtonArray()
+{
+    return array(
+        "Action 1 Display Value" => "instantiate_vm",
+        "Action 2 Display Value" => "terminate_vm",
+        "Action 3 Display Value" => "instantiate2",        
+    );
+}
+
+/**
+ * Custom function for performing an additional action.
+ *
+ * You can define an unlimited number of custom functions in this way.
+ *
+ * Similar to all other module call functions, they should either return
+ * 'success' or an error message to be displayed.
+ *
+ * @param array $params common module parameters
+ *
+ * @see https://developers.whmcs.com/provisioning-modules/module-parameters/
+ * @see onecontrol_AdminCustomButtonArray()
+ *
+ * @return string "success" or an error message
+ */
+function onecontrol_buttonOneFunction(array $params)
+{
+    try {
+        // Call the service's function, using the values provided by WHMCS in
+        // `$params`.
+    } catch (Exception $e) {
+        // Record the error in WHMCS's module log.
+        logModuleCall(
+            'onecontrol',
+            __FUNCTION__,
+            $params,
+            $e->getMessage(),
+            $e->getTraceAsString()
+        );
+
+        return $e->getMessage();
+    }
+
+    return 'success';
+}
+
+/**
+ * Custom function for performing an additional action.
+ *
+ * You can define an unlimited number of custom functions in this way.
+ *
+ * Similar to all other module call functions, they should either return
+ * 'success' or an error message to be displayed.
+ *
+ * @param array $params common module parameters
+ *
+ * @see https://developers.whmcs.com/provisioning-modules/module-parameters/
+ * @see onecontrol_ClientAreaCustomButtonArray()
+ *
+ * @return string "success" or an error message
+ */
+function onecontrol_instantiate_vm(array $params)
+{
+    try {
+            // Call the service's function, using the values provided by WHMCS in
+            // `$params`.
+            require_once('lib/OneConnector.php');
+            $oneconnector = new OneConnector;
+
+            $result_oneuser = Capsule::table( 'mod_onecontrol_oneuser' )
+                        ->select('one_user_id')
+                        ->where('whmcs_user_id',$params['clientsdetails']['id'])
+                        ->first();
+                        
+            if($result_oneuser) {
+                $one_user_id = $result_oneuser->{'one_user_id'};
+                $result_onevm = Capsule::table('mod_onecontrol_onevm')
+                                ->select('id','vm_name','vm_ip_address','vm_network_mask','vm_network_address',
+                                         'vm_gw_ip_address','vm_dns_ip_address','one_network_id')
+                                ->where('vm_id',0)
+                                ->where('user_id',0)
+                                ->first();
+                               
+                if($result_onevm){
+                    Capsule::table('mod_onecontrol_onevm')->where('id',$result_onevm->{'id'})
+                        ->update(
+                            array(
+                                'user_id'=>$one_user_id,
+                                'service_id'=>$params['serviceid']
+                                )
+                        );    
+
+                    $arr = array(
+                        "cmd" => "template_instantiate",
+                        "user_id" => $one_user_id,
+                        "vm_name" => $result_onevm->{'vm_name'},
+                        "template_id" => get_onevmtemplate($params),
+                        "ip_address" => $result_onevm->{'vm_ip_address'},
+                        "dns_ip_address" => $result_onevm->{'vm_dns_ip_address'},
+                        "gw_ip_address" => $result_onevm->{'vm_gw_ip_address'},
+                        "network_id" => $result_onevm->{'one_network_id'},
+                        "network_address" => $result_onevm->{'vm_network_address'},
+                        "network_mask" => $result_onevm->{'vm_network_mask'},
+                    );
+ 
+                    $one_reply = $oneconnector->connector($arr);
+                    if($one_reply->{'error'}){
+                        return '. Oops! Something went wrong!';
+                    } 
+                    
+                    Capsule::table('mod_onecontrol_onevm')->where('id',$result_onevm->{'id'})
+                        ->update(
+                            array(
+                                'vm_id'=>$one_reply->{'vm_id'}
+                                )
+                        );
+                } else {
+                    logModuleCall(
+                        'onecontrol',
+                        __FUNCTION__,
+                        $params,
+                        $arr
+                    );
+                    return '. Oops! Something went wrong!';
+                }
+                
+            } else {
+                $one_user_password = $oneconnector->generate_password();       
+                $arr = array(
+                            "cmd" => "user_allocate",
+                            "user_name" => $params["clientsdetails"]["email"],
+                            "user_password" => $one_user_password,
+                            );
+                
+                $one_reply = $oneconnector->connector($arr);
+                if($one_reply->{'error'}){
+                    return '. Oops! Something went wrong!';
+                }
+
+                $one_user_group_id_array = '';
+                foreach($one_reply->{'user_group_id_array'} as $key => $value)
+                    {
+                        $one_user_group_id_array = $one_user_group_id_array . $value . ',';
+                    }
+
+                $result_oneuser = Capsule::table( 'mod_onecontrol_oneuser' )->insert(
+                                    array(
+                                        'whmcs_user_id' => $params['clientsdetails']['id'],

@@ -90,11 +90,11 @@ function onecontrol_MetaData()
 function onecontrol_ConfigOptions()
 {
     return array(
-        'ONE Templates ID' => array(
+        'ONE Template ID' => array(
             'Type' => 'text',
             'Size' => '25',
             'Default' => '0',
-            'Description' => 'Example: 110,350,390',
+            'Description' => '',
         ),    
     
     /*
@@ -215,7 +215,6 @@ function onecontrol_SuspendAccount(array $params)
     try {
         // Call the service's suspend function, using the values provided by
         // WHMCS in `$params`.
-        onecontrol_poweroff_vm($params);
     } catch (Exception $e) {
         // Record the error in WHMCS's module log.
         logModuleCall(
@@ -250,7 +249,6 @@ function onecontrol_UnsuspendAccount(array $params)
     try {
         // Call the service's unsuspend function, using the values provided by
         // WHMCS in `$params`.
-        onecontrol_resume_vm($params);
     } catch (Exception $e) {
         // Record the error in WHMCS's module log.
         logModuleCall(
@@ -317,8 +315,7 @@ function onecontrol_TerminateAccount(array $params)
  * @see https://developers.whmcs.com/provisioning-modules/module-parameters/
  *
  * @return string "success" or an error message
-*/ 
-/*
+ */
 function onecontrol_ChangePassword(array $params)
 {
     try {
@@ -348,7 +345,6 @@ function onecontrol_ChangePassword(array $params)
 
     return 'success';
 }
-*/
 
 /**
  * Upgrade or downgrade an instance of a product/service.
@@ -470,13 +466,12 @@ function onecontrol_AdminCustomButtonArray()
  *
  * @return array
  */
-
 function onecontrol_ClientAreaCustomButtonArray()
 {
     return array(
-        "Reboot VPS" => "reboot_vm",
-        "Resume VPS" => "resume_vm",
-        "Poweroff VPS" => "poweroff_vm",        
+        "Action 1 Display Value" => "instantiate_vm",
+        "Action 2 Display Value" => "terminate_vm",
+        "Action 3 Display Value" => "instantiate2",        
     );
 }
 
@@ -533,10 +528,11 @@ function onecontrol_buttonOneFunction(array $params)
  */
 function onecontrol_instantiate_vm(array $params)
 {
- 
     try {
             // Call the service's function, using the values provided by WHMCS in
             // `$params`.
+            require_once('lib/OneConnector.php');
+            $oneconnector = new OneConnector;
 
             $result_oneuser = Capsule::table( 'mod_onecontrol_oneuser' )
                         ->select('one_user_id')
@@ -553,6 +549,13 @@ function onecontrol_instantiate_vm(array $params)
                                 ->first();
                                
                 if($result_onevm){
+                    Capsule::table('mod_onecontrol_onevm')->where('id',$result_onevm->{'id'})
+                        ->update(
+                            array(
+                                'user_id'=>$one_user_id,
+                                'service_id'=>$params['serviceid']
+                                )
+                        );    
 
                     $arr = array(
                         "cmd" => "template_instantiate",
@@ -567,39 +570,10 @@ function onecontrol_instantiate_vm(array $params)
                         "network_mask" => $result_onevm->{'vm_network_mask'},
                     );
  
-                    $one_reply = send_to_one($arr);
+                    $one_reply = $oneconnector->connector($arr);
                     if($one_reply->{'error'}){
-
-                        $result_onevm_user = Capsule::table('mod_onecontrol_onevm')
-                                    ->select('vm_id')
-                                    ->where('user_id',$result_oneuser->{'one_user_id'})
-                                    ->first();                
-
-                        if (!$result_onevm_user){
-                            $arr = array(
-                                "cmd" => "user_delete",
-                                "user_id" => $result_oneuser->{'one_user_id'},    
-                            );
-                            $one_reply = send_to_one($arr);              
-                            if($one_reply->{'error'}){
-                                return '. Oops! Something went wrong!';
-                            }  
-                            
-                            Capsule::table('mod_onecontrol_oneuser')
-                                ->where('whmcs_user_id',$params['clientsdetails']['id'])
-                                ->delete();
-                        }        
-
                         return '. Oops! Something went wrong!';
                     } 
-
-                    Capsule::table('mod_onecontrol_onevm')->where('id',$result_onevm->{'id'})
-                        ->update(
-                            array(
-                                'user_id'=>$one_user_id,
-                                'service_id'=>$params['serviceid']
-                                )
-                        );    
                     
                     Capsule::table('mod_onecontrol_onevm')->where('id',$result_onevm->{'id'})
                         ->update(
@@ -618,16 +592,14 @@ function onecontrol_instantiate_vm(array $params)
                 }
                 
             } else {
-                require_once('lib/SecGenerators.php');
-                $secgenerators = new SecGenerators;
-                $one_user_password =  $secgenerators->generate_password();
+                $one_user_password = $oneconnector->generate_password();       
                 $arr = array(
                             "cmd" => "user_allocate",
                             "user_name" => $params["clientsdetails"]["email"],
                             "user_password" => $one_user_password,
                             );
                 
-                $one_reply = send_to_one($arr);
+                $one_reply = $oneconnector->connector($arr);
                 if($one_reply->{'error'}){
                     return '. Oops! Something went wrong!';
                 }
@@ -670,9 +642,12 @@ function onecontrol_instantiate_vm(array $params)
 
 function onecontrol_terminate_vm(array $params)
 {
+    
     try {
             // Call the service's function, using the values provided by WHMCS in
             // `$params`.
+            require_once('lib/OneConnector.php');
+            $oneconnector = new OneConnector;
            
             $result_oneuser = Capsule::table('mod_onecontrol_oneuser')
                 ->select('one_user_id')
@@ -693,7 +668,7 @@ function onecontrol_terminate_vm(array $params)
                 "user_id" => $result_oneuser->{'one_user_id'}    
             );
 
-            $one_reply = send_to_one($arr);              
+            $one_reply = $oneconnector->connector($arr);              
             if($one_reply->{'error'}){
                 return '. Oops! Something went wrong!';
             }
@@ -705,6 +680,7 @@ function onecontrol_terminate_vm(array $params)
                         'vm_id'=>0,
                         'service_id'=>0,
                         'user_id'=>0
+                        
                         )
                 );
                 
@@ -718,7 +694,7 @@ function onecontrol_terminate_vm(array $params)
                     "cmd" => "user_delete",
                     "user_id" => $result_oneuser->{'one_user_id'},    
                 );
-                $one_reply = send_to_one($arr);              
+                $one_reply = $oneconnector->connector($arr);              
                 if($one_reply->{'error'}){
                     return '. Oops! Something went wrong!';
                 }  
@@ -744,11 +720,14 @@ function onecontrol_terminate_vm(array $params)
     return 'success';
 }
 
-function onecontrol_terminate_v2_vm(array $params)
+function onecontrol_shutdown_vm(array $params)
 {
+    
     try {
             // Call the service's function, using the values provided by WHMCS in
             // `$params`.
+            require_once('lib/OneConnector.php');
+            $oneconnector = new OneConnector;
            
             $result_oneuser = Capsule::table('mod_onecontrol_oneuser')
                 ->select('one_user_id')
@@ -769,7 +748,7 @@ function onecontrol_terminate_v2_vm(array $params)
                 "user_id" => $result_oneuser->{'one_user_id'}    
             );
 
-            $one_reply = send_to_one($arr);              
+            $one_reply = $oneconnector->connector($arr);              
             if($one_reply->{'error'}){
                 return '. Oops! Something went wrong!';
             }
@@ -791,30 +770,15 @@ function onecontrol_terminate_v2_vm(array $params)
 }
 
 
-function onecontrol_poweroff_vm(array $params)
+function onecontrol_instantiate2(array $params)
 {
+    
     try {
         // Call the service's function, using the values provided by WHMCS in
         // `$params`.
-
-        //var_dump($params);
-        $result_onevm = Capsule::table('mod_onecontrol_onevm')
-                ->select('vm_id','user_id')
-                ->where('service_id',$params['serviceid'])
-                ->first();
-        
-        $arr = array(
-            "cmd" => "vm_action",
-            "vm_id" => $result_onevm->{'vm_id'},
-            "user_id" => $result_onevm->{'user_id'},
-            "action" => "poweroff", 
-        );
-        
-        $one_reply = send_to_one($arr);  
-       
-        if($one_reply->{'error'}){
-            return '. Oops! Something went wrong!';
-        }
+    
+        echo get_onevmtemplate($params);
+           
     } catch (Exception $e) {
         // Record the error in WHMCS's module log.
         logModuleCall(
@@ -827,92 +791,9 @@ function onecontrol_poweroff_vm(array $params)
         //return $e->getMessage();        
         return '. Oops! Something went wrong!';
     }    
-    
+
     return 'success';
 }
-
-
-function onecontrol_resume_vm(array $params)
-{
-    try {
-        // Call the service's function, using the values provided by WHMCS in
-        // `$params`.
-
-        //var_dump($params);
-        $result_onevm = Capsule::table('mod_onecontrol_onevm')
-                ->select('vm_id','user_id')
-                ->where('service_id',$params['serviceid'])
-                ->first();
-        
-        $arr = array(
-            "cmd" => "vm_action",
-            "vm_id" => $result_onevm->{'vm_id'},
-            "user_id" => $result_onevm->{'user_id'},
-            "action" => "resume", 
-        );
-        
-        $one_reply = send_to_one($arr);  
-       
-        if($one_reply->{'error'}){
-            return '. Oops! Something went wrong!';
-        }
-    } catch (Exception $e) {
-        // Record the error in WHMCS's module log.
-        logModuleCall(
-            'onecontrol',
-            __FUNCTION__,
-            $params,
-            $e->getMessage(),
-            $e->getTraceAsString()
-        );
-        //return $e->getMessage();        
-        return '. Oops! Something went wrong!';
-    }    
-    
-    return 'success';
-}
-
-
-function onecontrol_reboot_vm(array $params)
-{
-    try {
-        // Call the service's function, using the values provided by WHMCS in
-        // `$params`.
-    
-        //var_dump($params);
-        $result_onevm = Capsule::table('mod_onecontrol_onevm')
-                ->select('vm_id','user_id')
-                ->where('service_id',$params['serviceid'])
-                ->first();
-        
-        $arr = array(
-            "cmd" => "vm_action",
-            "vm_id" => $result_onevm->{'vm_id'},
-            "user_id" => $result_onevm->{'user_id'},
-            "action" => "reboot", 
-        );
-        
-        $one_reply = send_to_one($arr);  
-       
-        if($one_reply->{'error'}){
-            return '. Oops! Something went wrong!';
-        }
-    } catch (Exception $e) {
-        // Record the error in WHMCS's module log.
-        logModuleCall(
-            'onecontrol',
-            __FUNCTION__,
-            $params,
-            $e->getMessage(),
-            $e->getTraceAsString()
-        );
-        //return $e->getMessage();        
-        return '. Oops! Something went wrong!';
-    }    
-    
-    return 'success';
-}
-
 
 /**
  * Admin services tab additional fields.
@@ -1128,37 +1009,17 @@ function onecontrol_ClientArea(array $params)
 {
     // Determine the requested action and set service call parameters based on
     // the action.
-        
     $requestedAction = isset($_REQUEST['customAction']) ? $_REQUEST['customAction'] : '';
-
-    require_once('lib/SecGenerators.php');
-    $secgenerators = new SecGenerators;
-
+    
+    
+    
+    
     if ($requestedAction == 'manage') {
         $serviceAction = 'get_usage';
         $templateFile = 'templates/manage.tpl';
-        $token = $secgenerators->generate_token();
-        Capsule::table('mod_onecontrol_onevm')->where('service_id',$params['serviceid'])
-            ->update(
-                array(
-                    'vm_token'=>$token,
-                    )
-        ); 
-        $result_onevm = Capsule::table('mod_onecontrol_onevm')
-            ->select('vm_name','vm_ip_address')
-            ->where('service_id',$params['serviceid'])
-            ->first();
     } else {
         $serviceAction = 'get_stats';
         $templateFile = 'templates/overview.tpl';
-        $token = $secgenerators->generate_token();
-        Capsule::table('mod_onecontrol_onevm')->where('service_id',$params['serviceid'])
-            ->update(
-                array(
-                    'vm_token'=>$token,
-                    )
-        );   
-
         //echo "SID:".$params['serviceid']."; OID:".$params['attributes']['orderid'];
         //var_dump($params);
     }
@@ -1171,27 +1032,14 @@ function onecontrol_ClientArea(array $params)
         //$extraVariable1 = 'abc';
         //$extraVariable2 = '123';
         //$extraVariable1 = var_dump($params);
-        //$extraVariable1 = $params['status'];
-        //$extraVariable1 = $params['configoption1'];
-        //$extraVariable2 = $params["configoptions"]["OS Type"]. ", " . $params["clientsdetails"]["email"];
-        //$extraVariable1 = $_SESSION['uid'];
-        //$extraVariable2 = $params["clientsdetails"]["email"];
+        $extraVariable1 = $params['configoption1'];
+        $extraVariable2 = $params["configoptions"]["OS Type"]. ", " . $params["clientsdetails"]["email"];
 
-        if ($params['status'] == 'Cancelled' or $params['status'] == 'Terminated')
-        {
-            $productstatuscancelled = true;
-        } 
-        
         return array(
             'tabOverviewReplacementTemplate' => $templateFile,
             'templateVariables' => array(
                 'extraVariable1' => $extraVariable1,
                 'extraVariable2' => $extraVariable2,
-                'token' => $token,
-                'productstatuscancelled' => $productstatuscancelled,
-                'vmostype' => $params["configoptions"]["OS Type"],
-                'vmname' => $result_onevm->{'vm_name'},
-                'vmipaddress' => $result_onevm->{'vm_ip_address'},
             ),
         );
     } catch (Exception $e) {
@@ -1225,13 +1073,5 @@ function get_onevmtemplate(array $params)
         if (in_array ($value->one_template_id,explode (',', $params['configoption1']))) return $value->one_template_id;
     } 
 }
-
-function send_to_one($arr) 
-{
-    require_once('lib/OneConnector.php');
-    $oneconnector = new OneConnector;
-    
-    return $oneconnector->connector($arr);
-}    
     
 
