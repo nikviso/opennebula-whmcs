@@ -440,7 +440,7 @@ rm /var/run/one-context/one_env;\n\
 exit;\n\
 else\n\
 echo \"1\">/etc/wdont;\n\
-chmod 400 /etc/wdont;\n\
+chmod 644 /etc/wdont;\n\
 fi\n'\
         'vm_root_password="' + vm_root_password + '"\n' + \
         'vm_user_password="' + vm_user_password + '"\n' + \
@@ -470,11 +470,8 @@ esac\n\
 rm -r /var/run/one-context/context*\n\
 rm /var/run/one-context/one_env\n\
 '
-        
-        #Linux
-        #script = 'echo -e "' + vm_root_password + '\n' + vm_root_password + '" | passwd root; echo -e "' \
-        #          + vm_user_password + '\n' + vm_user_password + '" | passwd ' + vm_user
-       
+
+
         return script
         
     @staticmethod           

@@ -4857,3 +4857,48 @@
 24-Mar-21 23:32:40 - __main__ - INFO - Worker 3 started
 24-Mar-21 23:32:40 - __main__ - INFO - Worker 2 started
 24-Mar-21 23:32:40 - __main__ - INFO - Worker 4 started
+25-Mar-21 12:30:50 - __main__ - INFO - Worker 0 received  session ID: 5FC78A9D
+25-Mar-21 12:30:50 - commands.Dispatcher - INFO - Session ID: 5FC78A9D, Received request: {u'vm_id': 400, u'cmd': u'get_vm_state', u'user_id': 103}
+25-Mar-21 12:30:50 - commands.Dispatcher - INFO - Session ID: 5FC78A9D, Sended reply: {'vm_state': 'ACTIVE', 'vm_id': 400}
+25-Mar-21 12:30:56 - __main__ - INFO - Worker 1 received  session ID: 4F57063D
+25-Mar-21 12:30:56 - commands.Dispatcher - INFO - Session ID: 4F57063D, Received request: {u'action': u'poweroff', u'vm_id': 400, u'cmd': u'vm_action', u'user_id': 103}
+25-Mar-21 12:30:56 - commands.Dispatcher - INFO - Session ID: 4F57063D, Sended reply: {'vm_id': 400, 'vm_action': u'poweroff'}
+25-Mar-21 12:31:01 - __main__ - INFO - Worker 3 received  session ID: 901BE6F7
+25-Mar-21 12:31:01 - commands.Dispatcher - INFO - Session ID: 901BE6F7, Received request: {u'vm_id': 400, u'cmd': u'get_vm_state', u'user_id': 103}
+25-Mar-21 12:31:02 - commands.Dispatcher - INFO - Session ID: 901BE6F7, Sended reply: {'vm_state': 'ACTIVE', 'vm_id': 400}
+25-Mar-21 12:31:06 - __main__ - INFO - Worker 2 received  session ID: A128675F
+25-Mar-21 12:31:06 - commands.Dispatcher - INFO - Session ID: A128675F, Received request: {u'vm_id': 400, u'cmd': u'get_vm_state', u'user_id': 103}
+25-Mar-21 12:31:07 - commands.Dispatcher - INFO - Session ID: A128675F, Sended reply: {'vm_state': 'ACTIVE', 'vm_id': 400}
+25-Mar-21 12:31:11 - __main__ - INFO - Worker 4 received  session ID: 8034296C
+25-Mar-21 12:31:11 - commands.Dispatcher - INFO - Session ID: 8034296C, Received request: {u'vm_id': 400, u'cmd': u'get_vm_state', u'user_id': 103}
+25-Mar-21 12:31:12 - commands.Dispatcher - INFO - Session ID: 8034296C, Sended reply: {'vm_state': 'POWEROFF', 'vm_id': 400}
+25-Mar-21 12:32:25 - __main__ - INFO - Worker 0 received  session ID: 05A4B81E
+25-Mar-21 12:32:25 - commands.Dispatcher - INFO - Session ID: 05A4B81E, Received request: {u'vm_name': u'v1p248.clouds365.host', u'user_id': 103, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.248', u'template_id': 390}
+25-Mar-21 12:32:28 - commands.Dispatcher - INFO - Session ID: 05A4B81E, Sended reply: {'user_id': 103, 'vm_root_password': u'*******', 'vm_id': 410, 'vm_user_password': u'*******', 'vm_user': 'rvbkn27'}
+25-Mar-21 12:32:45 - __main__ - INFO - Worker 1 received  session ID: 40D19E23
+25-Mar-21 12:32:45 - commands.Dispatcher - INFO - Session ID: 40D19E23, Received request: {u'vm_id': 410, u'cmd': u'get_vm_state', u'user_id': 103}
+25-Mar-21 12:32:45 - commands.Dispatcher - INFO - Session ID: 40D19E23, Sended reply: {'vm_state': 'CLONING', 'vm_id': 410}
+25-Mar-21 12:33:34 - __main__ - INFO - Worker 3 received  session ID: 2F037A6D
+25-Mar-21 12:33:34 - commands.Dispatcher - INFO - Session ID: 2F037A6D, Received request: {u'vm_id': 410, u'cmd': u'get_vm_state', u'user_id': 103}
+25-Mar-21 12:33:34 - commands.Dispatcher - INFO - Session ID: 2F037A6D, Sended reply: {'vm_state': 'ACTIVE', 'vm_id': 410}
+25-Mar-21 13:49:29 - __main__ - INFO - Worker 2 received  session ID: 689D52BC
+25-Mar-21 13:49:29 - commands.Dispatcher - INFO - Session ID: 689D52BC, Received request: {u'vm_id': 410, u'cmd': u'vm_terminate', u'user_id': 103}
+25-Mar-21 13:49:33 - commands.Dispatcher - INFO - Session ID: 689D52BC, Sended reply: {'action': 'vm terminated'}
+25-Mar-21 13:54:14 - __main__ - INFO - Worker 4 received  session ID: 2F58ABC3
+25-Mar-21 13:54:14 - commands.Dispatcher - INFO - Session ID: 2F58ABC3, Received request: {u'vm_name': u'v1p248.clouds365.host', u'user_id': 103, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.248', u'template_id': 390}
+25-Mar-21 13:54:18 - commands.Dispatcher - INFO - Session ID: 2F58ABC3, Sended reply: {'user_id': 103, 'vm_root_password': u'*******', 'vm_id': 411, 'vm_user_password': u'*******', 'vm_user': 'trquc89'}
+25-Mar-21 13:54:42 - __main__ - INFO - Worker 0 received  session ID: 4A17E25C
+25-Mar-21 13:54:42 - commands.Dispatcher - INFO - Session ID: 4A17E25C, Received request: {u'vm_id': 411, u'cmd': u'get_vm_state', u'user_id': 103}
+25-Mar-21 13:54:42 - commands.Dispatcher - INFO - Session ID: 4A17E25C, Sended reply: {'vm_state': 'CLONING', 'vm_id': 411}
+25-Mar-21 13:55:35 - __main__ - INFO - Worker 1 received  session ID: CA50B794
+25-Mar-21 13:55:35 - commands.Dispatcher - INFO - Session ID: CA50B794, Received request: {u'vm_id': 411, u'cmd': u'get_vm_state', u'user_id': 103}
+25-Mar-21 13:55:36 - commands.Dispatcher - INFO - Session ID: CA50B794, Sended reply: {'vm_state': 'ACTIVE', 'vm_id': 411}
+25-Mar-21 14:09:32 - __main__ - INFO - Worker 3 received  session ID: 48D6527E
+25-Mar-21 14:09:32 - commands.Dispatcher - INFO - Session ID: 48D6527E, Received request: {u'vm_id': 411, u'cmd': u'vm_terminate', u'user_id': 103}
+25-Mar-21 14:09:35 - commands.Dispatcher - INFO - Session ID: 48D6527E, Sended reply: {'action': 'vm terminated'}
+25-Mar-21 14:10:27 - __main__ - INFO - Routing server started
+25-Mar-21 14:10:27 - __main__ - INFO - Worker 1 started
+25-Mar-21 14:10:27 - __main__ - INFO - Worker 0 started
+25-Mar-21 14:10:27 - __main__ - INFO - Worker 2 started
+25-Mar-21 14:10:27 - __main__ - INFO - Worker 3 started
+25-Mar-21 14:10:27 - __main__ - INFO - Worker 4 started
