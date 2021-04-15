@@ -39,7 +39,7 @@ body {font-family: Arial;}
   <table class="table"><tr>
                  <th>ID</th>
                  <th>OS</th>
-                 <th>Storage size(Gb)</th>
+                 <th>Image size(Gb)</th>
                  <th>ONE Template ID</th>
                  </tr>
 {OS}
@@ -143,9 +143,9 @@ body {font-family: Arial;}
           </td>
       </tr>
       <tr>
-          <td width="20%" class="fieldlabel">Storage size(Gb)</td>
+          <td width="20%" class="fieldlabel">Image size(Gb)</td>
           <td class="fieldarea">
-              <input type="text" name="vars[storage_size]" class="form-control input-225" />
+              <input type="text" name="vars[image_size]" class="form-control input-225" />
           </td>
       </tr>
       <tr>

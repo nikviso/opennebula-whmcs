@@ -206,7 +206,7 @@ function onecontrol_activate()
                     /** @var \Illuminate\Database\Schema\Blueprint $table */
                     $table->increments('id');                    
                     $table->integer('one_template_id');
-                    $table->integer('storage_size');
+                    $table->integer('image_size');
                     $table->text('one_image_os');
                 }
             );             
@@ -334,7 +334,7 @@ function onecontrol_output($vars)
     if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['uploadfile']))
     {
         $uploadfile = $_SERVER['DOCUMENT_ROOT'] . "/modules/addons/onecontrol/upload/vmset.txt";
-         
+        
         if (move_uploaded_file($_FILES['uploadfile']['tmp_name'], $uploadfile))
         {
           $vars += array("file_success" => "File is uploaded successfully");  

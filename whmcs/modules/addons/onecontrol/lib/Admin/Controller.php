@@ -8,25 +8,29 @@ use WHMCS\Database\Capsule;
  * Sample Admin Area Controller
  */
 class Controller {
+    
+    static $template_admin = '/var/www/html/modules/addons/onecontrol/templates/admin.tpl';
+    static $vmfile = '/var/www/html/modules/addons/onecontrol/upload/vmset.txt';
+    
 
     protected function check_add_data_os($vars)
     {
         $return_message = '';
 
         $vars['one_image_os'] ? : $return_message = $return_message . '"OS NAME" is empty.<br>';
-        $vars['storage_size'] ? : $return_message = $return_message . '"PRODUCT ID" is empty.<br>';
+        $vars['image_size'] ? : $return_message = $return_message . '"Image size" is empty.<br>';
         $vars['one_template_id'] ? : $return_message = $return_message . '"ONE TEMPLATE ID" is empty.<br>';
 
 
         $one_image_os = $vars['one_image_os'];
-        $storage_size = $vars['storage_size'];
+        $image_size = $vars['image_size'];
         $one_template_id = $vars['one_template_id'];
 
             try {
                 $vm[] = Capsule::table('mod_onecontrol_onetemplate')
-                ->select('one_image_os','storage_size','one_template_id')
+                ->select('one_image_os','image_size','one_template_id')
                 ->Where('one_image_os','=', $one_image_os)
-                ->Where('storage_size','=', $storage_size)
+                ->Where('image_size','=', $image_size)
                 ->Where('one_template_id','=', $one_template_id)
                 ->get();
                 if ($vm)
@@ -35,7 +39,7 @@ class Controller {
                     {
                         foreach ($value as $key2 => $value2)
                         {
-                            $return_message = $return_message . 'OS with such data already exists: ' . $value2->one_image_os ." => ". $value2->storage_size ." => ". $value2->one_template_id ."<br>";
+                            $return_message = $return_message . 'OS with such data already exists: ' . $value2->one_image_os ." => ". $value2->image_size ." => ". $value2->one_template_id ."<br>";
                         }
                     }
                 }
@@ -142,7 +146,7 @@ class Controller {
          $html_os .= '<tr>
                      <td>'. $data->id .'</td>
                      <td>'. $data->one_image_os .'</td>
-                     <td>'. $data->storage_size .'</td>
+                     <td>'. $data->image_size .'</td>
                      <td>'. $data->one_template_id .'</td>
                    </tr>';
          //do something with myid and unique column
@@ -171,7 +175,7 @@ class Controller {
         $html_os = $os_vm_data[1];        
 
         $parse = new Template_Parse;
-        $parse->get_tpl("/var/www/html/modules/addons/onecontrol/templates/admin.tpl");
+        $parse->get_tpl(self::$template_admin);
         $parse->set_tpl('{VMID}', $vmid);
         $parse->set_tpl('{MODULELINK}', $modulelink);
         $parse->set_tpl('{VERSION}', $version);
@@ -247,7 +251,7 @@ class Controller {
         $html_os = $os_vm_data[1];       
 
         $parse = new Template_Parse;
-        $parse->get_tpl("/var/www/html/modules/addons/onecontrol/templates/admin.tpl");
+        $parse->get_tpl(self::$template_admin);
         $parse->set_tpl('{VMID}', $vmid);
         $parse->set_tpl('{MODULELINK}', $modulelink);
         $parse->set_tpl('{VERSION}', $version);
@@ -308,7 +312,7 @@ class Controller {
         $html_os = $os_vm_data[1];    
 
         $parse = new Template_Parse;
-        $parse->get_tpl("/var/www/html/modules/addons/onecontrol/templates/admin.tpl");
+        $parse->get_tpl(self::$template_admin);
         $parse->set_tpl('{VMID}', $vmid);
         $parse->set_tpl('{MODULELINK}', $modulelink);
         $parse->set_tpl('{VERSION}', $version);
@@ -360,7 +364,7 @@ class Controller {
         $html_os = $os_vm_data[1];    
         
         $parse = new Template_Parse;
-        $parse->get_tpl("/var/www/html/modules/addons/onecontrol/templates/admin.tpl");
+        $parse->get_tpl(self::$template_admin);
         $parse->set_tpl('{VMID}', $vmid);
         $parse->set_tpl('{MODULELINK}', $modulelink);
         $parse->set_tpl('{VERSION}', $version);
@@ -414,7 +418,7 @@ class Controller {
         $html_os = $os_vm_data[1];    
 
         $parse = new Template_Parse;
-        $parse->get_tpl("/var/www/html/modules/addons/onecontrol/templates/admin.tpl");
+        $parse->get_tpl(self::$template_admin);
         $parse->set_tpl('{SHOWTABDEF}', '');
         $parse->set_tpl('{OSTABDEF}', 'tabShow');
         $parse->set_tpl('{CLEARTABDEF}', '');
@@ -442,7 +446,7 @@ class Controller {
     public function addos($vars)
     {
         $vars['one_image_os'] = $vars['os_name'];
-        $vars['storage_size'] = preg_replace('/\s*\t*/','',$vars['storage_size']);
+        $vars['image_size'] = preg_replace('/\s*\t*/','',$vars['image_size']);
         $vars['one_template_id'] = preg_replace('/\s*\t*/','',$vars['one_template_id']);
 
         $feedback_message = $this->check_add_data_os($vars);
@@ -453,14 +457,14 @@ class Controller {
         {
             try {
                 $statement = $pdo->prepare(
-                  'insert into mod_onecontrol_onetemplate (one_image_os, storage_size, one_template_id)
-                  values (:one_image_os, :storage_size, :one_template_id)'
+                  'insert into mod_onecontrol_onetemplate (one_image_os, image_size, one_template_id)
+                  values (:one_image_os, :image_size, :one_template_id)'
                 );
 
                 $statement->execute(
                   [
                       ':one_image_os' => $vars['one_image_os'],
-                      ':storage_size' => $vars['storage_size'],
+                      ':image_size' => $vars['image_size'],
                       ':one_template_id' => $vars['one_template_id'],
                   ]
                 );
@@ -480,7 +484,7 @@ class Controller {
         $html_os = $os_vm_data[1];    
 
         $parse = new Template_Parse;
-        $parse->get_tpl("/var/www/html/modules/addons/onecontrol/templates/admin.tpl");
+        $parse->get_tpl(self::$template_admin);
         $parse->set_tpl('{SHOWTABDEF}', '');
         $parse->set_tpl('{ADDOSTABDEF}', 'tabShow');
         $parse->set_tpl('{CLEARTABDEF}', '');
@@ -557,7 +561,7 @@ class Controller {
                 $feedback_file_message = $vars['file_success'];
                 $feedback_file_message_class = "alert alert-success";
 
-                $handle = @fopen("/var/www/html/modules/addons/onecontrol/upload/vmset.txt", "r");
+                $handle = @fopen(self::$vmfile, "r");
                 if ($handle) {
                     $str=1;
                     while (($buffer = fgets($handle)) !== false) {
@@ -626,7 +630,7 @@ class Controller {
         $html_os = $os_vm_data[1];        
 
         $parse = new Template_Parse;
-        $parse->get_tpl("/var/www/html/modules/addons/onecontrol/templates/admin.tpl");
+        $parse->get_tpl(self::$template_admin);
         $parse->set_tpl('{SHOWTABDEF}', '');
         $parse->set_tpl('{EDITTABDEF}', 'tabShow');
         $parse->set_tpl('{VM_NAME}', $vm_name);
