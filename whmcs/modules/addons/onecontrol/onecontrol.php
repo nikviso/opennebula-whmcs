@@ -206,7 +206,7 @@ function onecontrol_activate()
                     /** @var \Illuminate\Database\Schema\Blueprint $table */
                     $table->increments('id');                    
                     $table->integer('one_template_id');
-                    $table->integer('product_id');
+                    $table->integer('storage_size');
                     $table->text('one_image_os');
                 }
             );             

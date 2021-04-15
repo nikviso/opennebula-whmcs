@@ -14,19 +14,19 @@ class Controller {
         $return_message = '';
 
         $vars['one_image_os'] ? : $return_message = $return_message . '"OS NAME" is empty.<br>';
-        $vars['product_id'] ? : $return_message = $return_message . '"PRODUCT ID" is empty.<br>';
+        $vars['storage_size'] ? : $return_message = $return_message . '"PRODUCT ID" is empty.<br>';
         $vars['one_template_id'] ? : $return_message = $return_message . '"ONE TEMPLATE ID" is empty.<br>';
 
 
         $one_image_os = $vars['one_image_os'];
-        $product_id = $vars['product_id'];
+        $storage_size = $vars['storage_size'];
         $one_template_id = $vars['one_template_id'];
 
             try {
                 $vm[] = Capsule::table('mod_onecontrol_onetemplate')
-                ->select('one_image_os','product_id','one_template_id')
+                ->select('one_image_os','storage_size','one_template_id')
                 ->Where('one_image_os','=', $one_image_os)
-                ->Where('product_id','=', $product_id)
+                ->Where('storage_size','=', $storage_size)
                 ->Where('one_template_id','=', $one_template_id)
                 ->get();
                 if ($vm)
@@ -35,7 +35,7 @@ class Controller {
                     {
                         foreach ($value as $key2 => $value2)
                         {
-                            $return_message = $return_message . 'OS with such data already exists: ' . $value2->one_image_os ." => ". $value2->product_id ." => ". $value2->one_template_id ."<br>";
+                            $return_message = $return_message . 'OS with such data already exists: ' . $value2->one_image_os ." => ". $value2->storage_size ." => ". $value2->one_template_id ."<br>";
                         }
                     }
                 }
@@ -125,7 +125,9 @@ class Controller {
                      <td>'. $data->vm_gw_ip_address .'</td>
                      <td>'. $data->vm_dns_ip_address .'</td>
                      <td>'. $data->one_network_id .'</td>
-                     <td>'. $data->vm_active .'</td>
+                     <td>'. $data->service_id .'</td>
+                     <td>'. $data->user_id .'</td>
+                     <td>'. $data->vm_id .'</td>
                    </tr>';
          //do something with myid and unique column
         }
@@ -140,7 +142,7 @@ class Controller {
          $html_os .= '<tr>
                      <td>'. $data->id .'</td>
                      <td>'. $data->one_image_os .'</td>
-                     <td>'. $data->product_id .'</td>
+                     <td>'. $data->storage_size .'</td>
                      <td>'. $data->one_template_id .'</td>
                    </tr>';
          //do something with myid and unique column
@@ -347,7 +349,9 @@ class Controller {
             $vm_gw_ip_address = $data->vm_gw_ip_address;
             $vm_dns_ip_address = $data->vm_dns_ip_address;
             $one_network_id = $data->one_network_id;
-            $vm_active = $data->vm_active;
+            $service_id = $data->service_id;
+            $user_id = $data->user_id;
+            $vm_id = $data->vm_id;
             //do something with myid and unique column
         }
         
@@ -438,8 +442,8 @@ class Controller {
     public function addos($vars)
     {
         $vars['one_image_os'] = $vars['os_name'];
-        $vars['product_id'] = preg_replace('/\s*\t*/','',$vars['one_image_os']);
-        $vars['one_template_id'] = preg_replace('/\s*\t*/','',$vars['os_template']);
+        $vars['storage_size'] = preg_replace('/\s*\t*/','',$vars['storage_size']);
+        $vars['one_template_id'] = preg_replace('/\s*\t*/','',$vars['one_template_id']);
 
         $feedback_message = $this->check_add_data_os($vars);
         $pdo = Capsule::connection()->getPdo();
@@ -449,14 +453,14 @@ class Controller {
         {
             try {
                 $statement = $pdo->prepare(
-                  'insert into mod_onecontrol_onetemplate (one_image_os, product_id, one_template_id)
-                  values (:one_image_os, :product_id, :one_template_id)'
+                  'insert into mod_onecontrol_onetemplate (one_image_os, storage_size, one_template_id)
+                  values (:one_image_os, :storage_size, :one_template_id)'
                 );
 
                 $statement->execute(
                   [
                       ':one_image_os' => $vars['one_image_os'],
-                      ':product_id' => $vars['product_id'],
+                      ':storage_size' => $vars['storage_size'],
                       ':one_template_id' => $vars['one_template_id'],
                   ]
                 );

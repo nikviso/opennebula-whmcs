@@ -27,7 +27,9 @@ body {font-family: Arial;}
                <th>VM GW IP adress</th>
                <th>DNS IP adress</th>
                <th>Network ID</th>
-               <th>VM active</th>
+               <th>Service ID</th>
+               <th>One user ID</th>
+               <th>VM ID</th>               
                </tr>
 {VM}
 </table>
@@ -37,7 +39,7 @@ body {font-family: Arial;}
   <table class="table"><tr>
                  <th>ID</th>
                  <th>OS</th>
-                 <th>Product ID</th>
+                 <th>Storage size(Gb)</th>
                  <th>ONE Template ID</th>
                  </tr>
 {OS}
@@ -137,19 +139,19 @@ body {font-family: Arial;}
       <tr>
           <td width="20%" class="fieldlabel">OS</td>
           <td class="fieldarea">
-              <input type="text" name="vars[os_name]" class="form-control input-225" value="{VM_NAME}" />
+              <input type="text" name="vars[os_name]" class="form-control input-225" />
           </td>
       </tr>
       <tr>
-          <td width="20%" class="fieldlabel">Product ID</td>
+          <td width="20%" class="fieldlabel">Storage size(Gb)</td>
           <td class="fieldarea">
-              <input type="text" name="vars[one_image_os]" class="form-control input-225" value="{VM_IP_ADDRESS}" />
+              <input type="text" name="vars[storage_size]" class="form-control input-225" />
           </td>
       </tr>
       <tr>
           <td width="20%" class="fieldlabel">ONE Template ID</td>
           <td class="fieldarea">
-              <input type="text" name="vars[os_template]" class="form-control input-225" value="{VM_NETWORK_MASK}" />
+              <input type="text" name="vars[one_template_id]" class="form-control input-225" />
           </td>
       </tr>
   </tbody>
