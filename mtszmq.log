@@ -6630,3 +6630,387 @@
 12-Apr-21 00:26:17 - __main__ - INFO - Worker 1 received  session ID: CE258AF3
 12-Apr-21 00:26:17 - commands.Dispatcher - INFO - Session ID: CE258AF3, Received request: {u'vm_id': 502, u'cmd': u'get_vm_state', u'user_id': 132}
 12-Apr-21 00:26:17 - commands.Dispatcher - INFO - Session ID: CE258AF3, Sended reply: {'vm_state': 'POWEROFF', 'vm_id': 502}
+16-Apr-21 11:12:45 - __main__ - INFO - Worker 0 received  session ID: 15AE08BF
+16-Apr-21 11:12:45 - commands.Dispatcher - INFO - Session ID: 15AE08BF, Received request: {u'vm_id': 502, u'cmd': u'vm_terminate', u'user_id': 132}
+16-Apr-21 11:12:47 - commands.Dispatcher - INFO - Session ID: 15AE08BF, Sended reply: {'action': 'vm terminated'}
+16-Apr-21 11:12:48 - __main__ - INFO - Worker 2 received  session ID: D8A59E7C
+16-Apr-21 11:12:48 - commands.Dispatcher - INFO - Session ID: D8A59E7C, Received request: {u'cmd': u'user_delete', u'user_id': 132}
+16-Apr-21 11:12:48 - commands.Dispatcher - INFO - Session ID: D8A59E7C, Sended reply: {'action': 'user and user group deleted', 'user_group_id': 221, 'user_id': 132}
+16-Apr-21 12:59:59 - __main__ - INFO - Worker 3 received  session ID: 169C2035
+16-Apr-21 12:59:59 - commands.Dispatcher - INFO - Session ID: 169C2035, Received request: {u'user_password': u'*******', u'cmd': u'user_allocate', u'user_name': u'nikolaj@microlines.lv'}
+16-Apr-21 12:59:59 - commands.Dispatcher - INFO - Session ID: 169C2035, Sended reply: {'user_name': u'nikolaj@microlines.lv', 'user_id': 133, 'user_group_id_array': [222]}
+16-Apr-21 12:59:59 - __main__ - INFO - Worker 4 received  session ID: F53BD028
+16-Apr-21 12:59:59 - commands.Dispatcher - INFO - Session ID: F53BD028, Received request: {u'vm_name': u'v1p248.clouds365.host', u'user_id': 133, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.248', u'template_id': 329}
+16-Apr-21 13:00:03 - commands.Dispatcher - INFO - Session ID: F53BD028, Sended reply: {'user_id': 133, 'vm_root_password': u'*******', 'vm_id': 503, 'vm_user_password': u'*******', 'vm_user': 'krlcf61'}
+16-Apr-21 13:02:08 - __main__ - INFO - Worker 1 received  session ID: 0827D591
+16-Apr-21 13:02:08 - commands.Dispatcher - INFO - Session ID: 0827D591, Received request: {u'vm_id': 503, u'cmd': u'vm_terminate', u'user_id': 133}
+16-Apr-21 13:02:12 - commands.Dispatcher - INFO - Session ID: 0827D591, Sended reply: {'action': 'vm terminated'}
+16-Apr-21 13:02:12 - __main__ - INFO - Worker 0 received  session ID: 7E846C93
+16-Apr-21 13:02:12 - commands.Dispatcher - INFO - Session ID: 7E846C93, Received request: {u'cmd': u'user_delete', u'user_id': 133}
+16-Apr-21 13:02:12 - commands.Dispatcher - INFO - Session ID: 7E846C93, Sended reply: {'action': 'user and user group deleted', 'user_group_id': 222, 'user_id': 133}
+16-Apr-21 13:32:38 - __main__ - INFO - Worker 2 received  session ID: 85E6431C
+16-Apr-21 13:32:38 - commands.Dispatcher - INFO - Session ID: 85E6431C, Received request: {u'user_password': u'*******', u'cmd': u'user_allocate', u'user_name': u'nikolaj@microlines.lv'}
+16-Apr-21 13:32:38 - commands.Dispatcher - INFO - Session ID: 85E6431C, Sended reply: {'user_name': u'nikolaj@microlines.lv', 'user_id': 134, 'user_group_id_array': [223]}
+16-Apr-21 13:32:39 - __main__ - INFO - Worker 3 received  session ID: 64E235DF
+16-Apr-21 13:32:39 - commands.Dispatcher - INFO - Session ID: 64E235DF, Received request: {u'vm_name': u'v1p248.clouds365.host', u'user_id': 134, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.248', u'template_id': 390}
+16-Apr-21 13:32:42 - commands.Dispatcher - INFO - Session ID: 64E235DF, Sended reply: {'user_id': 134, 'vm_root_password': u'*******', 'vm_id': 504, 'vm_user_password': u'*******', 'vm_user': 'tynwh37'}
+16-Apr-21 13:48:36 - __main__ - INFO - Worker 4 received  session ID: 5AF423DC
+16-Apr-21 13:48:36 - commands.Dispatcher - INFO - Session ID: 5AF423DC, Received request: {u'user_password': u'*******', u'cmd': u'user_allocate', u'user_name': u'support@clouds365.host'}
+16-Apr-21 13:48:36 - commands.Dispatcher - INFO - Session ID: 5AF423DC, Sended reply: {'user_name': u'support@clouds365.host', 'user_id': 135, 'user_group_id_array': [224]}
+16-Apr-21 13:48:37 - __main__ - INFO - Worker 1 received  session ID: E827BCA9
+16-Apr-21 13:48:37 - commands.Dispatcher - INFO - Session ID: E827BCA9, Received request: {u'vm_name': u'v1p249.clouds365.host', u'user_id': 135, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.249', u'template_id': 329}
+16-Apr-21 13:48:40 - commands.Dispatcher - INFO - Session ID: E827BCA9, Sended reply: {'user_id': 135, 'vm_root_password': u'*******', 'vm_id': 505, 'vm_user_password': u'*******', 'vm_user': 'bxvrs60'}
+16-Apr-21 13:50:56 - __main__ - INFO - Worker 0 received  session ID: 0123A659
+16-Apr-21 13:50:56 - commands.Dispatcher - INFO - Session ID: 0123A659, Received request: {u'vm_id': 504, u'cmd': u'get_vm_state', u'user_id': 134}
+16-Apr-21 13:50:56 - commands.Dispatcher - INFO - Session ID: 0123A659, Sended reply: {'vm_state': 'ACTIVE', 'vm_id': 504}
+16-Apr-21 13:53:22 - __main__ - INFO - Worker 2 received  session ID: A90347EB
+16-Apr-21 13:53:23 - commands.Dispatcher - INFO - Session ID: A90347EB, Received request: {u'vm_id': 504, u'cmd': u'get_vm_state', u'user_id': 134}
+16-Apr-21 13:53:23 - commands.Dispatcher - INFO - Session ID: A90347EB, Sended reply: {'vm_state': 'ACTIVE', 'vm_id': 504}
+16-Apr-21 13:53:33 - __main__ - INFO - Worker 3 received  session ID: 4B396D05
+16-Apr-21 13:53:33 - commands.Dispatcher - INFO - Session ID: 4B396D05, Received request: {u'action': u'poweroff', u'vm_id': 504, u'cmd': u'vm_action', u'user_id': 134}
+16-Apr-21 13:53:33 - commands.Dispatcher - INFO - Session ID: 4B396D05, Sended reply: {'vm_id': 504, 'vm_action': u'poweroff'}
+16-Apr-21 13:53:39 - __main__ - INFO - Worker 4 received  session ID: 23C9068A
+16-Apr-21 13:53:39 - commands.Dispatcher - INFO - Session ID: 23C9068A, Received request: {u'vm_id': 504, u'cmd': u'get_vm_state', u'user_id': 134}
+16-Apr-21 13:53:39 - commands.Dispatcher - INFO - Session ID: 23C9068A, Sended reply: {'vm_state': 'ACTIVE', 'vm_id': 504}
+16-Apr-21 13:53:44 - __main__ - INFO - Worker 1 received  session ID: CF0DA286
+16-Apr-21 13:53:44 - commands.Dispatcher - INFO - Session ID: CF0DA286, Received request: {u'vm_id': 504, u'cmd': u'get_vm_state', u'user_id': 134}
+16-Apr-21 13:53:44 - commands.Dispatcher - INFO - Session ID: CF0DA286, Sended reply: {'vm_state': 'POWEROFF', 'vm_id': 504}
+16-Apr-21 13:54:39 - __main__ - INFO - Worker 0 received  session ID: 260B59A4
+16-Apr-21 13:54:39 - commands.Dispatcher - INFO - Session ID: 260B59A4, Received request: {u'vm_id': 505, u'cmd': u'get_vm_state', u'user_id': 135}
+16-Apr-21 13:54:40 - commands.Dispatcher - INFO - Session ID: 260B59A4, Sended reply: {'vm_state': 'ACTIVE', 'vm_id': 505}
+16-Apr-21 13:56:51 - __main__ - INFO - Worker 2 received  session ID: C8EB93A4
+16-Apr-21 13:56:51 - commands.Dispatcher - INFO - Session ID: C8EB93A4, Received request: {u'action': u'resume', u'vm_id': 504, u'cmd': u'vm_action', u'user_id': 134}
+16-Apr-21 13:56:51 - commands.Dispatcher - INFO - Session ID: C8EB93A4, Sended reply: {'vm_id': 504, 'vm_action': u'resume'}
+16-Apr-21 13:56:57 - __main__ - INFO - Worker 3 received  session ID: 6A19CF32
+16-Apr-21 13:56:57 - commands.Dispatcher - INFO - Session ID: 6A19CF32, Received request: {u'vm_id': 504, u'cmd': u'get_vm_state', u'user_id': 134}
+16-Apr-21 13:56:57 - commands.Dispatcher - INFO - Session ID: 6A19CF32, Sended reply: {'vm_state': 'ACTIVE', 'vm_id': 504}
+16-Apr-21 13:57:34 - __main__ - INFO - Worker 4 received  session ID: A3CF7408
+16-Apr-21 13:57:34 - commands.Dispatcher - INFO - Session ID: A3CF7408, Received request: {u'action': u'reboot', u'vm_id': 504, u'cmd': u'vm_action', u'user_id': 134}
+16-Apr-21 13:57:34 - commands.Dispatcher - INFO - Session ID: A3CF7408, Sended reply: {'vm_id': 504, 'vm_action': u'reboot'}
+16-Apr-21 13:58:05 - __main__ - INFO - Worker 1 received  session ID: 0AD2FB1E
+16-Apr-21 13:58:05 - commands.Dispatcher - INFO - Session ID: 0AD2FB1E, Received request: {u'vm_id': 504, u'cmd': u'get_vm_state', u'user_id': 134}
+16-Apr-21 13:58:05 - commands.Dispatcher - INFO - Session ID: 0AD2FB1E, Sended reply: {'vm_state': 'ACTIVE', 'vm_id': 504}
+16-Apr-21 13:59:33 - __main__ - INFO - Worker 0 received  session ID: F8A26C90
+16-Apr-21 13:59:33 - commands.Dispatcher - INFO - Session ID: F8A26C90, Received request: {u'action': u'poweroff', u'vm_id': 504, u'cmd': u'vm_action', u'user_id': 134}
+16-Apr-21 13:59:33 - commands.Dispatcher - ERROR - Session ID: F8A26C90, Sended reply: {'error': '[one.vm.action] Error performing action "poweroff": This action is not available for state POWEROFF'}
+16-Apr-21 13:59:44 - __main__ - INFO - Worker 2 received  session ID: 0FC28BE9
+16-Apr-21 13:59:44 - commands.Dispatcher - INFO - Session ID: 0FC28BE9, Received request: {u'vm_id': 504, u'cmd': u'get_vm_state', u'user_id': 134}
+16-Apr-21 13:59:44 - commands.Dispatcher - INFO - Session ID: 0FC28BE9, Sended reply: {'vm_state': 'POWEROFF', 'vm_id': 504}
+16-Apr-21 14:00:07 - __main__ - INFO - Worker 3 received  session ID: F5302C17
+16-Apr-21 14:00:07 - commands.Dispatcher - INFO - Session ID: F5302C17, Received request: {u'action': u'resume', u'vm_id': 504, u'cmd': u'vm_action', u'user_id': 134}
+16-Apr-21 14:00:07 - commands.Dispatcher - INFO - Session ID: F5302C17, Sended reply: {'vm_id': 504, 'vm_action': u'resume'}
+16-Apr-21 14:00:13 - __main__ - INFO - Worker 4 received  session ID: 1C2D5FB8
+16-Apr-21 14:00:13 - commands.Dispatcher - INFO - Session ID: 1C2D5FB8, Received request: {u'vm_id': 504, u'cmd': u'get_vm_state', u'user_id': 134}
+16-Apr-21 14:00:13 - commands.Dispatcher - INFO - Session ID: 1C2D5FB8, Sended reply: {'vm_state': 'ACTIVE', 'vm_id': 504}
+16-Apr-21 14:22:34 - __main__ - INFO - Worker 1 received  session ID: 14FAE80C
+16-Apr-21 14:22:34 - commands.Dispatcher - INFO - Session ID: 14FAE80C, Received request: {u'vm_id': 504, u'cmd': u'get_vm_state', u'user_id': 134}
+16-Apr-21 14:22:35 - commands.Dispatcher - INFO - Session ID: 14FAE80C, Sended reply: {'vm_state': 'ACTIVE', 'vm_id': 504}
+16-Apr-21 14:27:48 - __main__ - INFO - Worker 0 received  session ID: 5C6B1830
+16-Apr-21 14:27:48 - commands.Dispatcher - INFO - Session ID: 5C6B1830, Received request: {u'vm_id': 504, u'cmd': u'get_vm_state', u'user_id': 134}
+16-Apr-21 14:27:48 - commands.Dispatcher - INFO - Session ID: 5C6B1830, Sended reply: {'vm_state': 'ACTIVE', 'vm_id': 504}
+16-Apr-21 14:31:37 - __main__ - INFO - Worker 2 received  session ID: 579CDA10
+16-Apr-21 14:31:37 - commands.Dispatcher - INFO - Session ID: 579CDA10, Received request: {u'vm_id': 504, u'cmd': u'get_vm_state', u'user_id': 134}
+16-Apr-21 14:31:37 - commands.Dispatcher - INFO - Session ID: 579CDA10, Sended reply: {'vm_state': 'ACTIVE', 'vm_id': 504}
+16-Apr-21 14:39:43 - __main__ - INFO - Worker 3 received  session ID: F308415E
+16-Apr-21 14:39:43 - commands.Dispatcher - INFO - Session ID: F308415E, Received request: {u'vm_id': 504, u'cmd': u'get_vm_state', u'user_id': 134}
+16-Apr-21 14:39:43 - commands.Dispatcher - INFO - Session ID: F308415E, Sended reply: {'vm_state': 'ACTIVE', 'vm_id': 504}
+16-Apr-21 15:18:34 - __main__ - INFO - Worker 4 received  session ID: 31965FDA
+16-Apr-21 15:18:34 - commands.Dispatcher - INFO - Session ID: 31965FDA, Received request: {u'vm_id': 504, u'cmd': u'get_vm_state', u'user_id': 134}
+16-Apr-21 15:18:34 - commands.Dispatcher - INFO - Session ID: 31965FDA, Sended reply: {'vm_state': 'ACTIVE', 'vm_id': 504}
+16-Apr-21 15:51:31 - __main__ - INFO - Worker 1 received  session ID: 3A28164F
+16-Apr-21 15:51:31 - commands.Dispatcher - INFO - Session ID: 3A28164F, Received request: {u'vm_id': 504, u'cmd': u'get_vm_state', u'user_id': 134}
+16-Apr-21 15:51:31 - commands.Dispatcher - INFO - Session ID: 3A28164F, Sended reply: {'vm_state': 'ACTIVE', 'vm_id': 504}
+16-Apr-21 19:28:22 - __main__ - INFO - Worker 0 received  session ID: ED795C62
+16-Apr-21 19:28:22 - commands.Dispatcher - INFO - Session ID: ED795C62, Received request: {u'vm_id': 504, u'cmd': u'get_vm_state', u'user_id': 134}
+16-Apr-21 19:28:22 - commands.Dispatcher - INFO - Session ID: ED795C62, Sended reply: {'vm_state': 'ACTIVE', 'vm_id': 504}
+17-Apr-21 13:21:03 - __main__ - INFO - Worker 2 received  session ID: B67EFDC5
+17-Apr-21 13:21:03 - commands.Dispatcher - INFO - Session ID: B67EFDC5, Received request: {u'vm_id': 504, u'cmd': u'vm_terminate', u'user_id': 134}
+17-Apr-21 13:21:07 - commands.Dispatcher - INFO - Session ID: B67EFDC5, Sended reply: {'action': 'vm terminated'}
+17-Apr-21 13:21:07 - __main__ - INFO - Worker 3 received  session ID: 6FEA5174
+17-Apr-21 13:21:07 - commands.Dispatcher - INFO - Session ID: 6FEA5174, Received request: {u'cmd': u'user_delete', u'user_id': 134}
+17-Apr-21 13:21:07 - commands.Dispatcher - INFO - Session ID: 6FEA5174, Sended reply: {'action': 'user and user group deleted', 'user_group_id': 223, 'user_id': 134}
+17-Apr-21 13:27:55 - __main__ - INFO - Worker 4 received  session ID: E5904216
+17-Apr-21 13:27:56 - commands.Dispatcher - INFO - Session ID: E5904216, Received request: {u'user_password': u'*******', u'cmd': u'user_allocate', u'user_name': u'nikolaj@microlines.lv'}
+17-Apr-21 13:27:56 - commands.Dispatcher - INFO - Session ID: E5904216, Sended reply: {'user_name': u'nikolaj@microlines.lv', 'user_id': 136, 'user_group_id_array': [225]}
+17-Apr-21 13:27:56 - __main__ - INFO - Worker 1 received  session ID: 71304F52
+17-Apr-21 13:27:56 - commands.Dispatcher - INFO - Session ID: 71304F52, Received request: {u'vm_name': u'v1p248.clouds365.host', u'user_id': 136, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.248', u'template_id': 329}
+17-Apr-21 13:28:00 - commands.Dispatcher - INFO - Session ID: 71304F52, Sended reply: {'user_id': 136, 'vm_root_password': u'*******', 'vm_id': 506, 'vm_user_password': u'*******', 'vm_user': 'axnqi17'}
+17-Apr-21 13:31:37 - __main__ - INFO - Worker 0 received  session ID: FDC9B240
+17-Apr-21 13:31:37 - commands.Dispatcher - INFO - Session ID: FDC9B240, Received request: {u'action': u'poweroff', u'vm_id': 506, u'cmd': u'vm_action', u'user_id': 136}
+17-Apr-21 13:31:37 - commands.Dispatcher - INFO - Session ID: FDC9B240, Sended reply: {'vm_id': 506, 'vm_action': u'poweroff'}
+17-Apr-21 13:32:36 - __main__ - INFO - Worker 2 received  session ID: 8B90E5A4
+17-Apr-21 13:32:36 - commands.Dispatcher - INFO - Session ID: 8B90E5A4, Received request: {u'action': u'resume', u'vm_id': 506, u'cmd': u'vm_action', u'user_id': 136}
+17-Apr-21 13:32:36 - commands.Dispatcher - INFO - Session ID: 8B90E5A4, Sended reply: {'vm_id': 506, 'vm_action': u'resume'}
+17-Apr-21 13:33:26 - __main__ - INFO - Worker 3 received  session ID: 05621D7F
+17-Apr-21 13:33:26 - commands.Dispatcher - INFO - Session ID: 05621D7F, Received request: {u'action': u'reboot', u'vm_id': 506, u'cmd': u'vm_action', u'user_id': 136}
+17-Apr-21 13:33:26 - commands.Dispatcher - INFO - Session ID: 05621D7F, Sended reply: {'vm_id': 506, 'vm_action': u'reboot'}
+17-Apr-21 13:34:08 - __main__ - INFO - Worker 4 received  session ID: 51AF9E7C
+17-Apr-21 13:34:08 - commands.Dispatcher - INFO - Session ID: 51AF9E7C, Received request: {u'action': u'poweroff', u'vm_id': 506, u'cmd': u'vm_action', u'user_id': 136}
+17-Apr-21 13:34:08 - commands.Dispatcher - INFO - Session ID: 51AF9E7C, Sended reply: {'vm_id': 506, 'vm_action': u'poweroff'}
+17-Apr-21 13:35:07 - __main__ - INFO - Worker 1 received  session ID: 5A9216CE
+17-Apr-21 13:35:07 - commands.Dispatcher - INFO - Session ID: 5A9216CE, Received request: {u'vm_id': 506, u'cmd': u'get_vm_state', u'user_id': 136}
+17-Apr-21 13:35:07 - commands.Dispatcher - INFO - Session ID: 5A9216CE, Sended reply: {'vm_state': 'POWEROFF', 'vm_id': 506}
+17-Apr-21 13:45:13 - __main__ - INFO - Worker 0 received  session ID: 03EFA92D
+17-Apr-21 13:45:13 - commands.Dispatcher - INFO - Session ID: 03EFA92D, Received request: {u'vm_id': 506, u'cmd': u'get_vm_state', u'user_id': 136}
+17-Apr-21 13:45:13 - commands.Dispatcher - INFO - Session ID: 03EFA92D, Sended reply: {'vm_state': 'POWEROFF', 'vm_id': 506}
+18-Apr-21 01:20:04 - __main__ - INFO - Worker 2 received  session ID: 31025E94
+18-Apr-21 01:20:04 - commands.Dispatcher - INFO - Session ID: 31025E94, Received request: {u'vm_id': 506, u'cmd': u'get_vm_state', u'user_id': 136}
+18-Apr-21 01:20:04 - commands.Dispatcher - INFO - Session ID: 31025E94, Sended reply: {'vm_state': 'POWEROFF', 'vm_id': 506}
+18-Apr-21 01:20:13 - __main__ - INFO - Worker 3 received  session ID: 4F689BC7
+18-Apr-21 01:20:13 - commands.Dispatcher - INFO - Session ID: 4F689BC7, Received request: {u'action': u'resume', u'vm_id': 506, u'cmd': u'vm_action', u'user_id': 136}
+18-Apr-21 01:20:13 - commands.Dispatcher - INFO - Session ID: 4F689BC7, Sended reply: {'vm_id': 506, 'vm_action': u'resume'}
+18-Apr-21 01:20:19 - __main__ - INFO - Worker 4 received  session ID: 72FB4E5A
+18-Apr-21 01:20:19 - commands.Dispatcher - INFO - Session ID: 72FB4E5A, Received request: {u'vm_id': 506, u'cmd': u'get_vm_state', u'user_id': 136}
+18-Apr-21 01:20:19 - commands.Dispatcher - INFO - Session ID: 72FB4E5A, Sended reply: {'vm_state': 'ACTIVE', 'vm_id': 506}
+23-Apr-21 16:12:17 - __main__ - INFO - Worker 1 received  session ID: 90138FE7
+23-Apr-21 16:12:17 - commands.Dispatcher - INFO - Session ID: 90138FE7, Received request: {u'vm_name': u'v1p250.clouds365.host', u'user_id': 136, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.250', u'template_id': 329}
+23-Apr-21 16:12:20 - commands.Dispatcher - INFO - Session ID: 90138FE7, Sended reply: {'user_id': 136, 'vm_root_password': u'*******', 'vm_id': 510, 'vm_user_password': u'*******', 'vm_user': 'nkdpb94'}
+23-Apr-21 16:20:33 - __main__ - INFO - Worker 0 received  session ID: 834EA12D
+23-Apr-21 16:20:33 - commands.Dispatcher - INFO - Session ID: 834EA12D, Received request: {u'vm_id': 506, u'cmd': u'vm_terminate', u'user_id': 136}
+23-Apr-21 16:20:36 - commands.Dispatcher - INFO - Session ID: 834EA12D, Sended reply: {'action': 'vm terminated'}
+23-Apr-21 18:19:08 - __main__ - INFO - Worker 2 received  session ID: C71028B5
+23-Apr-21 18:19:08 - commands.Dispatcher - INFO - Session ID: C71028B5, Received request: {u'user_password': u'*******', u'cmd': u'user_allocate', u'user_name': u'misha@microlines.lv'}
+23-Apr-21 18:19:09 - commands.Dispatcher - INFO - Session ID: C71028B5, Sended reply: {'user_name': u'misha@microlines.lv', 'user_id': 137, 'user_group_id_array': [226]}
+23-Apr-21 18:19:09 - __main__ - INFO - Worker 3 received  session ID: 7F1E5C60
+23-Apr-21 18:19:09 - commands.Dispatcher - INFO - Session ID: 7F1E5C60, Received request: {u'vm_name': u'v1p248.clouds365.host', u'user_id': 137, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.248', u'template_id': 329}
+23-Apr-21 18:19:12 - commands.Dispatcher - INFO - Session ID: 7F1E5C60, Sended reply: {'user_id': 137, 'vm_root_password': u'*******', 'vm_id': 511, 'vm_user_password': u'*******', 'vm_user': 'rdjuo01'}
+23-Apr-21 18:20:01 - __main__ - INFO - Worker 4 received  session ID: DC85BFA9
+23-Apr-21 18:20:01 - commands.Dispatcher - INFO - Session ID: DC85BFA9, Received request: {u'vm_id': 511, u'cmd': u'get_vm_state', u'user_id': 137}
+23-Apr-21 18:20:01 - commands.Dispatcher - INFO - Session ID: DC85BFA9, Sended reply: {'vm_state': 'PENDING', 'vm_id': 511}
+23-Apr-21 18:20:28 - __main__ - INFO - Worker 1 received  session ID: B9025F63
+23-Apr-21 18:20:28 - commands.Dispatcher - INFO - Session ID: B9025F63, Received request: {u'vm_id': 511, u'cmd': u'get_vm_state', u'user_id': 137}
+23-Apr-21 18:20:28 - commands.Dispatcher - INFO - Session ID: B9025F63, Sended reply: {'vm_state': 'ACTIVE', 'vm_id': 511}
+23-Apr-21 18:20:34 - __main__ - INFO - Worker 0 received  session ID: B1390AD2
+23-Apr-21 18:20:34 - commands.Dispatcher - INFO - Session ID: B1390AD2, Received request: {u'action': u'poweroff', u'vm_id': 511, u'cmd': u'vm_action', u'user_id': 137}
+23-Apr-21 18:20:34 - commands.Dispatcher - INFO - Session ID: B1390AD2, Sended reply: {'vm_id': 511, 'vm_action': u'poweroff'}
+23-Apr-21 18:20:40 - __main__ - INFO - Worker 2 received  session ID: 3E1AD87C
+23-Apr-21 18:20:40 - commands.Dispatcher - INFO - Session ID: 3E1AD87C, Received request: {u'vm_id': 511, u'cmd': u'get_vm_state', u'user_id': 137}
+23-Apr-21 18:20:40 - commands.Dispatcher - INFO - Session ID: 3E1AD87C, Sended reply: {'vm_state': 'ACTIVE', 'vm_id': 511}
+23-Apr-21 18:20:45 - __main__ - INFO - Worker 3 received  session ID: 93A8D1E7
+23-Apr-21 18:20:45 - commands.Dispatcher - INFO - Session ID: 93A8D1E7, Received request: {u'vm_id': 511, u'cmd': u'get_vm_state', u'user_id': 137}
+23-Apr-21 18:20:45 - commands.Dispatcher - INFO - Session ID: 93A8D1E7, Sended reply: {'vm_state': 'ACTIVE', 'vm_id': 511}
+23-Apr-21 18:20:50 - __main__ - INFO - Worker 4 received  session ID: 069C752F
+23-Apr-21 18:20:50 - commands.Dispatcher - INFO - Session ID: 069C752F, Received request: {u'vm_id': 511, u'cmd': u'get_vm_state', u'user_id': 137}
+23-Apr-21 18:20:50 - commands.Dispatcher - INFO - Session ID: 069C752F, Sended reply: {'vm_state': 'POWEROFF', 'vm_id': 511}
+23-Apr-21 18:21:00 - __main__ - INFO - Worker 1 received  session ID: B815A2E3
+23-Apr-21 18:21:00 - commands.Dispatcher - INFO - Session ID: B815A2E3, Received request: {u'action': u'resume', u'vm_id': 511, u'cmd': u'vm_action', u'user_id': 137}
+23-Apr-21 18:21:00 - commands.Dispatcher - INFO - Session ID: B815A2E3, Sended reply: {'vm_id': 511, 'vm_action': u'resume'}
+23-Apr-21 18:21:06 - __main__ - INFO - Worker 0 received  session ID: 89A1B236
+23-Apr-21 18:21:06 - commands.Dispatcher - INFO - Session ID: 89A1B236, Received request: {u'vm_id': 511, u'cmd': u'get_vm_state', u'user_id': 137}
+23-Apr-21 18:21:06 - commands.Dispatcher - INFO - Session ID: 89A1B236, Sended reply: {'vm_state': 'ACTIVE', 'vm_id': 511}
+23-Apr-21 18:22:01 - __main__ - INFO - Worker 2 received  session ID: EA18025C
+23-Apr-21 18:22:01 - commands.Dispatcher - INFO - Session ID: EA18025C, Received request: {u'vm_id': 511, u'cmd': u'get_vm_state', u'user_id': 137}
+23-Apr-21 18:22:01 - commands.Dispatcher - INFO - Session ID: EA18025C, Sended reply: {'vm_state': 'ACTIVE', 'vm_id': 511}
+23-Apr-21 18:22:07 - __main__ - INFO - Worker 3 received  session ID: 56C4BF1D
+23-Apr-21 18:22:08 - commands.Dispatcher - INFO - Session ID: 56C4BF1D, Received request: {u'action': u'poweroff', u'vm_id': 511, u'cmd': u'vm_action', u'user_id': 137}
+23-Apr-21 18:22:08 - commands.Dispatcher - INFO - Session ID: 56C4BF1D, Sended reply: {'vm_id': 511, 'vm_action': u'poweroff'}
+23-Apr-21 18:22:13 - __main__ - INFO - Worker 4 received  session ID: C2FE04D5
+23-Apr-21 18:22:13 - commands.Dispatcher - INFO - Session ID: C2FE04D5, Received request: {u'vm_id': 511, u'cmd': u'get_vm_state', u'user_id': 137}
+23-Apr-21 18:22:13 - commands.Dispatcher - INFO - Session ID: C2FE04D5, Sended reply: {'vm_state': 'ACTIVE', 'vm_id': 511}
+23-Apr-21 18:22:18 - __main__ - INFO - Worker 1 received  session ID: DA24018F
+23-Apr-21 18:22:18 - commands.Dispatcher - INFO - Session ID: DA24018F, Received request: {u'vm_id': 511, u'cmd': u'get_vm_state', u'user_id': 137}
+23-Apr-21 18:22:18 - commands.Dispatcher - INFO - Session ID: DA24018F, Sended reply: {'vm_state': 'ACTIVE', 'vm_id': 511}
+23-Apr-21 18:22:23 - __main__ - INFO - Worker 0 received  session ID: 6DF3E5A4
+23-Apr-21 18:22:23 - commands.Dispatcher - INFO - Session ID: 6DF3E5A4, Received request: {u'vm_id': 511, u'cmd': u'get_vm_state', u'user_id': 137}
+23-Apr-21 18:22:23 - commands.Dispatcher - INFO - Session ID: 6DF3E5A4, Sended reply: {'vm_state': 'POWEROFF', 'vm_id': 511}
+23-Apr-21 18:22:33 - __main__ - INFO - Worker 2 received  session ID: 9A875CB1
+23-Apr-21 18:22:33 - commands.Dispatcher - INFO - Session ID: 9A875CB1, Received request: {u'action': u'resume', u'vm_id': 511, u'cmd': u'vm_action', u'user_id': 137}
+23-Apr-21 18:22:33 - commands.Dispatcher - INFO - Session ID: 9A875CB1, Sended reply: {'vm_id': 511, 'vm_action': u'resume'}
+23-Apr-21 18:22:39 - __main__ - INFO - Worker 3 received  session ID: EB620D58
+23-Apr-21 18:22:39 - commands.Dispatcher - INFO - Session ID: EB620D58, Received request: {u'vm_id': 511, u'cmd': u'get_vm_state', u'user_id': 137}
+23-Apr-21 18:22:39 - commands.Dispatcher - INFO - Session ID: EB620D58, Sended reply: {'vm_state': 'ACTIVE', 'vm_id': 511}
+23-Apr-21 18:23:18 - __main__ - INFO - Worker 4 received  session ID: 765FC1E4
+23-Apr-21 18:23:18 - commands.Dispatcher - INFO - Session ID: 765FC1E4, Received request: {u'vm_id': 511, u'cmd': u'get_vm_state', u'user_id': 137}
+23-Apr-21 18:23:18 - commands.Dispatcher - INFO - Session ID: 765FC1E4, Sended reply: {'vm_state': 'ACTIVE', 'vm_id': 511}
+23-Apr-21 18:23:25 - __main__ - INFO - Worker 1 received  session ID: 2157436B
+23-Apr-21 18:23:25 - commands.Dispatcher - INFO - Session ID: 2157436B, Received request: {u'action': u'poweroff', u'vm_id': 511, u'cmd': u'vm_action', u'user_id': 137}
+23-Apr-21 18:23:25 - commands.Dispatcher - INFO - Session ID: 2157436B, Sended reply: {'vm_id': 511, 'vm_action': u'poweroff'}
+23-Apr-21 18:23:31 - __main__ - INFO - Worker 0 received  session ID: 3E054876
+23-Apr-21 18:23:31 - commands.Dispatcher - INFO - Session ID: 3E054876, Received request: {u'vm_id': 511, u'cmd': u'get_vm_state', u'user_id': 137}
+23-Apr-21 18:23:31 - commands.Dispatcher - INFO - Session ID: 3E054876, Sended reply: {'vm_state': 'ACTIVE', 'vm_id': 511}
+23-Apr-21 18:23:36 - __main__ - INFO - Worker 2 received  session ID: 9C16AD8F
+23-Apr-21 18:23:36 - commands.Dispatcher - INFO - Session ID: 9C16AD8F, Received request: {u'vm_id': 511, u'cmd': u'get_vm_state', u'user_id': 137}
+23-Apr-21 18:23:36 - commands.Dispatcher - INFO - Session ID: 9C16AD8F, Sended reply: {'vm_state': 'ACTIVE', 'vm_id': 511}
+23-Apr-21 18:23:41 - __main__ - INFO - Worker 3 received  session ID: A3B8F196
+23-Apr-21 18:23:41 - commands.Dispatcher - INFO - Session ID: A3B8F196, Received request: {u'vm_id': 511, u'cmd': u'get_vm_state', u'user_id': 137}
+23-Apr-21 18:23:41 - commands.Dispatcher - INFO - Session ID: A3B8F196, Sended reply: {'vm_state': 'POWEROFF', 'vm_id': 511}
+23-Apr-21 18:32:49 - __main__ - INFO - Worker 4 received  session ID: 6D5FBA17
+23-Apr-21 18:32:49 - commands.Dispatcher - INFO - Session ID: 6D5FBA17, Received request: {u'vm_id': 510, u'cmd': u'get_vm_state', u'user_id': 136}
+23-Apr-21 18:32:49 - commands.Dispatcher - INFO - Session ID: 6D5FBA17, Sended reply: {'vm_state': 'POWEROFF', 'vm_id': 510}
+08-May-21 16:57:10 - __main__ - INFO - Worker 1 received  session ID: 3E5D1F49
+08-May-21 16:57:10 - commands.Dispatcher - INFO - Session ID: 3E5D1F49, Received request: {u'vm_id': 505, u'cmd': u'get_vm_state', u'user_id': 135}
+08-May-21 16:57:10 - commands.Dispatcher - INFO - Session ID: 3E5D1F49, Sended reply: {'vm_state': 'ACTIVE', 'vm_id': 505}
+08-May-21 16:57:15 - __main__ - INFO - Worker 0 received  session ID: 4A52C798
+08-May-21 16:57:15 - commands.Dispatcher - INFO - Session ID: 4A52C798, Received request: {u'action': u'poweroff', u'vm_id': 505, u'cmd': u'vm_action', u'user_id': 135}
+08-May-21 16:57:16 - commands.Dispatcher - INFO - Session ID: 4A52C798, Sended reply: {'vm_id': 505, 'vm_action': u'poweroff'}
+08-May-21 16:57:21 - __main__ - INFO - Worker 2 received  session ID: AC46B92E
+08-May-21 16:57:21 - commands.Dispatcher - INFO - Session ID: AC46B92E, Received request: {u'vm_id': 505, u'cmd': u'get_vm_state', u'user_id': 135}
+08-May-21 16:57:21 - commands.Dispatcher - INFO - Session ID: AC46B92E, Sended reply: {'vm_state': 'ACTIVE', 'vm_id': 505}
+08-May-21 16:57:26 - __main__ - INFO - Worker 3 received  session ID: 56AE432C
+08-May-21 16:57:26 - commands.Dispatcher - INFO - Session ID: 56AE432C, Received request: {u'vm_id': 505, u'cmd': u'get_vm_state', u'user_id': 135}
+08-May-21 16:57:26 - commands.Dispatcher - INFO - Session ID: 56AE432C, Sended reply: {'vm_state': 'ACTIVE', 'vm_id': 505}
+08-May-21 16:57:31 - __main__ - INFO - Worker 4 received  session ID: 35486F1D
+08-May-21 16:57:31 - commands.Dispatcher - INFO - Session ID: 35486F1D, Received request: {u'vm_id': 505, u'cmd': u'get_vm_state', u'user_id': 135}
+08-May-21 16:57:31 - commands.Dispatcher - INFO - Session ID: 35486F1D, Sended reply: {'vm_state': 'POWEROFF', 'vm_id': 505}
+08-May-21 16:58:42 - __main__ - INFO - Worker 1 received  session ID: 0C1534F8
+08-May-21 16:58:42 - commands.Dispatcher - INFO - Session ID: 0C1534F8, Received request: {u'action': u'poweroff', u'vm_id': None, u'cmd': u'vm_action', u'user_id': None}
+08-May-21 16:58:42 - commands.Dispatcher - ERROR - Session ID: 0C1534F8, Sended reply: {'error': 'not set vm id'}
+14-May-21 10:47:27 - __main__ - INFO - Worker 0 received  session ID: 2C76F51E
+14-May-21 10:47:27 - commands.Dispatcher - INFO - Session ID: 2C76F51E, Received request: {u'user_password': u'*******', u'cmd': u'user_allocate', u'user_name': u'misha@microlines.lv'}
+14-May-21 10:47:27 - commands.Dispatcher - ERROR - Session ID: 2C76F51E, Sended reply: {'error': '[one.group.allocate] NAME is already taken by GROUP 226.'}
+16-May-21 21:10:31 - __main__ - INFO - Worker 2 received  session ID: 9BD1648F
+16-May-21 21:10:31 - commands.Dispatcher - INFO - Session ID: 9BD1648F, Received request: {u'vm_id': 510, u'cmd': u'get_vm_state', u'user_id': 136}
+16-May-21 21:10:31 - commands.Dispatcher - INFO - Session ID: 9BD1648F, Sended reply: {'vm_state': 'POWEROFF', 'vm_id': 510}
+18-May-21 22:13:08 - __main__ - INFO - Worker 3 received  session ID: 126083DE
+18-May-21 22:13:08 - commands.Dispatcher - INFO - Session ID: 126083DE, Received request: {u'vm_id': 510, u'cmd': u'vm_terminate', u'user_id': 136}
+18-May-21 22:13:10 - commands.Dispatcher - INFO - Session ID: 126083DE, Sended reply: {'action': 'vm terminated'}
+18-May-21 22:13:10 - __main__ - INFO - Worker 4 received  session ID: 157F398A
+18-May-21 22:13:10 - commands.Dispatcher - INFO - Session ID: 157F398A, Received request: {u'cmd': u'user_delete', u'user_id': 136}
+18-May-21 22:13:10 - commands.Dispatcher - INFO - Session ID: 157F398A, Sended reply: {'action': 'user and user group deleted', 'user_group_id': 225, 'user_id': 136}
+18-May-21 22:15:10 - __main__ - INFO - Worker 1 received  session ID: CA65E839
+18-May-21 22:15:10 - commands.Dispatcher - INFO - Session ID: CA65E839, Received request: {u'action': u'reboot', u'vm_id': None, u'cmd': u'vm_action', u'user_id': None}
+18-May-21 22:15:10 - commands.Dispatcher - ERROR - Session ID: CA65E839, Sended reply: {'error': 'not set vm id'}
+19-May-21 13:11:10 - __main__ - INFO - Worker 0 received  session ID: 3FA8B216
+19-May-21 13:11:10 - commands.Dispatcher - INFO - Session ID: 3FA8B216, Received request: {u'user_password': u'*******', u'cmd': u'user_allocate', u'user_name': u'misha@microlines.lv'}
+19-May-21 13:11:10 - commands.Dispatcher - ERROR - Session ID: 3FA8B216, Sended reply: {'error': '[one.group.allocate] NAME is already taken by GROUP 226.'}
+19-May-21 13:11:27 - __main__ - INFO - Worker 2 received  session ID: 28164FEB
+19-May-21 13:11:27 - commands.Dispatcher - INFO - Session ID: 28164FEB, Received request: {u'user_password': u'*******', u'cmd': u'user_allocate', u'user_name': u'misha@microlines.lv'}
+19-May-21 13:11:27 - commands.Dispatcher - ERROR - Session ID: 28164FEB, Sended reply: {'error': '[one.group.allocate] NAME is already taken by GROUP 226.'}
+19-May-21 19:00:53 - __main__ - INFO - Worker 3 received  session ID: BA2890D5
+19-May-21 19:00:53 - commands.Dispatcher - INFO - Session ID: BA2890D5, Received request: {u'user_password': u'*******', u'cmd': u'user_allocate', u'user_name': u'misha@microlines.lv'}
+19-May-21 19:00:53 - commands.Dispatcher - INFO - Session ID: BA2890D5, Sended reply: {'user_name': u'misha@microlines.lv', 'user_id': 138, 'user_group_id_array': [227]}
+19-May-21 19:00:53 - __main__ - INFO - Worker 4 received  session ID: 5BD27E98
+19-May-21 19:00:53 - commands.Dispatcher - INFO - Session ID: 5BD27E98, Received request: {u'vm_name': u'v1p250.clouds365.host', u'user_id': 138, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.250', u'template_id': 329}
+19-May-21 19:00:57 - commands.Dispatcher - INFO - Session ID: 5BD27E98, Sended reply: {'user_id': 138, 'vm_root_password': u'*******', 'vm_id': 512, 'vm_user_password': u'*******', 'vm_user': 'vjbsn84'}
+19-May-21 21:20:32 - __main__ - INFO - Worker 1 received  session ID: A0C1E54F
+19-May-21 21:20:32 - commands.Dispatcher - INFO - Session ID: A0C1E54F, Received request: {u'vm_id': 512, u'cmd': u'get_vm_state', u'user_id': 138}
+19-May-21 21:20:32 - commands.Dispatcher - INFO - Session ID: A0C1E54F, Sended reply: {'vm_state': 'ACTIVE', 'vm_id': 512}
+19-May-21 21:20:51 - __main__ - INFO - Worker 0 received  session ID: E92B054C
+19-May-21 21:20:51 - commands.Dispatcher - INFO - Session ID: E92B054C, Received request: {u'action': u'poweroff', u'vm_id': 512, u'cmd': u'vm_action', u'user_id': 138}
+19-May-21 21:20:51 - commands.Dispatcher - INFO - Session ID: E92B054C, Sended reply: {'vm_id': 512, 'vm_action': u'poweroff'}
+19-May-21 21:20:56 - __main__ - INFO - Worker 2 received  session ID: 12350ADE
+19-May-21 21:20:56 - commands.Dispatcher - INFO - Session ID: 12350ADE, Received request: {u'vm_id': 512, u'cmd': u'get_vm_state', u'user_id': 138}
+19-May-21 21:20:57 - commands.Dispatcher - INFO - Session ID: 12350ADE, Sended reply: {'vm_state': 'ACTIVE', 'vm_id': 512}
+19-May-21 21:21:01 - __main__ - INFO - Worker 3 received  session ID: 4107329F
+19-May-21 21:21:01 - commands.Dispatcher - INFO - Session ID: 4107329F, Received request: {u'vm_id': 512, u'cmd': u'get_vm_state', u'user_id': 138}
+19-May-21 21:21:02 - commands.Dispatcher - INFO - Session ID: 4107329F, Sended reply: {'vm_state': 'ACTIVE', 'vm_id': 512}
+19-May-21 21:21:06 - __main__ - INFO - Worker 4 received  session ID: EFCDA184
+19-May-21 21:21:06 - commands.Dispatcher - INFO - Session ID: EFCDA184, Received request: {u'vm_id': 512, u'cmd': u'get_vm_state', u'user_id': 138}
+19-May-21 21:21:07 - commands.Dispatcher - INFO - Session ID: EFCDA184, Sended reply: {'vm_state': 'POWEROFF', 'vm_id': 512}
+19-May-21 21:21:19 - __main__ - INFO - Worker 1 received  session ID: 74803FEA
+19-May-21 21:21:19 - commands.Dispatcher - INFO - Session ID: 74803FEA, Received request: {u'action': u'resume', u'vm_id': 512, u'cmd': u'vm_action', u'user_id': 138}
+19-May-21 21:21:19 - commands.Dispatcher - INFO - Session ID: 74803FEA, Sended reply: {'vm_id': 512, 'vm_action': u'resume'}
+19-May-21 21:21:25 - __main__ - INFO - Worker 0 received  session ID: C081DB72
+19-May-21 21:21:25 - commands.Dispatcher - INFO - Session ID: C081DB72, Received request: {u'vm_id': 512, u'cmd': u'get_vm_state', u'user_id': 138}
+19-May-21 21:21:25 - commands.Dispatcher - INFO - Session ID: C081DB72, Sended reply: {'vm_state': 'ACTIVE', 'vm_id': 512}
+21-May-21 09:00:17 - __main__ - INFO - Worker 2 received  session ID: 49DA2078
+21-May-21 09:00:17 - commands.Dispatcher - INFO - Session ID: 49DA2078, Received request: {u'vm_id': 512, u'cmd': u'vm_terminate', u'user_id': 138}
+21-May-21 09:00:22 - commands.Dispatcher - INFO - Session ID: 49DA2078, Sended reply: {'action': 'vm terminated'}
+21-May-21 09:00:22 - __main__ - INFO - Worker 3 received  session ID: 06B78D3F
+21-May-21 09:00:22 - commands.Dispatcher - INFO - Session ID: 06B78D3F, Received request: {u'cmd': u'user_delete', u'user_id': 138}
+21-May-21 09:00:22 - commands.Dispatcher - INFO - Session ID: 06B78D3F, Sended reply: {'action': 'user and user group deleted', 'user_group_id': 227, 'user_id': 138}
+29-May-21 23:52:05 - __main__ - INFO - Routing server started
+29-May-21 23:52:05 - __main__ - INFO - Worker 0 started
+29-May-21 23:52:05 - __main__ - INFO - Worker 2 started
+29-May-21 23:52:05 - __main__ - INFO - Worker 3 started
+29-May-21 23:52:05 - __main__ - INFO - Worker 1 started
+29-May-21 23:52:05 - __main__ - INFO - Worker 4 started
+05-Jun-21 15:34:09 - __main__ - INFO - Routing server started
+05-Jun-21 15:34:09 - __main__ - INFO - Worker 0 started
+05-Jun-21 15:34:09 - __main__ - INFO - Worker 2 started
+05-Jun-21 15:34:09 - __main__ - INFO - Worker 3 started
+05-Jun-21 15:34:09 - __main__ - INFO - Worker 4 started
+05-Jun-21 15:34:09 - __main__ - INFO - Worker 1 started
+05-Jun-21 15:41:56 - __main__ - INFO - Worker 0 received  session ID: 2C79E06D
+05-Jun-21 15:41:56 - commands.Dispatcher - INFO - Session ID: 2C79E06D, Received request: {u'user_password': u'*******', u'cmd': u'user_allocate', u'user_name': u'nikolaj@microlines.lv'}
+05-Jun-21 15:41:56 - commands.Dispatcher - INFO - Session ID: 2C79E06D, Sended reply: {'user_name': u'nikolaj@microlines.lv', 'user_id': 139, 'user_group_id_array': [228]}
+05-Jun-21 15:41:57 - __main__ - INFO - Worker 2 received  session ID: 52864E03
+05-Jun-21 15:41:57 - commands.Dispatcher - INFO - Session ID: 52864E03, Received request: {u'vm_name': u'v1p250.clouds365.host', u'user_id': 139, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.250', u'template_id': 329}
+05-Jun-21 15:42:00 - commands.Dispatcher - INFO - Session ID: 52864E03, Sended reply: {'user_id': 139, 'vm_root_password': u'*******', 'vm_id': 513, 'vm_user_password': u'*******', 'vm_user': 'utqhn71'}
+05-Jun-21 16:28:53 - __main__ - INFO - Worker 3 received  session ID: 2EAC5B40
+05-Jun-21 16:28:53 - commands.Dispatcher - INFO - Session ID: 2EAC5B40, Received request: {u'vm_id': 513, u'cmd': u'vm_terminate', u'user_id': 139}
+05-Jun-21 16:28:56 - commands.Dispatcher - INFO - Session ID: 2EAC5B40, Sended reply: {'action': 'vm terminated'}
+05-Jun-21 16:28:57 - __main__ - INFO - Worker 4 received  session ID: 6D4F17BC
+05-Jun-21 16:28:57 - commands.Dispatcher - INFO - Session ID: 6D4F17BC, Received request: {u'cmd': u'user_delete', u'user_id': 139}
+05-Jun-21 16:28:57 - commands.Dispatcher - INFO - Session ID: 6D4F17BC, Sended reply: {'action': 'user and user group deleted', 'user_group_id': 228, 'user_id': 139}
+22-Jun-21 14:01:49 - __main__ - INFO - Worker 1 received  session ID: D38E2015
+22-Jun-21 14:01:49 - commands.Dispatcher - INFO - Session ID: D38E2015, Received request: {u'user_password': u'*******', u'cmd': u'user_allocate', u'user_name': u'nikolaj@microlines.lv'}
+22-Jun-21 14:01:49 - commands.Dispatcher - INFO - Session ID: D38E2015, Sended reply: {'user_name': u'nikolaj@microlines.lv', 'user_id': 140, 'user_group_id_array': [229]}
+22-Jun-21 14:01:50 - __main__ - INFO - Worker 0 received  session ID: 9015C243
+22-Jun-21 14:01:50 - commands.Dispatcher - INFO - Session ID: 9015C243, Received request: {u'vm_name': u'v1p250.clouds365.host', u'user_id': 140, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.250', u'template_id': 329}
+22-Jun-21 14:01:53 - commands.Dispatcher - INFO - Session ID: 9015C243, Sended reply: {'user_id': 140, 'vm_root_password': u'*******', 'vm_id': 514, 'vm_user_password': u'*******', 'vm_user': 'lyutb57'}
+22-Jun-21 14:02:25 - __main__ - INFO - Worker 2 received  session ID: 3DB492E8
+22-Jun-21 14:02:25 - commands.Dispatcher - INFO - Session ID: 3DB492E8, Received request: {u'vm_id': 514, u'cmd': u'get_vm_state', u'user_id': 140}
+22-Jun-21 14:02:25 - commands.Dispatcher - INFO - Session ID: 3DB492E8, Sended reply: {'vm_state': 'CLONING', 'vm_id': 514}
+22-Jun-21 14:03:03 - __main__ - INFO - Worker 3 received  session ID: 69027ECF
+22-Jun-21 14:03:03 - commands.Dispatcher - INFO - Session ID: 69027ECF, Received request: {u'vm_id': 514, u'cmd': u'get_vm_state', u'user_id': 140}
+22-Jun-21 14:03:03 - commands.Dispatcher - INFO - Session ID: 69027ECF, Sended reply: {'vm_state': 'PENDING', 'vm_id': 514}
+22-Jun-21 14:03:12 - __main__ - INFO - Worker 4 received  session ID: 4861B7C9
+22-Jun-21 14:03:12 - commands.Dispatcher - INFO - Session ID: 4861B7C9, Received request: {u'vm_id': 514, u'cmd': u'get_vm_state', u'user_id': 140}
+22-Jun-21 14:03:12 - commands.Dispatcher - INFO - Session ID: 4861B7C9, Sended reply: {'vm_state': 'ACTIVE', 'vm_id': 514}
+22-Jun-21 14:03:59 - __main__ - INFO - Worker 1 received  session ID: 36DCF014
+22-Jun-21 14:03:59 - commands.Dispatcher - INFO - Session ID: 36DCF014, Received request: {u'vm_id': 514, u'cmd': u'vm_terminate', u'user_id': 140}
+22-Jun-21 14:04:02 - commands.Dispatcher - INFO - Session ID: 36DCF014, Sended reply: {'action': 'vm terminated'}
+22-Jun-21 14:04:02 - __main__ - INFO - Worker 0 received  session ID: BCF296D5
+22-Jun-21 14:04:02 - commands.Dispatcher - INFO - Session ID: BCF296D5, Received request: {u'cmd': u'user_delete', u'user_id': 140}
+22-Jun-21 14:04:02 - commands.Dispatcher - INFO - Session ID: BCF296D5, Sended reply: {'action': 'user and user group deleted', 'user_group_id': 229, 'user_id': 140}
+22-Jun-21 14:24:40 - __main__ - INFO - Worker 2 received  session ID: A50394CD
+22-Jun-21 14:24:40 - commands.Dispatcher - INFO - Session ID: A50394CD, Received request: {u'vm_id': None, u'cmd': u'vm_terminate', u'user_id': None}
+22-Jun-21 14:24:40 - commands.Dispatcher - ERROR - Session ID: A50394CD, Sended reply: {'error': 'not set vm id'}
+22-Jun-21 14:29:11 - __main__ - INFO - Worker 3 received  session ID: 4670D132
+22-Jun-21 14:29:11 - commands.Dispatcher - INFO - Session ID: 4670D132, Received request: {u'user_password': u'*******', u'cmd': u'user_allocate', u'user_name': u'nikolaj@microlines.lv'}
+22-Jun-21 14:29:11 - commands.Dispatcher - INFO - Session ID: 4670D132, Sended reply: {'user_name': u'nikolaj@microlines.lv', 'user_id': 141, 'user_group_id_array': [230]}
+22-Jun-21 14:29:12 - __main__ - INFO - Worker 4 received  session ID: 4265CF39
+22-Jun-21 14:29:12 - commands.Dispatcher - INFO - Session ID: 4265CF39, Received request: {u'vm_name': u'v1p248.clouds365.host', u'user_id': 141, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.248', u'template_id': 329}
+22-Jun-21 14:29:15 - commands.Dispatcher - INFO - Session ID: 4265CF39, Sended reply: {'user_id': 141, 'vm_root_password': u'*******', 'vm_id': 515, 'vm_user_password': u'*******', 'vm_user': 'yqbml08'}
+22-Jun-21 14:33:06 - __main__ - INFO - Worker 1 received  session ID: 02C5897B
+22-Jun-21 14:33:06 - commands.Dispatcher - INFO - Session ID: 02C5897B, Received request: {u'vm_id': 515, u'cmd': u'get_vm_state', u'user_id': 141}
+22-Jun-21 14:33:06 - commands.Dispatcher - INFO - Session ID: 02C5897B, Sended reply: {'vm_state': 'ACTIVE', 'vm_id': 515}
+22-Jun-21 14:33:11 - __main__ - INFO - Worker 0 received  session ID: 7B831902
+22-Jun-21 14:33:11 - commands.Dispatcher - INFO - Session ID: 7B831902, Received request: {u'action': u'poweroff', u'vm_id': 515, u'cmd': u'vm_action', u'user_id': 141}
+22-Jun-21 14:33:11 - commands.Dispatcher - INFO - Session ID: 7B831902, Sended reply: {'vm_id': 515, 'vm_action': u'poweroff'}
+22-Jun-21 14:33:16 - __main__ - INFO - Worker 2 received  session ID: B3CA6F8D
+22-Jun-21 14:33:16 - commands.Dispatcher - INFO - Session ID: B3CA6F8D, Received request: {u'vm_id': 515, u'cmd': u'get_vm_state', u'user_id': 141}
+22-Jun-21 14:33:17 - commands.Dispatcher - INFO - Session ID: B3CA6F8D, Sended reply: {'vm_state': 'ACTIVE', 'vm_id': 515}
+22-Jun-21 14:33:21 - __main__ - INFO - Worker 3 received  session ID: 265AF084
+22-Jun-21 14:33:21 - commands.Dispatcher - INFO - Session ID: 265AF084, Received request: {u'vm_id': 515, u'cmd': u'get_vm_state', u'user_id': 141}
+22-Jun-21 14:33:22 - commands.Dispatcher - INFO - Session ID: 265AF084, Sended reply: {'vm_state': 'ACTIVE', 'vm_id': 515}
+22-Jun-21 14:33:26 - __main__ - INFO - Worker 4 received  session ID: B0CDFA53
+22-Jun-21 14:33:26 - commands.Dispatcher - INFO - Session ID: B0CDFA53, Received request: {u'vm_id': 515, u'cmd': u'get_vm_state', u'user_id': 141}
+22-Jun-21 14:33:27 - commands.Dispatcher - INFO - Session ID: B0CDFA53, Sended reply: {'vm_state': 'POWEROFF', 'vm_id': 515}
+22-Jun-21 14:33:57 - __main__ - INFO - Worker 1 received  session ID: ECAF105D
+22-Jun-21 14:33:57 - commands.Dispatcher - INFO - Session ID: ECAF105D, Received request: {u'action': u'resume', u'vm_id': 515, u'cmd': u'vm_action', u'user_id': 141}
+22-Jun-21 14:33:57 - commands.Dispatcher - INFO - Session ID: ECAF105D, Sended reply: {'vm_id': 515, 'vm_action': u'resume'}
+22-Jun-21 14:34:03 - __main__ - INFO - Worker 0 received  session ID: 2FB17369
+22-Jun-21 14:34:03 - commands.Dispatcher - INFO - Session ID: 2FB17369, Received request: {u'vm_id': 515, u'cmd': u'get_vm_state', u'user_id': 141}
+22-Jun-21 14:34:03 - commands.Dispatcher - INFO - Session ID: 2FB17369, Sended reply: {'vm_state': 'ACTIVE', 'vm_id': 515}
+22-Jun-21 14:36:04 - __main__ - INFO - Worker 2 received  session ID: CF7E2036
+22-Jun-21 14:36:04 - commands.Dispatcher - INFO - Session ID: CF7E2036, Received request: {u'vm_id': 515, u'cmd': u'vm_terminate', u'user_id': 141}
+22-Jun-21 14:36:07 - commands.Dispatcher - INFO - Session ID: CF7E2036, Sended reply: {'action': 'vm terminated'}
+22-Jun-21 14:36:07 - __main__ - INFO - Worker 3 received  session ID: E5F0964B
+22-Jun-21 14:36:07 - commands.Dispatcher - INFO - Session ID: E5F0964B, Received request: {u'cmd': u'user_delete', u'user_id': 141}
+22-Jun-21 14:36:07 - commands.Dispatcher - INFO - Session ID: E5F0964B, Sended reply: {'action': 'user and user group deleted', 'user_group_id': 230, 'user_id': 141}
+16-Jul-21 17:45:55 - __main__ - INFO - Routing server started
+16-Jul-21 17:45:55 - __main__ - INFO - Worker 1 started
+16-Jul-21 17:45:55 - __main__ - INFO - Worker 2 started
+16-Jul-21 17:45:55 - __main__ - INFO - Worker 0 started
+16-Jul-21 17:45:55 - __main__ - INFO - Worker 4 started
+16-Jul-21 17:45:55 - __main__ - INFO - Worker 3 started
+16-Jul-21 23:23:27 - __main__ - INFO - Routing server started
+16-Jul-21 23:23:27 - __main__ - INFO - Worker 0 started
+16-Jul-21 23:23:27 - __main__ - INFO - Worker 2 started
+16-Jul-21 23:23:27 - __main__ - INFO - Worker 4 started
+16-Jul-21 23:23:27 - __main__ - INFO - Worker 1 started
+16-Jul-21 23:23:27 - __main__ - INFO - Worker 3 started
+17-Jul-21 11:16:47 - __main__ - INFO - Routing server started
+17-Jul-21 11:16:47 - __main__ - INFO - Worker 3 started
+17-Jul-21 11:16:47 - __main__ - INFO - Worker 0 started
+17-Jul-21 11:16:47 - __main__ - INFO - Worker 4 started
+17-Jul-21 11:16:47 - __main__ - INFO - Worker 2 started
+17-Jul-21 11:16:47 - __main__ - INFO - Worker 1 started
+17-Jul-21 22:14:23 - __main__ - INFO - Routing server started
+17-Jul-21 22:14:23 - __main__ - INFO - Worker 0 started
+17-Jul-21 22:14:23 - __main__ - INFO - Worker 2 started
+17-Jul-21 22:14:23 - __main__ - INFO - Worker 1 started
+17-Jul-21 22:14:23 - __main__ - INFO - Worker 3 started
+17-Jul-21 22:14:23 - __main__ - INFO - Worker 4 started
