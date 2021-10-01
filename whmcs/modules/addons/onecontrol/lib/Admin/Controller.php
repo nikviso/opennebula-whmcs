@@ -9,8 +9,8 @@ use WHMCS\Database\Capsule;
  */
 class Controller {
     
-    static $template_admin = '/var/www/html/modules/addons/onecontrol/templates/admin.tpl';
-    static $vmfile = '/var/www/html/modules/addons/onecontrol/upload/vmset.txt';
+    static $template_admin = '/var/www/html/www.clouds365.host/area/modules/addons/onecontrol/templates/admin.tpl';
+    static $vmfile = '/var/www/html/www.clouds365.host/area/modules/addons/onecontrol/upload/vmset.txt';
     
 
     protected function check_add_data_os($vars)

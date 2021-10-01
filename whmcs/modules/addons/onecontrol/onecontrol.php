@@ -333,7 +333,7 @@ function onecontrol_output($vars)
     $vars_outside = isset($_REQUEST['vars']) ? $_REQUEST['vars'] : '';
     if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['uploadfile']))
     {
-        $uploadfile = $_SERVER['DOCUMENT_ROOT'] . "/modules/addons/onecontrol/upload/vmset.txt";
+        $uploadfile = $_SERVER['DOCUMENT_ROOT'] . "/area/modules/addons/onecontrol/upload/vmset.txt";
         
         if (move_uploaded_file($_FILES['uploadfile']['tmp_name'], $uploadfile))
         {

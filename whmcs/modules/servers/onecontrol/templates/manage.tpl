@@ -80,7 +80,7 @@ function refresh(refInt) {
 //console.log(response+' '+state);
     var state = $('#vmstate').attr('data-vmstate');
     $.ajax({
-        url: '/auxiliary.php?id={$id}&a=get_vm_state&token='+$('#tkvm').text(),
+        url: '/area/auxiliary.php?id={$id}&a=get_vm_state&token='+$('#tkvm').text(),
         method: "GET",
         dataType: "html",
         success: function(response) {
@@ -113,7 +113,7 @@ function refresh(refInt) {
 
 function action(action) {
     $.ajax({
-        url: '/clientarea.php?action=productdetails&id={$id}&modop=custom&a='+action,
+        url: '/area/clientarea.php?action=productdetails&id={$id}&modop=custom&a='+action,
         method: "GET",
         dataType: "html",
         success: function(response) {

@@ -697,7 +697,7 @@ function instantiate_vm(array $params)
                                         'one_user_id' => $one_reply->{'user_id'},
                                         'one_user_group_id' => $one_user_group_id_array,
                                         'one_user_name' => $one_reply->{'user_name'},
-                                        'one_user_password' => $one_user_password,
+                                        'one_user_password' => password_hash($one_user_password, PASSWORD_BCRYPT),
                                         'one_user_token' => '')               
                                 );
                 
@@ -1134,7 +1134,7 @@ function onecontrol_ClientArea(array $params)
         //$extraVariable1 = var_dump($params);
         //$extraVariable1 = $params['status'];
         //$extraVariable1 = $params['configoption1'];
-        //$extraVariable2 = $params["configoptions"]["OS Type"]. ", " . $params["clientsdetails"]["email"];
+        //$extraVariable2 = $params["configoptions"]["Operating System"]. ", " . $params["clientsdetails"]["email"];
         //$extraVariable1 = $_SESSION['uid'];
         //$extraVariable2 = $params["clientsdetails"]["email"];
 
@@ -1148,7 +1148,7 @@ function onecontrol_ClientArea(array $params)
             'templateVariables' => array(
                 'token' => $token,
                 'productstatuscancelled' => $productstatuscancelled,
-                'vmostype' => $params["configoptions"]["OS Type"],
+                'vmostype' => $params["configoptions"]['Operating System'],
                 'vmname' => $result_onevm->{'vm_name'},
                 'vmipaddress' => $result_onevm->{'vm_ip_address'},
             ),
@@ -1177,7 +1177,7 @@ function get_onevmtemplate(array $params)
 {
     $result_onevmtemplate = Capsule::table('mod_onecontrol_onetemplate')
                             ->select('one_template_id')
-                            ->where('one_image_os',$params['configoptions']['OS Type'])
+                            ->where('one_image_os',$params['configoptions']['Operating System'])
                             ->get();           
     
     foreach($result_onevmtemplate as $value){

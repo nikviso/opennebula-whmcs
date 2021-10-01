@@ -7014,3 +7014,24 @@
 17-Jul-21 22:14:23 - __main__ - INFO - Worker 1 started
 17-Jul-21 22:14:23 - __main__ - INFO - Worker 3 started
 17-Jul-21 22:14:23 - __main__ - INFO - Worker 4 started
+15-Sep-21 12:11:57 - __main__ - INFO - Worker 0 received  session ID: 7925B1A0
+15-Sep-21 12:11:57 - commands.Dispatcher - INFO - Session ID: 7925B1A0, Received request: {u'user_password': u'*******', u'cmd': u'user_allocate', u'user_name': u'nikolaj@microlines.lv'}
+15-Sep-21 12:11:57 - commands.Dispatcher - INFO - Session ID: 7925B1A0, Sended reply: {'user_name': u'nikolaj@microlines.lv', 'user_id': 142, 'user_group_id_array': [231]}
+15-Sep-21 12:11:58 - __main__ - INFO - Worker 2 received  session ID: 6F3C7B8D
+15-Sep-21 12:11:58 - commands.Dispatcher - INFO - Session ID: 6F3C7B8D, Received request: {u'vm_name': u'v1p248.clouds365.host', u'user_id': 142, u'network_id': 0, u'cmd': u'template_instantiate', u'network_address': u'192.168.55.0', u'dns_ip_address': u'8.8.8.8', u'network_mask': u'255.255.255.0', u'gw_ip_address': u'192.168.55.1', u'ip_address': u'192.168.55.248', u'template_id': 329}
+15-Sep-21 12:12:01 - commands.Dispatcher - INFO - Session ID: 6F3C7B8D, Sended reply: {'user_id': 142, 'vm_root_password': u'*******', 'vm_id': 516, 'vm_user_password': u'*******', 'vm_user': 'hzsda61'}
+15-Sep-21 12:12:45 - __main__ - INFO - Worker 1 received  session ID: E9C057BA
+15-Sep-21 12:12:45 - commands.Dispatcher - INFO - Session ID: E9C057BA, Received request: {u'vm_id': 516, u'cmd': u'get_vm_state', u'user_id': 142}
+15-Sep-21 12:12:45 - commands.Dispatcher - INFO - Session ID: E9C057BA, Sended reply: {'vm_state': 'CLONING', 'vm_id': 516}
+15-Sep-21 12:13:06 - __main__ - INFO - Worker 3 received  session ID: 3B074962
+15-Sep-21 12:13:06 - commands.Dispatcher - INFO - Session ID: 3B074962, Received request: {u'vm_id': 516, u'cmd': u'get_vm_state', u'user_id': 142}
+15-Sep-21 12:13:06 - commands.Dispatcher - INFO - Session ID: 3B074962, Sended reply: {'vm_state': 'CLONING', 'vm_id': 516}
+15-Sep-21 12:14:02 - __main__ - INFO - Worker 4 received  session ID: 50CEBD81
+15-Sep-21 12:14:02 - commands.Dispatcher - INFO - Session ID: 50CEBD81, Received request: {u'vm_id': 516, u'cmd': u'get_vm_state', u'user_id': 142}
+15-Sep-21 12:14:02 - commands.Dispatcher - INFO - Session ID: 50CEBD81, Sended reply: {'vm_state': 'ACTIVE', 'vm_id': 516}
+15-Sep-21 12:15:51 - __main__ - INFO - Worker 0 received  session ID: CE47F2BA
+15-Sep-21 12:15:51 - commands.Dispatcher - INFO - Session ID: CE47F2BA, Received request: {u'vm_id': 516, u'cmd': u'vm_terminate', u'user_id': 142}
+15-Sep-21 12:15:54 - commands.Dispatcher - INFO - Session ID: CE47F2BA, Sended reply: {'action': 'vm terminated'}
+15-Sep-21 12:15:54 - __main__ - INFO - Worker 2 received  session ID: F95C461D
+15-Sep-21 12:15:54 - commands.Dispatcher - INFO - Session ID: F95C461D, Received request: {u'cmd': u'user_delete', u'user_id': 142}
+15-Sep-21 12:15:55 - commands.Dispatcher - INFO - Session ID: F95C461D, Sended reply: {'action': 'user and user group deleted', 'user_group_id': 231, 'user_id': 142}
