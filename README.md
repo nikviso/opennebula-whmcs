@@ -1,4 +1,6 @@
-# zmq-one-rpc-xml
+#opennebula-whmcs
+Pairing module for OpenNebula and WHMCS
 
-pip install pycryptodome
-pip install configparser
+#Install Python packages
+pip install pycryptodome; 
+pip install configparser;
