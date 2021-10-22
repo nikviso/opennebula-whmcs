@@ -13,13 +13,13 @@ $network_id = 0;
 $network_address = "192.168.55.0";
 $network_mask = "255.255.255.0";
 
-/**/
+/*
 $arr = array(
     "cmd" => "vm_terminate",
     "vm_id" => 385,
     "user_id" => 85    
 );
-
+*/
 /*
 $arr = array(
     "cmd" => "template_instantiate",
