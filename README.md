@@ -5,3 +5,7 @@ Module for pairing OpenNebula and WHMCS
 
 - pip install pycryptodome; 
 - pip install configparser;
+
+# AES key file generator
+
+- security/keygen.py
