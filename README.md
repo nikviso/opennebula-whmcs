@@ -8,6 +8,11 @@
 - pip install configparser;
 - pip install pyzmq
 
+# Install PHP ZMQ packages 
+
+- http://wiki.zeromq.org/bindings:php
+- http://github.com/mkoppanen/php-zmq
+
 # AES key file generator
 
 - security/keygen.py
