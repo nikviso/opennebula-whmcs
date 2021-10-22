@@ -3,8 +3,8 @@
 $password = generate_password(6,0);
 echo "password: ".$password."\n";
 #
-$vm_name = "v1p247.clouds365.host";
-$user_id = 85;
+$vm_name = "v1p247.mydomain.com";
+$user_id = 3;
 $template_id = 390;
 $ip_address = "192.168.55.247";
 $dns_ip_address = "8.8.8.8";
@@ -16,8 +16,8 @@ $network_mask = "255.255.255.0";
 /*
 $arr = array(
     "cmd" => "vm_terminate",
-    "vm_id" => 385,
-    "user_id" => 85    
+    "vm_id" => 394,
+    "user_id" => 95    
 );
 */
 /*
@@ -60,9 +60,9 @@ $arr = array(
     
 $arr = array(
     "cmd" => "vm_action",
-    "action" => "resume",
-    "vm_id" => 366,
-    "user_id" => 91,    
+    "action" => "poweroff",
+    "vm_id" => 519,
+    "user_id" => 3,    
 );
 */
 /*
@@ -77,7 +77,7 @@ $arr = array(
 /*
 $arr = array(
     "cmd" => "get_user_info",
-    "user_id" => 91,    
+    "user_id" => 3,    
 );
 */
 /*
@@ -89,14 +89,25 @@ $arr = array(
 /*
 $arr = array(
     "cmd" => "get_vm_state",
-    "user_id" => 85,
-    "vm_id" => 385,
+    "user_id" => 3,
+    "vm_id" => 519,
+);
+
+$arr = array(
+    "cmd" => "get_vm_state",
+    "user_name" => "test_user",
+    "vm_name" => "v1p247.mydomain.com",    
 );
 */
 /*
 $arr = array(
     "cmd" => "get_all_vm_state",
-    "user_id" => 85,
+    "user_id" => 3,
+);
+
+$arr = array(
+    "cmd" => "get_all_vm_state",
+    "user_name" => "test_user",
 );
 */
 $cipher="AES-256-CBC";

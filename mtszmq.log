@@ -13,15 +13,3 @@
 22-Oct-21 10:28:28 - __main__ - INFO - Worker 2 received  session ID: B0E523AD
 22-Oct-21 10:28:28 - commands.Dispatcher - INFO - Session ID: B0E523AD, Received request: {u'vm_id': 517, u'cmd': u'get_vm_state', u'user_id': 143}
 22-Oct-21 10:28:28 - commands.Dispatcher - INFO - Session ID: B0E523AD, Sended reply: {'vm_state': 'CLONING', 'vm_id': 517}
-22-Oct-21 14:49:11 - __main__ - INFO - Routing server started
-22-Oct-21 14:49:11 - __main__ - INFO - Worker 4 started
-22-Oct-21 14:49:11 - __main__ - INFO - Worker 2 started
-22-Oct-21 14:49:11 - __main__ - INFO - Worker 1 started
-22-Oct-21 14:49:11 - __main__ - INFO - Worker 0 started
-22-Oct-21 14:49:11 - __main__ - INFO - Worker 3 started
-22-Oct-21 14:50:49 - __main__ - INFO - Routing server started
-22-Oct-21 14:50:49 - __main__ - INFO - Worker 2 started
-22-Oct-21 14:50:49 - __main__ - INFO - Worker 1 started
-22-Oct-21 14:50:49 - __main__ - INFO - Worker 4 started
-22-Oct-21 14:50:49 - __main__ - INFO - Worker 0 started
-22-Oct-21 14:50:49 - __main__ - INFO - Worker 3 started

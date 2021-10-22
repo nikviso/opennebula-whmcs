@@ -1,4 +1,4 @@
-#Copy me to /lib/systemd/system/
+#Copy me to /usr/lib/systemd/system/
 #And systemctl daemon-reload "systemctl daemon-reload"
 [Unit]
 Description=mtszmq service
@@ -6,8 +6,8 @@ After=network.target
 
 [Service]
 Type=simple
-WorkingDirectory=/root/zmq-one-rpc-xml/
-ExecStart=/root/zmq-one-rpc-xml/mtszmq.py
+WorkingDirectory=/root/opennebula-whmcs/
+ExecStart=/root/opennebula-whmcs/mtszmq.py
 StandardInput=tty-force
 #User=oneadmin
 
