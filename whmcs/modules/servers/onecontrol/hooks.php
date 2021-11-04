@@ -154,12 +154,14 @@ add_hook('ClientAreaPrimarySidebar', 1, function($primarySidebar)
 add_hook('EmailPreSend', 1, function($vars) {
     
     $result_onevm = Capsule::table('mod_onecontrol_onevm')
-                    ->select('vm_user','vm_user_password','vm_root_password')
+                    ->select('vm_name','vm_ip_address','vm_user','vm_user_password','vm_root_password')
                     ->where('service_id',$vars[mergefields][service_id])
                     ->first();
                
     if($result_onevm){
         $merge_fields = array(
+            "vm_name" => $result_onevm->{'vm_name'},
+            "vm_ip_address" => $result_onevm->{'vm_ip_address'},
             "vm_user" => $result_onevm->{'vm_user'},
             "vm_user_password" => $result_onevm->{'vm_user_password'},
             "vm_root_password" => $result_onevm->{'vm_root_password'},
