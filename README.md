@@ -6,7 +6,8 @@
 
 - pip install pycryptodome; 
 - pip install configparser;
-- pip install pyzmq
+- pip install pyzmq;
+- pip install pyone;
 
 # Install PHP ZMQ packages 
 
