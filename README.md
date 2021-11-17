@@ -1,6 +1,6 @@
 # opennebula-whmcs 
 - Module for pairing OpenNebula and WHMCS. 
-- The ZMQ library is used for messaging. For encryption messages is used AES standard.
+- The ZMQ library is used for messaging. For encryption messages is used AES algorithm.
 
 # Install Python packages 
 
